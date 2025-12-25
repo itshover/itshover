@@ -1,0 +1,20 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "checked-icon",
+  "dependencies": ["motion"],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "icons/CheckedIcon.tsx",
+      "content": "import { AnimatedIconProps } from \"./types\";\nimport React from \"react\";\nimport { motion, useAnimate } from \"motion/react\";\n\nconst CheckedIcon = ({\n    size = 24,\n    color = \"currentColor\",\n    strokeWidth = 2,\n    className = \"\"\n}: AnimatedIconProps) => {\n  const [scope, animate] = useAnimate();\n  const hoverAnimation = async () => {\n    await animate(\n      \"svg\",\n      {\n        scale: 1.1,\n      },\n      {\n        duration: 0.1,\n        ease: \"easeInOut\",\n      },\n    );\n    await animate(\n      \".check-icon\",\n      {\n        pathLength: 0,\n      },\n      {\n        duration: 0.1,\n        ease: \"easeInOut\",\n      },\n    );\n    await animate(\n      \".check-icon\",\n      {\n        pathLength: 1,\n      },\n      {\n        duration: 0.4,\n        ease: \"easeInOut\",\n      },\n    );\n\n    await animate(\n      \"svg\",\n      {\n        scale: 1,\n      },\n      {\n        duration: 0.2,\n        ease: \"easeInOut\",\n      },\n    );\n  };\n  return (\n    <motion.div\n      ref={scope}\n      onHoverStart={() => {\n        hoverAnimation();\n      }}\n    >\n      <motion.svg\n        xmlns=\"http://www.w3.org/2000/svg\"\n        width={size}\n        height={size}\n        viewBox=\"0 0 24 24\"\n        fill=\"none\"\n        stroke={color}\n        stroke-width=\"2\"\n        stroke-linecap=\"round\"\n        stroke-linejoin=\"round\"\n        className={`cursor-pointer ${className}`}\n      >\n        <motion.path stroke=\"none\" d=\"M0 0h24v24H0z\" fill=\"none\" />\n        <motion.path d=\"M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0\" />\n        <motion.path d=\"M9 12l2 2l4 -4\" className=\"check-icon\" />\n      </motion.svg>\n    </motion.div>\n  );\n};\n\nexport default CheckedIcon;\n",
+      "type": "registry:ui"
+    },
+    {
+      "path": "icons/types.ts",
+      "content": "export interface AnimatedIconProps {\r\n    /** Icon size in pixels or CSS string */\r\n    size?: number | string;\r\n    /** Icon color (defaults to currentColor) */\r\n    color?: string;\r\n    /** SVG stroke width */\r\n    strokeWidth?: number;\r\n    /** Additional CSS classes */\r\n    className?: string;\r\n}\r\n",
+      "type": "registry:ui"
+    }
+  ],
+  "type": "registry:ui"
+}

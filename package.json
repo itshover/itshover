@@ -43,14 +43,20 @@
     "react-dom": ">=18.0.0"
   },
   "dependencies": {
+    "@radix-ui/react-slot": "^1.2.4",
+    "@radix-ui/react-tabs": "^1.1.13",
+    "@radix-ui/react-tooltip": "^1.2.8",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
+    "cmdk": "^1.1.1",
     "lucide-react": "^0.562.0",
     "motion": "^12.23.26",
     "next": "16.1.0",
+    "next-themes": "^0.4.6",
     "react": ">=18.0.0",
     "react-dom": ">=18.0.0",
     "shadcn": "^3.6.2",
+    "tabler": "^1.0.0",
     "tailwind-merge": "^3.4.0"
   },
   "devDependencies": {

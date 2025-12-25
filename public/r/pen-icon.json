@@ -1,0 +1,20 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "pen-icon",
+  "dependencies": ["motion"],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "icons/PenIcon.tsx",
+      "content": "import { AnimatedIconProps } from \"./types\";\nimport { motion, useAnimate } from \"motion/react\";\r\n\r\nconst PenIcon = ({\n    size = 24,\n    color = \"currentColor\",\n    strokeWidth = 2,\n    className = \"\"\n}: AnimatedIconProps) => {\r\n    const [scope, animate] = useAnimate();\r\n\r\n    const hoverAnimation = async () => {\r\n        // 1️⃣ Pen writes upward\r\n        await animate(\r\n            \".pen-icon\",\r\n            {\r\n                x: [0, 1, -1, 1, -1, 0],\r\n                y: [0, -2, -4, -6, -8, -10],\r\n                rotate: [0, -6, -4, -6, -4, 0],\r\n            },\r\n            {\r\n                duration: 0.8,\r\n                ease: \"easeInOut\",\r\n            }\r\n        );\r\n\r\n        // 2️⃣ Draw ink\r\n        await animate(\r\n            \".pen-slash\",\r\n            {\r\n                pathLength: [0, 1],\r\n                opacity: [0, 1],\r\n            },\r\n            {\r\n                duration: 0.3,\r\n                ease: \"easeOut\",\r\n            }\r\n        );\r\n\r\n        // 3️⃣ Reset ink\r\n        await animate(\r\n            \".pen-slash\",\r\n            {\r\n                pathLength: 0,\r\n                opacity: 0,\r\n            },\r\n            {\r\n                duration: 0.2,\r\n                ease: \"easeInOut\",\r\n            }\r\n        );\r\n\r\n        // 4️⃣ Reset pen to OG position\r\n        await animate(\r\n            \".pen-icon\",\r\n            {\r\n                x: 0,\r\n                y: 0,\r\n                rotate: 0,\r\n            },\r\n            {\r\n                duration: 0.25,\r\n                ease: \"easeInOut\",\r\n            }\r\n        );\r\n    };\r\n\r\n    return (\r\n        <motion.div\r\n            ref={scope}\r\n            onHoverStart={hoverAnimation}\r\n            className={`inline-flex cursor-pointer ${className}`}\r\n        >\r\n            <svg\r\n                xmlns=\"http://www.w3.org/2000/svg\"\r\n                width={size}\r\n                height={size}\r\n                viewBox=\"0 0 32 32\"\r\n                fill=\"none\"\r\n                stroke={color}\r\n                strokeWidth={strokeWidth}\r\n                strokeLinecap=\"square\"\r\n                strokeMiterlimit=\"10\"\r\n                className=\"pen-icon\"\r\n            >\r\n                {/* Ink */}\r\n                <motion.line\r\n                    className=\"pen-slash\"\r\n                    x1=\"20.031\"\r\n                    y1=\"5.969\"\r\n                    x2=\"26.031\"\r\n                    y2=\"11.969\"\r\n                    initial={{ pathLength: 0, opacity: 0 }}\r\n                />\r\n\r\n                {/* Pen */}\r\n                <motion.path\r\n                    className=\"pen-body\"\r\n                    style={{ transformOrigin: \"60% 40%\" }}\r\n                    d=\"m10.5,27.5l-8,2,2-8L22.257,3.743c1.657-1.657,4.343-1.657,6,0h0c1.657,1.657,1.657,4.343,0,6L10.5,27.5Z\"\r\n                />\r\n            </svg>\r\n        </motion.div>\r\n    );\r\n};\r\n\r\nexport default PenIcon;\r\n",
+      "type": "registry:ui"
+    },
+    {
+      "path": "icons/types.ts",
+      "content": "export interface AnimatedIconProps {\r\n    /** Icon size in pixels or CSS string */\r\n    size?: number | string;\r\n    /** Icon color (defaults to currentColor) */\r\n    color?: string;\r\n    /** SVG stroke width */\r\n    strokeWidth?: number;\r\n    /** Additional CSS classes */\r\n    className?: string;\r\n}\r\n",
+      "type": "registry:ui"
+    }
+  ],
+  "type": "registry:ui"
+}

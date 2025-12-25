@@ -1,0 +1,20 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "send-icon",
+  "dependencies": ["motion"],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "icons/SendIcon.tsx",
+      "content": "import { AnimatedIconProps } from \"./types\";\nimport { motion, useAnimate } from \"motion/react\";\r\n\r\nconst SendIcon = ({\n    size = 24,\n    color = \"currentColor\",\n    strokeWidth = 2,\n    className = \"\"\n}: AnimatedIconProps) => {\r\n    const [scope, animate] = useAnimate();\r\n\r\n    const hoverAnimation = async () => {\r\n        // Fly forward along 45°\r\n        await animate(\r\n            \".send-icon\",\r\n            {\r\n                x: [0, 24],\r\n                y: [0, -24],\r\n                opacity: [1, 0],\r\n            },\r\n            {\r\n                duration: 0.25,\r\n                ease: \"easeIn\",\r\n            }\r\n        );\r\n\r\n        // Instantly move back behind\r\n        await animate(\r\n            \".send-icon\",\r\n            {\r\n                x: -24,\r\n                y: 24,\r\n            },\r\n            { duration: 0 }\r\n        );\r\n\r\n        // Fly back in\r\n        await animate(\r\n            \".send-icon\",\r\n            {\r\n                x: [-24, 0],\r\n                y: [24, 0],\r\n                opacity: [0, 1],\r\n            },\r\n            {\r\n                duration: 0.25,\r\n                ease: \"easeOut\",\r\n            }\r\n        );\r\n    };\r\n\r\n    return (\r\n        <motion.div\r\n            ref={scope}\r\n            onHoverStart={hoverAnimation}\r\n            className={`inline-flex cursor-pointer ${className}`}\r\n        >\r\n            <svg\r\n                xmlns=\"http://www.w3.org/2000/svg\"\r\n                width={size}\r\n                height={size}\r\n                viewBox=\"0 0 24 24\"\r\n                fill=\"none\"\r\n                stroke={color}\r\n                strokeWidth={strokeWidth}\r\n                strokeLinecap=\"round\"\r\n                strokeLinejoin=\"round\"\r\n                className=\"send-icon\"\r\n            >\r\n                <path stroke=\"none\" d=\"M0 0h24v24H0z\" fill=\"none\" />\r\n                <path d=\"M10 14l11 -11\" />\r\n                <path d=\"M21 3l-6.5 18a.55 .55 0 0 1 -1 0l-3.5 -7l-7 -3.5a.55 .55 0 0 1 0 -1l18 -6.5\" />\r\n            </svg>\r\n        </motion.div>\r\n    );\r\n};\r\n\r\nexport default SendIcon;\r\n",
+      "type": "registry:ui"
+    },
+    {
+      "path": "icons/types.ts",
+      "content": "export interface AnimatedIconProps {\r\n    /** Icon size in pixels or CSS string */\r\n    size?: number | string;\r\n    /** Icon color (defaults to currentColor) */\r\n    color?: string;\r\n    /** SVG stroke width */\r\n    strokeWidth?: number;\r\n    /** Additional CSS classes */\r\n    className?: string;\r\n}\r\n",
+      "type": "registry:ui"
+    }
+  ],
+  "type": "registry:ui"
+}

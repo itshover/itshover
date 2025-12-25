@@ -1,0 +1,20 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "phone-volume",
+  "dependencies": ["motion"],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "icons/PhoneVolume.tsx",
+      "content": "import { AnimatedIconProps } from \"./types\";\nimport { motion, useAnimate } from \"motion/react\";\r\n\r\nconst PhoneVolume = ({\n    size = 24,\n    color = \"currentColor\",\n    strokeWidth = 2,\n    className = \"\"\n}: AnimatedIconProps) => {\r\n    const [scope, animate] = useAnimate();\r\n\r\n    const hoverAnimation = async () => {\r\n        // Inner wave\r\n        animate(\r\n            \".phone-wave-inner\",\r\n            {\r\n                scale: [1, 1.15, 1],\r\n                opacity: [0.4, 1, 0.4],\r\n            },\r\n            {\r\n                duration: 0.4,\r\n                ease: \"easeInOut\",\r\n            }\r\n        );\r\n\r\n        // Outer wave (slightly delayed)\r\n        await animate(\r\n            \".phone-wave-outer\",\r\n            {\r\n                scale: [1, 1.25, 1],\r\n                opacity: [0.2, 0.8, 0.2],\r\n            },\r\n            {\r\n                duration: 0.45,\r\n                ease: \"easeInOut\",\r\n                delay: 0.1,\r\n            }\r\n        );\r\n\r\n        animate('.phone-wave', {\r\n            opacity: 1,\r\n            scale: 1,\r\n        }, {\r\n            duration: 0.3,\r\n            ease: \"easeInOut\",\r\n        })\r\n    };\r\n\r\n    return (\r\n        <motion.div\r\n            ref={scope}\r\n            onHoverStart={hoverAnimation}\r\n            className={`inline-flex cursor-pointer ${className}`}\r\n        >\r\n            <svg\r\n                xmlns=\"http://www.w3.org/2000/svg\"\r\n                width={size}\r\n                height={size}\r\n                viewBox=\"0 0 32 32\"\r\n                fill=\"none\"\r\n                stroke={color}\r\n                strokeWidth={strokeWidth}\r\n                strokeLinecap=\"square\"\r\n                strokeMiterlimit=\"10\"\r\n            >\r\n                {/* Phone body */}\r\n                <motion.path\r\n                    className=\"phone-body\"\r\n                    d=\"m21.3832,18.2745l-3.1744,3.9688c-3.4906-2.0516-6.3996-4.9606-8.4513-8.4513l3.9702-3.1756L9.9013,1.9994l-6.4617,1.6761c-.9444.2466-1.555,1.1606-1.4212,2.1274,1.7626,12.5517,11.6278,22.4169,24.1795,24.1795.9665.1332,1.8799-.4773,2.1264-1.4212l1.6758-6.4603-8.6168-3.8264Z\"\r\n                />\r\n\r\n                {/* Inner wave */}\r\n                <motion.path\r\n                    className=\"phone-wave-inner phone-wave\"\r\n                    style={{ transformOrigin: \"21.5px 10.5px\" }}\r\n                    d=\"m19,8c2.7614,0,5,2.2386,5,5\"\r\n                    initial={{ opacity: 1 }}\r\n                />\r\n\r\n                {/* Outer wave */}\r\n                <motion.path\r\n                    className=\"phone-wave-outer phone-wave\"\r\n                    style={{ transformOrigin: \"24px 8px\" }}\r\n                    d=\"m19,3c5.5228,0,10,4.4772,10,10\"\r\n                    initial={{ opacity: 1 }}\r\n                />\r\n            </svg>\r\n        </motion.div>\r\n    );\r\n};\r\n\r\nexport default PhoneVolume;\r\n",
+      "type": "registry:ui"
+    },
+    {
+      "path": "icons/types.ts",
+      "content": "export interface AnimatedIconProps {\r\n    /** Icon size in pixels or CSS string */\r\n    size?: number | string;\r\n    /** Icon color (defaults to currentColor) */\r\n    color?: string;\r\n    /** SVG stroke width */\r\n    strokeWidth?: number;\r\n    /** Additional CSS classes */\r\n    className?: string;\r\n}\r\n",
+      "type": "registry:ui"
+    }
+  ],
+  "type": "registry:ui"
+}

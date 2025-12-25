@@ -1,19 +1,12 @@
 {
-    "extends": "./tsconfig.json",
-    "compilerOptions": {
-        "declaration": true,
-        "declarationDir": "./dist",
-        "outDir": "./dist",
-        "noEmit": false,
-        "jsx": "react-jsx"
-    },
-    "include": [
-        "icons/**/*"
-    ],
-    "exclude": [
-        "node_modules",
-        "dist",
-        "app",
-        ".next"
-    ]
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "declaration": true,
+    "declarationDir": "./dist",
+    "outDir": "./dist",
+    "noEmit": false,
+    "jsx": "react-jsx"
+  },
+  "include": ["icons/**/*"],
+  "exclude": ["node_modules", "dist", "app", ".next"]
 }

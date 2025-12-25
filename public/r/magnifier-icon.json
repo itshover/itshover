@@ -1,0 +1,20 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "magnifier-icon",
+  "dependencies": ["motion"],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "icons/MagnifierIcon.tsx",
+      "content": "import { AnimatedIconProps } from \"./types\";\nimport { motion, useAnimate } from \"motion/react\";\r\n\r\nconst MagnifierIcon = ({\n    size = 24,\n    color = \"currentColor\",\n    strokeWidth = 2,\n    className = \"\"\n}: AnimatedIconProps) => {\r\n    const [scope, animate] = useAnimate();\r\n\r\n    const hoverAnimation = async () => {\r\n        await animate(\r\n            \".magnifier-icon\",\r\n            {\r\n                x: [0, 1, 0, -1, 0],\r\n                y: [0, -1, -2, -1, 0],\r\n                rotate: [0, -5, 5, -5, 0],\r\n            },\r\n            {\r\n                duration: 1,\r\n                ease: \"easeInOut\",\r\n            }\r\n        );\r\n    };\r\n\r\n    return (\r\n        <motion.div\r\n            ref={scope}\r\n            onHoverStart={hoverAnimation}\r\n            className={`inline-flex cursor-pointer ${className}`}\r\n        >\r\n            <svg\r\n                xmlns=\"http://www.w3.org/2000/svg\"\r\n                width={size}\r\n                height={size}\r\n                viewBox=\"0 0 32 32\"\r\n                fill=\"none\"\r\n                stroke={color}\r\n                strokeWidth={strokeWidth}\r\n                strokeMiterlimit=\"10\"\r\n                className=\"magnifier-icon\"\r\n                style={{ transformOrigin: \"13px 13px\" }}\r\n            >\r\n                {/* Handle */}\r\n                <motion.path\r\n                    className=\"magnifier-handle\"\r\n                    d=\"m21.393,18.565l7.021,7.021c.781.781.781,2.047,0,2.828h0c-.781.781-2.047.781-2.828,0l-7.021-7.021\"\r\n                />\r\n\r\n                {/* Lens */}\r\n                <motion.circle\r\n                    className=\"magnifier-lens\"\r\n                    cx=\"13\"\r\n                    cy=\"13\"\r\n                    r=\"10\"\r\n                    strokeLinecap=\"square\"\r\n                />\r\n            </svg>\r\n        </motion.div>\r\n    );\r\n};\r\n\r\nexport default MagnifierIcon;\r\n",
+      "type": "registry:ui"
+    },
+    {
+      "path": "icons/types.ts",
+      "content": "export interface AnimatedIconProps {\r\n    /** Icon size in pixels or CSS string */\r\n    size?: number | string;\r\n    /** Icon color (defaults to currentColor) */\r\n    color?: string;\r\n    /** SVG stroke width */\r\n    strokeWidth?: number;\r\n    /** Additional CSS classes */\r\n    className?: string;\r\n}\r\n",
+      "type": "registry:ui"
+    }
+  ],
+  "type": "registry:ui"
+}

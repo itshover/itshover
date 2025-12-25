@@ -1,0 +1,20 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "shield-check",
+  "dependencies": ["motion"],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "icons/ShieldCheck.tsx",
+      "content": "import { AnimatedIconProps } from \"./types\";\nimport { motion, useAnimate } from \"motion/react\";\r\n\r\nconst ShieldCheck = ({\n    size = 24,\n    color = \"currentColor\",\n    strokeWidth = 2,\n    className = \"\"\n}: AnimatedIconProps) => {\r\n    const [scope, animate] = useAnimate();\r\n\r\n    const hoverAnimation = async () => {\r\n        // Shield soft confirmation pulse\r\n        animate(\r\n            \".shield-body\",\r\n            {\r\n                scale: [1, 1.05, 1],\r\n            },\r\n            {\r\n                duration: 0.35,\r\n                ease: \"easeOut\",\r\n            }\r\n        );\r\n\r\n        // Draw checkmark\r\n        await animate(\r\n            \".shield-check\",\r\n            {\r\n                pathLength: [0, 1],\r\n                opacity: [0, 1],\r\n            },\r\n            {\r\n                duration: 0.3,\r\n                ease: \"easeInOut\",\r\n            }\r\n        );\r\n    };\r\n\r\n    return (\r\n        <motion.div\r\n            ref={scope}\r\n            onHoverStart={hoverAnimation}\r\n            className={`inline-flex cursor-pointer ${className}`}\r\n        >\r\n            <svg\r\n                xmlns=\"http://www.w3.org/2000/svg\"\r\n                width={size}\r\n                height={size}\r\n                viewBox=\"0 0 24 24\"\r\n                fill=\"none\"\r\n                stroke={color}\r\n                strokeWidth={strokeWidth}\r\n                strokeLinecap=\"round\"\r\n                strokeLinejoin=\"round\"\r\n            >\r\n                {/* Shield body */}\r\n                <motion.path\r\n                    className=\"shield-body\"\r\n                    style={{ transformOrigin: \"50% 50%\" }}\r\n                    d=\"M11.46 20.846a12 12 0 0 1 -7.96 -14.846a12 12 0 0 0 8.5 -3a12 12 0 0 0 8.5 3a12 12 0 0 1 -.09 7.06\"\r\n                />\r\n\r\n                {/* Checkmark */}\r\n                <motion.path\r\n                    className=\"shield-check\"\r\n                    initial={{ pathLength: 0, opacity: 0 }}\r\n                    d=\"M15 19l2 2l4 -4\"\r\n                />\r\n            </svg>\r\n        </motion.div>\r\n    );\r\n};\r\n\r\nexport default ShieldCheck;\r\n",
+      "type": "registry:ui"
+    },
+    {
+      "path": "icons/types.ts",
+      "content": "export interface AnimatedIconProps {\r\n    /** Icon size in pixels or CSS string */\r\n    size?: number | string;\r\n    /** Icon color (defaults to currentColor) */\r\n    color?: string;\r\n    /** SVG stroke width */\r\n    strokeWidth?: number;\r\n    /** Additional CSS classes */\r\n    className?: string;\r\n}\r\n",
+      "type": "registry:ui"
+    }
+  ],
+  "type": "registry:ui"
+}

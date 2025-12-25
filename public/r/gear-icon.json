@@ -1,0 +1,20 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "gear-icon",
+  "dependencies": ["motion"],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "icons/GearIcon.tsx",
+      "content": "import { AnimatedIconProps } from \"./types\";\nimport { motion, useAnimate } from \"motion/react\";\r\n\r\nconst GearIcon = ({\n    size = 24,\n    color = \"currentColor\",\n    strokeWidth = 2,\n    className = \"\"\n}: AnimatedIconProps) => {\r\n    const [scope, animate] = useAnimate();\r\n\r\n    const hoverAnimation = async () => {\r\n        // 1. Engage the center (very subtle)\r\n        animate(\".gear-body\", {\r\n            scale: [1, 1.01, 1],\r\n        }, { duration: 0.6 })\r\n\r\n        animate(\r\n            \".gear-center\",\r\n            { scale: [1, 1.08, 1] },\r\n            { duration: 0.3, ease: \"easeOut\" }\r\n        )\r\n\r\n        // 2. Mechanical spin: forward, accelerate → decelerate\r\n        await animate(\r\n            \".gear-icon\",\r\n            { rotate: [0, 180, 360] },\r\n            {\r\n                duration: 0.9,\r\n                ease: \"easeInOut\",\r\n            }\r\n        )\r\n    }\r\n\r\n\r\n    return (\r\n        <motion.div\r\n            ref={scope}\r\n            onHoverStart={hoverAnimation}\r\n            className={`inline-flex cursor-pointer ${className}`}\r\n        >\r\n            <svg\r\n                xmlns=\"http://www.w3.org/2000/svg\"\r\n                x=\"0px\"\r\n                y=\"0px\"\r\n                width={size}\r\n                height={size}\r\n                viewBox=\"0 0 32 32\"\r\n                fill=\"none\"\r\n                stroke={color}\r\n                strokeWidth={strokeWidth}\r\n                strokeLinecap=\"square\"\r\n                strokeMiterlimit=\"10\"\r\n                className=\"gear-icon\"\r\n            >\r\n                {/* Inner circle */}\r\n                <motion.circle\r\n                    className=\"gear-center\"\r\n                    cx=\"16\"\r\n                    cy=\"16\"\r\n                    r=\"5\"\r\n                    style={{ transformOrigin: \"16px 16px\" }}\r\n                />\r\n                {/* Gear teeth/body */}\r\n                <motion.path\r\n                    className=\"gear-body\"\r\n                    style={{ transformOrigin: \"16px 16px\" }}\r\n                    d=\"m30,17.5v-3l-3.388-1.355c-.25-.933-.617-1.815-1.089-2.633l1.436-3.351-2.121-2.121-3.351,1.436c-.817-.472-1.7-.838-2.633-1.089l-1.355-3.388h-3l-1.355,3.388c-.933.25-1.815.617-2.633,1.089l-3.351-1.436-2.121,2.121,1.436,3.351c-.472.817-.838,1.7-1.089,2.633l-3.388,1.355v3l3.388,1.355c.25.933.617,1.815,1.089,2.633l-1.436,3.351,2.121,2.121,3.351-1.436c.817.472,1.7.838,2.633,1.089l1.355,3.388h3l1.355-3.388c.933-.25,1.815-.617,2.633-1.089l3.351,1.436,2.121-2.121-1.436-3.351c.472-.817.838-1.7,1.089-2.633l3.388-1.355Z\"\r\n                />\r\n            </svg>\r\n        </motion.div>\r\n    );\r\n};\r\n\r\nexport default GearIcon;\r\n",
+      "type": "registry:ui"
+    },
+    {
+      "path": "icons/types.ts",
+      "content": "export interface AnimatedIconProps {\r\n    /** Icon size in pixels or CSS string */\r\n    size?: number | string;\r\n    /** Icon color (defaults to currentColor) */\r\n    color?: string;\r\n    /** SVG stroke width */\r\n    strokeWidth?: number;\r\n    /** Additional CSS classes */\r\n    className?: string;\r\n}\r\n",
+      "type": "registry:ui"
+    }
+  ],
+  "type": "registry:ui"
+}

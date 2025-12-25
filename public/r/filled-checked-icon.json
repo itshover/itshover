@@ -1,0 +1,20 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "filled-checked-icon",
+  "dependencies": ["motion"],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "icons/FilledCheckedIcon.tsx",
+      "content": "import { AnimatedIconProps } from \"./types\";\nimport { motion, useAnimate } from \"motion/react\";\nimport React from \"react\";\n\nconst FilledCheckedIcon = ({\n    size = 24,\n    color = \"currentColor\",\n    strokeWidth = 2,\n    className = \"\"\n}: AnimatedIconProps) => {\n  const [scope, animate] = useAnimate();\n  const hoverAnimation = async () => {\n    // Scale up SVG and animate circle\n    await animate(\n      \"svg\",\n      {\n        scale: 1.1,\n      },\n      {\n        duration: 0.1,\n        ease: \"easeInOut\",\n      },\n    );\n\n    // Pulse the filled circle\n    animate(\n      \".filled-circle\",\n      {\n        scale: 1.15,\n        opacity: 0.8,\n      },\n      {\n        duration: 0.15,\n        ease: \"easeOut\",\n      },\n    );\n\n    // Reset checkmark path\n    await animate(\n      \".check-icon\",\n      {\n        pathLength: 0,\n      },\n      {\n        duration: 0.1,\n        ease: \"easeInOut\",\n      },\n    );\n\n    // Animate circle back while drawing checkmark\n    animate(\n      \".filled-circle\",\n      {\n        scale: 1,\n        opacity: 1,\n      },\n      {\n        duration: 0.3,\n        ease: \"easeInOut\",\n      },\n    );\n\n    // Draw checkmark\n    await animate(\n      \".check-icon\",\n      {\n        pathLength: 1,\n      },\n      {\n        duration: 0.4,\n        ease: \"easeInOut\",\n      },\n    );\n\n    // Scale SVG back to normal\n    await animate(\n      \"svg\",\n      {\n        scale: 1,\n      },\n      {\n        duration: 0.2,\n        ease: \"easeInOut\",\n      },\n    );\n  };\n  return (\n    <motion.div\n      ref={scope}\n      onHoverStart={() => {\n        hoverAnimation();\n      }}\n    >\n      <svg\n        xmlns=\"http://www.w3.org/2000/svg\"\n        width={size}\n        height={size}\n        viewBox=\"0 0 24 24\"\n        fill=\"currentColor\"\n        className=\"\"\n      >\n        <path stroke=\"none\" d=\"M0 0h24v24H0z\" fill=\"none\" />\n        {/* Filled Circle */}\n        <motion.path\n          d=\"M17 3.34a10 10 0 1 1 -14.995 8.984l-.005 -.324l.005 -.324a10 10 0 0 1 14.995 -8.336z\"\n          className={`filled-circle ${className}`}\n          style={{ transformOrigin: \"center\" }}\n        />\n        {/* Checkmark */}\n        <motion.path\n          d=\"M15.707 9.293a1 1 0 0 0 -1.32 -.083l-.094 .083l-3.293 3.292l-1.293 -1.292l-.094 -.083a1 1 0 0 0 -1.403 1.403l.083 .094l2 2l.094 .083a1 1 0 0 0 1.226 0l.094 -.083l4 -4l.083 -.094a1 1 0 0 0 -.083 -1.32z\"\n          className=\"check-icon\"\n          fill=\"black\"\n        />\n      </svg>\n    </motion.div>\n  );\n};\n\nexport default FilledCheckedIcon;\n",
+      "type": "registry:ui"
+    },
+    {
+      "path": "icons/types.ts",
+      "content": "export interface AnimatedIconProps {\r\n    /** Icon size in pixels or CSS string */\r\n    size?: number | string;\r\n    /** Icon color (defaults to currentColor) */\r\n    color?: string;\r\n    /** SVG stroke width */\r\n    strokeWidth?: number;\r\n    /** Additional CSS classes */\r\n    className?: string;\r\n}\r\n",
+      "type": "registry:ui"
+    }
+  ],
+  "type": "registry:ui"
+}

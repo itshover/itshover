@@ -1,0 +1,20 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "text-icon",
+  "dependencies": ["motion"],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "icons/TextIcon.tsx",
+      "content": "import { AnimatedIconProps } from \"./types\";\nimport { motion, useAnimate } from \"motion/react\";\r\n\r\nconst TextIcon = ({\n    size = 24,\n    color = \"currentColor\",\n    strokeWidth = 2,\n    className = \"\"\n}: AnimatedIconProps) => {\r\n    const [scope, animate] = useAnimate();\r\n\r\n    const hoverAnimation = async () => {\r\n        // Add your animations here\r\n    };\r\n\r\n    return (\r\n        <motion.div\r\n            ref={scope}\r\n            onHoverStart={hoverAnimation}\r\n            className={`inline-flex cursor-pointer ${className}`}\r\n        >\r\n            <svg\r\n                xmlns=\"http://www.w3.org/2000/svg\"\r\n                width={size}\r\n                height={size}\r\n                viewBox=\"0 0 48 48\"\r\n                fill=\"currentColor\"\r\n            >\r\n                {/* Vertical line */}\r\n                <motion.path\r\n                    className=\"text-line\"\r\n                    fillRule=\"evenodd\"\r\n                    clipRule=\"evenodd\"\r\n                    d=\"M35.5 3.5V43H32.5V3.5H35.5Z\"\r\n                />\r\n\r\n                {/* Z letter */}\r\n                <motion.path\r\n                    className=\"text-z\"\r\n                    fillRule=\"evenodd\"\r\n                    clipRule=\"evenodd\"\r\n                    d=\"M6.5 26H21.5V29.1627L10.4518 41H21.5V44H6.5V40.8373L17.5482 29H6.5V26Z\"\r\n                />\r\n\r\n                {/* A letter */}\r\n                <motion.path\r\n                    className=\"text-a\"\r\n                    fillRule=\"evenodd\"\r\n                    clipRule=\"evenodd\"\r\n                    d=\"M11.7802 4H16.0532L22.5532 22H18.7V20.1625L13.9469 7H13.8865L9.13335 20.1625V22H5.28021L11.7802 4Z\"\r\n                />\r\n\r\n                {/* A crossbar */}\r\n                <motion.path\r\n                    className=\"text-a-bar\"\r\n                    fillRule=\"evenodd\"\r\n                    clipRule=\"evenodd\"\r\n                    d=\"M19.5 18H8.5V15H19.5V18Z\"\r\n                />\r\n\r\n                {/* Arrow down */}\r\n                <motion.path\r\n                    className=\"text-arrow\"\r\n                    style={{ transformOrigin: \"34px 38px\" }}\r\n                    fillRule=\"evenodd\"\r\n                    clipRule=\"evenodd\"\r\n                    d=\"M25 31.8787L34 40.8787L43 31.8787L45.1213 34L34 45.1213L22.8787 34L25 31.8787Z\"\r\n                />\r\n            </svg>\r\n        </motion.div>\r\n    );\r\n};\r\n\r\nexport default TextIcon;\r\n",
+      "type": "registry:ui"
+    },
+    {
+      "path": "icons/types.ts",
+      "content": "export interface AnimatedIconProps {\r\n    /** Icon size in pixels or CSS string */\r\n    size?: number | string;\r\n    /** Icon color (defaults to currentColor) */\r\n    color?: string;\r\n    /** SVG stroke width */\r\n    strokeWidth?: number;\r\n    /** Additional CSS classes */\r\n    className?: string;\r\n}\r\n",
+      "type": "registry:ui"
+    }
+  ],
+  "type": "registry:ui"
+}

@@ -1,0 +1,20 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "instagram",
+  "dependencies": ["motion"],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "icons/Instagram.tsx",
+      "content": "import { AnimatedIconProps } from \"./types\";\nimport { motion, useAnimate } from \"motion/react\";\n\nconst Instagram = ({\n    size = 24,\n    color = \"currentColor\",\n    strokeWidth = 2,\n    className = \"\"\n}: AnimatedIconProps) => {\n    const [scope, animate] = useAnimate();\n\n    const hoverAnimation = async () => {\n        // Camera body\n        animate(\n            \".ig-body\",\n            { scale: [1, 1.05, 1] },\n            { duration: 0.3, ease: \"easeOut\" },\n        );\n\n        // Lens focus pop\n        await animate(\n            \".ig-lens\",\n            { scale: [1, 1.2, 1] },\n            { duration: 0.25, ease: \"easeOut\" },\n        );\n\n        // Dot blink\n        animate(\n            \".ig-dot\",\n            { opacity: [1, 0, 1] },\n            { duration: 0.2, ease: \"easeInOut\" },\n        );\n    };\n\n    return (\n        <motion.div\n            ref={scope}\n            onHoverStart={hoverAnimation}\n            className={`inline-flex cursor-pointer ${className}`}\n        >\n            <svg\n                xmlns=\"http://www.w3.org/2000/svg\"\n                width={size}\n                height={size}\n                viewBox=\"0 0 24 24\"\n                fill=\"none\"\n                stroke={color}\n                strokeWidth={strokeWidth}\n                strokeLinecap=\"round\"\n                strokeLinejoin=\"round\"\n            >\n                {/* Camera body */}\n                <motion.path\n                    className=\"ig-body\"\n                    style={{ transformOrigin: \"50% 50%\" }}\n                    d=\"M4 8a4 4 0 0 1 4 -4h8a4 4 0 0 1 4 4v8a4 4 0 0 1 -4 4h-8a4 4 0 0 1 -4 -4z\"\n                />\n\n                {/* Lens */}\n                <motion.path\n                    className=\"ig-lens\"\n                    style={{ transformOrigin: \"50% 50%\" }}\n                    d=\"M9 12a3 3 0 1 0 6 0a3 3 0 0 0 -6 0\"\n                />\n\n                {/* Flash dot */}\n                <motion.path className=\"ig-dot\" d=\"M16.5 7.5v.01\" />\n            </svg>\n        </motion.div>\n    );\n};\n\nexport default Instagram;\n",
+      "type": "registry:ui"
+    },
+    {
+      "path": "icons/types.ts",
+      "content": "export interface AnimatedIconProps {\r\n    /** Icon size in pixels or CSS string */\r\n    size?: number | string;\r\n    /** Icon color (defaults to currentColor) */\r\n    color?: string;\r\n    /** SVG stroke width */\r\n    strokeWidth?: number;\r\n    /** Additional CSS classes */\r\n    className?: string;\r\n}\r\n",
+      "type": "registry:ui"
+    }
+  ],
+  "type": "registry:ui"
+}
