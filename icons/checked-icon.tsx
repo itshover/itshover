@@ -5,7 +5,7 @@ import { motion, useAnimate } from "motion/react";
 const CheckedIcon = ({
   size = 24,
   color = "currentColor",
-  strokeWidth = 2,
+  strokeWidth = 1,
   className = "",
 }: AnimatedIconProps) => {
   const [scope, animate] = useAnimate();
@@ -66,9 +66,9 @@ const CheckedIcon = ({
         viewBox="0 0 24 24"
         fill="none"
         stroke={color}
-        stroke-width="2"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeWidth={strokeWidth}
+        strokeLinecap="round"
+        strokeLinejoin="round"
         className={`cursor-pointer ${className}`}
       >
         <motion.path stroke="none" d="M0 0h24v24H0z" fill="none" />

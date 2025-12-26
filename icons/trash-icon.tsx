@@ -13,7 +13,7 @@ const TrashIcon = ({
   keepOpenOnDelete = false,
   size = 24,
   color = "currentColor",
-  strokeWidth = 2,
+  strokeWidth = 1,
   className = "",
 }: TrashIconProps) => {
   const [scope, animate] = useAnimate();
@@ -51,9 +51,9 @@ const TrashIcon = ({
   const hoverAnimation = async () => {
     await openLid();
 
-    if (!keepOpenOnDelete) {
-      await closeLid();
-    }
+    // if (!keepOpenOnDelete) {
+    //   await closeLid();
+    // }
   };
 
   const clickAnimation = async () => {
@@ -98,7 +98,10 @@ const TrashIcon = ({
         await hoverAnimation();
         await dangerHoverAnimation();
       }}
-      onHoverEnd={resetColor}
+      onHoverEnd={() => {
+        resetColor()
+        closeLid()
+      }}
       onTap={clickAnimation}
     >
       <svg

@@ -4,7 +4,7 @@ import { motion, useAnimate } from "motion/react";
 const ShieldCheck = ({
   size = 24,
   color = "currentColor",
-  strokeWidth = 2,
+  strokeWidth = 1,
   className = "",
 }: AnimatedIconProps) => {
   const [scope, animate] = useAnimate();
@@ -63,7 +63,7 @@ const ShieldCheck = ({
         {/* Checkmark */}
         <motion.path
           className="shield-check"
-          initial={{ pathLength: 0, opacity: 0 }}
+          // initial={{ pathLength: 0, opacity: 0 }}
           d="M15 19l2 2l4 -4"
         />
       </svg>

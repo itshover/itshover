@@ -10,13 +10,38 @@ const BookmarkIcon = ({
   const [scope, animate] = useAnimate();
 
   const hoverAnimation = async () => {
-    // Add your animations here
+    await animate(
+      ".bookmark-body",
+      {
+        scaleY: 0.9,
+        y: 2,
+      },
+      {
+        duration: 0.18,
+        ease: "easeOut",
+      }
+    );
+  };
+
+  const resetAnimation = async () => {
+    await animate(
+      ".bookmark-body",
+      {
+        scaleY: 1,
+        y: 0,
+      },
+      {
+        duration: 0.18,
+        ease: "easeInOut",
+      }
+    );
   };
 
   return (
     <motion.div
       ref={scope}
       onHoverStart={hoverAnimation}
+      onHoverEnd={resetAnimation}
       className={`inline-flex cursor-pointer ${className}`}
     >
       <svg
@@ -33,7 +58,7 @@ const BookmarkIcon = ({
         {/* Bookmark body */}
         <motion.path
           className="bookmark-body"
-          style={{ transformOrigin: "24px 24px" }}
+          style={{ transformOrigin: "50% 20%" }}
           d="M24 34L41 44V8C41 5.23858 38.7614 3 36 3H12C9.23858 3 7 5.23858 7 8V44L24 34Z"
         />
       </svg>

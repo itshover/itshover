@@ -4,7 +4,7 @@ import { motion, useAnimate } from "motion/react";
 const CreditCard = ({
   size = 24,
   color = "currentColor",
-  strokeWidth = 2,
+  strokeWidth = 1,
   className = "",
 }: AnimatedIconProps) => {
   const [scope, animate] = useAnimate();

@@ -1,5 +1,6 @@
 import { AnimatedIconProps } from "./types";
 import BatteryIcon from "./battery-icon";
+import BatteryChargingIcon from "./battery-charging-icon";
 import BatteryPauseIcon from "./battery-pause-icon";
 import BookIcon from "./book-icon";
 import BookmarkIcon from "./bookmark-icon";
@@ -29,11 +30,11 @@ import ShieldCheck from "./shield-check";
 import ShoppingCartIcon from "./shopping-cart-icon";
 import SimpleCheckedIcon from "./simple-checked-icon";
 import SkullEmoji from "./skull-emoji";
-import StadiumIcon from "./stadium-icon";
+import TelephoneIcon from "./telephone-icon";
 import TextIcon from "./text-icon";
 import ToggleIcon from "./toggle-icon";
 import TrashIcon from "./trash-icon";
-import TreeIcon from "./tree-icon";
+import GlobeIcon from "./globe-icon";
 import WhatsappIcon from "./whatsapp-icon";
 
 export interface IconType {
@@ -52,6 +53,11 @@ const ICON_LIST: IconType[] = [
     name: "battery-icon",
     icon: BatteryIcon,
     keywords: ["battery", "charging", "bolt"],
+  },
+  {
+    name: "battery-charging-icon",
+    icon: BatteryChargingIcon,
+    keywords: ["battery", "charging", "power"],
   },
   {
     name: "battery-pause-icon",
@@ -199,9 +205,9 @@ const ICON_LIST: IconType[] = [
     keywords: ["skull", "death", "danger", "warning"],
   },
   {
-    name: "stadium-icon",
-    icon: StadiumIcon,
-    keywords: ["stadium", "arena", "sports", "game"],
+    name: "telephone-icon",
+    icon: TelephoneIcon,
+    keywords: ["telephone", "call", "phone", "contact"],
   },
   {
     name: "text-icon",
@@ -224,15 +230,15 @@ const ICON_LIST: IconType[] = [
     ],
   },
   {
-    name: "tree-icon",
-    icon: TreeIcon,
-    keywords: ["tree", "nature", "forest", "plant"],
+    name: "globe-icon",
+    icon: GlobeIcon,
+    keywords: ["globe", "world", "earth", "planet"],
   },
   {
     name: "whatsapp-icon",
     icon: WhatsappIcon,
     keywords: ["whatsapp", "chat", "message", "social"],
   },
-];
+].sort((a, b) => a.name.localeCompare(b.name));
 
 export { ICON_LIST };

@@ -4,7 +4,7 @@ import { motion, useAnimate } from "motion/react";
 const PenIcon = ({
   size = 24,
   color = "currentColor",
-  strokeWidth = 2,
+  strokeWidth = 1.3,
   className = "",
 }: AnimatedIconProps) => {
   const [scope, animate] = useAnimate();
@@ -90,7 +90,7 @@ const PenIcon = ({
           y1="5.969"
           x2="26.031"
           y2="11.969"
-          initial={{ pathLength: 0, opacity: 0 }}
+          initial={{ pathLength: 0, opacity: 1 }}
         />
 
         {/* Pen */}

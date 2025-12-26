@@ -11,6 +11,29 @@ const DoubleCheckIcon = ({
 
   const hoverAnimation = async () => {
     // Add your animations here
+    await animate(
+      ".check-first",
+      {
+        pathLength: [0, 1],
+        opacity: [0, 1],
+      },
+      {
+        duration: 0.5,
+        ease: "easeInOut",
+      },
+    );
+
+    await animate(
+      ".check-second",
+      {
+        pathLength: [0, 1],
+        opacity: [0, 1],
+      },
+      {
+        duration: 0.5,
+        ease: "easeInOut",
+      },
+    );
   };
 
   return (
