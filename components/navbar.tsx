@@ -29,7 +29,6 @@ const Navbar = () => {
             <div className="relative flex h-8 w-8 items-center justify-center rounded-md border border-slate-800 bg-black text-sm text-white antialiased md:h-6 md:w-6">
               <div className="absolute inset-x-0 -top-10 h-10 w-full rounded-full bg-white/20 blur-xl"></div>
               <div className="text-primary relative z-20 text-sm">
-                {/* Logo placeholder or image */}
                 <div className="bg-primary h-4 w-4 rounded-full" />
               </div>
             </div>
@@ -61,14 +60,14 @@ const Navbar = () => {
           <Link
             target="__blank"
             className="hover:text-foreground/80 text-foreground/60 mr-3 flex items-center justify-center text-sm font-medium transition-colors"
-            href="https://discord.gg/ftZbQvCdN7"
+            href=""
           >
             <TwitterXIcon className="h-4 w-4 text-neutral-500 dark:text-neutral-500" />
           </Link>
           <Link
             target="__blank"
             className="hover:text-foreground/80 text-foreground/60 flex items-center justify-center text-sm font-medium transition-colors"
-            href="https://x.com/abhijitwt"
+            href=""
           >
             <GithubIcon size={18} />
           </Link>
@@ -96,7 +95,6 @@ const Navbar = () => {
           </button>
         </div>
 
-        {/* Mobile Menu Button */}
         <div className="flex items-center md:hidden">
           <ModeToggle />
           <button
@@ -112,39 +110,9 @@ const Navbar = () => {
         </div>
       </div>
 
-      {/* Mobile Menu Overlay */}
       {isMobileMenuOpen && (
         <div className="bg-background absolute top-16 left-0 z-50 w-full border-b p-4 shadow-lg md:hidden">
           <nav className="flex flex-col space-y-4">
-            <Link
-              className="hover:text-foreground/80 text-muted-foreground text-sm font-medium transition-colors"
-              href="/components"
-              onClick={() => setIsMobileMenuOpen(false)}
-            >
-              Components
-            </Link>
-            <Link
-              className="hover:text-foreground/80 text-muted-foreground text-sm font-medium transition-colors"
-              target="_blank"
-              href="https://pro.aceternity.com/templates"
-              onClick={() => setIsMobileMenuOpen(false)}
-            >
-              Templates
-            </Link>
-            <Link
-              className="hover:text-foreground/80 text-muted-foreground text-sm font-medium transition-colors"
-              href="/pricing"
-              onClick={() => setIsMobileMenuOpen(false)}
-            >
-              Pricing
-            </Link>
-            <Link
-              className="hover:text-foreground/80 text-muted-foreground text-sm font-medium transition-colors"
-              href="/showcase"
-              onClick={() => setIsMobileMenuOpen(false)}
-            >
-              Showcase
-            </Link>
             <Link
               className="hover:text-foreground/80 text-muted-foreground text-sm font-medium transition-colors"
               href="/icons"
@@ -152,14 +120,50 @@ const Navbar = () => {
             >
               Icons
             </Link>
-            <div className="flex items-center space-x-4 pt-4">
-              <Link
-                target="__blank"
-                className="hover:text-foreground/80 text-foreground/60 text-sm font-medium transition-colors"
-                href="/playground"
-              >
-                Playground
-              </Link>
+            <Link
+              className="hover:text-foreground/80 text-muted-foreground text-sm font-medium transition-colors"
+              href="/sponsor"
+              onClick={() => setIsMobileMenuOpen(false)}
+            >
+              Sponsor
+            </Link>
+
+            <button
+              onClick={() => {
+                setIsMobileMenuOpen(false);
+                toggleCommandMenu();
+              }}
+              className="text-muted-foreground flex w-full items-center justify-between rounded-lg border border-white/10 bg-white/5 px-3 py-2 text-sm"
+            >
+              <div className="flex items-center gap-2">
+                <MagnifierIcon className="text-neutral-500" size={16} />
+                <span>Search...</span>
+              </div>
+              <Kbd>
+                <span className="text-xs">⌘</span>K
+              </Kbd>
+            </button>
+
+            <div className="flex items-center justify-between border-t border-white/10 pt-4">
+              <div className="flex items-center gap-4">
+                <Link
+                  target="_blank"
+                  className="hover:text-foreground/80 text-foreground/60 text-sm font-medium transition-colors"
+                  href=""
+                  onClick={() => setIsMobileMenuOpen(false)}
+                >
+                  <GithubIcon size={20} />
+                </Link>
+                <Link
+                  target="_blank"
+                  className="hover:text-foreground/80 text-foreground/60 text-sm font-medium transition-colors"
+                  href=""
+                  onClick={() => setIsMobileMenuOpen(false)}
+                >
+                  <TwitterXIcon size={20} />
+                </Link>
+              </div>
+              <GithubStars />
             </div>
           </nav>
         </div>

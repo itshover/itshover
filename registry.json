@@ -1,7 +1,7 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry.json",
   "name": "intent-ui",
-  "homepage": "https://abhijit.website",
+  "homepage": "https://intent-ui.vercel.app",
   "items": [
     {
       "name": "battery-icon",

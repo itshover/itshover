@@ -23,7 +23,6 @@ const SponsorPage = () => {
   return (
     <div className="bg-background text-foreground min-h-screen py-24">
       <div className="container mx-auto max-w-5xl px-4">
-        {/* Hero Section */}
         <div className="mb-16 text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -41,19 +40,13 @@ const SponsorPage = () => {
             </p>
             <div className="flex justify-center gap-4">
               <Button asChild size="lg" className="gap-2">
-                <Link
-                  href="https://twitter.com/intent/tweet?text=Check%20out%20this%20awesome%20animated%20icons%20library!%20%40yourhandle"
-                  target="_blank"
-                >
+                <Link href="" target="_blank">
                   <MessageSquare className="h-4 w-4" />
                   Leave Feedback
                 </Link>
               </Button>
               <Button asChild variant="outline" size="lg" className="gap-2">
-                <Link
-                  href="https://github.com/yourusername/yourrepo"
-                  target="_blank"
-                >
+                <Link href="" target="_blank">
                   <Github className="h-4 w-4" />
                   Star on GitHub
                 </Link>
@@ -62,9 +55,7 @@ const SponsorPage = () => {
           </motion.div>
         </div>
 
-        {/* Sponsorship Options */}
         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-          {/* Buy Me a Coffee */}
           <SponsorCard
             title="Buy Me a Coffee"
             description="Support with a small donation."
@@ -75,23 +66,19 @@ const SponsorPage = () => {
               asChild
               className="w-full bg-[#FFDD00] text-black hover:bg-[#FFDD00]/90"
             >
-              <Link
-                href="https://buymeacoffee.com/yourusername"
-                target="_blank"
-              >
+              <Link href="" target="_blank">
                 Buy Me a Coffee
               </Link>
             </Button>
           </SponsorCard>
 
-          {/* UPI */}
           <SponsorCard
             title="UPI"
             description="Direct transfer via UPI."
             icon={<QrCode className="h-6 w-6 text-blue-500" />}
             delay={0.2}
           >
-            <CopyField label="UPI ID" value="username@upi" />
+            <CopyField label="UPI ID" value="" />
           </SponsorCard>
 
           {/* Solana */}
@@ -115,7 +102,6 @@ const SponsorPage = () => {
                     </SponsorCard> */}
         </div>
 
-        {/* Recent Sponsors */}
         <div className="mt-24 mb-16">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -150,7 +136,6 @@ const SponsorPage = () => {
           </motion.div>
         </div>
 
-        {/* GitHub Star CTA */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -168,10 +153,7 @@ const SponsorPage = () => {
               more!
             </p>
             <Button asChild size="lg" variant="secondary" className="gap-2">
-              <Link
-                href="https://github.com/yourusername/yourrepo"
-                target="_blank"
-              >
+              <Link href="" target="_blank">
                 <Github className="h-4 w-4" />
                 Star Repository
               </Link>

@@ -1,6 +1,4 @@
 "use client";
-
-import React from "react";
 import Link from "next/link";
 import { motion } from "motion/react";
 
@@ -18,7 +16,7 @@ const Footer = () => {
           <p className="text-muted-foreground text-center text-sm leading-loose md:text-left">
             Built by{" "}
             <Link
-              href="https://twitter.com/abhijitwt"
+              href=""
               target="_blank"
               rel="noreferrer"
               className="font-medium underline underline-offset-4"
@@ -27,7 +25,7 @@ const Footer = () => {
             </Link>
             . The source code is available on{" "}
             <Link
-              href="https://github.com/mannupaaji/animated-svgs"
+              href=""
               target="_blank"
               rel="noreferrer"
               className="font-medium underline underline-offset-4"

@@ -30,10 +30,7 @@ const CTASection = () => {
               <ArrowNarrowRightIcon />
             </PrimaryButton>
           </Link>
-          <Link
-            href="https://github.com/mannupaaji/animated-svgs"
-            target="_blank"
-          >
+          <Link href="" target="_blank">
             <SecondaryButton>Star on GitHub</SecondaryButton>
           </Link>
         </div>

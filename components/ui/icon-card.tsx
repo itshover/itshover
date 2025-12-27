@@ -9,6 +9,7 @@ import { getIconsContent } from "@/actions/get-icons-content";
 import SimpleCheckedIcon from "@/icons/simple-checked-icon";
 import CopyIcon from "@/icons/copy-icon";
 import TerminalIcon from "@/icons/terminal-icon";
+import Link from "next/link";
 
 const IconCard = ({
   name,
@@ -29,15 +30,18 @@ const IconCard = ({
   };
 
   return (
-    <div className="bg-background flex flex-col items-center justify-center gap-4 rounded-lg border p-4 shadow-sm transition-all hover:shadow-md sm:w-48">
-      <div className="flex items-center justify-center p-2">
+    <div className="bg-background flex min-w-[140px] flex-1 flex-col items-center justify-center gap-4 rounded-lg border p-4 shadow-sm transition-all hover:shadow-md sm:w-48 sm:flex-none">
+      <Link
+        href={`/icons/${name}`}
+        className="flex cursor-pointer items-center justify-center p-2 transition-transform hover:scale-110"
+      >
         <Tooltip>
           <TooltipTrigger>
             <Icon size={56} />
           </TooltipTrigger>
           <TooltipContent>{name}</TooltipContent>
         </Tooltip>
-      </div>
+      </Link>
 
       <div className="flex items-center gap-2">
         <Tooltip>

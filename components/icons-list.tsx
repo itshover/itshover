@@ -90,7 +90,7 @@ const IconList = () => {
       transition={{ duration: 0.4 }}
     >
       <motion.div
-        className="mb-10 ml-20"
+        className="mx-4 mb-10 px-4 sm:ml-20 sm:px-0"
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.4, delay: 0.1 }}
@@ -99,14 +99,15 @@ const IconList = () => {
           ref={searchInputRef}
           value={searchQuery}
           onChange={setSearchQuery}
-          className="w-1/2"
+          placeholder="Search Icons... (⌘ + F)"
+          className="w-full md:w-1/2"
         />
       </motion.div>
 
       <AnimatePresence mode="wait">
         <motion.div
           key={searchQuery || "all"}
-          className="max-w-8xl flex flex-wrap items-center justify-start gap-4 sm:ml-20"
+          className="max-w-8xl flex flex-wrap items-center justify-center gap-4 px-4 sm:mr-2 sm:ml-20 sm:justify-start sm:px-0"
           variants={containerVariants}
           initial="hidden"
           animate="visible"

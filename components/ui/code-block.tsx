@@ -53,14 +53,25 @@ export const CodeBlock = ({ command, className }: CodeBlockProps) => {
         className="relative"
       >
         <div className="border-foreground/10 bg-background/5 flex items-center justify-between border-b px-4 py-2 backdrop-blur-sm">
-          <TabsList className="h-8 bg-transparent p-0">
+          <TabsList className="relative h-8 bg-transparent p-0">
             {packageManagers.map((pm) => (
               <TabsTrigger
                 key={pm}
                 value={pm}
-                className="text-foreground hover:text-foreground/70 data-[state=active]:bg-background/10 data-[state=active]:text-accent-foreground relative h-8 rounded-md px-3 text-xs font-medium transition-colors"
+                className="text-foreground/60 hover:text-foreground/80 data-[state=active]:text-foreground relative z-10 h-8 rounded-md px-3 text-xs font-medium transition-colors"
               >
-                {pm}
+                {activeTab === pm && (
+                  <motion.div
+                    layoutId="activeTab"
+                    className="bg-foreground/10 absolute inset-0 rounded-md"
+                    transition={{
+                      type: "spring",
+                      stiffness: 500,
+                      damping: 30,
+                    }}
+                  />
+                )}
+                <span className="relative z-10">{pm}</span>
               </TabsTrigger>
             ))}
           </TabsList>

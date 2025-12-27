@@ -58,10 +58,7 @@ const Hero = () => {
             <ArrowRight className="ml-2 h-4 w-4" />
           </PrimaryButton>
         </Link>
-        <Link
-          href="https://github.com/mannupaaji/animated-svgs"
-          target="_blank"
-        >
+        <Link href="" target="_blank">
           <SecondaryButton className="cursor-pointer">Sponsor</SecondaryButton>
         </Link>
       </motion.div>
