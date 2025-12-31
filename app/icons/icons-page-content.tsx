@@ -3,6 +3,7 @@ import { CodeBlock } from "@/components/ui/code-block";
 import IconList from "@/components/icons-list";
 import Link from "next/link";
 import { motion } from "motion/react";
+import { LINKS } from "@/constants";
 
 const HeroSection = () => {
   return (
@@ -105,7 +106,7 @@ const HeroSection = () => {
               <div className="relative w-full max-w-xl">
                 <div className="from-primary/20 via-primary/10 absolute inset-0 -z-10 translate-y-4 scale-95 rounded-2xl bg-linear-to-br to-transparent opacity-50 blur-2xl" />
                 <CodeBlock
-                  command="@itshover/circle-chevron-down"
+                  command={`${LINKS.SITE_URL}/plug-connected-icon.json`}
                   className="shadow-2xl"
                 />
               </div>

@@ -25,13 +25,13 @@ export const CodeBlock = ({ command, className }: CodeBlockProps) => {
   const getCommand = (pm: string) => {
     switch (pm) {
       case "pnpm":
-        return `pnpm add ${command}`;
+        return `pnpm dlx shadcn@latest add ${command}`;
       case "yarn":
-        return `yarn add ${command}`;
+        return `yarn shadcn@latest add ${command}`;
       case "bun":
-        return `bun add ${command}`;
+        return `bunx --bun shadcn@latest add ${command}`;
       default:
-        return `npm install ${command}`;
+        return `npx shadcn@latest add ${command}`;
     }
   };
 

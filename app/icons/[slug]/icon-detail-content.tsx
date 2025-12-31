@@ -9,6 +9,7 @@ import { getIconsContent } from "@/actions/get-icons-content";
 import { CodeBlock } from "@/components/ui/code-block";
 import ArrowNarrowLeftIcon from "@/icons/arrow-narrow-left-icon";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { LINKS } from "@/constants";
 
 export default function IconDetailContent({ slug }: { slug: string }) {
   const [iconCode, setIconCode] = React.useState<string>("");
@@ -71,7 +72,7 @@ export default function IconDetailContent({ slug }: { slug: string }) {
 
           <div className="mt-8 flex flex-col gap-8 md:flex-row md:gap-16">
             {/* Left Section - Icon Preview */}
-            <div className="flex flex-col items-center md:w-[300px] md:flex-shrink-0">
+            <div className="flex flex-col items-center md:w-[300px] md:shrink-0">
               <motion.div
                 className="bg-muted/30 flex aspect-square w-full max-w-xs items-center justify-center rounded-2xl border p-12"
                 initial={{ scale: 0.9, opacity: 0 }}
@@ -133,7 +134,7 @@ export default function IconDetailContent({ slug }: { slug: string }) {
                 <TabsContent value="cli" className="mt-0 space-y-4">
                   <div>
                     <CodeBlock
-                      command={`@itshover/${iconData.name}`}
+                      command={`${LINKS.SITE_URL}/${iconData.name}.json`}
                       className="w-full"
                     />
                   </div>

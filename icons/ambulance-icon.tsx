@@ -12,8 +12,8 @@ const AmbulanceIcon = ({
   const hoverAnimation = async () => {
     animate(
       ".ambulance",
-      { x: [0, 5, 0] },
-      { duration: 0.6, ease: "easeInOut" },
+      { x: [0, 1, 0, -1] },
+      { duration: 0.6, ease: "easeInOut", repeat: Infinity },
     );
     animate(
       ".plus",

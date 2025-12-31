@@ -754,11 +754,6 @@ const ICON_LIST: IconType[] = [
     keywords: ["message", "chat", "bubble", "talk", "conversation"],
   },
   {
-    name: "moon-icon",
-    icon: MoonIcon,
-    keywords: ["moon", "night", "dark", "sleep", "theme"],
-  },
-  {
     name: "pen-icon",
     icon: PenIcon,
     keywords: ["pen", "edit", "write", "modify"],

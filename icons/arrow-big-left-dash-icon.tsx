@@ -4,12 +4,13 @@ import { motion, useAnimate } from "motion/react";
 const ArrowBigLeftDashIcon = ({
   size = 40,
   className = "",
+  strokeWidth = 2,
 }: AnimatedIconProps) => {
   const [scope, animate] = useAnimate();
 
   const hoverAnimation = async () => {
-    animate(".arrow", { x: [0, -4, 0] }, { duration: 0.5 });
-    animate(".dash", { opacity: [1, 0.5, 1] }, { duration: 0.5 });
+    animate(".arrow", { x: [0, -4] }, { duration: 0.5 });
+    animate(".dash", { opacity: [1, 0.5] }, { duration: 0.5 });
   };
 
   const resetAnimation = async () => {
@@ -28,7 +29,7 @@ const ArrowBigLeftDashIcon = ({
       viewBox="0 0 24 24"
       fill="none"
       stroke="currentColor"
-      strokeWidth="2"
+      strokeWidth={strokeWidth}
       strokeLinecap="round"
       strokeLinejoin="round"
       className={`cursor-pointer ${className}`}
