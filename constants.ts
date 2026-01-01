@@ -4,6 +4,7 @@ export const LINKS = {
   GITHUB: "https://github.com/itshover/itshover",
   SITE_URL: "https://itshover.com",
   CREATOR: "https://x.com/abhijitwt",
+  PRODUCT_HUNT: "https://www.producthunt.com/products/its-hover",
 } as const;
 
 export const SPONSOR = {

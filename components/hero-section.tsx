@@ -13,7 +13,11 @@ import LikeIcon from "@/icons/like-icon";
 import SendIcon from "@/icons/send-icon";
 import GhostIcon from "@/icons/ghost-icon";
 import ArrowNarrowRightIcon from "@/icons/arrow-narrow-right-icon";
+import { useTheme } from "next-themes";
+import Image from "next/image";
+
 const Hero = () => {
+  const { theme } = useTheme();
   const textAnimation = {
     initial: {
       opacity: 0,
@@ -58,8 +62,22 @@ const Hero = () => {
           </FloatingIcon>
         </div>
       </div>
-      <div className="mb-6">
+      <div className="mb-6 flex flex-col items-center gap-3">
         <GithubBadge />
+        <a
+          href="https://www.producthunt.com/products/its-hover?embed=true&utm_source=badge-featured&utm_medium=badge&utm_campaign=badge-its-hover"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-block"
+        >
+          <Image
+            width={200}
+            height={200}
+            alt="Its Hover - Icons that move and react mirroring user intent | Product Hunt"
+            className="h-auto w-[200px] sm:w-[220px]"
+            src={`https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=1056670&theme=${theme === "dark" ? "dark" : "light"}`}
+          />
+        </a>
       </div>
       <div className="max-w-3xl space-y-4">
         <motion.h1
