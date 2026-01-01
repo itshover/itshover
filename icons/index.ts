@@ -177,6 +177,26 @@ import Volume2Icon from "./volume-2-icon";
 import VolumeXIcon from "./volume-x-icon";
 import XIcon from "./x-icon";
 import YoutubeIcon from "./youtube-icon";
+import FingerprintIcon from "./fingerprint-icon";
+import ShieldLockIcon from "./shield-lock-icon";
+import ZapIcon from "./zap-icon";
+import CloudDownloadIcon from "./cloud-download-icon";
+import CompassIcon from "./compass-icon";
+import CommandIcon from "./command-icon";
+import Layers3dIcon from "./layers-3d-icon";
+import WandIcon from "./wand-icon";
+import BellRingIcon from "./bell-ring-icon";
+import CrownIcon from "./crown-icon";
+import SunIcon from "./sun-icon";
+import DownloadIcon from "./download-icon";
+import UploadIcon from "./upload-icon";
+import ShareIcon from "./share-icon";
+import FilterIcon from "./filter-icon";
+import CalendarIcon from "./calendar-icon";
+import MicrophoneIcon from "./microphone-icon";
+import ClipboardIcon from "./clipboard-icon";
+import PinIcon from "./pin-icon";
+import BoltIcon from "./bolt-icon";
 
 export interface IconType {
   name: string;
@@ -1283,6 +1303,106 @@ const ICON_LIST: IconType[] = [
     name: "target-icon",
     icon: TargetIcon,
     keywords: ["target", "aim", "goal", "focus", "bullseye", "center"],
+  },
+  {
+    name: "fingerprint-icon",
+    icon: FingerprintIcon,
+    keywords: ["fingerprint", "biometric", "security", "identity", "auth", "scan"],
+  },
+  {
+    name: "shield-lock-icon",
+    icon: ShieldLockIcon,
+    keywords: ["shield", "lock", "security", "protection", "safe", "privacy"],
+  },
+  {
+    name: "zap-icon",
+    icon: ZapIcon,
+    keywords: ["zap", "lightning", "bolt", "energy", "power", "flash", "electric"],
+  },
+  {
+    name: "cloud-download-icon",
+    icon: CloudDownloadIcon,
+    keywords: ["cloud", "download", "save", "storage", "sync", "file"],
+  },
+  {
+    name: "compass-icon",
+    icon: CompassIcon,
+    keywords: ["compass", "navigation", "direction", "north", "map", "explore"],
+  },
+  {
+    name: "command-icon",
+    icon: CommandIcon,
+    keywords: ["command", "key", "keyboard", "shortcut", "mac", "apple", "cmd"],
+  },
+  {
+    name: "layers-3d-icon",
+    icon: Layers3dIcon,
+    keywords: ["layers", "3d", "stack", "design", "depth", "overlay"],
+  },
+  {
+    name: "wand-icon",
+    icon: WandIcon,
+    keywords: ["wand", "magic", "ai", "generate", "create", "sparkle", "auto"],
+  },
+  {
+    name: "bell-ring-icon",
+    icon: BellRingIcon,
+    keywords: ["bell", "ring", "notification", "alert", "alarm", "reminder"],
+  },
+  {
+    name: "crown-icon",
+    icon: CrownIcon,
+    keywords: ["crown", "premium", "pro", "king", "queen", "royal", "vip"],
+  },
+  {
+    name: "sun-icon",
+    icon: SunIcon,
+    keywords: ["sun", "light", "day", "brightness", "weather", "sunny"],
+  },
+  {
+    name: "download-icon",
+    icon: DownloadIcon,
+    keywords: ["download", "save", "arrow", "file", "get"],
+  },
+  {
+    name: "upload-icon",
+    icon: UploadIcon,
+    keywords: ["upload", "send", "arrow", "file", "put", "share"],
+  },
+  {
+    name: "share-icon",
+    icon: ShareIcon,
+    keywords: ["share", "social", "network", "connect", "send"],
+  },
+  {
+    name: "filter-icon",
+    icon: FilterIcon,
+    keywords: ["filter", "funnel", "sort", "search", "refine"],
+  },
+  {
+    name: "calendar-icon",
+    icon: CalendarIcon,
+    keywords: ["calendar", "date", "schedule", "event", "time", "day"],
+  },
+  {
+    name: "microphone-icon",
+    icon: MicrophoneIcon,
+    keywords: ["microphone", "mic", "audio", "voice", "record", "speak"],
+  },
+  {
+    name: "clipboard-icon",
+    icon: ClipboardIcon,
+    keywords: ["clipboard", "paste", "copy", "board", "task"],
+  },
+  {
+    name: "pin-icon",
+    icon: PinIcon,
+    keywords: ["pin", "tack", "stick", "attach", "note", "pinned"],
+  },
+  {
+    name: "bolt-icon",
+    icon: BoltIcon,
+    keywords: ["bolt", "lightning", "flash", "power", "energy", "fast", "filled"],
   },
 ].sort((a, b) => a.name.localeCompare(b.name));
 
