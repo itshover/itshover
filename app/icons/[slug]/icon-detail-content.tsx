@@ -19,6 +19,37 @@ export default function IconDetailContent({ slug }: { slug: string }) {
   const iconData = ICON_LIST.find((icon) => icon.name === slug);
   const IconComponent = iconData?.icon;
 
+  const wrapperRef = React.useRef<HTMLDivElement | null>(null);
+
+  const triggerHoverOnSvg = React.useCallback(() => {
+    const el = wrapperRef.current?.querySelector("svg");
+    if (!el) return;
+
+    const dispatch = (type: string) => {
+      try {
+        if (typeof PointerEvent !== "undefined") {
+          el.dispatchEvent(
+            new PointerEvent(type, {
+              bubbles: true,
+            } satisfies PointerEventInit),
+          );
+        } else {
+          const mouseType =
+            type === "pointerenter" || type === "pointerover"
+              ? "mouseover"
+              : "mouseenter";
+          el.dispatchEvent(new MouseEvent(mouseType, { bubbles: true }));
+        }
+      } catch {
+        /* ignore */
+      }
+    };
+
+    ["pointerenter", "pointerover", "mouseenter", "mouseover"].forEach(
+      dispatch,
+    );
+  }, []);
+
   React.useEffect(() => {
     if (slug) {
       getIconsContent(slug).then(setIconCode).catch(console.error);
@@ -74,6 +105,12 @@ export default function IconDetailContent({ slug }: { slug: string }) {
             {/* Left Section - Icon Preview */}
             <div className="flex flex-col items-center md:w-[300px] md:shrink-0">
               <motion.div
+                ref={wrapperRef}
+                onPointerDown={(e) => {
+                  if ((e as React.PointerEvent).pointerType === "touch")
+                    triggerHoverOnSvg();
+                }}
+                onTouchStart={triggerHoverOnSvg}
                 className="bg-muted/30 flex aspect-square w-full max-w-xs items-center justify-center rounded-2xl border p-12"
                 initial={{ scale: 0.9, opacity: 0 }}
                 animate={{ scale: 1, opacity: 1 }}
