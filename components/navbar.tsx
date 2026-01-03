@@ -1,5 +1,5 @@
 "use client";
-import React, { useState, useEffect } from "react";
+import { useState } from "react";
 import Link from "next/link";
 import { ModeToggle } from "./ui/toggle-button";
 import { Kbd } from "@/components/ui/kbd";
@@ -15,12 +15,12 @@ import XIcon from "@/icons/x-icon";
 
 const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const [isMac, setIsMac] = useState(true);
+  const [isMac] = useState(() =>
+    typeof navigator !== "undefined"
+      ? navigator.userAgent.toLowerCase().includes("mac")
+      : true,
+  );
   const { toggle: toggleCommandMenu } = useCommandMenu();
-
-  useEffect(() => {
-    setIsMac(navigator.userAgent.toLowerCase().includes("mac"));
-  }, []);
 
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
