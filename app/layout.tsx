@@ -9,8 +9,10 @@ import { CommandMenuProvider } from "@/components/command-menu-context";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { LINKS } from "@/constants";
 import { Analytics } from "@vercel/analytics/react";
-// import { StickyBanner } from "@/components/ui/sticky-banner";
+import { StickyBanner } from "@/components/ui/sticky-banner";
 import { GithubStarsProvider } from "@/components/github-stars-context";
+import ExternalLinkIcon from "@/icons/external-link-icon";
+import Link from "next/link";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -65,9 +67,22 @@ export default function RootLayout({
             <CommandMenuProvider>
               <TooltipProvider>
                 <CommandMenu />
-                {/* <StickyBanner className="bg-primary text-primary-foreground h-8">
-                  <p>Something Coming Soon</p>
-                </StickyBanner> */}
+                <StickyBanner
+                  className="bg-primary text-primary-foreground h-auto min-h-8 py-2"
+                  hideOnScroll
+                >
+                  <Link
+                    href="https://evilcharts.com/?ref=itshover.com"
+                    target="_blank"
+                    className="flex items-center justify-center gap-2 text-center text-sm font-medium hover:underline"
+                  >
+                    <span>
+                      A Beautiful & Animated Chart UI Website built on top of
+                      recharts.
+                    </span>
+                    <ExternalLinkIcon className="h-4 w-4 shrink-0" />
+                  </Link>
+                </StickyBanner>
                 <Navbar />
 
                 {children}

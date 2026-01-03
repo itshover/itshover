@@ -1,3 +1,4 @@
+"use client";
 import { forwardRef, useImperativeHandle, useCallback } from "react";
 import { AnimatedIconProps } from "./types";
 import { motion, useAnimate } from "motion/react";
