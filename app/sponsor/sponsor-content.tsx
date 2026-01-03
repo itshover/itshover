@@ -21,8 +21,10 @@ import MessageCircleIcon from "@/icons/message-circle-icon";
 import CurrencyBitcoinIcon from "@/icons/currency-bitcoin-icon";
 import CurrencyEthereumIcon from "@/icons/currency-ethereum-icon";
 import Image from "next/image";
+import { ISponsor } from "@/models/sponsor";
+import { SponsorCard as SponsorListCard } from "@/components/sponsor-card";
 
-const SponsorCard = ({
+const DonationCard = ({
   title,
   description,
   icon,
@@ -96,7 +98,11 @@ const CopyField = ({ label, value }: { label: string; value: string }) => {
   );
 };
 
-export default function SponsorContent() {
+export default function SponsorContent({
+  sponsors = [],
+}: {
+  sponsors?: ISponsor[];
+}) {
   const [showQrCode, setShowQrCode] = useState(false);
 
   return (
@@ -140,7 +146,7 @@ export default function SponsorContent() {
         </div>
 
         <div className="grid min-w-0 gap-6 md:grid-cols-2 lg:grid-cols-3">
-          <SponsorCard
+          <DonationCard
             title="Buy Me a Coffee"
             description="Support with a small donation."
             icon={<CoffeeIcon className="h-6 w-6 text-yellow-500" />}
@@ -154,10 +160,10 @@ export default function SponsorContent() {
                 Buy Me a Coffee
               </Link>
             </Button>
-          </SponsorCard>
+          </DonationCard>
 
           <div className="relative">
-            <SponsorCard
+            <DonationCard
               title="UPI"
               description="Direct transfer via UPI."
               icon={<AtSignIcon className="h-6 w-6 text-blue-500" />}
@@ -181,35 +187,35 @@ export default function SponsorContent() {
                 </TooltipProvider>
                 <CopyField label="UPI ID" value={SPONSOR.upiId} />
               </>
-            </SponsorCard>
+            </DonationCard>
           </div>
 
-          <SponsorCard
+          <DonationCard
             title="Bitcoin (BTC)"
             description="Support via Bitcoin."
             icon={<CurrencyBitcoinIcon className="h-6 w-6 text-orange-500" />}
             delay={0.3}
           >
             <CopyField label="BTC Address" value={SPONSOR.btc} />
-          </SponsorCard>
+          </DonationCard>
 
-          <SponsorCard
+          <DonationCard
             title="Ethereum (ETH)"
             description="Support via Ethereum."
             icon={<CurrencyEthereumIcon className="h-6 w-6 text-purple-500" />}
             delay={0.4}
           >
             <CopyField label="ETH Address" value={SPONSOR.eth} />
-          </SponsorCard>
+          </DonationCard>
 
-          <SponsorCard
+          <DonationCard
             title="Solana (SOL)"
             description="Support via Solana."
             icon={<AtSignIcon className="h-6 w-6 text-green-500" />}
             delay={0.5}
           >
             <CopyField label="SOL Address" value={SPONSOR.sol} />
-          </SponsorCard>
+          </DonationCard>
         </div>
 
         <div className="mt-24 mb-16">
@@ -222,9 +228,20 @@ export default function SponsorContent() {
             <h2 className="mb-8 text-3xl font-bold tracking-tight">
               Recent Sponsors
             </h2>
-            <div className="flex items-center justify-center">
-              No sponsors yet
-            </div>
+            {sponsors.length > 0 ? (
+              <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+                {sponsors.map((sponsor) => (
+                  <SponsorListCard
+                    key={sponsor._id as string}
+                    sponsor={sponsor}
+                  />
+                ))}
+              </div>
+            ) : (
+              <div className="text-muted-foreground flex items-center justify-center">
+                No sponsors yet
+              </div>
+            )}
           </motion.div>
         </div>
 

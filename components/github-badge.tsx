@@ -34,7 +34,7 @@ const GithubBadge = () => {
         >
           <GithubIcon size={18} />
           <span className="text-foreground font-inter text-xs font-semibold uppercase">
-            Closed Source
+            Open Source
           </span>
         </div>
       </motion.div>
