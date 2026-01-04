@@ -7,11 +7,11 @@ const CoinBitcoinIcon = forwardRef<AnimatedIconHandle, AnimatedIconProps>(
     const [scope, animate] = useAnimate();
 
     const start = async () => {
-      await animate("svg", { rotateY: [0, 360] }, { duration: 3 });
+      await animate(scope.current, { rotateY: [0, 360] }, { duration: 3 });
     };
 
     const stop = () => {
-      animate("svg", { rotateY: 0 }, { duration: 0.5 });
+      animate(scope.current, { rotateY: 0 }, { duration: 0.5 });
     };
 
     useImperativeHandle(ref, () => {
