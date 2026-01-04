@@ -56,7 +56,7 @@ const AccessibilityIcon = forwardRef<AnimatedIconHandle, AnimatedIconProps>(
         strokeWidth={strokeWidth}
         strokeLinecap="round"
         strokeLinejoin="round"
-        className={`cursor - pointer ${className} `}
+        className={`cursor-pointer ${className} `}
       >
         <motion.circle className="person" cx="16" cy="4" r="1" />
         <motion.path className="person" d="m18 19 1-7-6 1" />
