@@ -9,7 +9,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "registry:build": "npm run scripts/generate-registry.ts && shadcn build && prettier --write registry.json public/r",
+    "registry:build": "npx tsx scripts/generate-registry.ts && shadcn build && prettier --write registry.json public/r",
     "lint": "eslint",
     "lint:fix": "eslint --fix",
     "format": "prettier --write .",
