@@ -160,7 +160,7 @@ const HeroBackground = () => {
   return (
     <div>
       <div
-        className="pointer-events-none hidden md:block lg:pointer-events-auto [&_div]:text-[color-mix(in_oklch,var(--accent-foreground)_20%,var(--background))]"
+        className="pointer-events-none hidden **:cursor-default md:block lg:pointer-events-auto [&_div]:text-[color-mix(in_oklch,var(--accent-foreground)_20%,var(--background))]"
         onMouseEnter={handleIconInteraction}
       >
         <FloatingIcon className="top-32 left-10 rotate-[-20deg]">
