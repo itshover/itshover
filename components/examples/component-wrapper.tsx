@@ -27,10 +27,10 @@ const CodeViewer = ({ code }: { code: string }) => {
   };
 
   return (
-    <div className="relative max-h-[400px] w-full overflow-auto rounded-md bg-zinc-950 p-4 text-sm text-zinc-50">
+    <div className="bg-accent text-foreground relative max-h-[400px] w-full overflow-auto rounded-md p-4 text-sm">
       <button
         onClick={copyToClipboard}
-        className="absolute top-4 right-4 z-10 rounded-md bg-zinc-900/50 p-1 text-zinc-400 backdrop-blur-sm transition-colors hover:text-white"
+        className="bg-muted/50 text-muted-foreground hover:text-foreground absolute top-4 right-4 z-10 rounded-md p-1 backdrop-blur-sm transition-colors"
       >
         {copied ? (
           <SimpleCheckedIcon className="text-green-500" />
@@ -49,16 +49,16 @@ export const ExampleDetail = ({ example }: { example: Example }) => {
   const [isAnimated, setIsAnimated] = useState(true);
 
   return (
-    <div className="w-full overflow-hidden rounded-xl border border-zinc-800 bg-zinc-900/50 shadow-sm backdrop-blur-xl">
+    <div className="border-border bg-card/50 w-full overflow-hidden rounded-xl border shadow-sm backdrop-blur-xl">
       <Tabs defaultValue="preview" className="flex w-full flex-col">
-        <div className="flex items-center justify-between border-b border-zinc-800 bg-zinc-900/50 px-6 py-3">
-          <TabsList className="bg-zinc-800">
+        <div className="border-border bg-card/50 flex items-center justify-between border-b px-6 py-3">
+          <TabsList className="bg-muted">
             <TabsTrigger value="preview">Preview</TabsTrigger>
             <TabsTrigger value="code">Code</TabsTrigger>
           </TabsList>
 
           <div className="flex items-center gap-2">
-            <span className="text-xs text-zinc-400">Animation</span>
+            <span className="text-muted-foreground text-xs">Animation</span>
             <button
               role="switch"
               aria-checked={isAnimated}
@@ -66,7 +66,7 @@ export const ExampleDetail = ({ example }: { example: Example }) => {
               onClick={() => setIsAnimated(!isAnimated)}
               className={cn(
                 "relative inline-flex h-5 w-9 items-center rounded-full transition-colors focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 focus:outline-none",
-                isAnimated ? "bg-indigo-600" : "bg-zinc-700",
+                isAnimated ? "bg-indigo-600" : "bg-input",
               )}
             >
               <span
@@ -80,7 +80,7 @@ export const ExampleDetail = ({ example }: { example: Example }) => {
         </div>
 
         <TabsContent value="preview" className="mt-0 flex-1 p-0">
-          <div className="flex h-full min-h-[500px] w-full overflow-x-auto bg-zinc-950/50 p-8">
+          <div className="bg-muted/50 flex h-full min-h-[500px] w-full overflow-x-auto p-8">
             <div className="m-auto">
               {/* Pass isAnimated prop if the component handles it, otherwise it just renders */}
               <example.component isAnimated={isAnimated} />

@@ -65,7 +65,7 @@ const SidebarItem = ({
   return (
     <Link
       href={href}
-      className="group flex w-fit items-center gap-4 rounded-full px-4 py-3 text-xl transition-colors hover:bg-white/10"
+      className="group hover:bg-accent hover:text-accent-foreground flex w-fit items-center gap-4 rounded-full px-4 py-3 text-xl transition-colors"
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
     >
@@ -81,13 +81,13 @@ interface XSidebarProps {
 
 const XSidebar = ({ isAnimated = true }: XSidebarProps) => {
   return (
-    <div className="flex w-full flex-col bg-black p-4 text-white md:w-[275px]">
+    <div className="bg-background text-foreground flex w-full flex-col p-4 md:w-[275px]">
       <div className="mb-4 px-4">
         <Link
           href="#"
-          className="flex h-12 w-12 items-center justify-center rounded-full hover:bg-white/10"
+          className="hover:bg-accent hover:text-accent-foreground flex h-12 w-12 items-center justify-center rounded-full"
         >
-          <TwitterXIcon className="h-8 w-8 text-white" />
+          <TwitterXIcon className="text-foreground h-8 w-8" />
         </Link>
       </div>
 
