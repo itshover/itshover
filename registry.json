@@ -2569,6 +2569,23 @@
           "type": "registry:ui"
         }
       ]
+    },
+    {
+      "name": "linkedin-icon",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": ["motion"],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "icons/linkedin-icon.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "icons/types.ts",
+          "type": "registry:ui"
+        }
+      ]
     }
   ]
 }
