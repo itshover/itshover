@@ -6,8 +6,8 @@ const CoinBitcoinIcon = forwardRef<AnimatedIconHandle, AnimatedIconProps>(
   ({ size = 24, color = "currentColor", className = "" }, ref) => {
     const [scope, animate] = useAnimate();
 
-    const start = async () => {
-      await animate(scope.current, { rotateY: [0, 360] }, { duration: 3 });
+    const start = () => {
+      animate(scope.current, { rotateY: 360 }, { duration: 3 });
     };
 
     const stop = () => {
