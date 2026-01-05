@@ -2,7 +2,7 @@ import { forwardRef, useImperativeHandle, useCallback } from "react";
 import { AnimatedIconHandle, AnimatedIconProps } from "./types";
 import { motion, useAnimate } from "motion/react";
 
-const LeftCheveron = forwardRef<AnimatedIconHandle, AnimatedIconProps>(
+const LeftChevron = forwardRef<AnimatedIconHandle, AnimatedIconProps>(
   (
     { size = 24, color = "currentColor", strokeWidth = 2, className = "" },
     ref,
@@ -56,5 +56,5 @@ const LeftCheveron = forwardRef<AnimatedIconHandle, AnimatedIconProps>(
   },
 );
 
-LeftCheveron.displayName = "LeftCheveron";
-export default LeftCheveron;
+LeftChevron.displayName = "LeftChevron";
+export default LeftChevron;
