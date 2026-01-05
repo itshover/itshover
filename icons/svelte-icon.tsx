@@ -9,8 +9,8 @@ const SvelteIcon = forwardRef<AnimatedIconHandle, AnimatedIconProps>(
   ) => {
     const [scope, animate] = useAnimate();
 
-    const start = useCallback(async () => {
-      await animate(
+    const start = useCallback(() => {
+      animate(
         ".svelte-path",
         { pathLength: [0, 1] },
         { duration: 0.8, ease: "easeInOut" },

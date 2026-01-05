@@ -9,8 +9,8 @@ const VueIcon = forwardRef<AnimatedIconHandle, AnimatedIconProps>(
   ) => {
     const [scope, animate] = useAnimate();
 
-    const start = useCallback(async () => {
-      await animate(
+    const start = useCallback(() => {
+      animate(
         ".inner-v",
         { opacity: [1, 0.4, 1], scale: [1, 0.9, 1] },
         { duration: 0.8, ease: "easeInOut", repeat: Infinity },

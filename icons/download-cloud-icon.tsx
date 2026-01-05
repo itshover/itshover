@@ -9,7 +9,7 @@ const DownloadCloudIcon = forwardRef<AnimatedIconHandle, AnimatedIconProps>(
   ) => {
     const [scope, animate] = useAnimate();
 
-    const start = useCallback(async () => {
+    const start = useCallback(() => {
       animate(
         ".arrow",
         { y: [0, 4, 0] },

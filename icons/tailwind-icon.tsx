@@ -9,7 +9,7 @@ const TailwindIcon = forwardRef<AnimatedIconHandle, AnimatedIconProps>(
   ) => {
     const [scope, animate] = useAnimate();
 
-    const start = useCallback(async () => {
+    const start = useCallback(() => {
       animate(
         ".wave-1",
         { x: [-2, 2, -2] },

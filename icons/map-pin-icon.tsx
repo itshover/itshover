@@ -9,7 +9,7 @@ const MapPinIcon = forwardRef<AnimatedIconHandle, AnimatedIconProps>(
   ) => {
     const [scope, animate] = useAnimate();
 
-    const start = useCallback(async () => {
+    const start = useCallback(() => {
       animate(
         "svg",
         { y: [0, -6, 0] },

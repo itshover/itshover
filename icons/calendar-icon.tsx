@@ -9,8 +9,8 @@ const CalendarIcon = forwardRef<AnimatedIconHandle, AnimatedIconProps>(
   ) => {
     const [scope, animate] = useAnimate();
 
-    const start = useCallback(async () => {
-      await animate(
+    const start = useCallback(() => {
+      animate(
         ".calendar-sheet",
         { rotateX: [0, -20, 0], y: [0, -2, 0] },
         { duration: 0.5, ease: "easeInOut" },

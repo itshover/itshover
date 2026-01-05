@@ -9,7 +9,7 @@ const CloudIcon = forwardRef<AnimatedIconHandle, AnimatedIconProps>(
   ) => {
     const [scope, animate] = useAnimate();
 
-    const start = useCallback(async () => {
+    const start = useCallback(() => {
       animate(
         "svg",
         { y: [0, -4, 0] },

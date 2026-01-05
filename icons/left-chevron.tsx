@@ -9,8 +9,8 @@ const LeftChevron = forwardRef<AnimatedIconHandle, AnimatedIconProps>(
   ) => {
     const [scope, animate] = useAnimate();
 
-    const start = useCallback(async () => {
-      await animate(
+    const start = useCallback(() => {
+      animate(
         ".chevron-left",
         { x: [0, -6, 0] },
         {

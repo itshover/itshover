@@ -9,12 +9,10 @@ const MenuIcon = forwardRef<AnimatedIconHandle, AnimatedIconProps>(
   ) => {
     const [scope, animate] = useAnimate();
 
-    const start = useCallback(async () => {
-      await Promise.all([
-        animate(".line-top", { y: 6, rotate: 45 }, { duration: 0.3 }),
-        animate(".line-middle", { opacity: 0, x: -10 }, { duration: 0.2 }),
-        animate(".line-bottom", { y: -6, rotate: -45 }, { duration: 0.3 }),
-      ]);
+    const start = useCallback(() => {
+      animate(".line-top", { y: 6, rotate: 45 }, { duration: 0.3 });
+      animate(".line-middle", { opacity: 0, x: -10 }, { duration: 0.2 });
+      animate(".line-bottom", { y: -6, rotate: -45 }, { duration: 0.3 });
     }, [animate]);
 
     const stop = useCallback(() => {

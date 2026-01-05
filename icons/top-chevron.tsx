@@ -9,8 +9,8 @@ const TopChevron = forwardRef<AnimatedIconHandle, AnimatedIconProps>(
   ) => {
     const [scope, animate] = useAnimate();
 
-    const start = useCallback(async () => {
-      await animate(
+    const start = useCallback(() => {
+      animate(
         ".chevron-top",
         {
           y: [0, -6, 0],
