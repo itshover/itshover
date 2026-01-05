@@ -24,6 +24,7 @@ import GearIcon from "@/icons/gear-icon";
 import MessageCircleIcon from "@/icons/message-circle-icon";
 import SendIcon from "@/icons/send-icon";
 import CheckedIcon from "@/icons/checked-icon";
+import RequestIconModal from "./request-icon-modal";
 
 const CryptoAddress = ({
   label,
@@ -77,6 +78,8 @@ const Footer = () => {
     { Icon: TwitterXIcon, name: "twitter" },
   ];
 
+  const [isRequestModalOpen, setIsRequestModalOpen] = useState(false);
+
   return (
     <motion.footer
       initial={{ opacity: 0, y: 20 }}
@@ -108,6 +111,12 @@ const Footer = () => {
               >
                 Sponsor
               </Link>
+              <button
+                onClick={() => setIsRequestModalOpen(true)}
+                className="text-muted-foreground hover:text-foreground text-left transition-colors"
+              >
+                Request an Icon
+              </button>
               <Link
                 href={LINKS.GITHUB}
                 target="_blank"
@@ -203,6 +212,7 @@ const Footer = () => {
           </div>
         </div>
       </div>
+      <RequestIconModal isOpen={isRequestModalOpen} onClose={() => setIsRequestModalOpen(false)} />
     </motion.footer>
   );
 };
