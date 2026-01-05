@@ -184,6 +184,7 @@ import Volume2Icon from "./volume-2-icon";
 import VolumeXIcon from "./volume-x-icon";
 import XIcon from "./x-icon";
 import YoutubeIcon from "./youtube-icon";
+import AirportIcon from "./airport-icon";
 
 export interface IconType {
   name: string;
@@ -203,6 +204,11 @@ const ICON_LIST: IconType[] = [
     name: "accessibility-icon",
     icon: AccessibilityIcon,
     keywords: ["accessibility", "a11y", "wheelchair", "disabled", "inclusive"],
+  },
+  {
+    name: "airport-icon",
+    icon: AirportIcon,
+    keywords: ["airport", "plane", "airplane", "travel", "transportation"],
   },
   {
     name: "alarm-clock-plus-icon",
