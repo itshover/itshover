@@ -10,12 +10,12 @@ const CoinBitcoinIcon = forwardRef<AnimatedIconHandle, AnimatedIconProps>(
       animate(
         scope.current,
         { rotateY: 360 },
-        { duration: 2, ease: "easeInOut" },
+        { duration: 0.6, ease: "easeInOut" },
       );
     };
 
     const stop = () => {
-      animate(scope.current, { rotateY: 0 }, { duration: 2, ease: "easeInOut" });
+      animate(scope.current, { rotateY: 0 }, { duration: 0.6, ease: "easeInOut" });
     };
 
     useImperativeHandle(ref, () => {
