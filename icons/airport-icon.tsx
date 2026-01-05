@@ -45,7 +45,7 @@ const AirportIcon = forwardRef<AnimatedIconHandle, AnimatedIconProps>(
     useImperativeHandle(ref, () => ({
       startAnimation: start,
       stopAnimation: stop,
-    }));
+    }), [start, stop]);
 
     return (
       <motion.svg
