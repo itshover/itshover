@@ -161,6 +161,7 @@ import GlobeIcon from "./globe-icon";
 import HashtagIcon from "./hashtag-icon";
 import KeyframesIcon from "./keyframes-icon";
 import LayersIcon from "./layers-icon";
+import LeftCheveron from "./left-cheveron";
 import LayoutBottombarCollapseIcon from "./layout-bottombar-collapse-icon";
 import LayoutSidebarRightIcon from "./layout-sidebar-right-icon";
 import LayoutSidebarRightCollapseIcon from "./layout-sidebar-right-collapse-icon";
@@ -175,6 +176,7 @@ import WhatsappIcon from "./whatsapp-icon";
 import WorldIcon from "./world-icon";
 import TerminalIcon from "./terminal-icon";
 import TriangleAlertIcon from "./triangle-alert-icon";
+import TopCheveron from "./top-cheveron";
 import TwitterIcon from "./twitter-icon";
 import TwitterXIcon from "./twitter-x-icon";
 import TypeScriptIcon from "./typescript-icon";
@@ -1351,6 +1353,16 @@ const ICON_LIST: IconType[] = [
       "ui",
       "interface",
     ],
+  },
+  {
+    name: "left-cheveron",
+    icon: LeftCheveron,
+    keywords: ["arrow", "left", "back", "previous"],
+  },
+  {
+    name: "top-cheveron",
+    icon: TopCheveron,
+    keywords: ["arrow", "top", "up", "collapse"],
   },
 ].sort((a, b) => a.name.localeCompare(b.name));
 
