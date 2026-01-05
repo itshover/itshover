@@ -1,0 +1,20 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "airport-icon",
+  "dependencies": ["motion"],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "icons/airport-icon.tsx",
+      "content": "import { forwardRef, useImperativeHandle, useCallback } from \"react\";\nimport { AnimatedIconHandle, AnimatedIconProps } from \"./types\";\nimport { motion, useAnimate } from \"motion/react\";\n\nconst AirportIcon = forwardRef<AnimatedIconHandle, AnimatedIconProps>(\n  (\n    { size = 24, color = \"currentColor\", strokeWidth = 2, className = \"\" },\n    ref,\n  ) => {\n    const [scope, animate] = useAnimate();\n\n    const start = useCallback(async () => {\n      animate(\n        \".airplane\",\n        {\n          x: 14,\n          y: 2,\n          opacity: 1,\n          scale: 1.1,\n        },\n        {\n          duration: 0.3,\n          delay: 0.1,\n          ease: \"easeOut\", \n        },\n      );\n    }, [animate]);\n\n    const stop = useCallback(async () => {\n      animate(\n        \".airplane\",\n        {\n          x: 7,\n          y: 5,\n          opacity: 0,\n          scale: 1,\n        },\n        {\n          duration: 0.25,\n          ease: \"easeInOut\",\n        },\n      );\n    }, [animate]);\n\n    useImperativeHandle(ref, () => ({\n      startAnimation: start,\n      stopAnimation: stop,\n    }));\n\n    return (\n      <motion.svg\n        ref={scope}\n        xmlns=\"http://www.w3.org/2000/svg\"\n        width={size}\n        height={size}\n        viewBox=\"0 0 24 24\"\n        fill=\"none\"\n        stroke={color}\n        strokeWidth={strokeWidth}\n        strokeLinecap=\"round\"\n        strokeLinejoin=\"round\"\n        className={`cursor-pointer ${className}`}\n        onHoverStart={start}\n        onHoverEnd={stop}\n      >\n        <path d=\"M7.752 20.75h-1c-1.414 0-2.121 0-2.56-.44-.44-.439-.44-1.146-.44-2.56v-7h4zm0 0v-7h8c1.416 0 2.123 0 2.56.44.44.439.44 1.146.44 2.56v1c0 1.414 0 2.121-.44 2.56-.438.44-1.145.44-2.56.44zm-2-18v-2m4.269 8.118c-.367.912-.55 1.367-.93 1.625-.38.257-.872.257-1.854.257H4.264c-.982 0-1.474 0-1.854-.257-.38-.258-.564-.713-.93-1.625l-.15-.375C.83 7.25.58 6.629.88 6.189c.297-.439.969-.439 2.313-.439h5.113c1.344 0 2.016 0 2.314.44.3.439.05 1.06-.45 2.303zM7.748 5.75H3.756c-.814-1.268-1.154-1.902-.941-2.404.284-.462 1.087-.596 2.557-.596h.76c1.47 0 2.274.134 2.558.596.213.502-.127 1.136-.942 2.404\"></path>\n        <motion.path initial={{x:7, y:5, opacity:0}} className=\"airplane\" d=\"M.75 4.75h1.5l4-4\"></motion.path>\n        <motion.path initial={{x:7, y:5, opacity:0}} className=\"airplane\" d=\"M5.25 1.75h-3.5M5.25 1.75v3.5\"></motion.path>\n      </motion.svg>\n    );\n  },\n);\n\nAirportIcon.displayName = \"AirportIcon\";\nexport default AirportIcon;",
+      "type": "registry:ui"
+    },
+    {
+      "path": "icons/types.ts",
+      "content": "export interface AnimatedIconProps {\n  /** Icon size in pixels or CSS string */\n  size?: number | string;\n  /** Icon color (defaults to currentColor) */\n  color?: string;\n  /** SVG stroke width */\n  strokeWidth?: number;\n  /** Additional CSS classes */\n  className?: string;\n}\n\nexport interface AnimatedIconHandle {\n  startAnimation: () => void;\n  stopAnimation: () => void;\n}\n",
+      "type": "registry:ui"
+    }
+  ],
+  "type": "registry:ui"
+}

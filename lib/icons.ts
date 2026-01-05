@@ -4,6 +4,10 @@ export const ICONS = [
     path: "/icons/accessibility-icon",
   },
   {
+    name: "airport icon",
+    path: "/icons/airport-icon",
+  },
+  {
     name: "alarm clock plus icon",
     path: "/icons/alarm-clock-plus-icon",
   },
