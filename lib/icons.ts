@@ -647,4 +647,8 @@ export const ICONS = [
     name: "volume x icon",
     path: "/icons/volume-x-icon",
   },
+  {
+    name: "code merge icon",
+    path: "/icons/code-merge-icon",
+  },
 ];
