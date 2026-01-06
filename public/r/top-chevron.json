@@ -1,0 +1,20 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "top-chevron",
+  "dependencies": ["motion"],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "icons/top-chevron.tsx",
+      "content": "import { forwardRef, useImperativeHandle, useCallback } from \"react\";\nimport { AnimatedIconHandle, AnimatedIconProps } from \"./types\";\nimport { motion, useAnimate } from \"motion/react\";\n\nconst TopChevron = forwardRef<AnimatedIconHandle, AnimatedIconProps>(\n  (\n    { size = 24, color = \"currentColor\", strokeWidth = 2, className = \"\" },\n    ref,\n  ) => {\n    const [scope, animate] = useAnimate();\n\n    const start = useCallback(async () => {\n      await animate(\n        \".chevron-top\",\n        {\n          y: [0, -6, 0],\n        },\n        {\n          duration: 0.8,\n          ease: \"easeInOut\",\n        },\n      );\n    }, [animate]);\n\n    const stop = useCallback(() => {\n      animate(\".chevron-top\", { y: 0 }, { duration: 0.2, ease: \"easeInOut\" });\n    }, [animate]);\n\n    useImperativeHandle(ref, () => ({\n      startAnimation: start,\n      stopAnimation: stop,\n    }));\n\n    return (\n      <motion.div\n        ref={scope}\n        className={`inline-flex cursor-pointer items-center justify-center ${className}`}\n        onHoverStart={start}\n        onHoverEnd={stop}\n      >\n        <svg\n          xmlns=\"http://www.w3.org/2000/svg\"\n          width={size}\n          height={size}\n          viewBox=\"0 0 24 24\"\n          fill=\"none\"\n          stroke={color}\n          strokeWidth={strokeWidth}\n          strokeLinecap=\"round\"\n          strokeLinejoin=\"round\"\n          className=\"chevron-top\"\n        >\n          <path stroke=\"none\" d=\"M0 0h24v24H0z\" fill=\"none\" />\n          <path d=\"M6 15l6 -6l6 6\" />\n        </svg>\n      </motion.div>\n    );\n  },\n);\n\nTopChevron.displayName = \"TopChevron\";\nexport default TopChevron;\n",
+      "type": "registry:ui"
+    },
+    {
+      "path": "icons/types.ts",
+      "content": "export interface AnimatedIconProps {\n  /** Icon size in pixels or CSS string */\n  size?: number | string;\n  /** Icon color (defaults to currentColor) */\n  color?: string;\n  /** SVG stroke width */\n  strokeWidth?: number;\n  /** Additional CSS classes */\n  className?: string;\n}\n\nexport interface AnimatedIconHandle {\n  startAnimation: () => Promise<void>;\n  stopAnimation: () => void;\n}\n",
+      "type": "registry:ui"
+    }
+  ],
+  "type": "registry:ui"
+}

@@ -1841,6 +1841,23 @@
       ]
     },
     {
+      "name": "left-chevron",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": ["motion"],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "icons/left-chevron.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "icons/types.ts",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
       "name": "like-icon",
       "type": "registry:ui",
       "registryDependencies": [],
@@ -2750,6 +2767,23 @@
       "files": [
         {
           "path": "icons/toggle-icon.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "icons/types.ts",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "top-chevron",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": ["motion"],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "icons/top-chevron.tsx",
           "type": "registry:ui"
         },
         {

@@ -161,6 +161,7 @@ import GlobeIcon from "./globe-icon";
 import HashtagIcon from "./hashtag-icon";
 import KeyframesIcon from "./keyframes-icon";
 import LayersIcon from "./layers-icon";
+import LeftChevron from "./left-chevron";
 import LayoutBottombarCollapseIcon from "./layout-bottombar-collapse-icon";
 import LayoutSidebarRightIcon from "./layout-sidebar-right-icon";
 import LayoutSidebarRightCollapseIcon from "./layout-sidebar-right-collapse-icon";
@@ -175,6 +176,7 @@ import WhatsappIcon from "./whatsapp-icon";
 import WorldIcon from "./world-icon";
 import TerminalIcon from "./terminal-icon";
 import TriangleAlertIcon from "./triangle-alert-icon";
+import TopChevron from "./top-chevron";
 import TwitterIcon from "./twitter-icon";
 import TwitterXIcon from "./twitter-x-icon";
 import TypeScriptIcon from "./typescript-icon";
@@ -184,6 +186,15 @@ import Volume2Icon from "./volume-2-icon";
 import VolumeXIcon from "./volume-x-icon";
 import XIcon from "./x-icon";
 import YoutubeIcon from "./youtube-icon";
+import ReactIcon from "./react-icon";
+import VueIcon from "./vue-icon";
+import TailwindIcon from "./tailwind-icon";
+import SvelteIcon from "./svelte-icon";
+import CalendarIcon from "./calendar-icon";
+import CloudIcon from "./cloud-icon";
+import MenuIcon from "./menu-icon";
+import MapPinIcon from "./map-pin-icon";
+import DownloadCloudIcon from "./download-cloud-icon";
 
 export interface IconType {
   name: string;
@@ -1351,6 +1362,61 @@ const ICON_LIST: IconType[] = [
       "ui",
       "interface",
     ],
+  },
+  {
+    name: "left-chevron",
+    icon: LeftChevron,
+    keywords: ["arrow", "left", "back", "previous"],
+  },
+  {
+    name: "top-chevron",
+    icon: TopChevron,
+    keywords: ["arrow", "top", "up", "collapse"],
+  },
+  {
+    name: "react-icon",
+    icon: ReactIcon,
+    keywords: ["react", "library", "framework", "component", "hooks"],
+  },
+  {
+    name: "vue-icon",
+    icon: VueIcon,
+    keywords: ["vue", "framework", "javascript", "progressive"],
+  },
+  {
+    name: "tailwind-icon",
+    icon: TailwindIcon,
+    keywords: ["tailwind", "css", "framework", "style", "utility"],
+  },
+  {
+    name: "svelte-icon",
+    icon: SvelteIcon,
+    keywords: ["svelte", "framework", "javascript", "compiler"],
+  },
+  {
+    name: "calendar-icon",
+    icon: CalendarIcon,
+    keywords: ["calendar", "date", "schedule", "time", "event"],
+  },
+  {
+    name: "cloud-icon",
+    icon: CloudIcon,
+    keywords: ["cloud", "weather", "storage", "sky", "floating"],
+  },
+  {
+    name: "menu-icon",
+    icon: MenuIcon,
+    keywords: ["menu", "hamburger", "navigation", "list", "options"],
+  },
+  {
+    name: "map-pin-icon",
+    icon: MapPinIcon,
+    keywords: ["map", "pin", "location", "place", "marker", "navigation"],
+  },
+  {
+    name: "download-cloud-icon",
+    icon: DownloadCloudIcon,
+    keywords: ["download", "cloud", "save", "import", "data"],
   },
 ].sort((a, b) => a.name.localeCompare(b.name));
 
