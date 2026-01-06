@@ -940,6 +940,23 @@
       ]
     },
     {
+      "name": "code-merge-icon",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": ["motion"],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "icons/code-merge-icon.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "icons/types.ts",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
       "name": "code-xml-icon",
       "type": "registry:ui",
       "registryDependencies": [],

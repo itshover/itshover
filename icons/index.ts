@@ -184,6 +184,7 @@ import Volume2Icon from "./volume-2-icon";
 import VolumeXIcon from "./volume-x-icon";
 import XIcon from "./x-icon";
 import YoutubeIcon from "./youtube-icon";
+import CodeMergeIcon from "./code-merge-icon";
 
 export interface IconType {
   name: string;
@@ -1350,6 +1351,20 @@ const ICON_LIST: IconType[] = [
       "panel",
       "ui",
       "interface",
+    ],
+  },
+  {
+    name: "code-merge-icon",
+    icon: CodeMergeIcon,
+    keywords: [
+      "code",
+      "merge",
+      "git",
+      "branch",
+      "pull",
+      "request",
+      "combine",
+      "integrate",
     ],
   },
 ].sort((a, b) => a.name.localeCompare(b.name));
