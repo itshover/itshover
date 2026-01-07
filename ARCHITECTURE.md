@@ -65,7 +65,7 @@ Every icon follows this pattern:
 ```tsx
 import { forwardRef, useImperativeHandle } from "react";
 import { motion, useAnimate } from "motion/react";
-import { AnimatedIconProps } from "./types";
+import type { AnimatedIconProps } from "./types";
 
 export type IconHandle = {
   startAnimation: () => void;

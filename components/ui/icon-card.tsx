@@ -2,7 +2,7 @@
 
 import React from "react";
 import Link from "next/link";
-import { AnimatedIconProps, AnimatedIconHandle } from "@/icons/types";
+import type { AnimatedIconProps, AnimatedIconHandle } from "@/icons/types";
 import {
   Tooltip,
   TooltipContent,

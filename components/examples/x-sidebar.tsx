@@ -12,7 +12,7 @@ import BookmarkIcon from "../ui/bookmark-icon";
 import UserCheckIcon from "../ui/user-check-icon";
 import UsersIcon from "../ui/users-icon";
 import DotsHorizontalIcon from "../ui/dots-horizontal-icon";
-import { AnimatedIconHandle, AnimatedIconProps } from "../ui/types";
+import type { AnimatedIconHandle, AnimatedIconProps } from "../ui/types";
 
 const sidebarItems = [
   { icon: HomeIcon, label: "Home", href: "#" },

@@ -1,4 +1,4 @@
-import { AnimatedIconProps, AnimatedIconHandle } from "./types";
+import type { AnimatedIconProps, AnimatedIconHandle } from "./types";
 import AccessibilityIcon from "./accessibility-icon";
 import AlarmClockPlusIcon from "./alarm-clock-plus-icon";
 import AlignCenterIcon from "./align-center-icon";

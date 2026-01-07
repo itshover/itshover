@@ -10,7 +10,7 @@ import { CodeBlock } from "@/components/ui/code-block";
 import ArrowNarrowLeftIcon from "@/icons/arrow-narrow-left-icon";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { LINKS } from "@/constants";
-import { AnimatedIconProps } from "@/icons/types";
+import type { AnimatedIconProps } from "@/icons/types";
 import PlayerIcon from "@/icons/player-icon";
 
 type AnimatedIconHandle = {

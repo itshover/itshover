@@ -1,6 +1,6 @@
 "use client";
 import { forwardRef, useImperativeHandle } from "react";
-import { AnimatedIconProps } from "./types";
+import type { AnimatedIconProps } from "./types";
 import { motion, useAnimate } from "motion/react";
 
 export type BookmarkIconHandle = {

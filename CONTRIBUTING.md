@@ -141,7 +141,7 @@ import Link from "next/link";
 import { motion, useAnimate } from "motion/react";
 
 // 3. Internal components and utilities
-import { AnimatedIconProps } from "./types";
+import type { AnimatedIconProps } from "./types";
 import { cn } from "@/lib/utils";
 ```
 
@@ -322,7 +322,7 @@ To verify icons work when installed via the shadcn CLI:
    "use client";
    import { useRef } from "react";
    import GithubIcon from "@/components/ui/github-icon";
-   import { AnimatedIconHandle } from "@/components/ui/types";
+   import type { AnimatedIconHandle } from "@/components/ui/types";
 
    export default function Home() {
      const iconRef = useRef<AnimatedIconHandle>(null);

@@ -16,7 +16,7 @@ import GhostIcon from "@/icons/ghost-icon";
 import ArrowNarrowRightIcon from "@/icons/arrow-narrow-right-icon";
 import { useTheme } from "next-themes";
 import Image from "next/image";
-import { AnimatedIconHandle } from "@/icons/types";
+import type { AnimatedIconHandle } from "@/icons/types";
 
 const Hero = () => {
   const { theme } = useTheme();
