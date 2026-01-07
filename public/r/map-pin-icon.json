@@ -1,0 +1,20 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "map-pin-icon",
+  "dependencies": ["motion"],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "icons/map-pin-icon.tsx",
+      "content": "import { forwardRef, useImperativeHandle } from \"react\";\r\nimport { AnimatedIconHandle, AnimatedIconProps } from \"./types\";\r\nimport { motion, useAnimate } from \"motion/react\";\r\n\r\nconst MapPinIcon = forwardRef<AnimatedIconHandle, AnimatedIconProps>(\r\n  (\r\n    { size = 24, color = \"currentColor\", strokeWidth = 2, className = \"\" },\r\n    ref,\r\n  ) => {\r\n    const [scope, animate] = useAnimate();\r\n\r\n    const start = async () => {\r\n      animate(\r\n        \".pin\",\r\n        { y: -4 },\r\n        { duration: 0.3, ease: \"easeInOut\", repeat: 1, repeatType: \"reverse\" },\r\n      );\r\n      animate(\r\n        \".pin-circle\",\r\n        { fill: color },\r\n        { duration: 0.3, ease: \"easeInOut\" },\r\n      );\r\n    };\r\n\r\n    const stop = () => {\r\n      animate(\".pin\", { y: 0 }, { duration: 0.2 });\r\n      animate(\".pin-circle\", { fill: \"none\" }, { duration: 0.2 });\r\n    };\r\n\r\n    useImperativeHandle(ref, () => ({\r\n      startAnimation: start,\r\n      stopAnimation: stop,\r\n    }));\r\n\r\n    return (\r\n      <motion.svg\r\n        ref={scope}\r\n        onHoverStart={start}\r\n        onHoverEnd={stop}\r\n        xmlns=\"http://www.w3.org/2000/svg\"\r\n        width={size}\r\n        height={size}\r\n        viewBox=\"0 0 24 24\"\r\n        fill=\"none\"\r\n        stroke={color}\r\n        strokeWidth={strokeWidth}\r\n        strokeLinecap=\"round\"\r\n        strokeLinejoin=\"round\"\r\n        className={`inline-flex cursor-pointer items-center justify-center ${className}`}\r\n        style={{ overflow: \"visible\" }}\r\n      >\r\n        <motion.g className=\"pin\">\r\n          <path d=\"M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z\" />\r\n          <motion.circle className=\"pin-circle\" cx=\"12\" cy=\"10\" r=\"3\" />\r\n        </motion.g>\r\n      </motion.svg>\r\n    );\r\n  },\r\n);\r\n\r\nMapPinIcon.displayName = \"MapPinIcon\";\r\nexport default MapPinIcon;\r\n",
+      "type": "registry:ui"
+    },
+    {
+      "path": "icons/types.ts",
+      "content": "export interface AnimatedIconProps {\n  /** Icon size in pixels or CSS string */\n  size?: number | string;\n  /** Icon color (defaults to currentColor) */\n  color?: string;\n  /** SVG stroke width */\n  strokeWidth?: number;\n  /** Additional CSS classes */\n  className?: string;\n}\n\nexport interface AnimatedIconHandle {\n  startAnimation: () => void;\n  stopAnimation: () => void;\n}\n",
+      "type": "registry:ui"
+    }
+  ],
+  "type": "registry:ui"
+}
