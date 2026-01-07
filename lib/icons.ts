@@ -144,6 +144,10 @@ export const ICONS = [
     path: "/icons/bulb-svg",
   },
   {
+    name: "calendar icon",
+    path: "/icons/calendar-icon",
+  },
+  {
     name: "camera icon",
     path: "/icons/camera-icon",
   },
@@ -178,6 +182,10 @@ export const ICONS = [
   {
     name: "chart pie icon",
     path: "/icons/chart-pie-icon",
+  },
+  {
+    name: "cloud icon",
+    path: "/icons/cloud-icon",
   },
   {
     name: "checked icon",
@@ -392,8 +400,16 @@ export const ICONS = [
     path: "/icons/magnifier-icon",
   },
   {
+    name: "map pin icon",
+    path: "/icons/map-pin-icon",
+  },
+  {
     name: "meh icon",
     path: "/icons/meh-icon",
+  },
+  {
+    name: "microphone icon",
+    path: "/icons/microphone-icon",
   },
   {
     name: "moon icon",
@@ -620,6 +636,10 @@ export const ICONS = [
     path: "/icons/subscript-icon",
   },
   {
+    name: "sun icon",
+    path: "/icons/sun-icon",
+  },
+  {
     name: "target icon",
     path: "/icons/target-icon",
   },
@@ -646,5 +666,9 @@ export const ICONS = [
   {
     name: "volume x icon",
     path: "/icons/volume-x-icon",
+  },
+  {
+    name: "wallet icon",
+    path: "/icons/wallet-icon",
   },
 ];

@@ -41,6 +41,7 @@ import BrandGoogleIcon from "./brand-google-icon";
 import BrandNextjsIcon from "./brand-nextjs-icon";
 import BrightnessDownIcon from "./brightness-down-icon";
 import BulbSvg from "./bulb-svg";
+import CalendarIcon from "./calendar-icon";
 import CameraIcon from "./camera-icon";
 import CameraOffIcon from "./camera-off-icon";
 import CandyCaneIcon from "./candy-cane-icon";
@@ -50,6 +51,7 @@ import ChartCovariateIcon from "./chart-covariate-icon";
 import ChartHistogramIcon from "./chart-histogram-icon";
 import ChartLineIcon from "./chart-line-icon";
 import ChartPieIcon from "./chart-pie-icon";
+import CloudIcon from "./cloud-icon";
 import CheckedIcon from "./checked-icon";
 import ClockIcon from "./clock-icon";
 import CodeIcon from "./code-icon";
@@ -105,9 +107,11 @@ import LinkIcon from "./link-icon";
 import LockIcon from "./lock-icon";
 import LogoutIcon from "./logout-icon";
 import MagnifierIcon from "./magnifier-icon";
+import MapPinIcon from "./map-pin-icon";
 import MailFilledIcon from "./mail-filled-icon";
 import MehIcon from "./meh-icon";
 import MessageCircleIcon from "./message-circle-icon";
+import MicrophoneIcon from "./microphone-icon";
 import MoonIcon from "./moon-icon";
 import MousePointer2Icon from "./mouse-pointer-2-icon";
 import MySQLIcon from "./mysql-icon";
@@ -144,6 +148,7 @@ import SparklesIcon from "./sparkles-icon";
 import SpotifyIcon from "./spotify-icon";
 import StarIcon from "./star-icon";
 import SubscriptIcon from "./subscript-icon";
+import SunIcon from "./sun-icon";
 import TargetIcon from "./target-icon";
 import TelephoneIcon from "./telephone-icon";
 import ArrowDownAZIcon from "./arrow-down-a-z-icon";
@@ -182,6 +187,7 @@ import UnlinkIcon from "./unlink-icon";
 import VercelIcon from "./vercel-icon";
 import Volume2Icon from "./volume-2-icon";
 import VolumeXIcon from "./volume-x-icon";
+import WalletIcon from "./wallet-icon";
 import XIcon from "./x-icon";
 import YoutubeIcon from "./youtube-icon";
 
@@ -439,6 +445,11 @@ const ICON_LIST: IconType[] = [
     keywords: ["bulb", "light", "idea", "creativity"],
   },
   {
+    name: "calendar-icon",
+    icon: CalendarIcon,
+    keywords: ["calendar", "date", "time", "schedule", "event", "plan"],
+  },
+  {
     name: "camera-icon",
     icon: CameraIcon,
     keywords: ["camera", "photo", "picture", "lens", "photography", "capture"],
@@ -489,6 +500,11 @@ const ICON_LIST: IconType[] = [
     name: "chart-pie-icon",
     icon: ChartPieIcon,
     keywords: ["chart", "pie", "graph", "percentage", "statistics", "data"],
+  },
+  {
+    name: "cloud-icon",
+    icon: CloudIcon,
+    keywords: ["cloud", "weather", "upload", "storage", "sky"],
   },
   {
     name: "checked-icon",
@@ -808,6 +824,11 @@ const ICON_LIST: IconType[] = [
     keywords: ["search", "find", "zoom", "look"],
   },
   {
+    name: "map-pin-icon",
+    icon: MapPinIcon,
+    keywords: ["map", "pin", "location", "place", "marker", "navigation"],
+  },
+  {
     name: "mail-filled-icon",
     icon: MailFilledIcon,
     keywords: ["mail", "email", "message", "envelope", "inbox"],
@@ -821,6 +842,11 @@ const ICON_LIST: IconType[] = [
     name: "message-circle-icon",
     icon: MessageCircleIcon,
     keywords: ["message", "chat", "bubble", "talk", "conversation"],
+  },
+  {
+    name: "microphone-icon",
+    icon: MicrophoneIcon,
+    keywords: ["microphone", "mic", "audio", "record", "voice", "sound"],
   },
   {
     name: "pen-icon",
@@ -1279,6 +1305,11 @@ const ICON_LIST: IconType[] = [
     keywords: ["volume", "mute", "silent", "sound off", "audio off", "quiet"],
   },
   {
+    name: "wallet-icon",
+    icon: WalletIcon,
+    keywords: ["wallet", "money", "payment", "finance", "cash", "card"],
+  },
+  {
     name: "radio-icon",
     icon: RadioIcon,
     keywords: [
@@ -1333,6 +1364,11 @@ const ICON_LIST: IconType[] = [
     name: "subscript-icon",
     icon: SubscriptIcon,
     keywords: ["subscript", "text", "format", "typography", "math", "chemical"],
+  },
+  {
+    name: "sun-icon",
+    icon: SunIcon,
+    keywords: ["sun", "light", "day", "mode", "brightness", "weather"],
   },
   {
     name: "target-icon",

@@ -1,0 +1,20 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "microphone-icon",
+  "dependencies": ["motion"],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "icons/microphone-icon.tsx",
+      "content": "import { forwardRef, useImperativeHandle } from \"react\";\nimport { AnimatedIconHandle, AnimatedIconProps } from \"./types\";\nimport { motion, useAnimate } from \"motion/react\";\n\nconst MicrophoneIcon = forwardRef<AnimatedIconHandle, AnimatedIconProps>(\n  (\n    { size = 24, color = \"currentColor\", strokeWidth = 2, className = \"\" },\n    ref,\n  ) => {\n    const [scope, animate] = useAnimate();\n\n    const start = async () => {\n      await animate(\n        \".mic-body\",\n        { rotate: [0, -10, 10, -5, 5, 0] },\n        { duration: 0.5 },\n      );\n    };\n\n    const stop = () => {\n      animate(\".mic-body\", { rotate: 0 }, { duration: 0.2 });\n    };\n\n    useImperativeHandle(ref, () => ({\n      startAnimation: start,\n      stopAnimation: stop,\n    }));\n\n    return (\n      <motion.svg\n        ref={scope}\n        onHoverStart={start}\n        onHoverEnd={stop}\n        xmlns=\"http://www.w3.org/2000/svg\"\n        width={size}\n        height={size}\n        viewBox=\"0 0 24 24\"\n        fill=\"none\"\n        stroke={color}\n        strokeWidth={strokeWidth}\n        strokeLinecap=\"round\"\n        strokeLinejoin=\"round\"\n        className={`inline-flex cursor-pointer items-center justify-center ${className}`}\n        style={{ overflow: \"visible\" }}\n      >\n        <motion.g className=\"mic-body\" style={{ transformOrigin: \"center\" }}>\n          <path d=\"M9 2m0 3a3 3 0 0 1 3 -3h0a3 3 0 0 1 3 3v5a3 3 0 0 1 -3 3h0a3 3 0 0 1 -3 -3z\" />\n          <path d=\"M5 10a7 7 0 0 0 14 0\" />\n          <path d=\"M8 21l8 0\" />\n          <path d=\"M12 17l0 4\" />\n        </motion.g>\n      </motion.svg>\n    );\n  },\n);\n\nMicrophoneIcon.displayName = \"MicrophoneIcon\";\nexport default MicrophoneIcon;\n",
+      "type": "registry:ui"
+    },
+    {
+      "path": "icons/types.ts",
+      "content": "export interface AnimatedIconProps {\n  /** Icon size in pixels or CSS string */\n  size?: number | string;\n  /** Icon color (defaults to currentColor) */\n  color?: string;\n  /** SVG stroke width */\n  strokeWidth?: number;\n  /** Additional CSS classes */\n  className?: string;\n}\n\nexport interface AnimatedIconHandle {\n  startAnimation: () => void;\n  stopAnimation: () => void;\n}\n",
+      "type": "registry:ui"
+    }
+  ],
+  "type": "registry:ui"
+}

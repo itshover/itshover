@@ -1,0 +1,20 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "cloud-icon",
+  "dependencies": ["motion"],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "icons/cloud-icon.tsx",
+      "content": "import { forwardRef, useImperativeHandle } from \"react\";\nimport { AnimatedIconHandle, AnimatedIconProps } from \"./types\";\nimport { motion, useAnimate } from \"motion/react\";\n\nconst CloudIcon = forwardRef<AnimatedIconHandle, AnimatedIconProps>(\n  (\n    { size = 24, color = \"currentColor\", strokeWidth = 2, className = \"\" },\n    ref,\n  ) => {\n    const [scope, animate] = useAnimate();\n\n    const start = async () => {\n      await animate(\n        \".cloud\",\n        { y: -3, scale: 1.05 },\n        { duration: 0.5, ease: \"easeInOut\", repeat: 1, repeatType: \"reverse\" },\n      );\n    };\n\n    const stop = () => {\n      animate(\".cloud\", { y: 0, scale: 1 }, { duration: 0.2, ease: \"easeOut\" });\n    };\n\n    useImperativeHandle(ref, () => ({\n      startAnimation: start,\n      stopAnimation: stop,\n    }));\n\n    return (\n      <motion.svg\n        ref={scope}\n        onHoverStart={start}\n        onHoverEnd={stop}\n        xmlns=\"http://www.w3.org/2000/svg\"\n        width={size}\n        height={size}\n        viewBox=\"0 0 24 24\"\n        fill=\"none\"\n        stroke={color}\n        strokeWidth={strokeWidth}\n        strokeLinecap=\"round\"\n        strokeLinejoin=\"round\"\n        className={`inline-flex cursor-pointer items-center justify-center ${className}`}\n        style={{ overflow: \"visible\" }}\n      >\n        <motion.g className=\"cloud\" style={{ transformOrigin: \"center\" }}>\n          <path d=\"M6.657 18c-2.572 0 -4.657 -2.007 -4.657 -4.483c0 -2.475 2.085 -4.482 4.657 -4.482c.393 -1.762 1.794 -3.2 3.675 -3.773c1.88 -.572 3.956 -.193 5.444 1c1.488 1.19 2.162 3.007 1.77 4.769h.99c1.913 0 3.464 1.56 3.464 3.486c0 1.927 -1.551 3.487 -3.465 3.487h-11.878\" />\n        </motion.g>\n      </motion.svg>\n    );\n  },\n);\n\nCloudIcon.displayName = \"CloudIcon\";\nexport default CloudIcon;\n",
+      "type": "registry:ui"
+    },
+    {
+      "path": "icons/types.ts",
+      "content": "export interface AnimatedIconProps {\n  /** Icon size in pixels or CSS string */\n  size?: number | string;\n  /** Icon color (defaults to currentColor) */\n  color?: string;\n  /** SVG stroke width */\n  strokeWidth?: number;\n  /** Additional CSS classes */\n  className?: string;\n}\n\nexport interface AnimatedIconHandle {\n  startAnimation: () => void;\n  stopAnimation: () => void;\n}\n",
+      "type": "registry:ui"
+    }
+  ],
+  "type": "registry:ui"
+}

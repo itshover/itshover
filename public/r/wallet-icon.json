@@ -1,0 +1,20 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "wallet-icon",
+  "dependencies": ["motion"],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "icons/wallet-icon.tsx",
+      "content": "import { forwardRef, useImperativeHandle } from \"react\";\nimport { AnimatedIconHandle, AnimatedIconProps } from \"./types\";\nimport { motion, useAnimate } from \"motion/react\";\n\nconst WalletIcon = forwardRef<AnimatedIconHandle, AnimatedIconProps>(\n  (\n    { size = 24, color = \"currentColor\", strokeWidth = 2, className = \"\" },\n    ref,\n  ) => {\n    const [scope, animate] = useAnimate();\n\n    const start = async () => {\n      await animate(\n        \".wallet\",\n        { scale: 1.1, rotate: -5 },\n        { duration: 0.3, ease: \"easeOut\" },\n      );\n    };\n\n    const stop = () => {\n      animate(\n        \".wallet\",\n        { scale: 1, rotate: 0 },\n        { duration: 0.2, ease: \"easeIn\" },\n      );\n    };\n\n    useImperativeHandle(ref, () => ({\n      startAnimation: start,\n      stopAnimation: stop,\n    }));\n\n    return (\n      <motion.svg\n        ref={scope}\n        onHoverStart={start}\n        onHoverEnd={stop}\n        xmlns=\"http://www.w3.org/2000/svg\"\n        width={size}\n        height={size}\n        viewBox=\"0 0 24 24\"\n        fill=\"none\"\n        stroke={color}\n        strokeWidth={strokeWidth}\n        strokeLinecap=\"round\"\n        strokeLinejoin=\"round\"\n        className={`inline-flex cursor-pointer items-center justify-center ${className}`}\n        style={{ overflow: \"visible\" }}\n      >\n        <motion.g className=\"wallet\" style={{ transformOrigin: \"center\" }}>\n          <path d=\"M17 8v-3a1 1 0 0 0 -1 -1h-10a2 2 0 0 0 0 4h12a1 1 0 0 1 1 1v3m0 4v3a1 1 0 0 1 -1 1h-12a2 2 0 0 1 -2 -2v-12\" />\n          <path d=\"M20 12v4h-4a2 2 0 0 1 0 -4h4\" />\n        </motion.g>\n      </motion.svg>\n    );\n  },\n);\n\nWalletIcon.displayName = \"WalletIcon\";\nexport default WalletIcon;\n",
+      "type": "registry:ui"
+    },
+    {
+      "path": "icons/types.ts",
+      "content": "export interface AnimatedIconProps {\n  /** Icon size in pixels or CSS string */\n  size?: number | string;\n  /** Icon color (defaults to currentColor) */\n  color?: string;\n  /** SVG stroke width */\n  strokeWidth?: number;\n  /** Additional CSS classes */\n  className?: string;\n}\n\nexport interface AnimatedIconHandle {\n  startAnimation: () => void;\n  stopAnimation: () => void;\n}\n",
+      "type": "registry:ui"
+    }
+  ],
+  "type": "registry:ui"
+}
