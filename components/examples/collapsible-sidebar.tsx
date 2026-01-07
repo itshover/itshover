@@ -16,7 +16,7 @@ import FilledBellIcon from "../ui/filled-bell-icon";
 import MailFilledIcon from "../ui/mail-filled-icon";
 import UserCheckIcon from "../ui/user-check-icon";
 import UnorderedListIcon from "../ui/unordered-list-icon";
-import { AnimatedIconHandle } from "../ui/types";
+import { AnimatedIconHandle, AnimatedIconProps } from "../ui/types";
 
 const sidebarItems = [
   { icon: HomeIcon, label: "Home", href: "#" },
@@ -46,7 +46,7 @@ const CollapsibleSidebar = ({ className, isAnimated = true }: CollapsibleSidebar
         )}
       >
         <div className="flex items-center p-4 pt-6">
-          <div className="relative flex h-10 w-10 shrink-0 items-center justify-center rounded-xl  bg-linear-to-tr text-white shadow-lg hover:bg-muted/50 cursor-pointer">
+          <div className="relative flex h-10 w-10 shrink-0 items-center justify-center rounded-xl  bg-linear-to-tr  shadow-lg hover:bg-muted/50 cursor-pointer">
              <span className="font-bold text-lg">A</span>
           </div>
           <AnimatePresence>
@@ -146,7 +146,7 @@ const CollapsibleSidebar = ({ className, isAnimated = true }: CollapsibleSidebar
 };
 
 interface SidebarItemProps {
-  icon: React.ComponentType<any>;
+  icon: React.ForwardRefExoticComponent<AnimatedIconProps & React.RefAttributes<AnimatedIconHandle>>;
   label: string;
   href: string;
   isCollapsed: boolean;

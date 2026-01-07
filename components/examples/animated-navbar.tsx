@@ -9,7 +9,7 @@ import MagnifierIcon from "../ui/magnifier-icon";
 import FilledBellIcon from "../ui/filled-bell-icon";
 import UserCheckIcon from "../ui/user-check-icon";
 import UnorderedListIcon from "../ui/unordered-list-icon";
-import { AnimatedIconHandle } from "../ui/types";
+import { AnimatedIconHandle, AnimatedIconProps } from "../ui/types";
 
 const navItems = [
   { icon: HomeIcon, label: "Home", href: "#" },
@@ -45,7 +45,7 @@ const AnimatedNavbar = ({ className, isAnimated = true }: AnimatedNavbarProps) =
 };
 
 interface NavItemProps {
-  icon: React.ComponentType<any>;
+  icon: React.ForwardRefExoticComponent<AnimatedIconProps & React.RefAttributes<AnimatedIconHandle>>;
   label: string;
   href: string;
   isActive: boolean;

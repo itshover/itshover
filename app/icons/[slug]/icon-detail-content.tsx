@@ -26,7 +26,6 @@ export default function IconDetailContent({
   code: string;
 }) {
   const iconRef = React.useRef<AnimatedIconHandle>(null);
-  const [iconCode, setIconCode] = React.useState<string>(code);
   const [codeCopied, setCodeCopied] = React.useState(false);
   const [depCopied, setDepCopied] = React.useState(false);
 
@@ -36,7 +35,7 @@ export default function IconDetailContent({
   >;
 
   const copyCode = async () => {
-    await navigator.clipboard.writeText(iconCode);
+    await navigator.clipboard.writeText(code);
     setCodeCopied(true);
     setTimeout(() => setCodeCopied(false), 2000);
   };
@@ -222,7 +221,7 @@ export default function IconDetailContent({
                         </span>
                         <button
                           onClick={copyCode}
-                          disabled={!iconCode}
+                          disabled={!code}
                           className="text-muted-foreground hover:text-foreground flex items-center gap-1.5 text-xs transition-colors disabled:opacity-50"
                         >
                           {codeCopied ? (
@@ -242,10 +241,10 @@ export default function IconDetailContent({
                         </button>
                       </div>
                       <div className="max-h-[500px] overflow-auto">
-                        {iconCode ? (
+                        {code ? (
                           <pre className="p-4 text-sm">
                             <code className="text-foreground/90">
-                              {iconCode}
+                              {code}
                             </code>
                           </pre>
                         ) : (
