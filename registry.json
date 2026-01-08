@@ -90,6 +90,23 @@
       ]
     },
     {
+      "name": "alipay-icon",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": ["motion"],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "icons/alipay-icon.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "icons/types.ts",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
       "name": "ambulance-icon",
       "type": "registry:ui",
       "registryDependencies": [],
@@ -166,6 +183,23 @@
       "files": [
         {
           "path": "icons/apple-brand-logo.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "icons/types.ts",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "appstore-icon",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": ["motion"],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "icons/appstore-icon.tsx",
           "type": "registry:ui"
         },
         {
@@ -2079,6 +2113,23 @@
       ]
     },
     {
+      "name": "netflix-icon",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": ["motion"],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "icons/netflix-icon.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "icons/types.ts",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
       "name": "nodejs-icon",
       "type": "registry:ui",
       "registryDependencies": [],
@@ -2087,6 +2138,23 @@
       "files": [
         {
           "path": "icons/nodejs-icon.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "icons/types.ts",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "openai-icon",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": ["motion"],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "icons/openai-icon.tsx",
           "type": "registry:ui"
         },
         {
@@ -2325,6 +2393,23 @@
       "files": [
         {
           "path": "icons/rainbow-icon.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "icons/types.ts",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "react",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": ["motion"],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "icons/react.tsx",
           "type": "registry:ui"
         },
         {
@@ -2793,6 +2878,23 @@
       ]
     },
     {
+      "name": "tiktok-icon",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": ["motion"],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "icons/tiktok-icon.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "icons/types.ts",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
       "name": "toggle-icon",
       "type": "registry:ui",
       "registryDependencies": [],
@@ -3065,6 +3167,23 @@
       ]
     },
     {
+      "name": "visa-icon",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": ["motion"],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "icons/visa-icon.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "icons/types.ts",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
       "name": "volume-2-icon",
       "type": "registry:ui",
       "registryDependencies": [],
@@ -3107,6 +3226,23 @@
       "files": [
         {
           "path": "icons/washing-machine-icon.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "icons/types.ts",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "wechat-icon",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": ["motion"],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "icons/wechat-icon.tsx",
           "type": "registry:ui"
         },
         {
