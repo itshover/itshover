@@ -132,7 +132,7 @@ import RocketIcon from "./rocket-icon";
 import RouterIcon from "./router-icon";
 import RosetteDiscountIcon from "./rosette-discount-icon";
 import RosetteDiscountCheckIcon from "./rosette-discount-check-icon";
-import ReactIcon from "./react";
+import ReactIcon from "./react-icon";
 import SatelliteDishIcon from "./satellite-dish-icon";
 import ScanBarcodeIcon from "./scan-barcode-icon";
 import ScanHeartIcon from "./scan-heart-icon";
