@@ -1,4 +1,6 @@
 import XSidebar from "@/components/examples/x-sidebar";
+import CircularMenu from "@/components/examples/circular-menu";
+import ExpandableActions from "@/components/examples/expandable-actions";
 import AnimatedNavbar from "@/components/examples/animated-navbar";
 import CollapsibleSidebar from "@/components/examples/collapsible-sidebar";
 import fs from "fs";
@@ -42,6 +44,26 @@ const EXAMPLE_REGISTRY = [
     description:
       "A dashboard sidebar that expands and collapses with a smooth transition. Features icon-only mode with tooltips and animated toggle button.",
     tags: ["Sidebar", "Collapsible", "Dashboard", "Framer Motion", "Tooltip"],
+  },
+  {
+    componentName: "Circular Menu",
+    slug: "circular-menu",
+    createdBy: "https://github.com/KompallyAkhil",
+    filePath: "components/examples/circular-menu.tsx",
+    component: CircularMenu,
+    description:
+      "A radial menu that expands from a toggle button. Uses physics-based springs for a satisfying deployment animation.",
+    tags: ["Menu", "FAB", "Animation", "Framer Motion", "Radial"],
+  },
+  {
+    componentName: "Expandable Actions",
+    slug: "expandable-actions",
+    createdBy: "https://github.com/KompallyAkhil",
+    filePath: "components/examples/expandable-actions.tsx",
+    component: ExpandableActions,
+    description:
+      "A compact pill-shaped button that smoothly expands to reveal a toolbar of action icons.",
+    tags: ["Toolbar", "Button", "Animation", "Framer Motion", "Expandable"],
   },
 ];
 
