@@ -1,11 +1,6 @@
-import React, {
-  forwardRef,
-  useImperativeHandle,
-  useCallback,
-  useEffect,
-} from "react";
+import React, { forwardRef, useImperativeHandle, useCallback } from "react";
 import type { AnimatedIconHandle, AnimatedIconProps } from "./types";
-import { motion, useAnimate, stagger } from "framer-motion";
+import { motion, useAnimate, stagger } from "motion/react";
 
 /**
  * NetflixIcon
@@ -51,10 +46,6 @@ const NetflixIcon = forwardRef<AnimatedIconHandle, AnimatedIconProps>(
       stopAnimation: stop,
     }));
 
-    useEffect(() => {
-      start();
-    }, [start]);
-
     return (
       <motion.svg
         ref={scope}
@@ -74,13 +65,10 @@ const NetflixIcon = forwardRef<AnimatedIconHandle, AnimatedIconProps>(
       >
         <path d="M0 0h24v24H0z" stroke="none" className="bg-none" fill="none" />
 
-        {/* 左侧垂直线条 */}
         <path d="M5 3v18h4v-10.5" />
 
-        {/* 右侧垂直线条 */}
         <path d="M19 21v-18h-4v10.5" />
 
-        {/* 中间连接斜杠 */}
         <path d="M9 3l10 18h-4l-10 -18l4 0" />
       </motion.svg>
     );

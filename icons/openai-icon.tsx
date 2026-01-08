@@ -1,6 +1,6 @@
 import React, { forwardRef, useImperativeHandle, useCallback } from "react";
 import type { AnimatedIconHandle, AnimatedIconProps } from "./types";
-import { motion, useAnimate, stagger } from "framer-motion";
+import { motion, useAnimate, stagger } from "motion/react";
 
 /**
  * OpenAI Icon
