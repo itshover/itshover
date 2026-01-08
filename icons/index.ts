@@ -29,6 +29,8 @@ import ArrowNarrowUpDashedIcon from "./arrow-narrow-up-dashed-icon";
 import ArrowNarrowUpIcon from "./arrow-narrow-up-icon";
 import AppleBrandLogo from "./apple-brand-logo";
 import AtSignIcon from "./at-sign-icon";
+import AppStoreIcon from "./appstore-icon";
+import Alipay from "./alipay-icon";
 import BananaIcon from "./banana-icon";
 import BatteryIcon from "./battery-icon";
 import BatteryChargingIcon from "./battery-charging-icon";
@@ -112,6 +114,8 @@ import MoonIcon from "./moon-icon";
 import MousePointer2Icon from "./mouse-pointer-2-icon";
 import MySQLIcon from "./mysql-icon";
 import NodeJSIcon from "./nodejs-icon";
+import NetflixIcon from "./netflix-icon";
+import OpenAIIcon from "./openai-icon";
 import PartyPopperIcon from "./party-popper-icon";
 import PenIcon from "./pen-icon";
 import PhoneVolume from "./phone-volume";
@@ -128,6 +132,7 @@ import RocketIcon from "./rocket-icon";
 import RouterIcon from "./router-icon";
 import RosetteDiscountIcon from "./rosette-discount-icon";
 import RosetteDiscountCheckIcon from "./rosette-discount-check-icon";
+import ReactIcon from "./react";
 import SatelliteDishIcon from "./satellite-dish-icon";
 import ScanBarcodeIcon from "./scan-barcode-icon";
 import ScanHeartIcon from "./scan-heart-icon";
@@ -150,6 +155,7 @@ import ArrowDownAZIcon from "./arrow-down-a-z-icon";
 import ToggleIcon from "./toggle-icon";
 import TrashIcon from "./trash-icon";
 import TruckElectricIcon from "./truck-electric-icon";
+import TiktokIcon from "./tiktok-icon";
 import UnorderedListIcon from "./unordered-list-icon";
 import UserCheckIcon from "./user-check-icon";
 import UserPlusIcon from "./user-plus-icon";
@@ -182,12 +188,14 @@ import UnlinkIcon from "./unlink-icon";
 import VercelIcon from "./vercel-icon";
 import Volume2Icon from "./volume-2-icon";
 import VolumeXIcon from "./volume-x-icon";
+import Visa from "./visa-icon";
 import XIcon from "./x-icon";
 import YoutubeIcon from "./youtube-icon";
 import PassportIcon from "./passport-icon";
 import AirplaneIcon from "./airplane-icon";
 import TravelBag from "./travel-bag";
 import HotelIcon from "./hotel-icon";
+import WechatIcon from "./wechat-icon";
 
 export interface IconType {
   name: string;
@@ -371,6 +379,16 @@ const ICON_LIST: IconType[] = [
     name: "at-sign-icon",
     icon: AtSignIcon,
     keywords: ["at", "sign", "@", "email", "mention", "tag", "social"],
+  },
+  {
+    name: "alipay-icon",
+    icon: Alipay,
+    keywords: ["ali", "pay", "alibaba", "zhifubao"],
+  },
+  {
+    name: "appstore-icon",
+    icon: AppStoreIcon,
+    keywords: ["apple", "appstore"],
   },
   {
     name: "banana-icon",
@@ -1065,6 +1083,11 @@ const ICON_LIST: IconType[] = [
     ],
   },
   {
+    name: "openai-icon",
+    icon: OpenAIIcon,
+    keywords: ["tech", "openai", "ai", "chatgpt"],
+  },
+  {
     name: "paint-icon",
     icon: PaintIcon,
     keywords: [
@@ -1218,6 +1241,11 @@ const ICON_LIST: IconType[] = [
     keywords: ["nodejs", "node", "javascript", "server", "backend"],
   },
   {
+    name: "netflix-icon",
+    icon: NetflixIcon,
+    keywords: ["netflix", "company", "movie", "video"],
+  },
+  {
     name: "party-popper-icon",
     icon: PartyPopperIcon,
     keywords: ["party", "popper", "celebration", "confetti", "celebrate"],
@@ -1226,6 +1254,11 @@ const ICON_LIST: IconType[] = [
     name: "passport-icon",
     icon: PassportIcon,
     keywords: ["international", "passport", "travel", "visa", "traveling"],
+  },
+  {
+    name: "react-icon",
+    icon: ReactIcon,
+    keywords: ["icon", "react", "tech"],
   },
   {
     name: "moon-icon",
@@ -1251,6 +1284,11 @@ const ICON_LIST: IconType[] = [
     name: "slack-icon",
     icon: SlackIcon,
     keywords: ["slack", "chat", "team", "communication", "work"],
+  },
+  {
+    name: "tiktok-icon",
+    icon: TiktokIcon,
+    keywords: ["tech", "tiktok", "company"],
   },
   {
     name: "vercel-icon",
@@ -1301,6 +1339,11 @@ const ICON_LIST: IconType[] = [
     name: "volume-x-icon",
     icon: VolumeXIcon,
     keywords: ["volume", "mute", "silent", "sound off", "audio off", "quiet"],
+  },
+  {
+    name: "visa-icon",
+    icon: Visa,
+    keywords: ["visa", "pay"],
   },
   {
     name: "radio-icon",
@@ -1362,6 +1405,11 @@ const ICON_LIST: IconType[] = [
     name: "target-icon",
     icon: TargetIcon,
     keywords: ["target", "aim", "goal", "focus", "bullseye", "center"],
+  },
+  {
+    name: "wechat-icon",
+    icon: WechatIcon,
+    keywords: ["wechat", "company", "social"],
   },
   {
     name: "layout-sidebar-right-collapse-icon",
