@@ -1,3 +1,5 @@
+import path from "path";
+
 export const ICONS = [
   {
     name: "accessibility icon",
@@ -98,6 +100,14 @@ export const ICONS = [
   {
     name: "arrow narrow up icon",
     path: "/icons/arrow-narrow-up-icon",
+  },
+  {
+    name: "alipay icon",
+    path: "/icons/alipay-icon",
+  },
+  {
+    name: "appstore icon",
+    path: "/icons/appstore-icon",
   },
   {
     name: "banana icon",
@@ -361,7 +371,7 @@ export const ICONS = [
   },
   {
     name: "hotel icon",
-    path: "/icons/hostel-icon",
+    path: "/icons/hotel-icon",
   },
   {
     name: "instagram icon",
@@ -418,6 +428,14 @@ export const ICONS = [
   {
     name: "nodejs icon",
     path: "/icons/nodejs-icon",
+  },
+  {
+    name: "netflix icon",
+    path: "/icons/netflix-icon",
+  },
+  {
+    name: "openai icon",
+    path: "/icons/openai-icon",
   },
   {
     name: "party popper icon",
@@ -478,6 +496,10 @@ export const ICONS = [
   {
     name: "rocket icon",
     path: "/icons/rocket-icon",
+  },
+  {
+    name: "react icon",
+    path: "/icons/react",
   },
   {
     name: "scan heart icon",
@@ -584,6 +606,10 @@ export const ICONS = [
     path: "/icons/typescript-icon",
   },
   {
+    name: "tiktok icon",
+    path: "/icons/tiktok-icon",
+  },
+  {
     name: "users icon",
     path: "/icons/users-icon",
   },
@@ -662,5 +688,13 @@ export const ICONS = [
   {
     name: "volume x icon",
     path: "/icons/volume-x-icon",
+  },
+  {
+    name: "visa icon",
+    path: "/icons/visa-icon",
+  },
+  {
+    name: "wechat icon",
+    path: "/icons/wechat-icon",
   },
 ];
