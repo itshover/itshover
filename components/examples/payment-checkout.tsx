@@ -106,7 +106,7 @@ const PaymentMethodOption = ({
           method.disabled
             ? "bg-muted/30 border-transparent"
             : selected
-              ? "bg-gradient-to-r from-primary/8 to-transparent border-primary/60 shadow-sm"
+              ? "from-primary/8 border-primary/60 bg-gradient-to-r to-transparent shadow-sm"
               : "bg-card border-border/30 hover:border-border/60 hover:bg-accent/20",
         )}
         onMouseEnter={handleMouseEnter}
@@ -134,7 +134,9 @@ const PaymentMethodOption = ({
               size={20}
               className={cn(
                 "pointer-events-none transition-colors",
-                selected ? "text-primary" : "text-muted-foreground group-hover:text-foreground",
+                selected
+                  ? "text-primary"
+                  : "text-muted-foreground group-hover:text-foreground",
               )}
             />
           </div>
@@ -150,7 +152,7 @@ const PaymentMethodOption = ({
                 {method.name}
               </span>
               {method.meta && (
-                <span className="text-muted-foreground shrink-0 text-[11px] font-mono tabular-nums">
+                <span className="text-muted-foreground shrink-0 font-mono text-[11px] tabular-nums">
                   {method.meta}
                 </span>
               )}
@@ -265,7 +267,7 @@ export const PaymentCheckout = ({
     >
       <motion.div
         layout
-        className="bg-card w-full overflow-hidden rounded-2xl border border-border/50 shadow-lg shadow-black/5"
+        className="bg-card border-border/50 w-full overflow-hidden rounded-2xl border shadow-lg shadow-black/5"
       >
         <div className="flex flex-col md:flex-row">
           <AnimatePresence initial={false} mode="popLayout">
@@ -289,7 +291,7 @@ export const PaymentCheckout = ({
                   clipPath: "inset(0% 0% 0% 100%)",
                 }}
                 transition={{ duration: 0.25, ease: [0.16, 1, 0.3, 1] }}
-                className="w-full bg-muted/30 p-4 md:w-[54%] md:p-5"
+                className="bg-muted/30 w-full p-4 md:w-[54%] md:p-5"
               >
                 <div className="mb-4">
                   <div className="flex items-center gap-2">
@@ -310,10 +312,10 @@ export const PaymentCheckout = ({
                     return (
                       <div
                         key={item.id}
-                        className="group flex items-center justify-between gap-3 rounded-lg bg-background/50 px-3 py-2.5 transition-colors hover:bg-background/80"
+                        className="group bg-background/50 hover:bg-background/80 flex items-center justify-between gap-3 rounded-lg px-3 py-2.5 transition-colors"
                       >
                         <div className="min-w-0 flex-1">
-                          <div className="truncate text-sm font-medium text-foreground">
+                          <div className="text-foreground truncate text-sm font-medium">
                             {item.name}
                           </div>
                           <div className="text-muted-foreground mt-0.5 line-clamp-1 text-xs">
@@ -326,7 +328,8 @@ export const PaymentCheckout = ({
                           </div>
                           {quantity > 1 && (
                             <div className="text-muted-foreground text-[11px] tabular-nums">
-                              {quantity} × {formatMoney(item.price, { locale, currency })}
+                              {quantity} ×{" "}
+                              {formatMoney(item.price, { locale, currency })}
                             </div>
                           )}
                         </div>
@@ -335,7 +338,7 @@ export const PaymentCheckout = ({
                   })}
                 </div>
 
-                <div className="mt-4 space-y-1.5 border-t border-border/30 pt-4">
+                <div className="border-border/30 mt-4 space-y-1.5 border-t pt-4">
                   <div className="flex items-center justify-between text-sm">
                     <span className="text-muted-foreground">Subtotal</span>
                     <span className="font-medium tabular-nums">
@@ -354,7 +357,7 @@ export const PaymentCheckout = ({
                       {formatMoney(tax, { locale, currency })}
                     </span>
                   </div>
-                  <div className="flex items-center justify-between border-t border-border/30 pt-2 mt-2">
+                  <div className="border-border/30 mt-2 flex items-center justify-between border-t pt-2">
                     <span className="text-foreground font-semibold">Total</span>
                     <span className="text-lg font-bold tabular-nums">
                       {formatMoney(total, { locale, currency })}
@@ -369,7 +372,7 @@ export const PaymentCheckout = ({
             layout
             className={cn(
               "bg-card w-full p-4 md:p-5",
-              effectiveShowSummary && "md:border-l md:border-border/30",
+              effectiveShowSummary && "md:border-border/30 md:border-l",
             )}
           >
             <div className="mb-5 flex items-start justify-between gap-4">
@@ -384,7 +387,7 @@ export const PaymentCheckout = ({
 
               <div className="flex shrink-0 flex-col items-end gap-1.5">
                 <div className="text-right">
-                  <div className="text-muted-foreground text-[10px] font-medium uppercase tracking-wide">
+                  <div className="text-muted-foreground text-[10px] font-medium tracking-wide uppercase">
                     Total
                   </div>
                   <div className="text-xl font-bold tabular-nums">
@@ -396,7 +399,7 @@ export const PaymentCheckout = ({
                   variant="outline"
                   size="sm"
                   onClick={toggleSummary}
-                  className="h-7 rounded-full border-primary/40 bg-primary/5 px-3 text-xs font-medium text-primary hover:bg-primary/10 hover:border-primary/60"
+                  className="border-primary/40 bg-primary/5 text-primary hover:bg-primary/10 hover:border-primary/60 h-7 rounded-full px-3 text-xs font-medium"
                 >
                   {effectiveShowSummary ? "Hide details" : "View details"}
                 </Button>
