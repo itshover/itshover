@@ -432,10 +432,6 @@ export const ICONS = [
     path: "/icons/nodejs-icon",
   },
   {
-    name: "netflix icon",
-    path: "/icons/netflix-icon",
-  },
-  {
     name: "openai icon",
     path: "/icons/openai-icon",
   },

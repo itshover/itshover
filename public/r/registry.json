@@ -2130,23 +2130,6 @@
       ]
     },
     {
-      "name": "netflix-icon",
-      "type": "registry:ui",
-      "registryDependencies": [],
-      "dependencies": ["motion"],
-      "devDependencies": [],
-      "files": [
-        {
-          "path": "icons/netflix-icon.tsx",
-          "type": "registry:ui"
-        },
-        {
-          "path": "icons/types.ts",
-          "type": "registry:ui"
-        }
-      ]
-    },
-    {
       "name": "nodejs-icon",
       "type": "registry:ui",
       "registryDependencies": [],
