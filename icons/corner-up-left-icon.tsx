@@ -1,4 +1,4 @@
-import { forwardRef, useImperativeHandle } from "react";
+import { forwardRef, useImperativeHandle, useCallback } from "react";
 import type { AnimatedIconHandle, AnimatedIconProps } from "./types";
 import { motion, useAnimate } from "motion/react";
 
@@ -9,22 +9,26 @@ const CornerUpLeftIcon = forwardRef<AnimatedIconHandle, AnimatedIconProps>(
   ) => {
     const [scope, animate] = useAnimate();
 
-    const start = async () => {
+    const start = useCallback(async () => {
       await animate(
         "path",
         { x: [0, -4, 0] },
         { duration: 0.45, ease: "easeInOut" },
       );
-    };
+    }, [animate]);
 
-    const stop = () => {
+    const stop = useCallback(() => {
       animate("path", { x: 0 }, { duration: 0.2, ease: "easeOut" });
-    };
+    }, [animate]);
 
-    useImperativeHandle(ref, () => ({
-      startAnimation: start,
-      stopAnimation: stop,
-    }));
+    useImperativeHandle(
+      ref,
+      () => ({
+        startAnimation: start,
+        stopAnimation: stop,
+      }),
+      [start, stop],
+    );
 
     return (
       <motion.svg
