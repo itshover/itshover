@@ -115,7 +115,6 @@ import MousePointer2Icon from "./mouse-pointer-2-icon";
 import MySQLIcon from "./mysql-icon";
 import MastercardIcon from "./mastercard-icon";
 import NodeJSIcon from "./nodejs-icon";
-import NetflixIcon from "./netflix-icon";
 import OpenAIIcon from "./openai-icon";
 import PartyPopperIcon from "./party-popper-icon";
 import PenIcon from "./pen-icon";
@@ -1241,11 +1240,6 @@ const ICON_LIST: IconType[] = [
     name: "nodejs-icon",
     icon: NodeJSIcon,
     keywords: ["nodejs", "node", "javascript", "server", "backend"],
-  },
-  {
-    name: "netflix-icon",
-    icon: NetflixIcon,
-    keywords: ["netflix", "company", "movie", "video"],
   },
   {
     name: "party-popper-icon",
