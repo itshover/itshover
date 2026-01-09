@@ -1,16 +1,7 @@
-import React, {
-  forwardRef,
-  useImperativeHandle,
-  useCallback,
-  useEffect,
-} from "react";
+import { forwardRef, useImperativeHandle, useCallback } from "react";
 import type { AnimatedIconHandle, AnimatedIconProps } from "./types";
-import { motion, useAnimate } from "motion/react";
-import { stagger } from "motion";
+import { motion, useAnimate, stagger } from "motion/react";
 
-/**
- * AppStoreIcon
- */
 const AppStoreIcon = forwardRef<AnimatedIconHandle, AnimatedIconProps>(
   (
     { size = 24, color = "currentColor", strokeWidth = 2, className = "" },
@@ -18,51 +9,46 @@ const AppStoreIcon = forwardRef<AnimatedIconHandle, AnimatedIconProps>(
   ) => {
     const [scope, animate] = useAnimate();
 
-    const brandColor = "#007aff";
-
     const start = useCallback(async () => {
+      await Promise.all([
+        animate(
+          "path:not(.bg-none)",
+          { pathLength: 0, opacity: 0 },
+          { duration: 0 },
+        ),
+        animate(scope.current, { rotate: 0 }, { duration: 0 }),
+      ]);
+
       await animate(
         "path:not(.bg-none)",
-        { pathLength: 0, opacity: 0, stroke: color },
-        { duration: 0 },
-      );
-
-      animate(
-        "path:not(.bg-none)",
         { pathLength: [0, 1], opacity: [0, 1] },
-        { duration: 0.8, ease: "easeInOut", delay: stagger(0.15) },
+        {
+          duration: 0.6,
+          ease: "easeInOut",
+          delay: stagger(0.1),
+        },
       );
 
-      const transitionConfig = {
-        duration: 1.6,
-        times: [0, 0.4, 1],
-        ease: "easeInOut" as const,
-      };
-
-      const strokeKeyframes = { stroke: [color, brandColor, color] };
-      animate(
-        "path:not(.bg-none)",
-        strokeKeyframes as Record<string, string[]>,
-        { ...transitionConfig, delay: 0.3 },
+      await animate(
+        scope.current,
+        { rotate: 360 },
+        { duration: 0.8, ease: "easeInOut" },
       );
-    }, [animate, color]);
+    }, [animate, scope]);
 
     const stop = useCallback(() => {
       animate(
         "path:not(.bg-none)",
-        { stroke: color, pathLength: 1, opacity: 1 },
-        { duration: 0.3 },
+        { pathLength: 1, opacity: 1 },
+        { duration: 0.2 },
       );
-    }, [animate, color]);
+      animate(scope.current, { rotate: 0 }, { duration: 0.2 });
+    }, [animate, scope]);
 
     useImperativeHandle(ref, () => ({
       startAnimation: start,
       stopAnimation: stop,
     }));
-
-    useEffect(() => {
-      start();
-    }, [start]);
 
     return (
       <motion.svg
@@ -82,16 +68,12 @@ const AppStoreIcon = forwardRef<AnimatedIconHandle, AnimatedIconProps>(
       >
         <path d="M0 0h24v24H0z" stroke="none" className="bg-none" fill="none" />
 
-        {/* 外圈 */}
         <path d="M3 12a9 9 0 1 0 18 0a9 9 0 1 0 -18 0" />
 
-        {/* 支架线条 A (左侧斜线) */}
         <path d="M8 16l1.106 -1.99m1.4 -2.522l2.494 -4.488" />
 
-        {/* 支架线条 B (底部横线) */}
         <path d="M7 14h5m2.9 0h2.1" />
 
-        {/* 支架线条 C (右侧斜线) */}
         <path d="M16 16l-2.51 -4.518m-1.487 -2.677l-1 -1.805" />
       </motion.svg>
     );
