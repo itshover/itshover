@@ -113,6 +113,7 @@ import MessageCircleIcon from "./message-circle-icon";
 import MoonIcon from "./moon-icon";
 import MousePointer2Icon from "./mouse-pointer-2-icon";
 import MySQLIcon from "./mysql-icon";
+import MastercardIcon from "./mastercard-icon";
 import NodeJSIcon from "./nodejs-icon";
 import NetflixIcon from "./netflix-icon";
 import OpenAIIcon from "./openai-icon";
@@ -122,6 +123,7 @@ import PhoneVolume from "./phone-volume";
 import PinterestIcon from "./pinterest-icon";
 import PythonIcon from "./python-icon";
 import PlayerIcon from "./player-icon";
+import PaypalIcon from "./paypal-icon";
 import QrCodeIcon from "./qrcode-icon";
 import QuestionMark from "./question-mark";
 import RadioIcon from "./radio-icon";
@@ -1256,6 +1258,11 @@ const ICON_LIST: IconType[] = [
     keywords: ["international", "passport", "travel", "visa", "traveling"],
   },
   {
+    name: "paypal-icon",
+    icon: PaypalIcon,
+    keywords: ["paypal", "pay", "money", "finance"],
+  },
+  {
     name: "react-icon",
     icon: ReactIcon,
     keywords: ["icon", "react", "tech"],
@@ -1269,6 +1276,11 @@ const ICON_LIST: IconType[] = [
     name: "mouse-pointer-2-icon",
     icon: MousePointer2Icon,
     keywords: ["mouse", "pointer", "cursor", "click", "select"],
+  },
+  {
+    name: "mastercard-icon",
+    icon: MastercardIcon,
+    keywords: ["mastercard", "pay", "credit", "card", "payment"],
   },
   {
     name: "mysql-icon",
