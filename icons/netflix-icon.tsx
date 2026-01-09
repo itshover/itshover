@@ -5,7 +5,7 @@ import React, {
   useRef,
 } from "react";
 import type { AnimatedIconHandle, AnimatedIconProps } from "./types";
-import { motion, useAnimate } from "framer-motion";
+import { motion, useAnimate } from "motion/react";
 
 const NetflixIcon = forwardRef<AnimatedIconHandle, AnimatedIconProps>(
   (
