@@ -1,4 +1,5 @@
 import XSidebar from "@/components/examples/x-sidebar";
+import PaymentCheckoutExample from "@/components/examples/payment-checkout";
 import fs from "fs";
 import path from "path";
 
@@ -14,6 +15,16 @@ const EXAMPLE_REGISTRY = [
     description:
       "An animated sidebar navigation component inspired by X (formerly Twitter). Features smooth hover effects and individual icon animations.",
     tags: ["Sidebar", "Navigation", "Animation", "Framer Motion"],
+  },
+  {
+    componentName: "Payment Checkout",
+    slug: "payment-checkout",
+    createdBy: "https://github.com/forever-ivy",
+    filePath: "components/examples/payment-checkout.tsx",
+    component: PaymentCheckoutExample,
+    description:
+      "A polished payment checkout component with expandable order summary and animated payment method selection. Features smooth layout transitions and hover-triggered icon animations.",
+    tags: ["Payment", "Checkout", "Animation", "Framer Motion"],
   },
 ];
 
