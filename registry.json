@@ -2028,6 +2028,23 @@
       ]
     },
     {
+      "name": "mastercard-icon",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": ["motion"],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "icons/mastercard-icon.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "icons/types.ts",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
       "name": "meh-icon",
       "type": "registry:ui",
       "registryDependencies": [],
@@ -2206,6 +2223,23 @@
       "files": [
         {
           "path": "icons/passport-icon.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "icons/types.ts",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "paypal-icon",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": ["motion"],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "icons/paypal-icon.tsx",
           "type": "registry:ui"
         },
         {
@@ -2402,14 +2436,14 @@
       ]
     },
     {
-      "name": "react",
+      "name": "react-icon",
       "type": "registry:ui",
       "registryDependencies": [],
       "dependencies": ["motion"],
       "devDependencies": [],
       "files": [
         {
-          "path": "icons/react.tsx",
+          "path": "icons/react-icon.tsx",
           "type": "registry:ui"
         },
         {

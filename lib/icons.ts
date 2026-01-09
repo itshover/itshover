@@ -426,6 +426,10 @@ export const ICONS = [
     path: "/icons/mysql-icon",
   },
   {
+    name: "mastercard icon",
+    path: "/icons/mastercard-icon",
+  },
+  {
     name: "nodejs icon",
     path: "/icons/nodejs-icon",
   },
@@ -474,6 +478,10 @@ export const ICONS = [
     path: "/icons/python-icon",
   },
   {
+    name: "paypal icon",
+    path: "/icons/paypal-icon",
+  },
+  {
     name: "qrcode icon",
     path: "/icons/qrcode-icon",
   },
@@ -499,7 +507,7 @@ export const ICONS = [
   },
   {
     name: "react icon",
-    path: "/icons/react",
+    path: "/icons/react-icon",
   },
   {
     name: "scan heart icon",
@@ -558,16 +566,8 @@ export const ICONS = [
     path: "/icons/stack-3-icon",
   },
   {
-    name: "stadium icon",
-    path: "/icons/stadium-icon",
-  },
-  {
     name: "star icon",
     path: "/icons/star-icon",
-  },
-  {
-    name: "sun icon",
-    path: "/icons/sun-icon",
   },
   {
     name: "telephone icon",
@@ -576,10 +576,6 @@ export const ICONS = [
   {
     name: "terminal icon",
     path: "/icons/terminal-icon",
-  },
-  {
-    name: "text icon",
-    path: "/icons/text-icon",
   },
   {
     name: "toggle icon",
@@ -592,10 +588,6 @@ export const ICONS = [
   {
     name: "travel bag",
     path: "/icons/travel-bag",
-  },
-  {
-    name: "tree icon",
-    path: "/icons/tree-icon",
   },
   {
     name: "twitter x icon",

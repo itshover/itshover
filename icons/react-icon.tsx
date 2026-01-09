@@ -1,10 +1,7 @@
-import React, { forwardRef, useImperativeHandle, useCallback } from "react";
+import { forwardRef, useImperativeHandle, useCallback } from "react";
 import type { AnimatedIconHandle, AnimatedIconProps } from "./types";
 import { motion, useAnimate, stagger } from "motion/react";
 
-/**
- * ReactIcon
- */
 const ReactIcon = forwardRef<AnimatedIconHandle, AnimatedIconProps>(
   (
     { size = 24, color = "currentColor", strokeWidth = 2, className = "" },
@@ -13,41 +10,56 @@ const ReactIcon = forwardRef<AnimatedIconHandle, AnimatedIconProps>(
     const [scope, animate] = useAnimate();
 
     const start = useCallback(async () => {
-      await animate(
-        "path:not(.bg-none)",
-        { pathLength: 0, opacity: 0 },
-        { duration: 0 },
-      );
-      await animate(".center-dot", { scale: 0, opacity: 0 }, { duration: 0 });
+      await Promise.all([
+        animate(
+          "path:not(.bg-none):not(.center-dot)",
+          { pathLength: 0, opacity: 0 },
+          { duration: 0 },
+        ),
+        animate(".center-dot", { scale: 0, opacity: 0 }, { duration: 0 }),
+        animate(scope.current, { scale: 1 }, { duration: 0 }),
+      ]);
 
-      animate(
-        "path:not(.bg-none)",
+      const orbitsAnimation = animate(
+        "path:not(.bg-none):not(.center-dot)",
+        { pathLength: [0, 1], opacity: [0, 1] },
         {
-          pathLength: [0, 1],
-          opacity: [0, 1],
-        },
-        {
-          duration: 0.8,
+          duration: 0.6,
           ease: "easeInOut",
-          delay: stagger(0.15),
+          delay: stagger(0.1),
         },
       );
 
-      await animate(
+      const dotAnimation = animate(
         ".center-dot",
-        { scale: [0, 1.2, 1], opacity: 1 },
-        { duration: 0.5, ease: "backOut", delay: 0.6 },
+        { scale: [0, 1], opacity: 1 },
+        { duration: 0.4, delay: 0.4, ease: "backOut" },
       );
-    }, [animate]);
+
+      await Promise.all([orbitsAnimation, dotAnimation]);
+
+      await animate(
+        scope.current,
+        { scale: 1.2 },
+        { duration: 0.25, ease: "easeOut" },
+      );
+
+      await animate(
+        scope.current,
+        { scale: 1 },
+        { duration: 0.25, ease: "easeIn" },
+      );
+    }, [animate, scope]);
 
     const stop = useCallback(() => {
       animate(
-        "path:not(.bg-none)",
+        "path:not(.bg-none):not(.center-dot)",
         { pathLength: 1, opacity: 1 },
-        { duration: 0.4 },
+        { duration: 0.2 },
       );
-      animate(".center-dot", { scale: 1, opacity: 1 }, { duration: 0.4 });
-    }, [animate]);
+      animate(".center-dot", { scale: 1, opacity: 1 }, { duration: 0.2 });
+      animate(scope.current, { scale: 1 }, { duration: 0.2 });
+    }, [animate, scope]);
 
     useImperativeHandle(ref, () => ({
       startAnimation: start,
@@ -85,6 +97,7 @@ const ReactIcon = forwardRef<AnimatedIconHandle, AnimatedIconProps>(
           className="center-dot"
           d="M11.5 12.866a1 1 0 1 0 1 -1.732a1 1 0 0 0 -1 1.732"
           fill={color}
+          stroke="none"
         />
       </motion.svg>
     );
