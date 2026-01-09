@@ -81,7 +81,6 @@ const Visa = forwardRef<AnimatedIconHandle, AnimatedIconProps>(
           className="visa-container"
           style={{ transformOrigin: "center" }}
         >
-          {/* 使用 motion.path 和 initial 确保初始隐藏，但可被动画控制显示 */}
           <motion.path
             className="card-frame"
             d="M3 5h18a2 2 0 0 1 2 2v10a2 2 0 0 1 -2 2H3a2 2 0 0 1 -2 -2V7a2 2 0 0 1 2 -2z"
