@@ -188,6 +188,14 @@ import PassportIcon from "./passport-icon";
 import AirplaneIcon from "./airplane-icon";
 import TravelBag from "./travel-bag";
 import HotelIcon from "./hotel-icon";
+import CornerDownLeftIcon from "./corner-down-left-icon";
+import CornerDownRightIcon from "./corner-down-right-icon";
+import CornerLeftDownIcon from "./corner-left-down-icon";
+import CornerLeftUpIcon from "./corner-left-up-icon";
+import CornerRightDownIcon from "./corner-right-down-icon";
+import CornerRightUpIcon from "./corner-right-up-icon";
+import CornerUpLeftIcon from "./corner-up-left-icon";
+import CornerUpRightIcon from "./corner-up-right-icon";
 
 export interface IconType {
   name: string;
@@ -1374,6 +1382,104 @@ const ICON_LIST: IconType[] = [
       "panel",
       "ui",
       "interface",
+    ],
+  },
+  {
+    name: "corner-down-left-icon",
+    icon: CornerDownLeftIcon,
+    keywords: [
+      "corner",
+      "down",
+      "left",
+      "arrow",
+      "turn",
+      "direction",
+      "reply",
+      "return",
+      "enter",
+    ],
+  },
+  {
+    name: "corner-down-right-icon",
+    icon: CornerDownRightIcon,
+    keywords: [
+      "corner",
+      "down",
+      "right",
+      "arrow",
+      "turn",
+      "direction",
+      "navigation",
+    ],
+  },
+  {
+    name: "corner-left-down-icon",
+    icon: CornerLeftDownIcon,
+    keywords: ["corner", "left", "down", "arrow", "turn", "flow", "navigation"],
+  },
+  {
+    name: "corner-left-up-icon",
+    icon: CornerLeftUpIcon,
+    keywords: [
+      "corner",
+      "left",
+      "up",
+      "arrow",
+      "turn",
+      "direction",
+      "navigation",
+    ],
+  },
+  {
+    name: "corner-right-down-icon",
+    icon: CornerRightDownIcon,
+    keywords: [
+      "corner",
+      "right",
+      "down",
+      "arrow",
+      "turn",
+      "direction",
+      "navigation",
+    ],
+  },
+  {
+    name: "corner-right-up-icon",
+    icon: CornerRightUpIcon,
+    keywords: [
+      "corner",
+      "right",
+      "up",
+      "arrow",
+      "turn",
+      "direction",
+      "navigation",
+    ],
+  },
+  {
+    name: "corner-up-left-icon",
+    icon: CornerUpLeftIcon,
+    keywords: [
+      "corner",
+      "up",
+      "left",
+      "arrow",
+      "turn",
+      "direction",
+      "navigation",
+    ],
+  },
+  {
+    name: "corner-up-right-icon",
+    icon: CornerUpRightIcon,
+    keywords: [
+      "corner",
+      "up",
+      "right",
+      "arrow",
+      "turn",
+      "direction",
+      "navigation",
     ],
   },
 ].sort((a, b) => a.name.localeCompare(b.name));
