@@ -10,11 +10,15 @@ const CornerRightDownIcon = forwardRef<AnimatedIconHandle, AnimatedIconProps>(
     const [scope, animate] = useAnimate();
 
     const start = useCallback(() => {
-      animate("path", { y: [0, 4, 0] }, { duration: 0.45, ease: "easeInOut" });
+      animate(
+        ".arrow-group",
+        { y: [0, 4, 0] },
+        { duration: 0.45, ease: "easeInOut" },
+      );
     }, [animate]);
 
     const stop = useCallback(() => {
-      animate("path", { y: 0 }, { duration: 0.2, ease: "easeOut" });
+      animate(".arrow-group", { y: 0 }, { duration: 0.2, ease: "easeOut" });
     }, [animate]);
 
     useImperativeHandle(
@@ -42,9 +46,12 @@ const CornerRightDownIcon = forwardRef<AnimatedIconHandle, AnimatedIconProps>(
         strokeLinejoin="round"
         className={`cursor-pointer ${className}`}
         style={{ overflow: "visible" }}
+        aria-hidden="true"
       >
-        <motion.path d="m10 15 5 5 5-5" />
-        <motion.path d="M4 4h7a4 4 0 0 1 4 4v12" />
+        <motion.g className="arrow-group">
+          <motion.path d="m10 15 5 5 5-5" />
+          <motion.path d="M4 4h7a4 4 0 0 1 4 4v12" />
+        </motion.g>
       </motion.svg>
     );
   },
