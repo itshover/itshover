@@ -87,7 +87,10 @@ const XSidebar = ({ isAnimated = true }: XSidebarProps) => {
           href="#"
           className="hover:bg-accent hover:text-accent-foreground flex h-12 w-12 items-center justify-center rounded-full"
         >
-          <TwitterXIcon className="text-foreground h-8 w-8" disableHover={!isAnimated}/>
+          <TwitterXIcon
+            className="text-foreground h-8 w-8"
+            disableHover={!isAnimated}
+          />
         </Link>
       </div>
 
