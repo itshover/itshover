@@ -69,7 +69,7 @@ const SidebarItem = ({
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
     >
-      <Icon className="h-7 w-7" ref={ref} disableHover={isAnimated} />
+      <Icon className="h-7 w-7" ref={ref} disableHover={!isAnimated} />
       <span className="font-normal">{label}</span>
     </Link>
   );
@@ -87,7 +87,10 @@ const XSidebar = ({ isAnimated = true }: XSidebarProps) => {
           href="#"
           className="hover:bg-accent hover:text-accent-foreground flex h-12 w-12 items-center justify-center rounded-full"
         >
-          <TwitterXIcon className="text-foreground h-8 w-8" />
+          <TwitterXIcon
+            className="text-foreground h-8 w-8"
+            disableHover={!isAnimated}
+          />
         </Link>
       </div>
 
