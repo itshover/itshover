@@ -9,12 +9,8 @@ const CornerDownRightIcon = forwardRef<AnimatedIconHandle, AnimatedIconProps>(
   ) => {
     const [scope, animate] = useAnimate();
 
-    const start = useCallback(async () => {
-      await animate(
-        "path",
-        { x: [0, 4, 0] },
-        { duration: 0.45, ease: "easeInOut" },
-      );
+    const start = useCallback(() => {
+      animate("path", { x: [0, 4, 0] }, { duration: 0.45, ease: "easeInOut" });
     }, [animate]);
 
     const stop = useCallback(() => {
@@ -44,7 +40,7 @@ const CornerDownRightIcon = forwardRef<AnimatedIconHandle, AnimatedIconProps>(
         strokeWidth={strokeWidth}
         strokeLinecap="round"
         strokeLinejoin="round"
-        className={`inline-flex cursor-pointer items-center justify-center ${className}`}
+        className={`cursor-pointer ${className}`}
         style={{ overflow: "visible" }}
       >
         <motion.path d="M4 4v7a4 4 0 0 0 4 4h12" />
