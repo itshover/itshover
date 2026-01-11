@@ -760,27 +760,27 @@ export const ICONS = [
     path: "/icons/brand-lmstudio-icon",
   },
   {
-    name: "ollama icon",
-    path: "/icons/ollama-icon",
+    name: "brand-ollama",
+    path: "/icons/brand-ollama-icon",
   },
   {
-    name: "xai icon",
-    path: "/icons/xai-icon",
+    name: "brand-xai",
+    path: "/icons/brand-xai-icon",
   },
   {
-    name: "anthropic icon",
-    path: "/icons/anthropic-icon",
+    name: "brand-anthropic",
+    path: "/icons/brand-anthropic-icon",
   },
   {
-    name: "aistudio icon",
-    path: "/icons/aistudio-icon",
+    name: "brand-aistudio",
+    path: "/icons/brand-aistudio-icon",
   },
   {
-    name: "midjourney icon",
-    path: "/icons/midjourney-icon",
+    name: "brand-midjourney",
+    path: "/icons/brand-midjourney-icon",
   },
   {
-    name: "lmstudio icon",
-    path: "/icons/lmstudio-icon",
+    name: "brand-lmstudio",
+    path: "/icons/brand-lmstudio-icon",
   },
 ];
