@@ -49,7 +49,9 @@ const ProfileDropdownItem = ({
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
     >
-      <div className="flex items-center gap-3">
+      <div
+        className={`flex items-center gap-3 ${isAnimated ? "" : "pointer-events-none"}`}
+      >
         <Icon className="h-5 w-5" ref={ref} />
         <span>{label}</span>
       </div>
