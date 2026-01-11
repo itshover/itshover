@@ -148,6 +148,7 @@ import TargetIcon from "./target-icon";
 import TelephoneIcon from "./telephone-icon";
 import ArrowDownAZIcon from "./arrow-down-a-z-icon";
 import ToggleIcon from "./toggle-icon";
+import ToggleIconReverse from "./toogle-icons-reverse";
 import TrashIcon from "./trash-icon";
 import TruckElectricIcon from "./truck-electric-icon";
 import UnorderedListIcon from "./unordered-list-icon";
@@ -962,7 +963,12 @@ const ICON_LIST: IconType[] = [
   {
     name: "toggle-icon",
     icon: ToggleIcon,
-    keywords: ["toggle", "switch", "on", "off"],
+    keywords: ["toggle", "switch", "on"],
+  },
+  {
+    name: "toggle-icon-reverse",
+    icon: ToggleIconReverse,
+    keywords: ["toggle", "switch", "off"]
   },
   {
     name: "trash-icon",
