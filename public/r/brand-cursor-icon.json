@@ -1,0 +1,20 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "brand-cursor-icon",
+  "dependencies": ["motion"],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "icons/brand-cursor-icon.tsx",
+      "content": "import { forwardRef, useImperativeHandle, useCallback } from \"react\";\nimport type { AnimatedIconHandle, AnimatedIconProps } from \"./types\";\nimport { motion, useAnimate } from \"motion/react\";\n\nconst BrandCursorIcon = forwardRef<AnimatedIconHandle, AnimatedIconProps>(\n  ({ size = 24, color = \"currentColor\", className = \"\" }, ref) => {\n    const [scope, animate] = useAnimate();\n\n    const start = useCallback(() => {\n      animate(\n        scope.current,\n        {\n          x: [0, -1, 1, -1, 0],\n          y: [0, 1, -1, 1, 0],\n        },\n        { duration: 0.25, repeat: 1 },\n      );\n    }, [animate, scope]);\n\n    const stop = useCallback(() => {\n      animate(scope.current, { x: 0, y: 0 }, { duration: 0.15 });\n    }, [animate, scope]);\n\n    useImperativeHandle(\n      ref,\n      () => ({\n        startAnimation: start,\n        stopAnimation: stop,\n      }),\n      [start, stop],\n    );\n\n    return (\n      <motion.svg\n        ref={scope}\n        onHoverStart={start}\n        onHoverEnd={stop}\n        fill={color}\n        fillRule=\"evenodd\"\n        height={size}\n        width={size}\n        style={{ flex: \"none\", lineHeight: 1 }}\n        viewBox=\"0 0 24 24\"\n        xmlns=\"http://www.w3.org/2000/svg\"\n        className={`cursor-ide-icon cursor-pointer ${className}`}\n        stroke={color}\n      >\n        <title>Cursor</title>\n        <motion.path d=\"M22.106 5.68L12.5.135a.998.998 0 00-.998 0L1.893 5.68a.84.84 0 00-.419.726v11.186c0 .3.16.577.42.727l9.607 5.547a.999.999 0 00.998 0l9.608-5.547a.84.84 0 00.42-.727V6.407a.84.84 0 00-.42-.726zm-.603 1.176L12.228 22.92c-.063.108-.228.064-.228-.061V12.34a.59.59 0 00-.295-.51l-9.11-5.26c-.107-.062-.063-.228.062-.228h18.55c.264 0 .428.286.296.514z\" />\n      </motion.svg>\n    );\n  },\n);\n\nBrandCursorIcon.displayName = \"BrandCursorIcon\";\nexport default BrandCursorIcon;\n",
+      "type": "registry:ui"
+    },
+    {
+      "path": "icons/types.ts",
+      "content": "export interface AnimatedIconProps {\n  /** Icon size in pixels or CSS string */\n  size?: number | string;\n  /** Icon color (defaults to currentColor) */\n  color?: string;\n  /** SVG stroke width */\n  strokeWidth?: number;\n  /** Additional CSS classes */\n  className?: string;\n}\n\nexport interface AnimatedIconHandle {\n  startAnimation: () => void;\n  stopAnimation: () => void;\n}\n",
+      "type": "registry:ui"
+    }
+  ],
+  "type": "registry:ui"
+}

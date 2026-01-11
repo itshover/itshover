@@ -39,6 +39,16 @@ import BookIcon from "./book-icon";
 import BookmarkIcon from "./bookmark-icon";
 import BrandGoogleIcon from "./brand-google-icon";
 import BrandNextjsIcon from "./brand-nextjs-icon";
+import BrandStripeIcon from "./brand-stripe-icon";
+import BrandReactIcon from "./brand-react-icon";
+import BrandPaypalIcon from "./brand-paypal-icon";
+import BrandAwsIcon from "./brand-aws-icon";
+import BrandThreadsIcon from "./brand-threads-icon";
+import BrandZoomIcon from "./brand-zoom-icon";
+import BrandReactNativeIcon from "./brand-react-native-icon";
+import BrandOpenaiIcon from "./brand-openai-icon";
+import BrandTelegramIcon from "./brand-telegram-icon";
+import BrandWindowsIcon from "./brand-windows-icon";
 import BrightnessDownIcon from "./brightness-down-icon";
 import BulbSvg from "./bulb-svg";
 import CameraIcon from "./camera-icon";
@@ -179,7 +189,7 @@ import TwitterIcon from "./twitter-icon";
 import TwitterXIcon from "./twitter-x-icon";
 import TypeScriptIcon from "./typescript-icon";
 import UnlinkIcon from "./unlink-icon";
-import VercelIcon from "./vercel-icon";
+import BrandVercelIcon from "./brand-vercel-icon";
 import Volume2Icon from "./volume-2-icon";
 import VolumeXIcon from "./volume-x-icon";
 import XIcon from "./x-icon";
@@ -189,12 +199,12 @@ import AirplaneIcon from "./airplane-icon";
 import TravelBag from "./travel-bag";
 import HotelIcon from "./hotel-icon";
 import GolangIcon from "./golang-icon";
-import RailwayIcon from "./railway-icon";
-import CursorIdeIcon from "./cursor-ide-icon";
-import NotionIcon from "./notion-icon";
-import GeminiIcon from "./gemini-icon";
-import QwenIcon from "./qwen-icon";
-import GrokIcon from "./grok-icon";
+import BrandRailwayIcon from "./brand-railway-icon";
+import BrandCursorIcon from "./brand-cursor-icon";
+import BrandNotionIcon from "./brand-notion-icon";
+import BrandGeminiIcon from "./brand-gemini-icon";
+import BrandQwenIcon from "./brand-qwen-icon";
+import BrandGrokIcon from "./brand-grok-icon";
 
 export interface IconType {
   name: string;
@@ -1260,8 +1270,8 @@ const ICON_LIST: IconType[] = [
     keywords: ["slack", "chat", "team", "communication", "work"],
   },
   {
-    name: "vercel-icon",
-    icon: VercelIcon,
+    name: "brand-vercel-icon",
+    icon: BrandVercelIcon,
     keywords: ["vercel", "deploy", "hosting", "nextjs", "triangle"],
   },
   {
@@ -1384,13 +1394,63 @@ const ICON_LIST: IconType[] = [
     ],
   },
   {
+    name: "brand-stripe-icon",
+    icon: BrandStripeIcon,
+    keywords: ["stripe", "brand", "payment", "money"],
+  },
+  {
+    name: "brand-react-icon",
+    icon: BrandReactIcon,
+    keywords: ["react", "brand", "library", "javascript"],
+  },
+  {
+    name: "brand-paypal-icon",
+    icon: BrandPaypalIcon,
+    keywords: ["paypal", "brand", "payment", "money"],
+  },
+  {
+    name: "brand-aws-icon",
+    icon: BrandAwsIcon,
+    keywords: ["aws", "brand", "cloud", "amazon"],
+  },
+  {
+    name: "brand-threads-icon",
+    icon: BrandThreadsIcon,
+    keywords: ["threads", "brand", "social", "meta"],
+  },
+  {
+    name: "brand-zoom-icon",
+    icon: BrandZoomIcon,
+    keywords: ["zoom", "brand", "video", "call"],
+  },
+  {
+    name: "brand-react-native-icon",
+    icon: BrandReactNativeIcon,
+    keywords: ["react native", "brand", "mobile", "app"],
+  },
+  {
+    name: "brand-openai-icon",
+    icon: BrandOpenaiIcon,
+    keywords: ["openai", "brand", "ai", "chatgpt"],
+  },
+  {
+    name: "brand-telegram-icon",
+    icon: BrandTelegramIcon,
+    keywords: ["telegram", "brand", "chat", "message"],
+  },
+  {
+    name: "brand-windows-icon",
+    icon: BrandWindowsIcon,
+    keywords: ["windows", "brand", "microsoft", "os"],
+  },
+  {
     name: "golang-icon",
     icon: GolangIcon,
     keywords: ["golang", "go", "programming", "language", "code", "developer"],
   },
   {
-    name: "railway-icon",
-    icon: RailwayIcon,
+    name: "brand-railway-icon",
+    icon: BrandRailwayIcon,
     keywords: [
       "railway",
       "train",
@@ -1402,28 +1462,28 @@ const ICON_LIST: IconType[] = [
     ],
   },
   {
-    name: "cursor-ide-icon",
-    icon: CursorIdeIcon,
+    name: "brand-cursor-icon",
+    icon: BrandCursorIcon,
     keywords: ["cursor", "ide", "code", "coding", "cursor-ide"],
   },
   {
-    name: "notion-icon",
-    icon: NotionIcon,
+    name: "brand-notion-icon",
+    icon: BrandNotionIcon,
     keywords: ["notion", "notion-icon", "notion-svg", "docs", "notes"],
   },
   {
-    name: "gemini-icon",
-    icon: GeminiIcon,
+    name: "brand-gemini-icon",
+    icon: BrandGeminiIcon,
     keywords: ["gemini", "gemini-icon", "ai", "chatbot", "conversation"],
   },
   {
-    name: "qwen-icon",
-    icon: QwenIcon,
+    name: "brand-qwen-icon",
+    icon: BrandQwenIcon,
     keywords: ["qwen", "qwen-icon", "ai", "chatbot", "conversation"],
   },
   {
-    name: "grok-icon",
-    icon: GrokIcon,
+    name: "brand-grok-icon",
+    icon: BrandGrokIcon,
     keywords: ["grok", "grok-icon", "ai", "chatbot", "conversation"],
   },
 ].sort((a, b) => a.name.localeCompare(b.name));

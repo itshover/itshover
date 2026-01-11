@@ -1,4 +1,4 @@
-import { forwardRef, useImperativeHandle, useCallback } from "react";
+import { forwardRef, useImperativeHandle, useRef } from "react";
 import type { AnimatedIconHandle, AnimatedIconProps } from "./types";
 import { motion, useAnimate } from "motion/react";
 
@@ -8,8 +8,12 @@ const QrcodeIcon = forwardRef<AnimatedIconHandle, AnimatedIconProps>(
     ref,
   ) => {
     const [scope, animate] = useAnimate();
+    const animationControls = useRef<Array<ReturnType<typeof animate>>>([]);
 
-    const start = useCallback(async () => {
+    const start = async () => {
+      animationControls.current.forEach((control) => control.stop());
+      animationControls.current = [];
+
       animate(".qr-scan", { opacity: 0, y: 0 }, { duration: 0 });
       animate(".corner-rect", { pathLength: 0, opacity: 0 }, { duration: 0 });
       animate(".inner-element", { opacity: 0, scale: 0.8 }, { duration: 0 });
@@ -21,15 +25,17 @@ const QrcodeIcon = forwardRef<AnimatedIconHandle, AnimatedIconProps>(
         { duration: 0.4, ease: "easeOut", delay: (i) => i * 0.1 },
       );
 
-      animate(
-        ".qr-scan",
-        { opacity: [0, 1, 1, 0], y: [0, 30, 0, 0] },
-        {
-          duration: 1.5,
-          ease: "easeInOut",
-          repeat: Infinity,
-          repeatDelay: 0.3,
-        },
+      animationControls.current.push(
+        animate(
+          ".qr-scan",
+          { opacity: [0, 1, 1, 0], y: [0, 30, 0, 0] },
+          {
+            duration: 1.5,
+            ease: "easeInOut",
+            repeat: Infinity,
+            repeatDelay: 0.3,
+          },
+        ),
       );
 
       await animate(
@@ -43,15 +49,18 @@ const QrcodeIcon = forwardRef<AnimatedIconHandle, AnimatedIconProps>(
         { scale: [0, 1.2, 1], opacity: [0, 1] },
         { duration: 0.3, ease: "easeOut", delay: (i) => i * 0.08 },
       );
-    }, [animate]);
+    };
 
-    const stop = useCallback(() => {
+    const stop = () => {
+      animationControls.current.forEach((control) => control.stop());
+      animationControls.current = [];
+
       animate(
         ".qr-scan, .corner-rect, .inner-element, .center-dot",
         { opacity: 1, pathLength: 1, scale: 1, y: 0 },
         { duration: 0.2 },
       );
-    }, [animate]);
+    };
 
     useImperativeHandle(ref, () => ({
       startAnimation: start,

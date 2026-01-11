@@ -2,7 +2,7 @@ import { forwardRef, useImperativeHandle, useCallback } from "react";
 import type { AnimatedIconHandle, AnimatedIconProps } from "./types";
 import { motion, useAnimate } from "motion/react";
 
-const QwenIcon = forwardRef<AnimatedIconHandle, AnimatedIconProps>(
+const BrandQwenIcon = forwardRef<AnimatedIconHandle, AnimatedIconProps>(
   ({ size = 24, color = "currentColor", className = "" }, ref) => {
     const [scope, animate] = useAnimate();
 
@@ -44,7 +44,7 @@ const QwenIcon = forwardRef<AnimatedIconHandle, AnimatedIconProps>(
         width={size}
         style={{ flex: "none", lineHeight: 1 }}
         xmlns="http://www.w3.org/2000/svg"
-        className={className}
+        className={`qwen-icon cursor-pointer ${className}`}
       >
         <title>Qwen</title>
 
@@ -58,5 +58,5 @@ const QwenIcon = forwardRef<AnimatedIconHandle, AnimatedIconProps>(
   },
 );
 
-QwenIcon.displayName = "QwenIcon";
-export default QwenIcon;
+BrandQwenIcon.displayName = "BrandQwenIcon";
+export default BrandQwenIcon;

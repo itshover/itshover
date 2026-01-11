@@ -1,8 +1,8 @@
 {
-  "name": "animated-icons",
+  "name": "itshover",
   "version": "0.1.0",
   "private": true,
-  "description": "Beautiful animated SVG icons with motion/react",
+  "description": "icons that move with intent",
   "author": "Abhij",
   "license": "MIT",
   "scripts": {

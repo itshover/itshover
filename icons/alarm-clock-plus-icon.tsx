@@ -1,4 +1,4 @@
-import { forwardRef, useImperativeHandle } from "react";
+import { forwardRef, useImperativeHandle, useRef } from "react";
 import type { AnimatedIconHandle, AnimatedIconProps } from "./types";
 import { motion, useAnimate } from "motion/react";
 
@@ -8,30 +8,38 @@ const AlarmClockPlusIcon = forwardRef<AnimatedIconHandle, AnimatedIconProps>(
     ref,
   ) => {
     const [scope, animate] = useAnimate();
+    const animationControls = useRef<Array<ReturnType<typeof animate>>>([]);
 
     const start = async () => {
-      animate(
-        ".clock",
-        {
-          y: -1.5,
-          x: [-1, 1, -1, 1, -1, 0],
-        },
-        {
-          y: { duration: 0.2, type: "spring", stiffness: 200, damping: 25 },
-          x: { duration: 0.3, repeat: Infinity, ease: "linear" },
-        },
+      animationControls.current.forEach((control) => control.stop());
+      animationControls.current = [];
+
+      animationControls.current.push(
+        animate(
+          ".clock",
+          {
+            y: -1.5,
+            x: [-1, 1, -1, 1, -1, 0],
+          },
+          {
+            y: { duration: 0.2, type: "spring", stiffness: 200, damping: 25 },
+            x: { duration: 0.3, repeat: Infinity, ease: "linear" },
+          },
+        ),
       );
 
-      animate(
-        ".bells",
-        {
-          y: -2.5,
-          x: [-2, 2, -2, 2, -2, 0],
-        },
-        {
-          y: { duration: 0.2, type: "spring", stiffness: 200, damping: 25 },
-          x: { duration: 0.3, repeat: Infinity, ease: "linear" },
-        },
+      animationControls.current.push(
+        animate(
+          ".bells",
+          {
+            y: -2.5,
+            x: [-2, 2, -2, 2, -2, 0],
+          },
+          {
+            y: { duration: 0.2, type: "spring", stiffness: 200, damping: 25 },
+            x: { duration: 0.3, repeat: Infinity, ease: "linear" },
+          },
+        ),
       );
 
       await animate(
@@ -42,6 +50,9 @@ const AlarmClockPlusIcon = forwardRef<AnimatedIconHandle, AnimatedIconProps>(
     };
 
     const stop = () => {
+      animationControls.current.forEach((control) => control.stop());
+      animationControls.current = [];
+
       animate(".clock", { y: 0, x: 0 }, { duration: 0.2 });
       animate(".bells", { y: 0, x: 0 }, { duration: 0.2 });
     };

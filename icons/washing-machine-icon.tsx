@@ -1,4 +1,4 @@
-import { forwardRef, useImperativeHandle, useCallback } from "react";
+import { forwardRef, useImperativeHandle, useRef } from "react";
 import type { AnimatedIconHandle, AnimatedIconProps } from "./types";
 import { motion, useAnimate } from "motion/react";
 
@@ -8,23 +8,32 @@ const WashingMachineIcon = forwardRef<AnimatedIconHandle, AnimatedIconProps>(
     ref,
   ) => {
     const [scope, animate] = useAnimate();
+    const animationControls = useRef<Array<ReturnType<typeof animate>>>([]);
 
-    const start = useCallback(async () => {
+    const start = async () => {
+      animationControls.current.forEach((control) => control.stop());
+      animationControls.current = [];
+
       // Continuously rotate the inner drum while hovering
-      animate(
-        ".drum-inner",
-        {
-          rotate: [0, 360],
-        },
-        {
-          duration: 2,
-          repeat: Infinity,
-          ease: "linear",
-        },
+      animationControls.current.push(
+        animate(
+          ".drum-inner",
+          {
+            rotate: [0, 360],
+          },
+          {
+            duration: 2,
+            repeat: Infinity,
+            ease: "linear",
+          },
+        ),
       );
-    }, [animate]);
+    };
 
-    const stop = useCallback(async () => {
+    const stop = () => {
+      animationControls.current.forEach((control) => control.stop());
+      animationControls.current = [];
+
       // Stop the rotation
       animate(
         ".drum-inner",
@@ -36,7 +45,7 @@ const WashingMachineIcon = forwardRef<AnimatedIconHandle, AnimatedIconProps>(
           ease: "easeOut",
         },
       );
-    }, [animate]);
+    };
 
     useImperativeHandle(ref, () => ({
       startAnimation: start,

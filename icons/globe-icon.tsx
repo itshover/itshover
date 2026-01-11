@@ -1,4 +1,4 @@
-import { forwardRef, useImperativeHandle, useCallback } from "react";
+import { forwardRef, useImperativeHandle, useRef } from "react";
 import type { AnimatedIconHandle, AnimatedIconProps } from "./types";
 import { motion, useAnimate } from "motion/react";
 
@@ -8,18 +8,27 @@ const GlobeIcon = forwardRef<AnimatedIconHandle, AnimatedIconProps>(
     ref,
   ) => {
     const [scope, animate] = useAnimate();
+    const animationControls = useRef<Array<ReturnType<typeof animate>>>([]);
 
-    const start = useCallback(async () => {
-      animate(
-        ".globe-circle",
-        { rotate: 360 },
-        { duration: 2, ease: "linear", repeat: Infinity },
+    const start = async () => {
+      animationControls.current.forEach((control) => control.stop());
+      animationControls.current = [];
+
+      animationControls.current.push(
+        animate(
+          ".globe-circle",
+          { rotate: 360 },
+          { duration: 2, ease: "linear", repeat: Infinity },
+        ),
       );
-    }, [animate]);
+    };
 
-    const stop = useCallback(async () => {
+    const stop = () => {
+      animationControls.current.forEach((control) => control.stop());
+      animationControls.current = [];
+
       animate(".globe-circle", { rotate: 0 }, { duration: 0.5 });
-    }, [animate]);
+    };
 
     useImperativeHandle(ref, () => ({
       startAnimation: start,

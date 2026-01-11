@@ -1,4 +1,4 @@
-import { forwardRef, useImperativeHandle, useCallback } from "react";
+import { forwardRef, useImperativeHandle, useRef } from "react";
 import type { AnimatedIconHandle, AnimatedIconProps } from "./types";
 import { motion, useAnimate } from "motion/react";
 
@@ -8,30 +8,41 @@ const DockerIcon = forwardRef<AnimatedIconHandle, AnimatedIconProps>(
     ref,
   ) => {
     const [scope, animate] = useAnimate();
+    const animationControls = useRef<Array<ReturnType<typeof animate>>>([]);
 
-    const start = useCallback(async () => {
-      animate(
-        ".whale",
-        { x: [0, 2, 0] },
-        { duration: 1.2, ease: "easeInOut", repeat: Infinity },
+    const start = async () => {
+      animationControls.current.forEach((control) => control.stop());
+      animationControls.current = [];
+
+      animationControls.current.push(
+        animate(
+          ".whale",
+          { x: [0, 2, 0] },
+          { duration: 1.2, ease: "easeInOut", repeat: Infinity },
+        ),
       );
-      animate(
-        ".containers",
-        { y: [0, -1, 0] },
-        { duration: 0.8, ease: "easeInOut", repeat: Infinity },
+      animationControls.current.push(
+        animate(
+          ".containers",
+          { y: [0, -1, 0] },
+          { duration: 0.8, ease: "easeInOut", repeat: Infinity },
+        ),
       );
       animate(
         ".dot",
         { scale: [1, 1.3, 1] },
         { duration: 0.5, ease: "easeInOut" },
       );
-    }, [animate]);
+    };
 
-    const stop = useCallback(() => {
+    const stop = () => {
+      animationControls.current.forEach((control) => control.stop());
+      animationControls.current = [];
+
       animate(".whale", { x: 0 }, { duration: 0.3 });
       animate(".containers", { y: 0 }, { duration: 0.3 });
       animate(".dot", { scale: 1 }, { duration: 0.3 });
-    }, [animate]);
+    };
 
     useImperativeHandle(ref, () => ({
       startAnimation: start,
