@@ -2,13 +2,14 @@
 
 import React, { useState, useRef, useEffect } from "react";
 import Link from "next/link";
-import type { AnimatedIconHandle, AnimatedIconProps } from "../ui/types";
+import type { AnimatedIconHandle, AnimatedIconProps } from "@/icons/types";
 import { motion, AnimatePresence } from "framer-motion";
 import UserPlusIcon from "@/icons/user-plus-icon";
 import GearIcon from "@/icons/gear-icon";
 import MessageCircleIcon from "@/icons/message-circle-icon";
 import CreditCard from "@/icons/credit-card";
 import LogoutIcon from "@/icons/logout-icon";
+import Image from "next/image";
 
 interface ProfileDropdownItemProps {
   icon: React.ComponentType<
@@ -49,7 +50,7 @@ const ProfileDropdownItem = ({
       onMouseLeave={handleMouseLeave}
     >
       <div className="flex items-center gap-3">
-        <Icon className="h-5 w-5" ref={ref} disableHover={!isAnimated} />
+        <Icon className="h-5 w-5" ref={ref} />
         <span>{label}</span>
       </div>
 
@@ -89,6 +90,14 @@ const ProfileDropdown = ({
   ];
 
   useEffect(() => {
+    function onEscape(e: KeyboardEvent) {
+      if (e.key === "Escape") setIsOpen(false);
+    }
+    document.addEventListener("keydown", onEscape);
+    return () => document.removeEventListener("keydown", onEscape);
+  }, []);
+
+  useEffect(() => {
     const handler = (e: MouseEvent) => {
       if (!dropdownRef.current?.contains(e.target as Node)) {
         setIsOpen(false);
@@ -102,12 +111,16 @@ const ProfileDropdown = ({
     <div ref={dropdownRef} className="relative inline-block">
       <button
         onClick={() => setIsOpen((prev) => !prev)}
+        aria-label="Toggle profile menu"
+        aria-expanded={isOpen}
         className="hover:ring-accent flex h-10 w-10 items-center justify-center overflow-hidden rounded-full transition-all hover:ring-2"
       >
-        <img
+        <Image
           src={avatarSrc || "/default-avatar.jpg"}
           alt="User avatar"
-          className="h-10 w-10 rounded-full object-cover"
+          width={40}
+          height={40}
+          className="rounded-full object-cover"
         />
       </button>
 
