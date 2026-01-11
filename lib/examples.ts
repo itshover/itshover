@@ -3,6 +3,7 @@ import AnimatedNavbar from "@/components/examples/animated-navbar";
 import CollapsibleSidebar from "@/components/examples/collapsible-sidebar";
 import fs from "fs";
 import path from "path";
+import ProfileDropdown from "@/components/examples/profile-dropdown";
 
 // Define the registry of examples
 // Add new examples to this array
@@ -42,6 +43,16 @@ const EXAMPLE_REGISTRY = [
     description:
       "A dashboard sidebar that expands and collapses with a smooth transition. Features icon-only mode with tooltips and animated toggle button.",
     tags: ["Sidebar", "Collapsible", "Dashboard", "Framer Motion", "Tooltip"],
+  },
+  {
+    componentName: "Profile Dropdown",
+    slug: "profile-dropdown",
+    createdBy: "https://github.com/vxnsh1",
+    filePath: "components/examples/profile-dropdown.tsx",
+    component: ProfileDropdown,
+    description:
+      "A profile dropdown with smooth open/close animation, default avatar fallback, animated icons, and badge support for individual items.",
+    tags: ["Dropdown", "Profile", "Navigation", "Animation", "Framer Motion"],
   },
 ];
 
