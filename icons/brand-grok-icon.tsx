@@ -2,7 +2,7 @@ import { forwardRef, useImperativeHandle, useCallback } from "react";
 import type { AnimatedIconHandle, AnimatedIconProps } from "./types";
 import { motion, useAnimate } from "motion/react";
 
-const GrokIcon = forwardRef<AnimatedIconHandle, AnimatedIconProps>(
+const BrandGrokIcon = forwardRef<AnimatedIconHandle, AnimatedIconProps>(
   ({ size = 24, color = "currentColor", className = "" }, ref) => {
     const [scope, animate] = useAnimate();
 
@@ -34,13 +34,13 @@ const GrokIcon = forwardRef<AnimatedIconHandle, AnimatedIconProps>(
 
       animate(
         ".grok-upper",
-        { x: 0, y: 0, opacity: 0.5 },
+        { x: 0, y: 0, opacity: 1 },
         { duration: 0.25, ease: "easeInOut" },
       );
 
       animate(
         ".grok-lower",
-        { x: 0, y: 0, opacity: 0.5 },
+        { x: 0, y: 0, opacity: 1 },
         { duration: 0.25, ease: "easeInOut" },
       );
     }, [animate, scope]);
@@ -59,7 +59,7 @@ const GrokIcon = forwardRef<AnimatedIconHandle, AnimatedIconProps>(
         viewBox="0 0 24 24"
         width={size}
         height={size}
-        className={className}
+        className={`grok-icon cursor-pointer ${className}`}
         style={{ flex: "none", lineHeight: 1 }}
       >
         <title>Grok</title>
@@ -80,5 +80,5 @@ const GrokIcon = forwardRef<AnimatedIconHandle, AnimatedIconProps>(
   },
 );
 
-GrokIcon.displayName = "GrokIcon";
-export default GrokIcon;
+BrandGrokIcon.displayName = "BrandGrokIcon";
+export default BrandGrokIcon;

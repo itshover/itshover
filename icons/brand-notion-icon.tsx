@@ -2,7 +2,7 @@ import { forwardRef, useImperativeHandle, useCallback } from "react";
 import type { AnimatedIconHandle, AnimatedIconProps } from "./types";
 import { motion, useAnimate } from "motion/react";
 
-const NotionIcon = forwardRef<AnimatedIconHandle, AnimatedIconProps>(
+const BrandNotionIcon = forwardRef<AnimatedIconHandle, AnimatedIconProps>(
   ({ size = 24, color = "currentColor", className = "" }, ref) => {
     const [scope, animate] = useAnimate();
 
@@ -47,7 +47,7 @@ const NotionIcon = forwardRef<AnimatedIconHandle, AnimatedIconProps>(
         style={{ flex: "none", lineHeight: 1 }}
         viewBox="0 0 24 24"
         xmlns="http://www.w3.org/2000/svg"
-        className={className}
+        className={`notion-icon cursor-pointer ${className}`}
       >
         <title>Notion</title>
 
@@ -67,5 +67,5 @@ const NotionIcon = forwardRef<AnimatedIconHandle, AnimatedIconProps>(
   },
 );
 
-NotionIcon.displayName = "NotionIcon";
-export default NotionIcon;
+BrandNotionIcon.displayName = "BrandNotionIcon";
+export default BrandNotionIcon;

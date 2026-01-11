@@ -136,8 +136,52 @@ export const ICONS = [
     path: "/icons/brand-google-icon",
   },
   {
-    name: "brand nextjs icon",
+    name: "brand-nextjs-icon",
     path: "/icons/brand-nextjs-icon",
+  },
+  {
+    name: "brand-stripe-icon",
+    path: "/icons/brand-stripe-icon",
+  },
+  {
+    name: "brand-react-icon",
+    path: "/icons/brand-react-icon",
+  },
+  {
+    name: "brand-paypal-icon",
+    path: "/icons/brand-paypal-icon",
+  },
+  {
+    name: "brand-aws-icon",
+    path: "/icons/brand-aws-icon",
+  },
+  {
+    name: "brand-threads-icon",
+    path: "/icons/brand-threads-icon",
+  },
+  {
+    name: "brand-zoom-icon",
+    path: "/icons/brand-zoom-icon",
+  },
+  {
+    name: "brand-react-native-icon",
+    path: "/icons/brand-react-native-icon",
+  },
+  {
+    name: "brand-openai-icon",
+    path: "/icons/brand-openai-icon",
+  },
+  {
+    name: "brand-telegram-icon",
+    path: "/icons/brand-telegram-icon",
+  },
+  {
+    name: "brand-windows-icon",
+    path: "/icons/brand-windows-icon",
+  },
+  {
+    name: "apple-brand-logo",
+    path: "/icons/apple-brand-logo",
   },
   {
     name: "brightness down icon",
@@ -592,8 +636,8 @@ export const ICONS = [
     path: "/icons/users-group-icon",
   },
   {
-    name: "vercel icon",
-    path: "/icons/vercel-icon",
+    name: "brand-vercel-icon",
+    path: "/icons/brand-vercel-icon",
   },
   {
     name: "whatsapp icon",
@@ -668,27 +712,27 @@ export const ICONS = [
     path: "/icons/golang-icon",
   },
   {
-    name: "railway icon",
-    path: "/icons/railway-icon",
+    name: "brand-railway-icon",
+    path: "/icons/brand-railway-icon",
   },
   {
-    name: "qwen icon",
-    path: "/icons/qwen-icon",
+    name: "brand-qwen-icon",
+    path: "/icons/brand-qwen-icon",
   },
   {
-    name: "cursor ide icon",
-    path: "/icons/cursor-ide-icon",
+    name: "brand-cursor-icon",
+    path: "/icons/brand-cursor-icon",
   },
   {
-    name: "notion icon",
-    path: "/icons/notion-icon",
+    name: "brand-notion-icon",
+    path: "/icons/brand-notion-icon",
   },
   {
-    name: "gemini icon",
-    path: "/icons/gemini-icon",
+    name: "brand-gemini-icon",
+    path: "/icons/brand-gemini-icon",
   },
   {
-    name: "grok icon",
-    path: "/icons/grok-icon",
+    name: "brand-grok-icon",
+    path: "/icons/brand-grok-icon",
   },
 ];

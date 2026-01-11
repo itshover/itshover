@@ -2,7 +2,7 @@ import { forwardRef, useImperativeHandle, useCallback } from "react";
 import type { AnimatedIconHandle, AnimatedIconProps } from "./types";
 import { motion, useAnimate } from "motion/react";
 
-const GeminiIcon = forwardRef<AnimatedIconHandle, AnimatedIconProps>(
+const BrandGeminiIcon = forwardRef<AnimatedIconHandle, AnimatedIconProps>(
   ({ size = 24, color = "currentColor", className = "" }, ref) => {
     const [scope, animate] = useAnimate();
 
@@ -47,7 +47,7 @@ const GeminiIcon = forwardRef<AnimatedIconHandle, AnimatedIconProps>(
         height={size}
         width={size}
         xmlns="http://www.w3.org/2000/svg"
-        className={className}
+        className={`gemini-icon cursor-pointer ${className}`}
         role="img"
         aria-label="Gemini"
         style={{
@@ -69,5 +69,5 @@ const GeminiIcon = forwardRef<AnimatedIconHandle, AnimatedIconProps>(
   },
 );
 
-GeminiIcon.displayName = "GeminiIcon";
-export default GeminiIcon;
+BrandGeminiIcon.displayName = "BrandGeminiIcon";
+export default BrandGeminiIcon;

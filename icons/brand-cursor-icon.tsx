@@ -2,7 +2,7 @@ import { forwardRef, useImperativeHandle, useCallback } from "react";
 import type { AnimatedIconHandle, AnimatedIconProps } from "./types";
 import { motion, useAnimate } from "motion/react";
 
-const CursorIdeIcon = forwardRef<AnimatedIconHandle, AnimatedIconProps>(
+const BrandCursorIcon = forwardRef<AnimatedIconHandle, AnimatedIconProps>(
   ({ size = 24, color = "currentColor", className = "" }, ref) => {
     const [scope, animate] = useAnimate();
 
@@ -42,7 +42,7 @@ const CursorIdeIcon = forwardRef<AnimatedIconHandle, AnimatedIconProps>(
         style={{ flex: "none", lineHeight: 1 }}
         viewBox="0 0 24 24"
         xmlns="http://www.w3.org/2000/svg"
-        className={className}
+        className={`cursor-ide-icon cursor-pointer ${className}`}
         stroke={color}
       >
         <title>Cursor</title>
@@ -52,5 +52,5 @@ const CursorIdeIcon = forwardRef<AnimatedIconHandle, AnimatedIconProps>(
   },
 );
 
-CursorIdeIcon.displayName = "CursorIdeIcon";
-export default CursorIdeIcon;
+BrandCursorIcon.displayName = "BrandCursorIcon";
+export default BrandCursorIcon;

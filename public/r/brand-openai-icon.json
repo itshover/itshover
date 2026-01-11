@@ -1,0 +1,20 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "brand-openai-icon",
+  "dependencies": ["motion"],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "icons/brand-openai-icon.tsx",
+      "content": "import { forwardRef, useImperativeHandle } from \"react\";\nimport type { AnimatedIconHandle, AnimatedIconProps } from \"./types\";\nimport { motion, useAnimate } from \"motion/react\";\n\nconst BrandOpenaiIcon = forwardRef<AnimatedIconHandle, AnimatedIconProps>(\n  (\n    { size = 24, color = \"currentColor\", strokeWidth = 2, className = \"\" },\n    ref,\n  ) => {\n    const [scope, animate] = useAnimate();\n\n    const start = async () => {\n      await animate(\n        \".internal\",\n        { pathOffset: [1, 0] },\n        {\n          duration: 0.8,\n          ease: \"easeInOut\",\n          delay: (i) => i * 0.05,\n        },\n      );\n    };\n\n    const stop = () => {\n      animate(\n        \".internal\",\n        { pathOffset: 0 },\n        { duration: 0.3, ease: \"easeInOut\" },\n      );\n    };\n\n    useImperativeHandle(ref, () => ({\n      startAnimation: start,\n      stopAnimation: stop,\n    }));\n\n    return (\n      <motion.svg\n        ref={scope}\n        onHoverStart={start}\n        onHoverEnd={stop}\n        xmlns=\"http://www.w3.org/2000/svg\"\n        width={size}\n        height={size}\n        viewBox=\"0 0 24 24\"\n        fill=\"none\"\n        stroke={color}\n        strokeWidth={strokeWidth}\n        strokeLinecap=\"round\"\n        strokeLinejoin=\"round\"\n        className={`cursor-pointer select-none ${className}`}\n      >\n        <path stroke=\"none\" d=\"M0 0h24v24H0z\" fill=\"none\" />\n\n        {[\n          \"M11.217 19.384a3.501 3.501 0 0 0 6.783 -1.217v-5.167l-6 -3.35\",\n          \"M5.214 15.014a3.501 3.501 0 0 0 4.446 5.266l4.34 -2.534v-6.946\",\n          \"M6 7.63c-1.391 -.236 -2.787 .395 -3.534 1.689a3.474 3.474 0 0 0 1.271 4.745l4.263 2.514l6 -3.348\",\n          \"M12.783 4.616a3.501 3.501 0 0 0 -6.783 1.217v5.067l6 3.45\",\n          \"M18.786 8.986a3.501 3.501 0 0 0 -4.446 -5.266l-4.34 2.534v6.946\",\n          \"M18 16.302c1.391 .236 2.787 -.395 3.534 -1.689a3.474 3.474 0 0 0 -1.271 -4.745l-4.308 -2.514l-5.955 3.42\",\n        ].map((d, i) => (\n          <motion.path\n            key={i}\n            d={d}\n            className=\"internal\"\n            initial={{\n              pathLength: 1,\n              opacity: 1,\n            }}\n          />\n        ))}\n      </motion.svg>\n    );\n  },\n);\n\nBrandOpenaiIcon.displayName = \"BrandOpenaiIcon\";\nexport default BrandOpenaiIcon;\n",
+      "type": "registry:ui"
+    },
+    {
+      "path": "icons/types.ts",
+      "content": "export interface AnimatedIconProps {\n  /** Icon size in pixels or CSS string */\n  size?: number | string;\n  /** Icon color (defaults to currentColor) */\n  color?: string;\n  /** SVG stroke width */\n  strokeWidth?: number;\n  /** Additional CSS classes */\n  className?: string;\n}\n\nexport interface AnimatedIconHandle {\n  startAnimation: () => void;\n  stopAnimation: () => void;\n}\n",
+      "type": "registry:ui"
+    }
+  ],
+  "type": "registry:ui"
+}

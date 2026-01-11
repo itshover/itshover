@@ -1,4 +1,4 @@
-import { forwardRef, useImperativeHandle, useCallback } from "react";
+import { forwardRef, useImperativeHandle, useRef } from "react";
 import type { AnimatedIconHandle, AnimatedIconProps } from "./types";
 import { motion, useAnimate } from "motion/react";
 
@@ -8,36 +8,49 @@ const SpotifyIcon = forwardRef<AnimatedIconHandle, AnimatedIconProps>(
     ref,
   ) => {
     const [scope, animate] = useAnimate();
+    const animationControls = useRef<Array<ReturnType<typeof animate>>>([]);
 
-    const start = useCallback(async () => {
+    const start = async () => {
+      animationControls.current.forEach((control) => control.stop());
+      animationControls.current = [];
+
       animate(
         ".circle",
         { scale: [1, 1.05, 1] },
         { duration: 0.5, ease: "easeInOut" },
       );
-      animate(
-        ".wave1",
-        { x: [-2, 2, -2], pathLength: [1, 0.8, 1] },
-        { duration: 0.8, ease: "easeInOut", repeat: Infinity },
+      animationControls.current.push(
+        animate(
+          ".wave1",
+          { x: [-2, 2, -2], pathLength: [1, 0.8, 1] },
+          { duration: 0.8, ease: "easeInOut", repeat: Infinity },
+        ),
       );
-      animate(
-        ".wave2",
-        { x: [-1, 1, -1], pathLength: [1, 0.9, 1] },
-        { duration: 0.7, ease: "easeInOut", repeat: Infinity },
+      animationControls.current.push(
+        animate(
+          ".wave2",
+          { x: [-1, 1, -1], pathLength: [1, 0.9, 1] },
+          { duration: 0.7, ease: "easeInOut", repeat: Infinity },
+        ),
       );
-      animate(
-        ".wave3",
-        { x: [-2, 2, -2], pathLength: [1, 0.85, 1] },
-        { duration: 0.9, ease: "easeInOut", repeat: Infinity },
+      animationControls.current.push(
+        animate(
+          ".wave3",
+          { x: [-2, 2, -2], pathLength: [1, 0.85, 1] },
+          { duration: 0.9, ease: "easeInOut", repeat: Infinity },
+        ),
       );
-    }, [animate]);
+    };
 
-    const stop = useCallback(() => {
+    const stop = () => {
+      animationControls.current.forEach((control) => control.stop());
+      animationControls.current = [];
+
       animate(".circle", { scale: 1 }, { duration: 0.2 });
       animate(".wave1", { x: 0, pathLength: 1 }, { duration: 0.2 });
       animate(".wave2", { x: 0, pathLength: 1 }, { duration: 0.2 });
       animate(".wave3", { x: 0, pathLength: 1 }, { duration: 0.2 });
-    }, [animate]);
+    };
 
     useImperativeHandle(ref, () => ({
       startAnimation: start,

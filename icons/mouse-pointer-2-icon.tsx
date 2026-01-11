@@ -1,4 +1,4 @@
-import { forwardRef, useImperativeHandle, useCallback } from "react";
+import { forwardRef, useImperativeHandle, useRef } from "react";
 import type { AnimatedIconHandle, AnimatedIconProps } from "./types";
 import { motion, useAnimate } from "motion/react";
 
@@ -8,25 +8,34 @@ const MousePointer2Icon = forwardRef<AnimatedIconHandle, AnimatedIconProps>(
     ref,
   ) => {
     const [scope, animate] = useAnimate();
+    const animationControls = useRef<Array<ReturnType<typeof animate>>>([]);
 
-    const start = useCallback(async () => {
-      animate(
-        ".pointer",
-        {
-          x: [0, 3, 0, -3, 0],
-          y: [0, -3, 0, 3, 0],
-        },
-        {
-          duration: 1.2,
-          ease: "easeInOut",
-          repeat: Infinity,
-        },
+    const start = async () => {
+      animationControls.current.forEach((control) => control.stop());
+      animationControls.current = [];
+
+      animationControls.current.push(
+        animate(
+          ".pointer",
+          {
+            x: [0, 3, 0, -3, 0],
+            y: [0, -3, 0, 3, 0],
+          },
+          {
+            duration: 1.2,
+            ease: "easeInOut",
+            repeat: Infinity,
+          },
+        ),
       );
-    }, [animate]);
+    };
 
-    const stop = useCallback(() => {
+    const stop = () => {
+      animationControls.current.forEach((control) => control.stop());
+      animationControls.current = [];
+
       animate(".pointer", { x: 0, y: 0 }, { duration: 0.3 });
-    }, [animate]);
+    };
 
     useImperativeHandle(ref, () => ({
       startAnimation: start,
