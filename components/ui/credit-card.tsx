@@ -4,7 +4,13 @@ import { motion, useAnimate } from "motion/react";
 
 const CreditCard = forwardRef<AnimatedIconHandle, AnimatedIconProps>(
   (
-    { size = 24, color = "currentColor", strokeWidth = 2, className = "", disableHover = false },
+    {
+      size = 24,
+      color = "currentColor",
+      strokeWidth = 2,
+      className = "",
+      disableHover = false,
+    },
     ref,
   ) => {
     const [scope, animate] = useAnimate();
@@ -83,7 +89,6 @@ const CreditCard = forwardRef<AnimatedIconHandle, AnimatedIconProps>(
           strokeWidth={strokeWidth}
           strokeLinecap="round"
           strokeLinejoin="round"
-          
         >
           <motion.path
             className="card-body"

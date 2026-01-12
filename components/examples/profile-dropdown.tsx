@@ -12,16 +12,16 @@ import LogoutIcon from "../ui/logout-icon";
 import Image from "next/image";
 
 const items: ProfileDropdownItemProps[] = [
-  { icon: UserPlusIcon, label: "Profile", href: "#"},
-  { icon: MessageCircleIcon, label: "Community", href: "#"},
+  { icon: UserPlusIcon, label: "Profile", href: "#" },
+  { icon: MessageCircleIcon, label: "Community", href: "#" },
   {
     icon: CreditCard,
     label: "Subscription",
     href: "#",
     badge: "PRO",
   },
-  { icon: GearIcon, label: "Settings", href: "#"},
-  { icon: LogoutIcon, label: "Sign Out", href: "#"},
+  { icon: GearIcon, label: "Settings", href: "#" },
+  { icon: LogoutIcon, label: "Sign Out", href: "#" },
 ];
 
 interface ProfileDropdownItemProps {
@@ -137,7 +137,11 @@ const ProfileDropdown = ({
             className="border-border bg-background absolute right-0 z-50 mt-2 min-w-[220px] overflow-hidden rounded-xl border shadow-lg"
           >
             {items.map((item) => (
-              <ProfileDropdownItem key={item.label} {...item} isAnimated={isAnimated} />
+              <ProfileDropdownItem
+                key={item.label}
+                {...item}
+                isAnimated={isAnimated}
+              />
             ))}
           </motion.div>
         )}
