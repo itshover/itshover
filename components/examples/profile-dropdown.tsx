@@ -2,14 +2,27 @@
 
 import React, { useState, useRef, useEffect } from "react";
 import Link from "next/link";
-import type { AnimatedIconHandle, AnimatedIconProps } from "@/icons/types";
+import type { AnimatedIconHandle, AnimatedIconProps } from "../ui/types";
 import { motion, AnimatePresence } from "framer-motion";
-import UserPlusIcon from "@/icons/user-plus-icon";
-import GearIcon from "@/icons/gear-icon";
-import MessageCircleIcon from "@/icons/message-circle-icon";
-import CreditCard from "@/icons/credit-card";
-import LogoutIcon from "@/icons/logout-icon";
+import UserPlusIcon from "../ui/user-plus-icon";
+import GearIcon from "../ui/gear-icon";
+import MessageCircleIcon from "../ui/message-circle-icon";
+import CreditCard from "../ui/credit-card";
+import LogoutIcon from "../ui/logout-icon";
 import Image from "next/image";
+
+const items: ProfileDropdownItemProps[] = [
+  { icon: UserPlusIcon, label: "Profile", href: "#"},
+  { icon: MessageCircleIcon, label: "Community", href: "#"},
+  {
+    icon: CreditCard,
+    label: "Subscription",
+    href: "#",
+    badge: "PRO",
+  },
+  { icon: GearIcon, label: "Settings", href: "#"},
+  { icon: LogoutIcon, label: "Sign Out", href: "#"},
+];
 
 interface ProfileDropdownItemProps {
   icon: React.ComponentType<
@@ -31,30 +44,32 @@ const ProfileDropdownItem = ({
   const ref = useRef<AnimatedIconHandle>(null);
 
   const handleMouseEnter = () => {
-    if (isAnimated) ref.current?.startAnimation();
+    if (isAnimated) {
+      ref.current?.startAnimation();
+    }
   };
 
   const handleMouseLeave = () => {
-    if (isAnimated) ref.current?.stopAnimation();
+    if (isAnimated) {
+      ref.current?.stopAnimation();
+    }
   };
 
   useEffect(() => {
-    if (!isAnimated) ref.current?.stopAnimation();
+    if (!isAnimated) {
+      ref.current?.stopAnimation();
+    }
   }, [isAnimated]);
 
   return (
     <Link
       href={href}
-      className="group hover:bg-accent hover:text-accent-foreground flex items-center justify-between gap-3 rounded-md px-4 py-2 transition-colors"
+      className="group hover:bg-accent hover:text-accent-foreground flex items-center gap-3 rounded-md px-4 py-2 transition-colors"
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
     >
-      <div
-        className={`flex items-center gap-3 ${isAnimated ? "" : "pointer-events-none"}`}
-      >
-        <Icon className="h-5 w-5" ref={ref} />
-        <span>{label}</span>
-      </div>
+      <Icon className="h-5 w-5" ref={ref} disableHover={!isAnimated} />
+      <span>{label}</span>
 
       {badge && (
         <span className="rounded-full bg-purple-200 px-2 py-0.5 text-xs font-semibold text-purple-800">
@@ -76,20 +91,6 @@ const ProfileDropdown = ({
 }: ProfileDropdownProps) => {
   const [isOpen, setIsOpen] = useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
-
-  const items: ProfileDropdownItemProps[] = [
-    { icon: UserPlusIcon, label: "Profile", href: "#", isAnimated },
-    { icon: MessageCircleIcon, label: "Community", href: "#", isAnimated },
-    {
-      icon: CreditCard,
-      label: "Subscription",
-      href: "#",
-      badge: "PRO",
-      isAnimated,
-    },
-    { icon: GearIcon, label: "Settings", href: "#", isAnimated },
-    { icon: LogoutIcon, label: "Sign Out", href: "#", isAnimated },
-  ];
 
   useEffect(() => {
     function onEscape(e: KeyboardEvent) {
@@ -136,7 +137,7 @@ const ProfileDropdown = ({
             className="border-border bg-background absolute right-0 z-50 mt-2 min-w-[220px] overflow-hidden rounded-xl border shadow-lg"
           >
             {items.map((item) => (
-              <ProfileDropdownItem key={item.label} {...item} />
+              <ProfileDropdownItem key={item.label} {...item} isAnimated={isAnimated} />
             ))}
           </motion.div>
         )}
