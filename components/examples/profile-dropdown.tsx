@@ -68,7 +68,7 @@ const ProfileDropdownItem = ({
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
     >
-      <Icon className="h-5 w-5" ref={ref} disableHover={!isAnimated} />
+      <Icon className="h-5 w-5" ref={ref} disableHover />
       <span>{label}</span>
 
       {badge && (
