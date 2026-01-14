@@ -189,6 +189,7 @@ import TwitterIcon from "./twitter-icon";
 import TwitterXIcon from "./twitter-x-icon";
 import TypeScriptIcon from "./typescript-icon";
 import UnlinkIcon from "./unlink-icon";
+import UploadIcon from "./upload-icon";
 import BrandVercelIcon from "./brand-vercel-icon";
 import Volume2Icon from "./volume-2-icon";
 import VolumeXIcon from "./volume-x-icon";
@@ -1314,6 +1315,11 @@ const ICON_LIST: IconType[] = [
     name: "unlink-icon",
     icon: UnlinkIcon,
     keywords: ["unlink", "disconnect", "break", "chain", "separate", "detach"],
+  },
+  {
+    name: "upload-icon",
+    icon: UploadIcon,
+    keywords: ["upload", "arrow", "up", "cloud", "file", "transfer", "import"],
   },
   {
     name: "volume-2-icon",

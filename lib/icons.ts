@@ -704,6 +704,10 @@ export const ICONS = [
     path: "/icons/unlink-icon",
   },
   {
+    name: "upload icon",
+    path: "/icons/upload-icon",
+  },
+  {
     name: "volume 2 icon",
     path: "/icons/volume-2-icon",
   },
