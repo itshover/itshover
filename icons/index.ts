@@ -201,6 +201,7 @@ import XIcon from "./x-icon";
 import YoutubeIcon from "./youtube-icon";
 import PassportIcon from "./passport-icon";
 import AirplaneIcon from "./airplane-icon";
+import CalendarIcon from "./calendar-icon";
 import TravelBag from "./travel-bag";
 import HotelIcon from "./hotel-icon";
 import GolangIcon from "./golang-icon";
@@ -234,6 +235,11 @@ const ICON_LIST: IconType[] = [
     name: "airplane-icon",
     icon: AirplaneIcon,
     keywords: ["airplane", "plane", "airport", "travel", "transportation"],
+  },
+  {
+    name: "calendar-icon",
+    icon: CalendarIcon,
+    keywords: ["calendar", "date", "schedule", "event", "time", "month", "day"],
   },
   {
     name: "alarm-clock-plus-icon",

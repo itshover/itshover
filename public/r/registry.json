@@ -1076,6 +1076,23 @@
       ]
     },
     {
+      "name": "calendar-icon",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": ["motion"],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "icons/calendar-icon.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "icons/types.ts",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
       "name": "camera-icon",
       "type": "registry:ui",
       "registryDependencies": [],
