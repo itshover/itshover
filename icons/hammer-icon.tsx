@@ -10,7 +10,6 @@ const HammerIcon = forwardRef<AnimatedIconHandle, AnimatedIconProps>(
     const [scope, animate] = useAnimate();
 
     const start = async () => {
-
       await animate(
         ".hammer",
         { rotate: [0, -35, 15, 0] },

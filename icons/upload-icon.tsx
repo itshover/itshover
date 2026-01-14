@@ -15,11 +15,7 @@ const UploadIcon = forwardRef<AnimatedIconHandle, AnimatedIconProps>(
         { y: -20, opacity: 0 },
         { duration: 0.3, ease: "easeIn" },
       );
-      await animate(
-        ".arrow",
-        { y: 10, opacity: 0 },
-        { duration: 0.001 },
-      );
+      await animate(".arrow", { y: 10, opacity: 0 }, { duration: 0.001 });
       await animate(
         ".arrow",
         { y: 0, opacity: 1 },

@@ -10,11 +10,10 @@ const GridLoaderIcon = forwardRef<AnimatedIconHandle, AnimatedIconProps>(
     const [scope, animate] = useAnimate();
 
     const start = async () => {
-      
       animate(
         ".grid-dot",
         {
-          r: [3, 0, 3], 
+          r: [3, 0, 3],
           opacity: [1, 0, 1],
         },
         {

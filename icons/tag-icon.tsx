@@ -10,7 +10,6 @@ const TagIcon = forwardRef<AnimatedIconHandle, AnimatedIconProps>(
     const [scope, animate] = useAnimate();
 
     const start = async () => {
-
       animate(scope.current, { scale: 1.07 }, { duration: 0.2 });
       animate(
         ".tag-group",
