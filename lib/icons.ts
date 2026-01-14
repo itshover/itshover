@@ -396,6 +396,10 @@ export const ICONS = [
     path: "/icons/globe-icon",
   },
   {
+    name: "grid loader icon",
+    path: "/icons/grid-loader-icon",
+  },
+  {
     name: "gmail icon",
     path: "/icons/gmail-icon",
   },

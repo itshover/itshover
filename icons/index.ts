@@ -168,6 +168,7 @@ import UsersGroupIcon from "./users-group-icon";
 import VinylIcon from "./vinyl-icon";
 import WashingMachineIcon from "./washing-machine-icon";
 import GlobeIcon from "./globe-icon";
+import GridLoaderIcon from "./grid-loader-icon";
 import HashtagIcon from "./hashtag-icon";
 import KeyframesIcon from "./keyframes-icon";
 import LayersIcon from "./layers-icon";
@@ -1042,6 +1043,19 @@ const ICON_LIST: IconType[] = [
     name: "globe-icon",
     icon: GlobeIcon,
     keywords: ["globe", "world", "earth", "planet"],
+  },
+  {
+    name: "grid-loader-icon",
+    icon: GridLoaderIcon,
+    keywords: [
+      "grid",
+      "loader",
+      "loading",
+      "spinner",
+      "dots",
+      "circle",
+      "progress",
+    ],
   },
   {
     name: "hashtag-icon",
