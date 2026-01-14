@@ -112,8 +112,9 @@ const NavItem = ({
         disableHover={true}
       />
       <span
-        className={`text-xs font-medium transition-colors duration-200 ${isHovered ? "text-[#eb7134]" : "text-zinc-700 dark:text-zinc-200"
-          }`}
+        className={`text-xs font-medium transition-colors duration-200 ${
+          isHovered ? "text-[#eb7134]" : "text-zinc-700 dark:text-zinc-200"
+        }`}
       >
         {label}
       </span>
@@ -161,8 +162,9 @@ const DropdownItem = ({
     <motion.div
       onHoverStart={handleMouseEnter}
       onHoverEnd={handleMouseLeave}
-      className={`flex cursor-pointer items-center justify-between px-4 py-2 transition-colors duration-150 ${isHovered ? "bg-zinc-200/50 dark:bg-zinc-800/40" : ""
-        }`}
+      className={`flex cursor-pointer items-center justify-between px-4 py-2 transition-colors duration-150 ${
+        isHovered ? "bg-zinc-200/50 dark:bg-zinc-800/40" : ""
+      }`}
     >
       <div className="flex items-center gap-3">
         <Icon
