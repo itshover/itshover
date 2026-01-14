@@ -312,8 +312,8 @@ export const ICONS = [
     path: "/icons/double-check-icon",
   },
   {
-    name: "down cheveron",
-    path: "/icons/down-cheveron",
+    name: "down chevron",
+    path: "/icons/down-chevron",
   },
   {
     name: "drum icon",
@@ -516,8 +516,8 @@ export const ICONS = [
     path: "/icons/refresh-icon",
   },
   {
-    name: "right cheveron",
-    path: "/icons/right-cheveron",
+    name: "right chevron",
+    path: "/icons/right-chevron",
   },
   {
     name: "rocket icon",

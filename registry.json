@@ -1025,6 +1025,23 @@
       ]
     },
     {
+      "name": "bug-icon",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": ["motion"],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "icons/bug-icon.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "icons/types.ts",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
       "name": "bulb-svg",
       "type": "registry:ui",
       "registryDependencies": [],
@@ -1569,14 +1586,14 @@
       ]
     },
     {
-      "name": "down-cheveron",
+      "name": "down-chevron",
       "type": "registry:ui",
       "registryDependencies": [],
       "dependencies": ["motion"],
       "devDependencies": [],
       "files": [
         {
-          "path": "icons/down-cheveron.tsx",
+          "path": "icons/down-chevron.tsx",
           "type": "registry:ui"
         },
         {
@@ -2147,6 +2164,23 @@
       ]
     },
     {
+      "name": "layout-dashboard-icon",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": ["motion"],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "icons/layout-dashboard-icon.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "icons/types.ts",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
       "name": "layout-sidebar-right-collapse-icon",
       "type": "registry:ui",
       "registryDependencies": [],
@@ -2657,14 +2691,14 @@
       ]
     },
     {
-      "name": "right-cheveron",
+      "name": "right-chevron",
       "type": "registry:ui",
       "registryDependencies": [],
       "dependencies": ["motion"],
       "devDependencies": [],
       "files": [
         {
-          "path": "icons/right-cheveron.tsx",
+          "path": "icons/right-chevron.tsx",
           "type": "registry:ui"
         },
         {
@@ -3286,6 +3320,23 @@
       ]
     },
     {
+      "name": "user-icon",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": ["motion"],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "icons/user-icon.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "icons/types.ts",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
       "name": "user-plus-icon",
       "type": "registry:ui",
       "registryDependencies": [],
@@ -3379,6 +3430,23 @@
       "files": [
         {
           "path": "icons/volume-x-icon.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "icons/types.ts",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "wallet-icon",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": ["motion"],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "icons/wallet-icon.tsx",
           "type": "registry:ui"
         },
         {
