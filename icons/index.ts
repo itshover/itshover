@@ -205,6 +205,7 @@ import BrandNotionIcon from "./brand-notion-icon";
 import BrandGeminiIcon from "./brand-gemini-icon";
 import BrandQwenIcon from "./brand-qwen-icon";
 import BrandGrokIcon from "./brand-grok-icon";
+import AvatarIcon from "./avatar-icon";
 
 export interface IconType {
   name: string;
@@ -388,6 +389,11 @@ const ICON_LIST: IconType[] = [
     name: "at-sign-icon",
     icon: AtSignIcon,
     keywords: ["at", "sign", "@", "email", "mention", "tag", "social"],
+  },
+  {
+    name: "avatar-icon",
+    icon: AvatarIcon,
+    keywords: ["avatar", "user", "profile", "person", "human", "account"],
   },
   {
     name: "banana-icon",

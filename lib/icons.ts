@@ -100,6 +100,10 @@ export const ICONS = [
     path: "/icons/arrow-narrow-up-icon",
   },
   {
+    name: "avatar-icon",
+    path: "/icons/avatar-icon",
+  },
+  {
     name: "banana icon",
     path: "/icons/banana-icon",
   },
