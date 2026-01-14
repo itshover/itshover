@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useRef, useEffect } from "react";
+import type { ForwardRefExoticComponent, RefAttributes } from "react";
 import { motion, AnimatePresence } from "motion/react";
 import HomeIcon from "../ui/home-icon";
 import LayoutDashboardIcon from "../ui/layout-dashboard-icon";
@@ -67,8 +68,8 @@ const NavItem = ({
   isAnimated,
   animationsEnabled,
 }: {
-  icon: React.ForwardRefExoticComponent<
-    AnimatedIconProps & React.RefAttributes<AnimatedIconHandle>
+  icon: ForwardRefExoticComponent<
+    AnimatedIconProps & RefAttributes<AnimatedIconHandle>
   >;
   label: string;
   isAnimated?: boolean;
@@ -111,9 +112,8 @@ const NavItem = ({
         disableHover={true}
       />
       <span
-        className={`text-xs font-medium transition-colors duration-200 ${
-          isHovered ? "text-[#eb7134]" : "text-zinc-700 dark:text-zinc-200"
-        }`}
+        className={`text-xs font-medium transition-colors duration-200 ${isHovered ? "text-[#eb7134]" : "text-zinc-700 dark:text-zinc-200"
+          }`}
       >
         {label}
       </span>
@@ -130,8 +130,8 @@ const DropdownItem = ({
   isAnimated = false,
   animationsEnabled = true,
 }: {
-  icon: React.ForwardRefExoticComponent<
-    AnimatedIconProps & React.RefAttributes<AnimatedIconHandle>
+  icon: ForwardRefExoticComponent<
+    AnimatedIconProps & RefAttributes<AnimatedIconHandle>
   >;
   label: string;
   locked?: boolean;
@@ -161,9 +161,8 @@ const DropdownItem = ({
     <motion.div
       onHoverStart={handleMouseEnter}
       onHoverEnd={handleMouseLeave}
-      className={`flex cursor-pointer items-center justify-between px-4 py-2 transition-colors duration-150 ${
-        isHovered ? "bg-zinc-200/50 dark:bg-zinc-800/40" : ""
-      }`}
+      className={`flex cursor-pointer items-center justify-between px-4 py-2 transition-colors duration-150 ${isHovered ? "bg-zinc-200/50 dark:bg-zinc-800/40" : ""
+        }`}
     >
       <div className="flex items-center gap-3">
         <Icon
@@ -244,18 +243,24 @@ export default function TakeuforwardNavbar({
       </div>
 
       <div className="relative z-10" ref={dropdownRef}>
-        <motion.div
+        <motion.button
+          type="button"
+          aria-haspopup="menu"
+          aria-expanded={isDropdownOpen}
+          aria-controls="user-dropdown-menu"
           onClick={() => setIsDropdownOpen(!isDropdownOpen)}
           className="group flex cursor-pointer items-center"
         >
           <div className="flex h-9 w-9 items-center justify-center rounded-full border border-zinc-200 bg-zinc-50 transition-colors group-hover:border-zinc-300 dark:border-zinc-700/50 dark:bg-zinc-800/50 dark:group-hover:border-zinc-500">
             <UserIcon size={18} className="text-zinc-500 dark:text-zinc-400" />
           </div>
-        </motion.div>
+        </motion.button>
 
         <AnimatePresence>
           {isDropdownOpen && (
             <motion.div
+              id="user-dropdown-menu"
+              role="menu"
               initial={{ opacity: 0, y: 8, scale: 0.98 }}
               animate={{ opacity: 1, y: 0, scale: 1 }}
               exit={{ opacity: 0, y: 8, scale: 0.98 }}
