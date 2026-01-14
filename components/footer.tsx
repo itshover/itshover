@@ -2,7 +2,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import { motion } from "motion/react";
-import { LINKS, SPONSOR } from "@/constants";
+import { LINKS, SPONSOR, TOKEN } from "@/constants";
 import GithubIcon from "@/icons/github-icon";
 import TwitterXIcon from "@/icons/twitter-x-icon";
 import HeartIcon from "@/icons/heart-icon";
@@ -125,6 +125,14 @@ const Footer = () => {
               >
                 GitHub
               </Link>
+              <Link
+                href={LINKS.BAGS_FM}
+                target="_blank"
+                rel="noreferrer"
+                className="bg-primary hover:bg-primary/90 inline-flex w-fit items-center rounded-full px-3 py-1 text-sm font-semibold text-white transition-all duration-200 hover:scale-105"
+              >
+                $hover
+              </Link>
             </nav>
           </div>
 
@@ -190,6 +198,15 @@ const Footer = () => {
             </p>
 
             <div className="flex items-center gap-4">
+              <Link
+                href={LINKS.BAGS_FM}
+                target="_blank"
+                rel="noreferrer"
+                className="bg-primary hover:bg-primary/90 inline-flex items-center rounded-full px-3 py-1 text-sm font-semibold text-white transition-all duration-200 hover:scale-105"
+                aria-label="$hover token"
+              >
+                $hover
+              </Link>
               <Link
                 href={LINKS.GITHUB}
                 target="_blank"

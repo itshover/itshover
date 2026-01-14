@@ -8,7 +8,7 @@ import GithubIcon from "@/icons/github-icon";
 import TwitterXIcon from "@/icons/twitter-x-icon";
 import MagnifierIcon from "@/icons/magnifier-icon";
 import { useCommandMenu } from "./command-menu-context";
-import { LINKS } from "@/constants";
+import { LINKS, TOKEN } from "@/constants";
 import LayersIcon from "@/icons/layers-icon";
 import AlignCenterIcon from "@/icons/align-center-icon";
 import XIcon from "@/icons/x-icon";
@@ -58,6 +58,14 @@ const Navbar = () => {
             href="/example"
           >
             example
+          </Link>
+          <Link
+            className="bg-primary hover:bg-primary/90 inline-flex items-center rounded-full px-3 py-1 text-sm font-semibold text-white transition-all duration-200 hover:scale-105"
+            href={LINKS.BAGS_FM}
+            target="_blank"
+            rel="noreferrer"
+          >
+            $hover
           </Link>
         </nav>
 
@@ -139,6 +147,15 @@ const Navbar = () => {
               onClick={() => setIsMobileMenuOpen(false)}
             >
               Example
+            </Link>
+            <Link
+              className="bg-primary hover:bg-primary/90 inline-flex w-fit items-center rounded-full px-3 py-2 text-sm font-semibold text-white transition-all duration-200 hover:scale-105"
+              href={LINKS.BAGS_FM}
+              target="_blank"
+              rel="noreferrer"
+              onClick={() => setIsMobileMenuOpen(false)}
+            >
+              $hover
             </Link>
             <button
               onClick={() => {
