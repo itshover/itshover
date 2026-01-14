@@ -735,4 +735,36 @@ export const ICONS = [
     name: "brand-grok-icon",
     path: "/icons/brand-grok-icon",
   },
+  {
+    name: "corner down left icon",
+    path: "/icons/corner-down-left-icon",
+  },
+  {
+    name: "corner down right icon",
+    path: "/icons/corner-down-right-icon",
+  },
+  {
+    name: "corner left down icon",
+    path: "/icons/corner-left-down-icon",
+  },
+  {
+    name: "corner left up icon",
+    path: "/icons/corner-left-up-icon",
+  },
+  {
+    name: "corner right down icon",
+    path: "/icons/corner-right-down-icon",
+  },
+  {
+    name: "corner right up icon",
+    path: "/icons/corner-right-up-icon",
+  },
+  {
+    name: "corner up left icon",
+    path: "/icons/corner-up-left-icon",
+  },
+  {
+    name: "corner up right icon",
+    path: "/icons/corner-up-right-icon",
+  },
 ];
