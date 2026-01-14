@@ -51,6 +51,7 @@ import BrandTelegramIcon from "./brand-telegram-icon";
 import BrandWindowsIcon from "./brand-windows-icon";
 import BrightnessDownIcon from "./brightness-down-icon";
 import BulbSvg from "./bulb-svg";
+import HammerIcon from "./hammer-icon";
 import CameraIcon from "./camera-icon";
 import CameraOffIcon from "./camera-off-icon";
 import CandyCaneIcon from "./candy-cane-icon";
@@ -156,6 +157,7 @@ import SpotifyIcon from "./spotify-icon";
 import StarIcon from "./star-icon";
 import SubscriptIcon from "./subscript-icon";
 import TargetIcon from "./target-icon";
+import TagIcon from "./tag-icon";
 import TelephoneIcon from "./telephone-icon";
 import ArrowDownAZIcon from "./arrow-down-a-z-icon";
 import ToggleIcon from "./toggle-icon";
@@ -472,6 +474,19 @@ const ICON_LIST: IconType[] = [
     name: "bulb-svg",
     icon: BulbSvg,
     keywords: ["bulb", "light", "idea", "creativity"],
+  },
+  {
+    name: "hammer-icon",
+    icon: HammerIcon,
+    keywords: [
+      "build",
+      "hammer",
+      "tool",
+      "construct",
+      "repair",
+      "fix",
+      "settings",
+    ],
   },
   {
     name: "camera-icon",
@@ -1419,6 +1434,11 @@ const ICON_LIST: IconType[] = [
     name: "target-icon",
     icon: TargetIcon,
     keywords: ["target", "aim", "goal", "focus", "bullseye", "center"],
+  },
+  {
+    name: "tag-icon",
+    icon: TagIcon,
+    keywords: ["tag", "label", "price", "sale", "badge", "category", "mark"],
   },
   {
     name: "layout-sidebar-right-collapse-icon",

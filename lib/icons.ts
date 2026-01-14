@@ -196,6 +196,10 @@ export const ICONS = [
     path: "/icons/bulb-svg",
   },
   {
+    name: "hammer icon",
+    path: "/icons/hammer-icon",
+  },
+  {
     name: "camera icon",
     path: "/icons/camera-icon",
   },
@@ -694,6 +698,10 @@ export const ICONS = [
   {
     name: "target icon",
     path: "/icons/target-icon",
+  },
+  {
+    name: "tag icon",
+    path: "/icons/tag-icon",
   },
   {
     name: "triangle alert icon",
