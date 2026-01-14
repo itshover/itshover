@@ -70,6 +70,7 @@ import CreditCard from "./credit-card";
 import CopyIcon from "./copy-icon";
 import DiscordIcon from "./discord-icon";
 import DockerIcon from "./docker-icon";
+import DocumentScanIcon from "./document-scan-icon";
 import CopyOffIcon from "./copy-off-icon";
 import CpuIcon from "./cpu-icon";
 import CurrencyBitcoinIcon from "./currency-bitcoin-icon";
@@ -1304,6 +1305,19 @@ const ICON_LIST: IconType[] = [
     name: "docker-icon",
     icon: DockerIcon,
     keywords: ["docker", "container", "devops", "deployment", "whale"],
+  },
+  {
+    name: "document-scan-icon",
+    icon: DocumentScanIcon,
+    keywords: [
+      "document",
+      "scan",
+      "scanner",
+      "file",
+      "paper",
+      "ocr",
+      "digitize",
+    ],
   },
   {
     name: "typescript-icon",

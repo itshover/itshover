@@ -304,6 +304,10 @@ export const ICONS = [
     path: "/icons/docker-icon",
   },
   {
+    name: "document scan icon",
+    path: "/icons/document-scan-icon",
+  },
+  {
     name: "dots horizontal icon",
     path: "/icons/dots-horizontal-icon",
   },
