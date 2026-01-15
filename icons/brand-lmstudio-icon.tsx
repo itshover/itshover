@@ -2,7 +2,7 @@ import { forwardRef, useImperativeHandle, useCallback } from "react";
 import type { AnimatedIconHandle, AnimatedIconProps } from "./types";
 import { motion, useAnimate } from "motion/react";
 
-const LmStudioIcon = forwardRef<AnimatedIconHandle, AnimatedIconProps>(
+const BrandLmStudioIcon = forwardRef<AnimatedIconHandle, AnimatedIconProps>(
   (
     { size = 24, color = "currentColor", strokeWidth = 1, className = "" },
     ref,
@@ -108,5 +108,5 @@ const LmStudioIcon = forwardRef<AnimatedIconHandle, AnimatedIconProps>(
   },
 );
 
-LmStudioIcon.displayName = "LmStudioIcon";
-export default LmStudioIcon;
+BrandLmStudioIcon.displayName = "BrandLmStudioIcon";
+export default BrandLmStudioIcon;

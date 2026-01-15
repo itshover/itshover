@@ -735,4 +735,28 @@ export const ICONS = [
     name: "brand-grok-icon",
     path: "/icons/brand-grok-icon",
   },
+  {
+    name: "brand-ollama-icon",
+    path: "/icons/brand-ollama-icon",
+  },
+  {
+    name: "brand-xai-icon",
+    path: "/icons/brand-xai-icon",
+  },
+  {
+    name: "brand-anthropic-icon",
+    path: "/icons/brand-anthropic-icon",
+  },
+  {
+    name: "brand-aistudio-icon",
+    path: "/icons/brand-aistudio-icon",
+  },
+  {
+    name: "brand-midjourney-icon",
+    path: "/icons/brand-midjourney-icon",
+  },
+  {
+    name: "brand-lmstudio-icon",
+    path: "/icons/brand-lmstudio-icon",
+  },
 ];

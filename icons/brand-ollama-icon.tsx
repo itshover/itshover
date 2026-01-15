@@ -2,7 +2,7 @@ import { forwardRef, useImperativeHandle, useCallback } from "react";
 import type { AnimatedIconHandle, AnimatedIconProps } from "./types";
 import { motion, useAnimate } from "motion/react";
 
-const OllamaIcon = forwardRef<AnimatedIconHandle, AnimatedIconProps>(
+const BrandOllamaIcon = forwardRef<AnimatedIconHandle, AnimatedIconProps>(
   ({ size = 24, color = "currentColor", className = "" }, ref) => {
     const [scope, animate] = useAnimate();
 
@@ -98,5 +98,5 @@ const OllamaIcon = forwardRef<AnimatedIconHandle, AnimatedIconProps>(
   },
 );
 
-OllamaIcon.displayName = "OllamaIcon";
-export default OllamaIcon;
+BrandOllamaIcon.displayName = "BrandOllamaIcon";
+export default BrandOllamaIcon;

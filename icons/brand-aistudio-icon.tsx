@@ -2,7 +2,7 @@ import { forwardRef, useImperativeHandle, useCallback, useRef } from "react";
 import type { AnimatedIconHandle, AnimatedIconProps } from "./types";
 import { motion, useAnimate } from "motion/react";
 
-const AiStudioIcon = forwardRef<AnimatedIconHandle, AnimatedIconProps>(
+const BrandAiStudioIcon = forwardRef<AnimatedIconHandle, AnimatedIconProps>(
   ({ size = 24, color = "currentColor", className = "" }, ref) => {
     const [scope, animate] = useAnimate();
 
@@ -116,5 +116,5 @@ const AiStudioIcon = forwardRef<AnimatedIconHandle, AnimatedIconProps>(
   },
 );
 
-AiStudioIcon.displayName = "AiStudioIcon";
-export default AiStudioIcon;
+BrandAiStudioIcon.displayName = "BrandAiStudioIcon";
+export default BrandAiStudioIcon;
