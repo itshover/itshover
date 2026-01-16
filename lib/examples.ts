@@ -1,12 +1,11 @@
 import XSidebar from "@/components/examples/x-sidebar";
+import PaymentCheckout from "@/components/examples/payment-checkout";
 import AnimatedNavbar from "@/components/examples/animated-navbar";
 import CollapsibleSidebar from "@/components/examples/collapsible-sidebar";
 import fs from "fs";
 import path from "path";
 import TakeuforwardNavbar from "@/components/examples/takeuforward-navbar";
 
-// Define the registry of examples
-// Add new examples to this array
 const EXAMPLE_REGISTRY = [
   {
     componentName: "X Sidebar",
@@ -54,6 +53,16 @@ const EXAMPLE_REGISTRY = [
       "A modern, interactive component featuring advanced animations and smooth state transitions.",
     tags: ["UI", "Animation", "Framer Motion", "Interactive"],
     fullWidth: true,
+  },
+  {
+    componentName: "Payment Checkout",
+    slug: "payment-checkout",
+    createdBy: "https://github.com/forever-ivy",
+    filePath: "components/examples/payment-checkout.tsx",
+    component: PaymentCheckout,
+    description:
+      "A polished payment checkout component with expandable order summary and animated payment method selection. Features smooth layout transitions and hover-triggered icon animations.",
+    tags: ["Payment", "Checkout", "Animation", "Framer Motion"],
   },
 ];
 
