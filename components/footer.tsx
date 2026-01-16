@@ -47,7 +47,7 @@ const CryptoAddress = ({
   return (
     <button
       onClick={handleCopy}
-      className="group flex cursor-pointer items-center gap-1.5 text-left text-xs transition-colors hover:text-foreground"
+      className="group hover:text-foreground flex cursor-pointer items-center gap-1.5 text-left text-xs transition-colors"
     >
       <span className="truncate">
         {label}: {address.slice(0, 20)}...
@@ -97,18 +97,27 @@ const Footer = () => {
           <div className="space-y-4">
             <h3 className="text-lg font-semibold">Quick Links</h3>
             <nav className="flex flex-col space-y-3">
-              <Link href="/" className="text-muted-foreground transition-colors hover:text-foreground">
+              <Link
+                href="/"
+                className="text-muted-foreground hover:text-foreground transition-colors"
+              >
                 Home
               </Link>
-              <Link href="/icons" className="text-muted-foreground transition-colors hover:text-foreground">
+              <Link
+                href="/icons"
+                className="text-muted-foreground hover:text-foreground transition-colors"
+              >
                 Icons
               </Link>
-              <Link href="/sponsor" className="text-muted-foreground transition-colors hover:text-foreground">
+              <Link
+                href="/sponsor"
+                className="text-muted-foreground hover:text-foreground transition-colors"
+              >
                 Sponsor
               </Link>
               <button
                 onClick={() => setIsRequestModalOpen(true)}
-                className="text-left text-muted-foreground transition-colors hover:text-foreground"
+                className="text-muted-foreground hover:text-foreground text-left transition-colors"
               >
                 Request an Icon
               </button>
@@ -116,7 +125,7 @@ const Footer = () => {
                 href={LINKS.GITHUB}
                 target="_blank"
                 rel="noreferrer"
-                className="text-muted-foreground transition-colors hover:text-foreground"
+                className="text-muted-foreground hover:text-foreground transition-colors"
               >
                 GitHub
               </Link>
@@ -124,7 +133,7 @@ const Footer = () => {
                 href={LINKS.BAGS_FM}
                 target="_blank"
                 rel="noreferrer"
-                className="inline-flex w-fit items-center rounded-full bg-primary px-3 py-1 text-sm font-semibold text-white transition-all duration-200 hover:scale-105 hover:bg-primary/90"
+                className="bg-primary hover:bg-primary/90 inline-flex w-fit items-center rounded-full px-3 py-1 text-sm font-semibold text-white transition-all duration-200 hover:scale-105"
               >
                 $hover
               </Link>
@@ -139,14 +148,14 @@ const Footer = () => {
                 href={SPONSOR.buymeacoffee}
                 target="_blank"
                 rel="noreferrer"
-                className="inline-flex items-center gap-2 text-muted-foreground transition-colors hover:text-foreground"
+                className="text-muted-foreground hover:text-foreground inline-flex items-center gap-2 transition-colors"
               >
                 <CoffeeIcon size={16} />
                 Buy Me a Coffee
               </Link>
 
-              <div className="space-y-2 text-sm text-muted-foreground">
-                <p className="font-medium text-foreground">Crypto</p>
+              <div className="text-muted-foreground space-y-2 text-sm">
+                <p className="text-foreground font-medium">Crypto</p>
                 <CryptoAddress label="BTC" address={SPONSOR.btc} />
                 <CryptoAddress label="ETH" address={SPONSOR.eth} />
                 <CryptoAddress label="SOL" address={SPONSOR.sol} />
@@ -163,7 +172,7 @@ const Footer = () => {
                   key={name}
                   href={`/icons/${path}`}
                   aria-label={`${name} icon`}
-                  className="flex items-center justify-center rounded-lg border p-2 transition-colors hover:bg-accent"
+                  className="hover:bg-accent flex items-center justify-center rounded-lg border p-2 transition-colors"
                 >
                   <motion.span
                     whileHover={{ scale: 1.1 }}
@@ -180,13 +189,13 @@ const Footer = () => {
         {/* Bottom bar */}
         <div className="mt-12 border-t pt-8">
           <div className="flex flex-col items-center justify-between gap-4 md:flex-row">
-            <p className="text-center text-sm text-muted-foreground md:text-left">
+            <p className="text-muted-foreground text-center text-sm md:text-left">
               Built by{" "}
               <Link
                 href={LINKS.CREATOR}
                 target="_blank"
                 rel="noreferrer"
-                className="font-medium underline underline-offset-4 transition-colors hover:text-foreground"
+                className="hover:text-foreground font-medium underline underline-offset-4 transition-colors"
               >
                 Abhijit
               </Link>
@@ -195,7 +204,7 @@ const Footer = () => {
                 href={LINKS.GITHUB}
                 target="_blank"
                 rel="noreferrer"
-                className="font-medium underline underline-offset-4 transition-colors hover:text-foreground"
+                className="hover:text-foreground font-medium underline underline-offset-4 transition-colors"
               >
                 GitHub
               </Link>
@@ -207,7 +216,7 @@ const Footer = () => {
                 href={LINKS.BAGS_FM}
                 target="_blank"
                 rel="noreferrer"
-                className="inline-flex items-center rounded-full bg-primary px-3 py-1 text-sm font-semibold text-white transition-all duration-200 hover:scale-105 hover:bg-primary/90"
+                className="bg-primary hover:bg-primary/90 inline-flex items-center rounded-full px-3 py-1 text-sm font-semibold text-white transition-all duration-200 hover:scale-105"
                 aria-label="$hover token"
               >
                 $hover
@@ -216,7 +225,7 @@ const Footer = () => {
                 href={LINKS.GITHUB}
                 target="_blank"
                 rel="noreferrer"
-                className="text-muted-foreground transition-colors hover:text-foreground"
+                className="text-muted-foreground hover:text-foreground transition-colors"
                 aria-label="GitHub"
               >
                 <GithubIcon size={20} />
@@ -225,7 +234,7 @@ const Footer = () => {
                 href={LINKS.TWITTER}
                 target="_blank"
                 rel="noreferrer"
-                className="text-muted-foreground transition-colors hover:text-foreground"
+                className="text-muted-foreground hover:text-foreground transition-colors"
                 aria-label="Twitter"
               >
                 <TwitterXIcon size={20} />
