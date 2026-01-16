@@ -29,7 +29,6 @@ import ArrowNarrowUpDashedIcon from "./arrow-narrow-up-dashed-icon";
 import ArrowNarrowUpIcon from "./arrow-narrow-up-icon";
 import AppleBrandLogo from "./apple-brand-logo";
 import AtSignIcon from "./at-sign-icon";
-import AppStoreIcon from "./appstore-icon";
 import Alipay from "./alipay-icon";
 import BananaIcon from "./banana-icon";
 import BatteryIcon from "./battery-icon";
@@ -39,8 +38,24 @@ import BellOffIcon from "./bell-off-icon";
 import BluetoothConnectedIcon from "./bluetooth-connected-icon";
 import BookIcon from "./book-icon";
 import BookmarkIcon from "./bookmark-icon";
+import BugIcon from "./bug-icon";
 import BrandGoogleIcon from "./brand-google-icon";
 import BrandNextjsIcon from "./brand-nextjs-icon";
+import BrandStripeIcon from "./brand-stripe-icon";
+import BrandReactIcon from "./brand-react-icon";
+import BrandPaypalIcon from "./brand-paypal-icon";
+import BrandAwsIcon from "./brand-aws-icon";
+import BrandBagsFmIcon from "./brand-bags-fm-icon";
+import BrandThreadsIcon from "./brand-threads-icon";
+import BrandZoomIcon from "./brand-zoom-icon";
+import BrandReactNativeIcon from "./brand-react-native-icon";
+import BrandOpenaiIcon from "./brand-openai-icon";
+import BrandTelegramIcon from "./brand-telegram-icon";
+import BrandWindowsIcon from "./brand-windows-icon";
+import BrandTiktokIcon from "./brand-tiktok-icon";
+import BrandMastercardIcon from "./brand-mastercard-icon";
+import BrandAppStoreIcon from "./brand-appstore-icon";
+import BrandVisaIcon from "./brand-visa-icon";
 import BrightnessDownIcon from "./brightness-down-icon";
 import BulbSvg from "./bulb-svg";
 import CameraIcon from "./camera-icon";
@@ -75,7 +90,7 @@ import DoubleCheckIcon from "./double-check-icon";
 import DotsHorizontalIcon from "./dots-horizontal-icon";
 import DotsVerticalIcon from "./dots-vertical-icon";
 import DrumIcon from "./drum-icon";
-import DownCheveron from "./down-cheveron";
+import DownChevron from "./down-chevron";
 import EyeIcon from "./eye-icon";
 import EyeOffIcon from "./eye-off-icon";
 import ExpandIcon from "./expand-icon";
@@ -101,6 +116,7 @@ import HomeIcon from "./home-icon";
 import InfoCircleIcon from "./info-circle-icon";
 import Instagram from "./instagram-icon";
 import JavaScriptIcon from "./javascript-icon";
+import LayoutDashboardIcon from "./layout-dashboard-icon";
 import LikeIcon from "./like-icon";
 import LinkedInIcon from "./linkedin-icon";
 import LinkIcon from "./link-icon";
@@ -113,27 +129,23 @@ import MessageCircleIcon from "./message-circle-icon";
 import MoonIcon from "./moon-icon";
 import MousePointer2Icon from "./mouse-pointer-2-icon";
 import MySQLIcon from "./mysql-icon";
-import MastercardIcon from "./mastercard-icon";
 import NodeJSIcon from "./nodejs-icon";
-import OpenAIIcon from "./openai-icon";
 import PartyPopperIcon from "./party-popper-icon";
 import PenIcon from "./pen-icon";
 import PhoneVolume from "./phone-volume";
 import PinterestIcon from "./pinterest-icon";
 import PythonIcon from "./python-icon";
 import PlayerIcon from "./player-icon";
-import PaypalIcon from "./paypal-icon";
 import QrCodeIcon from "./qrcode-icon";
 import QuestionMark from "./question-mark";
 import RadioIcon from "./radio-icon";
 import RainbowIcon from "./rainbow-icon";
 import RefreshIcon from "./refresh-icon";
-import RightCheveron from "./right-cheveron";
+import RightChevron from "./right-chevron";
 import RocketIcon from "./rocket-icon";
 import RouterIcon from "./router-icon";
 import RosetteDiscountIcon from "./rosette-discount-icon";
 import RosetteDiscountCheckIcon from "./rosette-discount-check-icon";
-import ReactIcon from "./react-icon";
 import SatelliteDishIcon from "./satellite-dish-icon";
 import ScanBarcodeIcon from "./scan-barcode-icon";
 import ScanHeartIcon from "./scan-heart-icon";
@@ -156,13 +168,14 @@ import ArrowDownAZIcon from "./arrow-down-a-z-icon";
 import ToggleIcon from "./toggle-icon";
 import TrashIcon from "./trash-icon";
 import TruckElectricIcon from "./truck-electric-icon";
-import TiktokIcon from "./tiktok-icon";
 import UnorderedListIcon from "./unordered-list-icon";
 import UserCheckIcon from "./user-check-icon";
+import UserIcon from "./user-icon";
 import UserPlusIcon from "./user-plus-icon";
 import UsersIcon from "./users-icon";
 import UsersGroupIcon from "./users-group-icon";
 import VinylIcon from "./vinyl-icon";
+import WalletIcon from "./wallet-icon";
 import WashingMachineIcon from "./washing-machine-icon";
 import GlobeIcon from "./globe-icon";
 import HashtagIcon from "./hashtag-icon";
@@ -186,10 +199,9 @@ import TwitterIcon from "./twitter-icon";
 import TwitterXIcon from "./twitter-x-icon";
 import TypeScriptIcon from "./typescript-icon";
 import UnlinkIcon from "./unlink-icon";
-import VercelIcon from "./vercel-icon";
+import BrandVercelIcon from "./brand-vercel-icon";
 import Volume2Icon from "./volume-2-icon";
 import VolumeXIcon from "./volume-x-icon";
-import Visa from "./visa-icon";
 import XIcon from "./x-icon";
 import YoutubeIcon from "./youtube-icon";
 import PassportIcon from "./passport-icon";
@@ -197,6 +209,13 @@ import AirplaneIcon from "./airplane-icon";
 import TravelBag from "./travel-bag";
 import HotelIcon from "./hotel-icon";
 import WechatIcon from "./wechat-icon";
+import GolangIcon from "./golang-icon";
+import BrandRailwayIcon from "./brand-railway-icon";
+import BrandCursorIcon from "./brand-cursor-icon";
+import BrandNotionIcon from "./brand-notion-icon";
+import BrandGeminiIcon from "./brand-gemini-icon";
+import BrandQwenIcon from "./brand-qwen-icon";
+import BrandGrokIcon from "./brand-grok-icon";
 
 export interface IconType {
   name: string;
@@ -387,11 +406,6 @@ const ICON_LIST: IconType[] = [
     keywords: ["ali", "pay", "alibaba", "zhifubao"],
   },
   {
-    name: "appstore-icon",
-    icon: AppStoreIcon,
-    keywords: ["apple", "appstore"],
-  },
-  {
     name: "banana-icon",
     icon: BananaIcon,
     keywords: ["banana", "fruit", "food", "tropical", "yellow"],
@@ -455,6 +469,21 @@ const ICON_LIST: IconType[] = [
       "framework",
       "vercel",
     ],
+  },
+  {
+    name: "brand-appstore-icon",
+    icon: BrandAppStoreIcon,
+    keywords: ["apple", "appstore"],
+  },
+  {
+    name: "brand-mastercard-icon",
+    icon: BrandMastercardIcon,
+    keywords: ["mastercard", "pay", "credit", "card", "payment"],
+  },
+  {
+    name: "brand-visa-icon",
+    icon: BrandVisaIcon,
+    keywords: ["visa", "pay"],
   },
   {
     name: "brightness-down-icon",
@@ -686,8 +715,8 @@ const ICON_LIST: IconType[] = [
     keywords: ["dots", "menu", "more", "options", "vertical"],
   },
   {
-    name: "down-cheveron",
-    icon: DownCheveron,
+    name: "down-chevron",
+    icon: DownChevron,
     keywords: ["arrow", "down", "expand", "more"],
   },
   {
@@ -891,8 +920,8 @@ const ICON_LIST: IconType[] = [
     keywords: ["refresh", "reload", "sync", "update"],
   },
   {
-    name: "right-cheveron",
-    icon: RightCheveron,
+    name: "right-chevron",
+    icon: RightChevron,
     keywords: ["arrow", "right", "next", "forward"],
   },
   {
@@ -1084,11 +1113,6 @@ const ICON_LIST: IconType[] = [
     ],
   },
   {
-    name: "openai-icon",
-    icon: OpenAIIcon,
-    keywords: ["tech", "openai", "ai", "chatgpt"],
-  },
-  {
     name: "paint-icon",
     icon: PaintIcon,
     keywords: [
@@ -1252,16 +1276,6 @@ const ICON_LIST: IconType[] = [
     keywords: ["international", "passport", "travel", "visa", "traveling"],
   },
   {
-    name: "paypal-icon",
-    icon: PaypalIcon,
-    keywords: ["paypal", "pay", "money", "finance"],
-  },
-  {
-    name: "react-icon",
-    icon: ReactIcon,
-    keywords: ["icon", "react", "tech"],
-  },
-  {
     name: "moon-icon",
     icon: MoonIcon,
     keywords: ["moon", "dark", "night", "theme", "mode"],
@@ -1270,11 +1284,6 @@ const ICON_LIST: IconType[] = [
     name: "mouse-pointer-2-icon",
     icon: MousePointer2Icon,
     keywords: ["mouse", "pointer", "cursor", "click", "select"],
-  },
-  {
-    name: "mastercard-icon",
-    icon: MastercardIcon,
-    keywords: ["mastercard", "pay", "credit", "card", "payment"],
   },
   {
     name: "mysql-icon",
@@ -1292,13 +1301,8 @@ const ICON_LIST: IconType[] = [
     keywords: ["slack", "chat", "team", "communication", "work"],
   },
   {
-    name: "tiktok-icon",
-    icon: TiktokIcon,
-    keywords: ["tech", "tiktok", "company"],
-  },
-  {
-    name: "vercel-icon",
-    icon: VercelIcon,
+    name: "brand-vercel-icon",
+    icon: BrandVercelIcon,
     keywords: ["vercel", "deploy", "hosting", "nextjs", "triangle"],
   },
   {
@@ -1345,11 +1349,6 @@ const ICON_LIST: IconType[] = [
     name: "volume-x-icon",
     icon: VolumeXIcon,
     keywords: ["volume", "mute", "silent", "sound off", "audio off", "quiet"],
-  },
-  {
-    name: "visa-icon",
-    icon: Visa,
-    keywords: ["visa", "pay"],
   },
   {
     name: "radio-icon",
@@ -1430,6 +1429,128 @@ const ICON_LIST: IconType[] = [
       "interface",
     ],
   },
+  {
+    name: "brand-stripe-icon",
+    icon: BrandStripeIcon,
+    keywords: ["stripe", "brand", "payment", "money"],
+  },
+  {
+    name: "brand-react-icon",
+    icon: BrandReactIcon,
+    keywords: ["react", "brand", "library", "javascript"],
+  },
+  {
+    name: "brand-paypal-icon",
+    icon: BrandPaypalIcon,
+    keywords: ["paypal", "brand", "payment", "money"],
+  },
+  {
+    name: "brand-aws-icon",
+    icon: BrandAwsIcon,
+    keywords: ["aws", "brand", "cloud", "amazon"],
+  },
+  {
+    name: "brand-bags-fm-icon",
+    icon: BrandBagsFmIcon,
+    keywords: ["bags", "fm", "brand", "logo", "shopping", "ecommerce"],
+  },
+  {
+    name: "brand-threads-icon",
+    icon: BrandThreadsIcon,
+    keywords: ["threads", "brand", "social", "meta"],
+  },
+  {
+    name: "brand-zoom-icon",
+    icon: BrandZoomIcon,
+    keywords: ["zoom", "brand", "video", "call"],
+  },
+  {
+    name: "brand-react-native-icon",
+    icon: BrandReactNativeIcon,
+    keywords: ["react native", "brand", "mobile", "app"],
+  },
+  {
+    name: "brand-openai-icon",
+    icon: BrandOpenaiIcon,
+    keywords: ["openai", "brand", "ai", "chatgpt"],
+  },
+  {
+    name: "brand-telegram-icon",
+    icon: BrandTelegramIcon,
+    keywords: ["telegram", "brand", "chat", "message"],
+  },
+  {
+    name: "brand-windows-icon",
+    icon: BrandWindowsIcon,
+    keywords: ["windows", "brand", "microsoft", "os"],
+  },
+  {
+    name: "golang-icon",
+    icon: GolangIcon,
+    keywords: ["golang", "go", "programming", "language", "code", "developer"],
+  },
+  {
+    name: "brand-railway-icon",
+    icon: BrandRailwayIcon,
+    keywords: [
+      "railway",
+      "train",
+      "transport",
+      "travel",
+      "traveling",
+      "journey",
+      "cloud",
+    ],
+  },
+  {
+    name: "brand-cursor-icon",
+    icon: BrandCursorIcon,
+    keywords: ["cursor", "ide", "code", "coding", "cursor-ide"],
+  },
+  {
+    name: "brand-notion-icon",
+    icon: BrandNotionIcon,
+    keywords: ["notion", "notion-icon", "notion-svg", "docs", "notes"],
+  },
+  {
+    name: "brand-gemini-icon",
+    icon: BrandGeminiIcon,
+    keywords: ["gemini", "gemini-icon", "ai", "chatbot", "conversation"],
+  },
+  {
+    name: "brand-qwen-icon",
+    icon: BrandQwenIcon,
+    keywords: ["qwen", "qwen-icon", "ai", "chatbot", "conversation"],
+  },
+  {
+    name: "brand-grok-icon",
+    icon: BrandGrokIcon,
+    keywords: ["grok", "grok-icon", "ai", "chatbot", "conversation"],
+  },
+  {
+    name: "brand-tiktok-icon",
+    icon: BrandTiktokIcon,
+    keywords: ["tech", "tiktok", "company", "brand"],
+  },
+  {
+    name: "bug-icon",
+    icon: BugIcon,
+    keywords: ["bug", "insect", "debug", "error", "pest", "crawl"],
+  },
+  {
+    name: "layout-dashboard-icon",
+    icon: LayoutDashboardIcon,
+    keywords: ["layout", "dashboard", "grid", "panel", "widgets", "admin"],
+  },
+  {
+    name: "user-icon",
+    icon: UserIcon,
+    keywords: ["user", "person", "profile", "account", "avatar"],
+  },
+  {
+    name: "wallet-icon",
+    icon: WalletIcon,
+    keywords: ["wallet", "money", "payment", "finance", "cash", "billfold"],
+  },
 ].sort((a, b) => a.name.localeCompare(b.name));
-
 export { ICON_LIST };

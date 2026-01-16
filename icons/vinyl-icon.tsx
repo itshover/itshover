@@ -1,4 +1,4 @@
-import { forwardRef, useImperativeHandle, useCallback } from "react";
+import { forwardRef, useImperativeHandle, useRef } from "react";
 import type { AnimatedIconHandle, AnimatedIconProps } from "./types";
 import { motion, useAnimate } from "motion/react";
 
@@ -8,36 +8,47 @@ const VinylIcon = forwardRef<AnimatedIconHandle, AnimatedIconProps>(
     ref,
   ) => {
     const [scope, animate] = useAnimate();
+    const animationControls = useRef<Array<ReturnType<typeof animate>>>([]);
 
-    const start = useCallback(async () => {
+    const start = async () => {
+      animationControls.current.forEach((control) => control.stop());
+      animationControls.current = [];
+
       // Rotate the vinyl record
-      animate(
-        ".vinyl-disc",
-        {
-          rotate: [0, 360],
-        },
-        {
-          duration: 3,
-          repeat: Infinity,
-          ease: "linear",
-        },
+      animationControls.current.push(
+        animate(
+          ".vinyl-disc",
+          {
+            rotate: [0, 360],
+          },
+          {
+            duration: 3,
+            repeat: Infinity,
+            ease: "linear",
+          },
+        ),
       );
 
       // Pulse the center dot
-      animate(
-        ".center-dot",
-        {
-          scale: [1, 1.2, 1],
-        },
-        {
-          duration: 1,
-          repeat: Infinity,
-          ease: "easeInOut",
-        },
+      animationControls.current.push(
+        animate(
+          ".center-dot",
+          {
+            scale: [1, 1.2, 1],
+          },
+          {
+            duration: 1,
+            repeat: Infinity,
+            ease: "easeInOut",
+          },
+        ),
       );
-    }, [animate]);
+    };
 
-    const stop = useCallback(async () => {
+    const stop = () => {
+      animationControls.current.forEach((control) => control.stop());
+      animationControls.current = [];
+
       animate(
         ".vinyl-disc",
         {
@@ -59,7 +70,7 @@ const VinylIcon = forwardRef<AnimatedIconHandle, AnimatedIconProps>(
           ease: "easeInOut",
         },
       );
-    }, [animate]);
+    };
 
     useImperativeHandle(ref, () => ({
       startAnimation: start,

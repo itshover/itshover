@@ -1,4 +1,4 @@
-import { forwardRef, useImperativeHandle } from "react";
+import { forwardRef, useImperativeHandle, useRef } from "react";
 import type { AnimatedIconHandle, AnimatedIconProps } from "./types";
 import { motion, useAnimate } from "motion/react";
 
@@ -8,12 +8,18 @@ const AccessibilityIcon = forwardRef<AnimatedIconHandle, AnimatedIconProps>(
     ref,
   ) => {
     const [scope, animate] = useAnimate();
+    const animationControls = useRef<Array<ReturnType<typeof animate>>>([]);
 
     const start = async () => {
-      animate(
-        ".wheel",
-        { rotate: [0, 360] },
-        { duration: 1, ease: "easeInOut", repeat: Infinity },
+      animationControls.current.forEach((control) => control.stop());
+      animationControls.current = [];
+
+      animationControls.current.push(
+        animate(
+          ".wheel",
+          { rotate: [0, 360] },
+          { duration: 1, ease: "easeInOut", repeat: Infinity },
+        ),
       );
       animate(
         ".person",
@@ -23,6 +29,9 @@ const AccessibilityIcon = forwardRef<AnimatedIconHandle, AnimatedIconProps>(
     };
 
     const stop = () => {
+      animationControls.current.forEach((control) => control.stop());
+      animationControls.current = [];
+
       animate(".wheel", { rotate: 0 }, { duration: 0.3 });
       animate(".person", { y: 0 }, { duration: 0.2 });
     };

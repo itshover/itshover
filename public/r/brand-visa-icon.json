@@ -1,0 +1,20 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "brand-visa-icon",
+  "dependencies": ["motion"],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "icons/brand-visa-icon.tsx",
+      "content": "import React, {\n  forwardRef,\n  useImperativeHandle,\n  useCallback,\n  useRef,\n} from \"react\";\nimport type { AnimatedIconHandle, AnimatedIconProps } from \"./types\";\nimport { motion, useAnimate } from \"motion/react\";\n\nconst BrandVisaIcon = forwardRef<AnimatedIconHandle, AnimatedIconProps>(\n  (\n    { size = 24, color = \"currentColor\", strokeWidth = 2, className = \"\" },\n    ref,\n  ) => {\n    const [scope, animate] = useAnimate();\n    const sequenceRef = useRef(0);\n\n    const start = useCallback(async () => {\n      sequenceRef.current++;\n      const currentSeq = sequenceRef.current;\n\n      animate(\n        \".visa-container\",\n        { x: 80, opacity: 0, skewX: -30 },\n        { duration: 0 },\n      );\n\n      animate(\".card-frame\", { opacity: 1, scale: 1 }, { duration: 0 });\n\n      await new Promise((resolve) => setTimeout(resolve, 30));\n\n      if (currentSeq !== sequenceRef.current) return;\n\n      await animate(\n        \".visa-container\",\n        { x: 0, opacity: 1, skewX: 0 },\n        { duration: 0.35, ease: [0.16, 1, 0.3, 1] },\n      );\n\n      if (currentSeq !== sequenceRef.current) return;\n\n      animate(\".card-frame\", { opacity: 0, scale: 1.05 }, { duration: 0.2 });\n    }, [animate]);\n\n    const stop = useCallback(() => {\n      sequenceRef.current++;\n\n      animate(\n        \".visa-container\",\n        { x: 0, opacity: 1, skewX: 0 },\n        { duration: 0.2 },\n      );\n      animate(\".card-frame\", { opacity: 0 }, { duration: 0.2 });\n    }, [animate]);\n\n    useImperativeHandle(ref, () => ({\n      startAnimation: start,\n      stopAnimation: stop,\n    }));\n\n    return (\n      <motion.svg\n        ref={scope}\n        onHoverStart={start}\n        onHoverEnd={stop}\n        xmlns=\"http://www.w3.org/2000/svg\"\n        width={size}\n        height={size}\n        viewBox=\"0 0 24 24\"\n        fill=\"none\"\n        stroke={color}\n        strokeWidth={strokeWidth}\n        strokeLinecap=\"round\"\n        strokeLinejoin=\"round\"\n        className={`cursor-pointer ${className}`}\n        style={{ overflow: \"visible\" }}\n      >\n        <path d=\"M0 0h24v24H0z\" stroke=\"none\" className=\"bg-none\" fill=\"none\" />\n\n        <motion.g\n          className=\"visa-container\"\n          style={{ transformOrigin: \"center\" }}\n        >\n          <motion.path\n            className=\"card-frame\"\n            d=\"M3 5h18a2 2 0 0 1 2 2v10a2 2 0 0 1 -2 2H3a2 2 0 0 1 -2 -2V7a2 2 0 0 1 2 -2z\"\n            initial={{ opacity: 0 }}\n          />\n\n          <g className=\"visa-text\">\n            <path d=\"M3 9h1v6h.5l2.5 -6\" />\n            <path d=\"M9 15l1 -6\" />\n            <path d=\"M16 9.5a.5 .5 0 0 0 -.5 -.5h-.75c-.721 0 -1.337 .521 -1.455 1.233l-.09 .534a1.059 1.059 0 0 0 1.045 1.233a1.059 1.059 0 0 1 1.045 1.233l-.09 .534a1.476 1.476 0 0 1 -1.455 1.233h-.75a.5 .5 0 0 1 -.5 -.5\" />\n            <path d=\"M21 15l-1 -6l-2.5 6\" />\n            <path d=\"M18 14h2.7\" />\n          </g>\n        </motion.g>\n      </motion.svg>\n    );\n  },\n);\n\nBrandVisaIcon.displayName = \"Visa\";\n\nexport default BrandVisaIcon;\n",
+      "type": "registry:ui"
+    },
+    {
+      "path": "icons/types.ts",
+      "content": "export interface AnimatedIconProps {\n  /** Icon size in pixels or CSS string */\n  size?: number | string;\n  /** Icon color (defaults to currentColor) */\n  color?: string;\n  /** SVG stroke width */\n  strokeWidth?: number;\n  /** Additional CSS classes */\n  className?: string;\n}\n\nexport interface AnimatedIconHandle {\n  startAnimation: () => void;\n  stopAnimation: () => void;\n}\n",
+      "type": "registry:ui"
+    }
+  ],
+  "type": "registry:ui"
+}

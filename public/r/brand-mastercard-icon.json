@@ -1,0 +1,20 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "brand-mastercard-icon",
+  "dependencies": ["motion"],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "icons/brand-mastercard-icon.tsx",
+      "content": "import { forwardRef, useImperativeHandle, useCallback, useRef } from \"react\";\nimport type { AnimatedIconHandle, AnimatedIconProps } from \"./types\";\nimport { motion, useAnimate } from \"motion/react\";\n\nconst BrandMastercardIcon = forwardRef<AnimatedIconHandle, AnimatedIconProps>(\n  (\n    { size = 24, color = \"currentColor\", strokeWidth = 2, className = \"\" },\n    ref,\n  ) => {\n    const [scope, animate] = useAnimate();\n    const sequenceRef = useRef(0);\n\n    const start = useCallback(async () => {\n      sequenceRef.current++;\n      const currentSeq = sequenceRef.current;\n\n      animate(\".mc-left\", { x: -20, opacity: 0 }, { duration: 0 });\n      animate(\".mc-right\", { x: 20, opacity: 0 }, { duration: 0 });\n      animate(\".mc-frame\", { pathLength: 0, opacity: 0 }, { duration: 0 });\n\n      await new Promise((resolve) => setTimeout(resolve, 30));\n\n      if (currentSeq !== sequenceRef.current) return;\n\n      await Promise.all([\n        animate(\n          \".mc-left\",\n          { x: 0, opacity: 1 },\n          { duration: 0.5, ease: \"backOut\" },\n        ),\n        animate(\n          \".mc-right\",\n          { x: 0, opacity: 1 },\n          { duration: 0.5, ease: \"backOut\" },\n        ),\n      ]);\n\n      if (currentSeq !== sequenceRef.current) return;\n\n      await animate(\n        \".mc-frame\",\n        { pathLength: 1, opacity: 1 },\n        { duration: 0.4, ease: \"easeInOut\" },\n      );\n    }, [animate]);\n\n    const stop = useCallback(() => {\n      sequenceRef.current++;\n      animate(\".mc-left\", { x: 0, opacity: 1 }, { duration: 0.2 });\n      animate(\".mc-right\", { x: 0, opacity: 1 }, { duration: 0.2 });\n      animate(\".mc-frame\", { pathLength: 1, opacity: 1 }, { duration: 0.2 });\n    }, [animate]);\n\n    useImperativeHandle(ref, () => ({\n      startAnimation: start,\n      stopAnimation: stop,\n    }));\n\n    return (\n      <motion.svg\n        ref={scope}\n        onHoverStart={start}\n        onHoverEnd={stop}\n        xmlns=\"http://www.w3.org/2000/svg\"\n        width={size}\n        height={size}\n        viewBox=\"0 0 24 24\"\n        fill=\"none\"\n        stroke={color}\n        strokeWidth={strokeWidth}\n        strokeLinecap=\"round\"\n        strokeLinejoin=\"round\"\n        className={`cursor-pointer ${className}`}\n        style={{ overflow: \"visible\" }}\n      >\n        <path d=\"M0 0h24v24H0z\" stroke=\"none\" className=\"bg-none\" fill=\"none\" />\n\n        <motion.path\n          className=\"mc-frame\"\n          d=\"M3 7a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v10a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-10\"\n        />\n\n        <motion.path\n          className=\"mc-right\"\n          d=\"M11 12a3 3 0 1 0 6 0a3 3 0 1 0 -6 0\"\n        />\n\n        <motion.path className=\"mc-left\" d=\"M12 9.765a3 3 0 1 0 0 4.47\" />\n      </motion.svg>\n    );\n  },\n);\n\nBrandMastercardIcon.displayName = \"MastercardIcon\";\n\nexport default BrandMastercardIcon;\n",
+      "type": "registry:ui"
+    },
+    {
+      "path": "icons/types.ts",
+      "content": "export interface AnimatedIconProps {\n  /** Icon size in pixels or CSS string */\n  size?: number | string;\n  /** Icon color (defaults to currentColor) */\n  color?: string;\n  /** SVG stroke width */\n  strokeWidth?: number;\n  /** Additional CSS classes */\n  className?: string;\n}\n\nexport interface AnimatedIconHandle {\n  startAnimation: () => void;\n  stopAnimation: () => void;\n}\n",
+      "type": "registry:ui"
+    }
+  ],
+  "type": "registry:ui"
+}

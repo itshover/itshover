@@ -5,11 +5,11 @@ import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import AlipayIcon from "@/icons/alipay-icon";
 import CreditCardIcon from "@/icons/credit-card";
-import MastercardIcon from "@/icons/mastercard-icon";
-import PaypalIcon from "@/icons/paypal-icon";
+import BrandMastercardIcon from "@/icons/brand-mastercard-icon";
+import BrandVisaIcon from "@/icons/brand-visa-icon";
+import BrandPaypalIcon from "@/icons/brand-paypal-icon";
 import ShieldCheckIcon from "@/icons/shield-check";
 import SimpleCheckedIcon from "@/icons/simple-checked-icon";
-import VisaIcon from "@/icons/visa-icon";
 import type { AnimatedIconHandle, AnimatedIconProps } from "@/icons/types";
 import { AnimatePresence, motion } from "motion/react";
 
@@ -109,8 +109,8 @@ const PaymentMethodOption = ({
               ? "from-primary/8 border-primary/60 bg-gradient-to-r to-transparent shadow-sm"
               : "bg-card border-border/30 hover:border-border/60 hover:bg-accent/20",
         )}
-        onMouseEnter={handleMouseEnter}
-        onMouseLeave={handleMouseLeave}
+        onMouseEnter={isAnimated ? handleMouseEnter : undefined}
+        onMouseLeave={isAnimated ? handleMouseLeave : undefined}
       >
         {selected && (
           <div className="bg-primary absolute top-0 right-0 z-10 rounded-bl-lg p-1">
@@ -120,13 +120,14 @@ const PaymentMethodOption = ({
           </div>
         )}
 
-        <div className="flex items-center gap-3 p-3">
+        <div className="flex items-center gap-2 p-2.5 sm:gap-3 sm:p-3">
           <div
             className={cn(
-              "flex h-9 w-9 shrink-0 items-center justify-center rounded-lg transition-colors",
+              "flex h-8 w-8 shrink-0 items-center justify-center rounded-lg transition-colors sm:h-9 sm:w-9",
               selected
                 ? "bg-primary/10"
                 : "bg-muted/50 group-hover:bg-muted/80",
+              !isAnimated && "pointer-events-none",
             )}
           >
             <Icon
@@ -194,7 +195,7 @@ export interface PaymentCheckoutProps {
   onShowSummaryChange?: (show: boolean) => void;
 }
 
-export const PaymentCheckout = ({
+export const Paymentcheckout = ({
   items,
   methods,
   currency = "USD",
@@ -260,7 +261,7 @@ export const PaymentCheckout = ({
     <motion.div
       layout
       className={cn(
-        "text-foreground mx-auto w-full p-2",
+        "text-foreground mx-auto w-full p-2 sm:p-3",
         effectiveShowSummary ? "max-w-[920px]" : "max-w-[440px]",
         className,
       )}
@@ -291,7 +292,7 @@ export const PaymentCheckout = ({
                   clipPath: "inset(0% 0% 0% 100%)",
                 }}
                 transition={{ duration: 0.25, ease: [0.16, 1, 0.3, 1] }}
-                className="bg-muted/30 w-full p-4 md:w-[54%] md:p-5"
+                className="bg-muted/30 w-full p-3 sm:p-4 md:w-[54%] md:p-5"
               >
                 <div className="mb-4">
                   <div className="flex items-center gap-2">
@@ -371,11 +372,11 @@ export const PaymentCheckout = ({
           <motion.div
             layout
             className={cn(
-              "bg-card w-full p-4 md:p-5",
+              "bg-card w-full p-3 sm:p-4 md:p-5",
               effectiveShowSummary && "md:border-border/30 md:border-l",
             )}
           >
-            <div className="mb-5 flex items-start justify-between gap-4">
+            <div className="mb-5 flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between">
               <div className="min-w-0">
                 <h3 className="text-base font-semibold tracking-tight">
                   Payment Method
@@ -385,8 +386,8 @@ export const PaymentCheckout = ({
                 </p>
               </div>
 
-              <div className="flex shrink-0 flex-col items-end gap-1.5">
-                <div className="text-right">
+              <div className="flex w-full flex-col items-start gap-2 sm:w-auto sm:items-end">
+                <div className="text-left sm:text-right">
                   <div className="text-muted-foreground text-[10px] font-medium tracking-wide uppercase">
                     Total
                   </div>
@@ -399,7 +400,7 @@ export const PaymentCheckout = ({
                   variant="outline"
                   size="sm"
                   onClick={toggleSummary}
-                  className="border-primary/40 bg-primary/5 text-primary hover:bg-primary/10 hover:border-primary/60 h-7 rounded-full px-3 text-xs font-medium"
+                  className="border-primary/40 bg-primary/5 text-primary hover:bg-primary/10 hover:border-primary/60 h-7 w-full rounded-full px-3 text-xs font-medium sm:w-auto"
                 >
                   {effectiveShowSummary ? "Hide details" : "View details"}
                 </Button>
@@ -451,7 +452,7 @@ export const PaymentCheckout = ({
   );
 };
 
-const PaymentCheckoutExample = ({ isAnimated }: { isAnimated?: boolean }) => {
+export const PaymentCheckout = ({ isAnimated }: { isAnimated?: boolean }) => {
   const sampleItems: CheckoutItem[] = [
     {
       id: "plan",
@@ -488,21 +489,21 @@ const PaymentCheckoutExample = ({ isAnimated }: { isAnimated?: boolean }) => {
       id: "visa",
       name: "Visa",
       description: "Fast checkout with Visa",
-      icon: VisaIcon,
+      icon: BrandVisaIcon,
       meta: "•••• 8888",
     },
     {
       id: "mastercard",
       name: "Mastercard",
       description: "Secure Mastercard payment",
-      icon: MastercardIcon,
+      icon: BrandMastercardIcon,
       meta: "•••• 9999",
     },
     {
       id: "paypal",
       name: "PayPal",
       description: "Pay using your wallet",
-      icon: PaypalIcon,
+      icon: BrandPaypalIcon,
     },
     {
       id: "alipay",
@@ -513,7 +514,7 @@ const PaymentCheckoutExample = ({ isAnimated }: { isAnimated?: boolean }) => {
   ];
 
   return (
-    <PaymentCheckout
+    <Paymentcheckout
       items={sampleItems}
       methods={sampleMethods}
       shipping={4}
@@ -526,4 +527,4 @@ const PaymentCheckoutExample = ({ isAnimated }: { isAnimated?: boolean }) => {
   );
 };
 
-export default PaymentCheckoutExample;
+export default PaymentCheckout;

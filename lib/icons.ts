@@ -104,8 +104,8 @@ export const ICONS = [
     path: "/icons/alipay-icon",
   },
   {
-    name: "appstore icon",
-    path: "/icons/appstore-icon",
+    name: "brand appstore icon",
+    path: "/icons/brand-appstore-icon",
   },
   {
     name: "banana icon",
@@ -144,8 +144,60 @@ export const ICONS = [
     path: "/icons/brand-google-icon",
   },
   {
-    name: "brand nextjs icon",
+    name: "brand-nextjs-icon",
     path: "/icons/brand-nextjs-icon",
+  },
+  {
+    name: "brand-stripe-icon",
+    path: "/icons/brand-stripe-icon",
+  },
+  {
+    name: "brand-react-icon",
+    path: "/icons/brand-react-icon",
+  },
+  {
+    name: "brand-paypal-icon",
+    path: "/icons/brand-paypal-icon",
+  },
+  {
+    name: "brand-aws-icon",
+    path: "/icons/brand-aws-icon",
+  },
+  {
+    name: "brand-threads-icon",
+    path: "/icons/brand-threads-icon",
+  },
+  {
+    name: "brand-zoom-icon",
+    path: "/icons/brand-zoom-icon",
+  },
+  {
+    name: "brand-react-native-icon",
+    path: "/icons/brand-react-native-icon",
+  },
+  {
+    name: "brand-openai-icon",
+    path: "/icons/brand-openai-icon",
+  },
+  {
+    name: "brand-telegram-icon",
+    path: "/icons/brand-telegram-icon",
+  },
+  {
+    name: "brand-windows-icon",
+    path: "/icons/brand-windows-icon",
+  },
+  {
+    name: "brand-tiktok-icon",
+    path: "/icons/brand-tiktok-icon",
+  },
+  {
+    name: " icon",
+    path: "/icons/tiktok-icon",
+  },
+  {
+    name: "apple-brand-logo",
+    path: "/icons/apple-brand-logo",
   },
   {
     name: "brightness down icon",
@@ -276,8 +328,8 @@ export const ICONS = [
     path: "/icons/double-check-icon",
   },
   {
-    name: "down cheveron",
-    path: "/icons/down-cheveron",
+    name: "down chevron",
+    path: "/icons/down-chevron",
   },
   {
     name: "drum icon",
@@ -424,8 +476,8 @@ export const ICONS = [
     path: "/icons/mysql-icon",
   },
   {
-    name: "mastercard icon",
-    path: "/icons/mastercard-icon",
+    name: "brand-mastercard icon",
+    path: "/icons/brand-mastercard-icon",
   },
   {
     name: "nodejs icon",
@@ -492,8 +544,8 @@ export const ICONS = [
     path: "/icons/refresh-icon",
   },
   {
-    name: "right cheveron",
-    path: "/icons/right-cheveron",
+    name: "right chevron",
+    path: "/icons/right-chevron",
   },
   {
     name: "rocket icon",
@@ -592,10 +644,6 @@ export const ICONS = [
     path: "/icons/typescript-icon",
   },
   {
-    name: "tiktok icon",
-    path: "/icons/tiktok-icon",
-  },
-  {
     name: "users icon",
     path: "/icons/users-icon",
   },
@@ -604,8 +652,8 @@ export const ICONS = [
     path: "/icons/users-group-icon",
   },
   {
-    name: "vercel icon",
-    path: "/icons/vercel-icon",
+    name: "brand-vercel-icon",
+    path: "/icons/brand-vercel-icon",
   },
   {
     name: "whatsapp icon",
@@ -676,11 +724,39 @@ export const ICONS = [
     path: "/icons/volume-x-icon",
   },
   {
-    name: "visa icon",
-    path: "/icons/visa-icon",
+    name: "brand visa icon",
+    path: "/icons/brand-visa-icon",
   },
   {
     name: "wechat icon",
     path: "/icons/wechat-icon",
+  },
+  {
+    name: "golang icon",
+    path: "/icons/golang-icon",
+  },
+  {
+    name: "brand-railway-icon",
+    path: "/icons/brand-railway-icon",
+  },
+  {
+    name: "brand-qwen-icon",
+    path: "/icons/brand-qwen-icon",
+  },
+  {
+    name: "brand-cursor-icon",
+    path: "/icons/brand-cursor-icon",
+  },
+  {
+    name: "brand-notion-icon",
+    path: "/icons/brand-notion-icon",
+  },
+  {
+    name: "brand-gemini-icon",
+    path: "/icons/brand-gemini-icon",
+  },
+  {
+    name: "brand-grok-icon",
+    path: "/icons/brand-grok-icon",
   },
 ];

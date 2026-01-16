@@ -1,0 +1,20 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "bug-icon",
+  "dependencies": ["motion"],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "icons/bug-icon.tsx",
+      "content": "import { forwardRef, useImperativeHandle } from \"react\";\nimport { motion, useAnimate } from \"motion/react\";\nimport type { AnimatedIconHandle, AnimatedIconProps } from \"./types\";\n\nconst BugIcon = forwardRef<AnimatedIconHandle, AnimatedIconProps>(\n  (\n    { size = 40, className = \"\", strokeWidth = 2, color = \"currentColor\" },\n    ref,\n  ) => {\n    const [scope, animate] = useAnimate();\n\n    const start = async () => {\n      // Wiggle the legs\n      animate(\n        \".leg-left\",\n        { x: [-1, 1, -1], rotate: [-5, 5, -5] },\n        { duration: 0.2, repeat: 2, ease: \"easeInOut\" },\n      );\n      animate(\n        \".leg-right\",\n        { x: [1, -1, 1], rotate: [5, -5, 5] },\n        { duration: 0.2, repeat: 2, ease: \"easeInOut\" },\n      );\n      // Subtle body shake\n      animate(\n        \".body\",\n        { x: [-0.5, 0.5, -0.5] },\n        { duration: 0.1, repeat: 2, ease: \"easeInOut\" },\n      );\n    };\n\n    const stop = async () => {\n      animate(\n        \".leg-left, .leg-right, .body\",\n        { x: 0, rotate: 0 },\n        { duration: 0.2 },\n      );\n    };\n\n    useImperativeHandle(ref, () => ({\n      startAnimation: start,\n      stopAnimation: stop,\n    }));\n\n    return (\n      <motion.svg\n        ref={scope}\n        onHoverStart={start}\n        onHoverEnd={stop}\n        xmlns=\"http://www.w3.org/2000/svg\"\n        width={size}\n        height={size}\n        viewBox=\"0 0 24 24\"\n        fill=\"none\"\n        color={color}\n        stroke=\"currentColor\"\n        strokeWidth={strokeWidth}\n        strokeLinecap=\"round\"\n        strokeLinejoin=\"round\"\n        className={`cursor-pointer ${className}`}\n      >\n        <path stroke=\"none\" d=\"M0 0h24v24H0z\" fill=\"none\" />\n        <path d=\"M9 9v-1a3 3 0 0 1 6 0v1\" />\n        <path\n          className=\"body\"\n          d=\"M8 9h8a6 6 0 0 1 1 3v3a5 5 0 0 1 -10 0v-3a6 6 0 0 1 1 -3\"\n        />\n        {/* Left legs */}\n        <motion.path className=\"leg-left\" d=\"M3 13l4 0\" />\n        <motion.path className=\"leg-left\" d=\"M4 19l3.35 -2\" />\n        <motion.path className=\"leg-left\" d=\"M4 7l3.75 2.4\" />\n        {/* Right legs */}\n        <motion.path className=\"leg-right\" d=\"M17 13l4 0\" />\n        <motion.path className=\"leg-right\" d=\"M20 19l-3.35 -2\" />\n        <motion.path className=\"leg-right\" d=\"M20 7l-3.75 2.4\" />\n        {/* Center line */}\n        <path d=\"M12 20l0 -6\" />\n      </motion.svg>\n    );\n  },\n);\n\nBugIcon.displayName = \"BugIcon\";\n\nexport default BugIcon;\n",
+      "type": "registry:ui"
+    },
+    {
+      "path": "icons/types.ts",
+      "content": "export interface AnimatedIconProps {\n  /** Icon size in pixels or CSS string */\n  size?: number | string;\n  /** Icon color (defaults to currentColor) */\n  color?: string;\n  /** SVG stroke width */\n  strokeWidth?: number;\n  /** Additional CSS classes */\n  className?: string;\n}\n\nexport interface AnimatedIconHandle {\n  startAnimation: () => void;\n  stopAnimation: () => void;\n}\n",
+      "type": "registry:ui"
+    }
+  ],
+  "type": "registry:ui"
+}

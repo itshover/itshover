@@ -1,0 +1,20 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "gemini-icon",
+  "dependencies": ["motion"],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "icons/gemini-icon.tsx",
+      "content": "import { forwardRef, useImperativeHandle, useCallback } from \"react\";\nimport type { AnimatedIconHandle, AnimatedIconProps } from \"./types\";\nimport { motion, useAnimate } from \"motion/react\";\n\nconst GeminiIcon = forwardRef<AnimatedIconHandle, AnimatedIconProps>(\n  ({ size = 24, color = \"currentColor\", className = \"\" }, ref) => {\n    const [scope, animate] = useAnimate();\n\n    const start = useCallback(() => {\n      animate(\n        scope.current,\n        { scale: 0.9, rotate: [0, 180] },\n        {\n          duration: 0.8,\n          ease: \"easeInOut\",\n        },\n      );\n    }, [animate, scope]);\n\n    const stop = useCallback(() => {\n      animate(\n        scope.current,\n        { scale: 1, rotate: 0 },\n        {\n          duration: 0.8,\n          ease: \"easeInOut\",\n        },\n      );\n    }, [animate, scope]);\n\n    useImperativeHandle(\n      ref,\n      () => ({\n        startAnimation: start,\n        stopAnimation: stop,\n      }),\n      [start, stop],\n    );\n\n    return (\n      <motion.svg\n        ref={scope}\n        onHoverStart={start}\n        onHoverEnd={stop}\n        fill={color}\n        viewBox=\"0 0 24 24\"\n        height={size}\n        width={size}\n        xmlns=\"http://www.w3.org/2000/svg\"\n        className={className}\n        role=\"img\"\n        aria-label=\"Gemini\"\n        style={{\n          flex: \"none\",\n          lineHeight: 1,\n          transformBox: \"fill-box\",\n          transformOrigin: \"center\",\n        }}\n      >\n        <title>Gemini</title>\n\n        {/* Gemini star glyph */}\n        <motion.path\n          className=\"gemini-shape\"\n          d=\"M20.616 10.835a14.147 14.147 0 01-4.45-3.001 14.111 14.111 0 01-3.678-6.452.503.503 0 00-.975 0 14.134 14.134 0 01-3.679 6.452 14.155 14.155 0 01-4.45 3.001c-.65.28-1.318.505-2.002.678a.502.502 0 000 .975c.684.172 1.35.397 2.002.677a14.147 14.147 0 014.45 3.001 14.112 14.112 0 013.679 6.453.502.502 0 00.975 0c.172-.685.397-1.351.677-2.003a14.145 14.145 0 013.001-4.45 14.113 14.113 0 016.453-3.678.503.503 0 000-.975 13.245 13.245 0 01-2.003-.678z\"\n        />\n      </motion.svg>\n    );\n  },\n);\n\nGeminiIcon.displayName = \"GeminiIcon\";\nexport default GeminiIcon;\n",
+      "type": "registry:ui"
+    },
+    {
+      "path": "icons/types.ts",
+      "content": "export interface AnimatedIconProps {\n  /** Icon size in pixels or CSS string */\n  size?: number | string;\n  /** Icon color (defaults to currentColor) */\n  color?: string;\n  /** SVG stroke width */\n  strokeWidth?: number;\n  /** Additional CSS classes */\n  className?: string;\n}\n\nexport interface AnimatedIconHandle {\n  startAnimation: () => void;\n  stopAnimation: () => void;\n}\n",
+      "type": "registry:ui"
+    }
+  ],
+  "type": "registry:ui"
+}

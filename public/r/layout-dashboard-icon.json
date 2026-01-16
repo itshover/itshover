@@ -1,0 +1,20 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "layout-dashboard-icon",
+  "dependencies": ["motion"],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "icons/layout-dashboard-icon.tsx",
+      "content": "import { forwardRef, useImperativeHandle } from \"react\";\nimport type { AnimatedIconHandle, AnimatedIconProps } from \"./types\";\nimport { motion, useAnimate } from \"motion/react\";\n\nconst LayoutDashboardIcon = forwardRef<AnimatedIconHandle, AnimatedIconProps>(\n  (\n    { size = 40, className = \"\", strokeWidth = 2, color = \"currentColor\" },\n    ref,\n  ) => {\n    const [scope, animate] = useAnimate();\n\n    const start = async () => {\n      animate(\".rect-1\", { x: 10 }, { duration: 0.3, ease: \"easeInOut\" });\n\n      animate(\n        \".rect-2\",\n        { y: 12, x: -1 },\n        { duration: 0.3, ease: \"easeInOut\" },\n      );\n      animate(\".rect-3\", { x: -10 }, { duration: 0.3, ease: \"easeInOut\" });\n      animate(\n        \".rect-4\",\n        { y: -12, x: 1 },\n        { duration: 0.3, ease: \"easeInOut\" },\n      );\n    };\n\n    const stop = async () => {\n      animate(\n        \".rect-1, .rect-2, .rect-3, .rect-4\",\n        { scale: 1, x: 0, y: 0 },\n        { duration: 0.2, ease: \"easeInOut\" },\n      );\n    };\n\n    useImperativeHandle(ref, () => {\n      return {\n        startAnimation: start,\n        stopAnimation: stop,\n      };\n    });\n\n    return (\n      <motion.svg\n        ref={scope}\n        onHoverStart={start}\n        onHoverEnd={stop}\n        xmlns=\"http://www.w3.org/2000/svg\"\n        width={size}\n        height={size}\n        viewBox=\"0 0 24 24\"\n        fill=\"none\"\n        stroke=\"currentColor\"\n        color={color}\n        strokeWidth={strokeWidth}\n        strokeLinecap=\"round\"\n        strokeLinejoin=\"round\"\n        className={`cursor-pointer ${className}`}\n        initial={{ x: 0, y: 0 }}\n      >\n        <motion.rect\n          initial={{ x: 0, y: 0 }}\n          className=\"rect-1\"\n          width=\"7\"\n          height=\"9\"\n          x=\"3\"\n          y=\"3\"\n          rx=\"1\"\n        />\n        <motion.rect\n          initial={{ x: 0, y: 0 }}\n          className=\"rect-2\"\n          width=\"7\"\n          height=\"5\"\n          x=\"14\"\n          y=\"3\"\n          rx=\"1\"\n        />\n        <motion.rect\n          initial={{ x: 0, y: 0 }}\n          className=\"rect-3\"\n          width=\"7\"\n          height=\"9\"\n          x=\"14\"\n          y=\"12\"\n          rx=\"1\"\n        />\n        <motion.rect\n          initial={{ x: 0, y: 0 }}\n          className=\"rect-4\"\n          width=\"7\"\n          height=\"5\"\n          x=\"3\"\n          y=\"16\"\n          rx=\"1\"\n        />\n      </motion.svg>\n    );\n  },\n);\n\nLayoutDashboardIcon.displayName = \"LayoutDashboardIcon\";\n\nexport default LayoutDashboardIcon;\n",
+      "type": "registry:ui"
+    },
+    {
+      "path": "icons/types.ts",
+      "content": "export interface AnimatedIconProps {\n  /** Icon size in pixels or CSS string */\n  size?: number | string;\n  /** Icon color (defaults to currentColor) */\n  color?: string;\n  /** SVG stroke width */\n  strokeWidth?: number;\n  /** Additional CSS classes */\n  className?: string;\n}\n\nexport interface AnimatedIconHandle {\n  startAnimation: () => void;\n  stopAnimation: () => void;\n}\n",
+      "type": "registry:ui"
+    }
+  ],
+  "type": "registry:ui"
+}
