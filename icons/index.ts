@@ -129,13 +129,16 @@ import MessageCircleIcon from "./message-circle-icon";
 import MoonIcon from "./moon-icon";
 import MousePointer2Icon from "./mouse-pointer-2-icon";
 import MySQLIcon from "./mysql-icon";
+import MastercardIcon from "./mastercard-icon";
 import NodeJSIcon from "./nodejs-icon";
+import OpenAIIcon from "./openai-icon";
 import PartyPopperIcon from "./party-popper-icon";
 import PenIcon from "./pen-icon";
 import PhoneVolume from "./phone-volume";
 import PinterestIcon from "./pinterest-icon";
 import PythonIcon from "./python-icon";
 import PlayerIcon from "./player-icon";
+import PaypalIcon from "./paypal-icon";
 import QrCodeIcon from "./qrcode-icon";
 import QuestionMark from "./question-mark";
 import RadioIcon from "./radio-icon";
@@ -146,6 +149,7 @@ import RocketIcon from "./rocket-icon";
 import RouterIcon from "./router-icon";
 import RosetteDiscountIcon from "./rosette-discount-icon";
 import RosetteDiscountCheckIcon from "./rosette-discount-check-icon";
+import ReactIcon from "./react-icon";
 import SatelliteDishIcon from "./satellite-dish-icon";
 import ScanBarcodeIcon from "./scan-barcode-icon";
 import ScanHeartIcon from "./scan-heart-icon";
@@ -168,6 +172,7 @@ import ArrowDownAZIcon from "./arrow-down-a-z-icon";
 import ToggleIcon from "./toggle-icon";
 import TrashIcon from "./trash-icon";
 import TruckElectricIcon from "./truck-electric-icon";
+import TiktokIcon from "./tiktok-icon";
 import UnorderedListIcon from "./unordered-list-icon";
 import UserCheckIcon from "./user-check-icon";
 import UserIcon from "./user-icon";
@@ -202,6 +207,7 @@ import UnlinkIcon from "./unlink-icon";
 import BrandVercelIcon from "./brand-vercel-icon";
 import Volume2Icon from "./volume-2-icon";
 import VolumeXIcon from "./volume-x-icon";
+import Visa from "./visa-icon";
 import XIcon from "./x-icon";
 import YoutubeIcon from "./youtube-icon";
 import PassportIcon from "./passport-icon";
@@ -1113,6 +1119,11 @@ const ICON_LIST: IconType[] = [
     ],
   },
   {
+    name: "openai-icon",
+    icon: OpenAIIcon,
+    keywords: ["tech", "openai", "ai", "chatgpt"],
+  },
+  {
     name: "paint-icon",
     icon: PaintIcon,
     keywords: [
@@ -1276,6 +1287,16 @@ const ICON_LIST: IconType[] = [
     keywords: ["international", "passport", "travel", "visa", "traveling"],
   },
   {
+    name: "paypal-icon",
+    icon: PaypalIcon,
+    keywords: ["paypal", "pay", "money", "finance"],
+  },
+  {
+    name: "react-icon",
+    icon: ReactIcon,
+    keywords: ["icon", "react", "tech"],
+  },
+  {
     name: "moon-icon",
     icon: MoonIcon,
     keywords: ["moon", "dark", "night", "theme", "mode"],
@@ -1284,6 +1305,11 @@ const ICON_LIST: IconType[] = [
     name: "mouse-pointer-2-icon",
     icon: MousePointer2Icon,
     keywords: ["mouse", "pointer", "cursor", "click", "select"],
+  },
+  {
+    name: "mastercard-icon",
+    icon: MastercardIcon,
+    keywords: ["mastercard", "pay", "credit", "card", "payment"],
   },
   {
     name: "mysql-icon",
@@ -1351,6 +1377,11 @@ const ICON_LIST: IconType[] = [
     keywords: ["volume", "mute", "silent", "sound off", "audio off", "quiet"],
   },
   {
+    name: "visa-icon",
+    icon: Visa,
+    keywords: ["visa", "pay"],
+  },
+  {
     name: "radio-icon",
     icon: RadioIcon,
     keywords: [
@@ -1410,6 +1441,11 @@ const ICON_LIST: IconType[] = [
     name: "target-icon",
     icon: TargetIcon,
     keywords: ["target", "aim", "goal", "focus", "bullseye", "center"],
+  },
+  {
+    name: "wechat-icon",
+    icon: WechatIcon,
+    keywords: ["wechat", "company", "social"],
   },
   {
     name: "wechat-icon",
