@@ -192,23 +192,6 @@
       ]
     },
     {
-      "name": "appstore-icon",
-      "type": "registry:ui",
-      "registryDependencies": [],
-      "dependencies": ["motion"],
-      "devDependencies": [],
-      "files": [
-        {
-          "path": "icons/appstore-icon.tsx",
-          "type": "registry:ui"
-        },
-        {
-          "path": "icons/types.ts",
-          "type": "registry:ui"
-        }
-      ]
-    },
-    {
       "name": "arrow-back-icon",
       "type": "registry:ui",
       "registryDependencies": [],
@@ -2453,23 +2436,6 @@
       ]
     },
     {
-      "name": "mastercard-icon",
-      "type": "registry:ui",
-      "registryDependencies": [],
-      "dependencies": ["motion"],
-      "devDependencies": [],
-      "files": [
-        {
-          "path": "icons/mastercard-icon.tsx",
-          "type": "registry:ui"
-        },
-        {
-          "path": "icons/types.ts",
-          "type": "registry:ui"
-        }
-      ]
-    },
-    {
       "name": "meh-icon",
       "type": "registry:ui",
       "registryDependencies": [],
@@ -2572,23 +2538,6 @@
       ]
     },
     {
-      "name": "openai-icon",
-      "type": "registry:ui",
-      "registryDependencies": [],
-      "dependencies": ["motion"],
-      "devDependencies": [],
-      "files": [
-        {
-          "path": "icons/openai-icon.tsx",
-          "type": "registry:ui"
-        },
-        {
-          "path": "icons/types.ts",
-          "type": "registry:ui"
-        }
-      ]
-    },
-    {
       "name": "paint-icon",
       "type": "registry:ui",
       "registryDependencies": [],
@@ -2631,23 +2580,6 @@
       "files": [
         {
           "path": "icons/passport-icon.tsx",
-          "type": "registry:ui"
-        },
-        {
-          "path": "icons/types.ts",
-          "type": "registry:ui"
-        }
-      ]
-    },
-    {
-      "name": "paypal-icon",
-      "type": "registry:ui",
-      "registryDependencies": [],
-      "dependencies": ["motion"],
-      "devDependencies": [],
-      "files": [
-        {
-          "path": "icons/paypal-icon.tsx",
           "type": "registry:ui"
         },
         {
@@ -2835,23 +2767,6 @@
       "files": [
         {
           "path": "icons/rainbow-icon.tsx",
-          "type": "registry:ui"
-        },
-        {
-          "path": "icons/types.ts",
-          "type": "registry:ui"
-        }
-      ]
-    },
-    {
-      "name": "react-icon",
-      "type": "registry:ui",
-      "registryDependencies": [],
-      "dependencies": ["motion"],
-      "devDependencies": [],
-      "files": [
-        {
-          "path": "icons/react-icon.tsx",
           "type": "registry:ui"
         },
         {
@@ -3320,23 +3235,6 @@
       ]
     },
     {
-      "name": "tiktok-icon",
-      "type": "registry:ui",
-      "registryDependencies": [],
-      "dependencies": ["motion"],
-      "devDependencies": [],
-      "files": [
-        {
-          "path": "icons/tiktok-icon.tsx",
-          "type": "registry:ui"
-        },
-        {
-          "path": "icons/types.ts",
-          "type": "registry:ui"
-        }
-      ]
-    },
-    {
       "name": "toggle-icon",
       "type": "registry:ui",
       "registryDependencies": [],
@@ -3600,23 +3498,6 @@
       "files": [
         {
           "path": "icons/vinyl-icon.tsx",
-          "type": "registry:ui"
-        },
-        {
-          "path": "icons/types.ts",
-          "type": "registry:ui"
-        }
-      ]
-    },
-    {
-      "name": "visa-icon",
-      "type": "registry:ui",
-      "registryDependencies": [],
-      "dependencies": ["motion"],
-      "devDependencies": [],
-      "files": [
-        {
-          "path": "icons/visa-icon.tsx",
           "type": "registry:ui"
         },
         {
