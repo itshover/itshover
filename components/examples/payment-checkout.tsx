@@ -195,7 +195,7 @@ export interface PaymentCheckoutProps {
   onShowSummaryChange?: (show: boolean) => void;
 }
 
-export const Paymentcheckout = ({
+export const PaymentCheckout = ({
   items,
   methods,
   currency = "USD",
@@ -452,7 +452,11 @@ export const Paymentcheckout = ({
   );
 };
 
-export const PaymentCheckout = ({ isAnimated }: { isAnimated?: boolean }) => {
+export const PaymentCheckoutExample = ({
+  isAnimated,
+}: {
+  isAnimated?: boolean;
+}) => {
   const sampleItems: CheckoutItem[] = [
     {
       id: "plan",
@@ -514,7 +518,7 @@ export const PaymentCheckout = ({ isAnimated }: { isAnimated?: boolean }) => {
   ];
 
   return (
-    <Paymentcheckout
+    <PaymentCheckout
       items={sampleItems}
       methods={sampleMethods}
       shipping={4}
@@ -527,4 +531,4 @@ export const PaymentCheckout = ({ isAnimated }: { isAnimated?: boolean }) => {
   );
 };
 
-export default PaymentCheckout;
+export default PaymentCheckoutExample;
