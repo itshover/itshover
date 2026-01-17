@@ -4,6 +4,7 @@ import CollapsibleSidebar from "@/components/examples/collapsible-sidebar";
 import fs from "fs";
 import path from "path";
 import TakeuforwardNavbar from "@/components/examples/takeuforward-navbar";
+import Dock from "@/components/examples/dock";
 
 // Define the registry of examples
 // Add new examples to this array
@@ -52,6 +53,17 @@ const EXAMPLE_REGISTRY = [
     component: TakeuforwardNavbar,
     description:
       "A modern, interactive component featuring advanced animations and smooth state transitions.",
+    tags: ["UI", "Animation", "Framer Motion", "Interactive"],
+    fullWidth: true,
+  },
+  {
+    componentName: "Dock",
+    slug: "dock",
+    createdBy: "https://github.com/AyushGuleria2005",
+    filePath: "components/examples/dock.tsx",
+    component: Dock,
+    description:
+      "An animated dock navigation component inspired by macOS. Features smooth hover interactions and individual icon animations for fast, compact navigation.",
     tags: ["UI", "Animation", "Framer Motion", "Interactive"],
     fullWidth: true,
   },
