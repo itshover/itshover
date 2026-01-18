@@ -1,0 +1,20 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "brand-anthropic-icon",
+  "dependencies": ["motion"],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "icons/brand-anthropic-icon.tsx",
+      "content": "import { forwardRef, useImperativeHandle, useCallback } from \"react\";\nimport type { AnimatedIconHandle, AnimatedIconProps } from \"./types\";\nimport { motion, useAnimate } from \"motion/react\";\n\nconst BrandAnthropicIcon = forwardRef<AnimatedIconHandle, AnimatedIconProps>(\n  ({ size = 24, color = \"currentColor\", className = \"\" }, ref) => {\n    const [scope, animate] = useAnimate();\n\n    const start = useCallback(() => {\n      // Simple scale pulse on the slash\n      animate(\n        \".anthropic-i\",\n        { rotateX: 22, skewX: -22, scaleY: 1.09 },\n        { duration: 0.2, ease: \"easeInOut\" },\n      );\n    }, [animate]);\n\n    const stop = useCallback(() => {\n      animate(\n        \".anthropic-i\",\n        { rotateX: 0, skewX: 0, scaleY: 1 },\n        { duration: 0.2 },\n      );\n    }, [animate]);\n\n    useImperativeHandle(\n      ref,\n      () => ({\n        startAnimation: start,\n        stopAnimation: stop,\n      }),\n      [start, stop],\n    );\n\n    return (\n      <motion.svg\n        ref={scope}\n        width={size}\n        height={size}\n        viewBox=\"0 0 24 24\"\n        fill={color}\n        className={className}\n        xmlns=\"http://www.w3.org/2000/svg\"\n        onHoverStart={start}\n        onHoverEnd={stop}\n      >\n        <title>Anthropic</title>\n\n        {/* A */}\n        <motion.g\n          className=\"anthropic-a\"\n          style={{ transformBox: \"fill-box\", transformOrigin: \"center\" }}\n        >\n          <path d=\"M6.57 3.52h3.767L16.906 20h-3.674l-1.343-3.461H5.017L3.673 20H0L6.57 3.522zm4.132 9.959L8.453 7.687 6.205 13.48H10.7z\" />\n        </motion.g>\n\n        {/* Backslash */}\n        <motion.g\n          className=\"anthropic-i\"\n          style={{ transformBox: \"fill-box\", transformOrigin: \"center\" }}\n        >\n          <path d=\"M13.827 3.52h3.603L24 20h-3.603l-6.57-16.48z\" />\n        </motion.g>\n      </motion.svg>\n    );\n  },\n);\n\nBrandAnthropicIcon.displayName = \"BrandAnthropicIcon\";\nexport default BrandAnthropicIcon;\n",
+      "type": "registry:ui"
+    },
+    {
+      "path": "icons/types.ts",
+      "content": "export interface AnimatedIconProps {\n  /** Icon size in pixels or CSS string */\n  size?: number | string;\n  /** Icon color (defaults to currentColor) */\n  color?: string;\n  /** SVG stroke width */\n  strokeWidth?: number;\n  /** Additional CSS classes */\n  className?: string;\n}\n\nexport interface AnimatedIconHandle {\n  startAnimation: () => void;\n  stopAnimation: () => void;\n}\n",
+      "type": "registry:ui"
+    }
+  ],
+  "type": "registry:ui"
+}
