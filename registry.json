@@ -90,6 +90,23 @@
       ]
     },
     {
+      "name": "alipay-icon",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": ["motion"],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "icons/alipay-icon.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "icons/types.ts",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
       "name": "ambulance-icon",
       "type": "registry:ui",
       "registryDependencies": [],
@@ -719,6 +736,23 @@
       ]
     },
     {
+      "name": "brand-appstore-icon",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": ["motion"],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "icons/brand-appstore-icon.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "icons/types.ts",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
       "name": "brand-aws-icon",
       "type": "registry:ui",
       "registryDependencies": [],
@@ -829,6 +863,23 @@
       "files": [
         {
           "path": "icons/brand-lmstudio-icon.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "icons/types.ts",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "brand-mastercard-icon",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": ["motion"],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "icons/brand-mastercard-icon.tsx",
           "type": "registry:ui"
         },
         {
@@ -1059,6 +1110,23 @@
       ]
     },
     {
+      "name": "brand-tiktok-icon",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": ["motion"],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "icons/brand-tiktok-icon.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "icons/types.ts",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
       "name": "brand-vercel-icon",
       "type": "registry:ui",
       "registryDependencies": [],
@@ -1067,6 +1135,23 @@
       "files": [
         {
           "path": "icons/brand-vercel-icon.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "icons/types.ts",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "brand-visa-icon",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": ["motion"],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "icons/brand-visa-icon.tsx",
           "type": "registry:ui"
         },
         {
@@ -3583,6 +3668,23 @@
       "files": [
         {
           "path": "icons/washing-machine-icon.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "icons/types.ts",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "wechat-icon",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": ["motion"],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "icons/wechat-icon.tsx",
           "type": "registry:ui"
         },
         {

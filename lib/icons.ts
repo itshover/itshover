@@ -100,6 +100,14 @@ export const ICONS = [
     path: "/icons/arrow-narrow-up-icon",
   },
   {
+    name: "alipay icon",
+    path: "/icons/alipay-icon",
+  },
+  {
+    name: "brand appstore icon",
+    path: "/icons/brand-appstore-icon",
+  },
+  {
     name: "banana icon",
     path: "/icons/banana-icon",
   },
@@ -178,6 +186,14 @@ export const ICONS = [
   {
     name: "brand-windows-icon",
     path: "/icons/brand-windows-icon",
+  },
+  {
+    name: "brand-tiktok-icon",
+    path: "/icons/brand-tiktok-icon",
+  },
+  {
+    name: " icon",
+    path: "/icons/tiktok-icon",
   },
   {
     name: "apple-brand-logo",
@@ -405,7 +421,7 @@ export const ICONS = [
   },
   {
     name: "hotel icon",
-    path: "/icons/hostel-icon",
+    path: "/icons/hotel-icon",
   },
   {
     name: "instagram icon",
@@ -460,8 +476,16 @@ export const ICONS = [
     path: "/icons/mysql-icon",
   },
   {
+    name: "brand-mastercard icon",
+    path: "/icons/brand-mastercard-icon",
+  },
+  {
     name: "nodejs icon",
     path: "/icons/nodejs-icon",
+  },
+  {
+    name: "openai icon",
+    path: "/icons/openai-icon",
   },
   {
     name: "party popper icon",
@@ -500,6 +524,10 @@ export const ICONS = [
     path: "/icons/python-icon",
   },
   {
+    name: "paypal icon",
+    path: "/icons/paypal-icon",
+  },
+  {
     name: "qrcode icon",
     path: "/icons/qrcode-icon",
   },
@@ -522,6 +550,10 @@ export const ICONS = [
   {
     name: "rocket icon",
     path: "/icons/rocket-icon",
+  },
+  {
+    name: "react icon",
+    path: "/icons/react-icon",
   },
   {
     name: "scan heart icon",
@@ -580,16 +612,8 @@ export const ICONS = [
     path: "/icons/stack-3-icon",
   },
   {
-    name: "stadium icon",
-    path: "/icons/stadium-icon",
-  },
-  {
     name: "star icon",
     path: "/icons/star-icon",
-  },
-  {
-    name: "sun icon",
-    path: "/icons/sun-icon",
   },
   {
     name: "telephone icon",
@@ -598,10 +622,6 @@ export const ICONS = [
   {
     name: "terminal icon",
     path: "/icons/terminal-icon",
-  },
-  {
-    name: "text icon",
-    path: "/icons/text-icon",
   },
   {
     name: "toggle icon",
@@ -614,10 +634,6 @@ export const ICONS = [
   {
     name: "travel bag",
     path: "/icons/travel-bag",
-  },
-  {
-    name: "tree icon",
-    path: "/icons/tree-icon",
   },
   {
     name: "twitter x icon",
@@ -706,6 +722,14 @@ export const ICONS = [
   {
     name: "volume x icon",
     path: "/icons/volume-x-icon",
+  },
+  {
+    name: "brand visa icon",
+    path: "/icons/brand-visa-icon",
+  },
+  {
+    name: "wechat icon",
+    path: "/icons/wechat-icon",
   },
   {
     name: "golang icon",

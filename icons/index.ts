@@ -29,6 +29,7 @@ import ArrowNarrowUpDashedIcon from "./arrow-narrow-up-dashed-icon";
 import ArrowNarrowUpIcon from "./arrow-narrow-up-icon";
 import AppleBrandLogo from "./apple-brand-logo";
 import AtSignIcon from "./at-sign-icon";
+import Alipay from "./alipay-icon";
 import BananaIcon from "./banana-icon";
 import BatteryIcon from "./battery-icon";
 import BatteryChargingIcon from "./battery-charging-icon";
@@ -51,6 +52,10 @@ import BrandReactNativeIcon from "./brand-react-native-icon";
 import BrandOpenaiIcon from "./brand-openai-icon";
 import BrandTelegramIcon from "./brand-telegram-icon";
 import BrandWindowsIcon from "./brand-windows-icon";
+import BrandTiktokIcon from "./brand-tiktok-icon";
+import BrandMastercardIcon from "./brand-mastercard-icon";
+import BrandAppStoreIcon from "./brand-appstore-icon";
+import BrandVisaIcon from "./brand-visa-icon";
 import BrightnessDownIcon from "./brightness-down-icon";
 import BulbSvg from "./bulb-svg";
 import CameraIcon from "./camera-icon";
@@ -203,6 +208,7 @@ import PassportIcon from "./passport-icon";
 import AirplaneIcon from "./airplane-icon";
 import TravelBag from "./travel-bag";
 import HotelIcon from "./hotel-icon";
+import WechatIcon from "./wechat-icon";
 import GolangIcon from "./golang-icon";
 import BrandCursorIcon from "./brand-cursor-icon";
 import BrandGeminiIcon from "./brand-gemini-icon";
@@ -401,6 +407,11 @@ const ICON_LIST: IconType[] = [
     keywords: ["at", "sign", "@", "email", "mention", "tag", "social"],
   },
   {
+    name: "alipay-icon",
+    icon: Alipay,
+    keywords: ["ali", "pay", "alibaba", "zhifubao"],
+  },
+  {
     name: "banana-icon",
     icon: BananaIcon,
     keywords: ["banana", "fruit", "food", "tropical", "yellow"],
@@ -464,6 +475,21 @@ const ICON_LIST: IconType[] = [
       "framework",
       "vercel",
     ],
+  },
+  {
+    name: "brand-appstore-icon",
+    icon: BrandAppStoreIcon,
+    keywords: ["apple", "appstore"],
+  },
+  {
+    name: "brand-mastercard-icon",
+    icon: BrandMastercardIcon,
+    keywords: ["mastercard", "pay", "credit", "card", "payment"],
+  },
+  {
+    name: "brand-visa-icon",
+    icon: BrandVisaIcon,
+    keywords: ["visa", "pay"],
   },
   {
     name: "brightness-down-icon",
@@ -1392,6 +1418,16 @@ const ICON_LIST: IconType[] = [
     keywords: ["target", "aim", "goal", "focus", "bullseye", "center"],
   },
   {
+    name: "wechat-icon",
+    icon: WechatIcon,
+    keywords: ["wechat", "company", "social"],
+  },
+  {
+    name: "wechat-icon",
+    icon: WechatIcon,
+    keywords: ["wechat", "company", "social"],
+  },
+  {
     name: "layout-sidebar-right-collapse-icon",
     icon: LayoutSidebarRightCollapseIcon,
     keywords: [
@@ -1501,6 +1537,11 @@ const ICON_LIST: IconType[] = [
     name: "brand-grok-icon",
     icon: BrandGrokIcon,
     keywords: ["grok", "grok-icon", "ai", "chatbot", "conversation"],
+  },
+  {
+    name: "brand-tiktok-icon",
+    icon: BrandTiktokIcon,
+    keywords: ["tech", "tiktok", "company", "brand"],
   },
   {
     name: "bug-icon",
