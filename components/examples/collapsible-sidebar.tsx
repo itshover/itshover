@@ -117,7 +117,7 @@ const CollapsibleSidebar = ({
             )}
           >
             <div className="border-border h-9 w-9 shrink-0 overflow-hidden rounded-full border bg-neutral-200 dark:bg-neutral-700">
-              <div className="h-full w-full bg-gradient-to-br from-pink-400 to-orange-400" />
+              <div className="h-full w-full bg-linear-to-br from-pink-400 to-orange-400" />
             </div>
             <AnimatePresence>
               {!isCollapsed && (

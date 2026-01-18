@@ -1,0 +1,20 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "wallet-icon",
+  "dependencies": ["motion"],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "icons/wallet-icon.tsx",
+      "content": "import { forwardRef, useImperativeHandle } from \"react\";\nimport { motion, useAnimate } from \"motion/react\";\nimport type { AnimatedIconHandle, AnimatedIconProps } from \"./types\";\n\nconst WalletIcon = forwardRef<AnimatedIconHandle, AnimatedIconProps>(\n  (\n    { size = 40, className = \"\", strokeWidth = 2, color = \"currentColor\" },\n    ref,\n  ) => {\n    const [scope, animate] = useAnimate();\n\n    const start = async () => {\n      // Flap opens outward\n      animate(\n        \".flap\",\n        { rotateY: 25, x: 2 },\n        { duration: 0.4, ease: \"easeOut\" },\n      );\n\n      // Wallet expands slightly\n      animate(\n        \".wallet-body\",\n        { scale: 1.05 },\n        { duration: 0.4, ease: \"easeOut\" },\n      );\n    };\n\n    const stop = async () => {\n      animate(\".flap\", { rotateY: 0, x: 0 }, { duration: 0.4, ease: \"easeIn\" });\n\n      animate(\".wallet-body\", { scale: 1 }, { duration: 0.4, ease: \"easeIn\" });\n    };\n\n    useImperativeHandle(ref, () => ({\n      startAnimation: start,\n      stopAnimation: stop,\n    }));\n\n    return (\n      <motion.svg\n        ref={scope}\n        onHoverStart={start}\n        onHoverEnd={stop}\n        xmlns=\"http://www.w3.org/2000/svg\"\n        width={size}\n        height={size}\n        viewBox=\"0 0 24 24\"\n        fill=\"none\"\n        color={color}\n        stroke=\"currentColor\"\n        strokeWidth={strokeWidth}\n        strokeLinecap=\"round\"\n        strokeLinejoin=\"round\"\n        className={`cursor-pointer ${className}`}\n        style={{ perspective: \"400px\" }}\n      >\n        <path stroke=\"none\" d=\"M0 0h24v24H0z\" fill=\"none\" />\n\n        <motion.path\n          className=\"wallet-body\"\n          d=\"M17 8v-3a1 1 0 0 0 -1 -1h-10a2 2 0 0 0 0 4h12a1 1 0 0 1 1 1v3m0 4v3a1 1 0 0 1 -1 1h-12a2 2 0 0 1 -2 -2v-12\"\n        />\n\n        <motion.path\n          className=\"flap\"\n          d=\"M20 12v4h-4a2 2 0 0 1 0 -4h4\"\n          style={{\n            originX: \"50%\",\n            originY: \"50%\",\n            transformStyle: \"preserve-3d\",\n          }}\n        />\n      </motion.svg>\n    );\n  },\n);\n\nWalletIcon.displayName = \"WalletIcon\";\n\nexport default WalletIcon;\n",
+      "type": "registry:ui"
+    },
+    {
+      "path": "icons/types.ts",
+      "content": "export interface AnimatedIconProps {\n  /** Icon size in pixels or CSS string */\n  size?: number | string;\n  /** Icon color (defaults to currentColor) */\n  color?: string;\n  /** SVG stroke width */\n  strokeWidth?: number;\n  /** Additional CSS classes */\n  className?: string;\n}\n\nexport interface AnimatedIconHandle {\n  startAnimation: () => void;\n  stopAnimation: () => void;\n}\n",
+      "type": "registry:ui"
+    }
+  ],
+  "type": "registry:ui"
+}

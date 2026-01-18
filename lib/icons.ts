@@ -324,8 +324,8 @@ export const ICONS = [
     path: "/icons/double-check-icon",
   },
   {
-    name: "down cheveron",
-    path: "/icons/down-cheveron",
+    name: "down chevron",
+    path: "/icons/down-chevron",
   },
   {
     name: "drum icon",
@@ -532,8 +532,8 @@ export const ICONS = [
     path: "/icons/refresh-icon",
   },
   {
-    name: "right cheveron",
-    path: "/icons/right-cheveron",
+    name: "right chevron",
+    path: "/icons/right-chevron",
   },
   {
     name: "rocket icon",
@@ -758,5 +758,53 @@ export const ICONS = [
   {
     name: "brand-grok-icon",
     path: "/icons/brand-grok-icon",
+  },
+  {
+    name: "brand-ollama-icon",
+    path: "/icons/brand-ollama-icon",
+  },
+  {
+    name: "brand-xai-icon",
+    path: "/icons/brand-xai-icon",
+  },
+  {
+    name: "brand-anthropic-icon",
+    path: "/icons/brand-anthropic-icon",
+  },
+  {
+    name: "brand-aistudio-icon",
+    path: "/icons/brand-aistudio-icon",
+  },
+  {
+    name: "brand-midjourney-icon",
+    path: "/icons/brand-midjourney-icon",
+  },
+  {
+    name: "brand-lmstudio-icon",
+    path: "/icons/brand-lmstudio-icon",
+  },
+  {
+    name: "brand-ollama",
+    path: "/icons/brand-ollama-icon",
+  },
+  {
+    name: "brand-xai",
+    path: "/icons/brand-xai-icon",
+  },
+  {
+    name: "brand-anthropic",
+    path: "/icons/brand-anthropic-icon",
+  },
+  {
+    name: "brand-aistudio",
+    path: "/icons/brand-aistudio-icon",
+  },
+  {
+    name: "brand-midjourney",
+    path: "/icons/brand-midjourney-icon",
+  },
+  {
+    name: "brand-lmstudio",
+    path: "/icons/brand-lmstudio-icon",
   },
 ];

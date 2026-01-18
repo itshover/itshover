@@ -2,7 +2,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import { motion } from "motion/react";
-import { LINKS, SPONSOR, TOKEN } from "@/constants";
+import { LINKS, SPONSOR } from "@/constants";
 import GithubIcon from "@/icons/github-icon";
 import TwitterXIcon from "@/icons/twitter-x-icon";
 import HeartIcon from "@/icons/heart-icon";
@@ -56,26 +56,26 @@ const CryptoAddress = ({
 
 const Footer = () => {
   const featuredIcons = [
-    { Icon: HeartIcon, name: "heart" },
-    { Icon: RocketIcon, name: "rocket" },
-    { Icon: StarIcon, name: "star" },
-    { Icon: SparklesIcon, name: "sparkles" },
-    { Icon: CoffeeIcon, name: "coffee" },
-    { Icon: CodeIcon, name: "code" },
-    { Icon: BulbSvg, name: "bulb" },
-    { Icon: FlameIcon, name: "flame" },
-    { Icon: LikeIcon, name: "like" },
-    { Icon: BookmarkIcon, name: "bookmark" },
-    { Icon: CameraIcon, name: "camera" },
-    { Icon: MoonIcon, name: "moon" },
-    { Icon: BellOffIcon, name: "bell-off" },
-    { Icon: LockIcon, name: "lock" },
-    { Icon: RefreshIcon, name: "refresh" },
-    { Icon: GearIcon, name: "gear" },
-    { Icon: MessageCircleIcon, name: "message" },
-    { Icon: SendIcon, name: "send" },
-    { Icon: GithubIcon, name: "github" },
-    { Icon: TwitterXIcon, name: "twitter" },
+    { Icon: HeartIcon, name: "heart", path: "heart-icon" },
+    { Icon: RocketIcon, name: "rocket", path: "rocket-icon" },
+    { Icon: StarIcon, name: "star", path: "star-icon" },
+    { Icon: SparklesIcon, name: "sparkles", path: "sparkles-icon" },
+    { Icon: CoffeeIcon, name: "coffee", path: "coffee-icon" },
+    { Icon: CodeIcon, name: "code", path: "code-icon" },
+    { Icon: BulbSvg, name: "bulb", path: "bulb-svg" },
+    { Icon: FlameIcon, name: "flame", path: "flame-icon" },
+    { Icon: LikeIcon, name: "like", path: "like-icon" },
+    { Icon: BookmarkIcon, name: "bookmark", path: "bookmark-icon" },
+    { Icon: CameraIcon, name: "camera", path: "camera-icon" },
+    { Icon: MoonIcon, name: "moon", path: "moon-icon" },
+    { Icon: BellOffIcon, name: "bell-off", path: "bell-off-icon" },
+    { Icon: LockIcon, name: "lock", path: "lock-icon" },
+    { Icon: RefreshIcon, name: "refresh", path: "refresh-icon" },
+    { Icon: GearIcon, name: "gear", path: "gear-icon" },
+    { Icon: MessageCircleIcon, name: "message", path: "message-circle-icon" },
+    { Icon: SendIcon, name: "send", path: "send-icon" },
+    { Icon: GithubIcon, name: "github", path: "github-icon" },
+    { Icon: TwitterXIcon, name: "twitter", path: "twitter-x-icon" },
   ];
 
   const [isRequestModalOpen, setIsRequestModalOpen] = useState(false);
@@ -160,14 +160,20 @@ const Footer = () => {
           <div className="space-y-4 lg:col-span-2">
             <h3 className="text-lg font-semibold">Featured Icons</h3>
             <div className="grid grid-cols-5 gap-3 sm:grid-cols-6 md:grid-cols-5 lg:grid-cols-10">
-              {featuredIcons.map(({ Icon, name }) => (
-                <motion.div
+              {featuredIcons.map(({ Icon, name, path }) => (
+                <Link
                   key={name}
-                  whileHover={{ scale: 1.1 }}
+                  href={`/icons/${path}`}
+                  aria-label={`${name} icon`}
                   className="hover:bg-accent flex items-center justify-center rounded-lg border p-2 transition-colors"
                 >
-                  <Icon size={20} />
-                </motion.div>
+                  <motion.span
+                    whileHover={{ scale: 1.1 }}
+                    className="flex h-full w-full items-center justify-center"
+                  >
+                    <Icon size={20} />
+                  </motion.span>
+                </Link>
               ))}
             </div>
           </div>

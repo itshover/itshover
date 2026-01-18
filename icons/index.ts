@@ -37,12 +37,14 @@ import BellOffIcon from "./bell-off-icon";
 import BluetoothConnectedIcon from "./bluetooth-connected-icon";
 import BookIcon from "./book-icon";
 import BookmarkIcon from "./bookmark-icon";
+import BugIcon from "./bug-icon";
 import BrandGoogleIcon from "./brand-google-icon";
 import BrandNextjsIcon from "./brand-nextjs-icon";
 import BrandStripeIcon from "./brand-stripe-icon";
 import BrandReactIcon from "./brand-react-icon";
 import BrandPaypalIcon from "./brand-paypal-icon";
 import BrandAwsIcon from "./brand-aws-icon";
+import BrandBagsFmIcon from "./brand-bags-fm-icon";
 import BrandThreadsIcon from "./brand-threads-icon";
 import BrandZoomIcon from "./brand-zoom-icon";
 import BrandReactNativeIcon from "./brand-react-native-icon";
@@ -85,7 +87,7 @@ import DoubleCheckIcon from "./double-check-icon";
 import DotsHorizontalIcon from "./dots-horizontal-icon";
 import DotsVerticalIcon from "./dots-vertical-icon";
 import DrumIcon from "./drum-icon";
-import DownCheveron from "./down-cheveron";
+import DownChevron from "./down-chevron";
 import EyeIcon from "./eye-icon";
 import EyeOffIcon from "./eye-off-icon";
 import ExpandIcon from "./expand-icon";
@@ -111,6 +113,7 @@ import HomeIcon from "./home-icon";
 import InfoCircleIcon from "./info-circle-icon";
 import Instagram from "./instagram-icon";
 import JavaScriptIcon from "./javascript-icon";
+import LayoutDashboardIcon from "./layout-dashboard-icon";
 import LikeIcon from "./like-icon";
 import LinkedInIcon from "./linkedin-icon";
 import LinkIcon from "./link-icon";
@@ -135,7 +138,7 @@ import QuestionMark from "./question-mark";
 import RadioIcon from "./radio-icon";
 import RainbowIcon from "./rainbow-icon";
 import RefreshIcon from "./refresh-icon";
-import RightCheveron from "./right-cheveron";
+import RightChevron from "./right-chevron";
 import RocketIcon from "./rocket-icon";
 import RouterIcon from "./router-icon";
 import RosetteDiscountIcon from "./rosette-discount-icon";
@@ -165,10 +168,12 @@ import TrashIcon from "./trash-icon";
 import TruckElectricIcon from "./truck-electric-icon";
 import UnorderedListIcon from "./unordered-list-icon";
 import UserCheckIcon from "./user-check-icon";
+import UserIcon from "./user-icon";
 import UserPlusIcon from "./user-plus-icon";
 import UsersIcon from "./users-icon";
 import UsersGroupIcon from "./users-group-icon";
 import VinylIcon from "./vinyl-icon";
+import WalletIcon from "./wallet-icon";
 import WashingMachineIcon from "./washing-machine-icon";
 import GlobeIcon from "./globe-icon";
 import GridLoaderIcon from "./grid-loader-icon";
@@ -204,13 +209,19 @@ import AirplaneIcon from "./airplane-icon";
 import TravelBag from "./travel-bag";
 import HotelIcon from "./hotel-icon";
 import GolangIcon from "./golang-icon";
-import BrandRailwayIcon from "./brand-railway-icon";
 import BrandCursorIcon from "./brand-cursor-icon";
-import BrandNotionIcon from "./brand-notion-icon";
 import BrandGeminiIcon from "./brand-gemini-icon";
-import BrandQwenIcon from "./brand-qwen-icon";
 import BrandGrokIcon from "./brand-grok-icon";
 import AvatarIcon from "./avatar-icon";
+import BrandNotionIcon from "./brand-notion-icon";
+import BrandQwenIcon from "./brand-qwen-icon";
+import BrandRailwayIcon from "./brand-railway-icon";
+import BrandAnthropicIcon from "./brand-anthropic-icon";
+import BrandAiStudioIcon from "./brand-aistudio-icon";
+import BrandXaiIcon from "./brand-xai-icon";
+import BrandLmStudioIcon from "./brand-lmstudio-icon";
+import BrandMidJourneyIcon from "./brand-midjourney-icon";
+import BrandOllamaIcon from "./brand-ollama-icon";
 
 export interface IconType {
   name: string;
@@ -708,8 +719,8 @@ const ICON_LIST: IconType[] = [
     keywords: ["dots", "menu", "more", "options", "vertical"],
   },
   {
-    name: "down-cheveron",
-    icon: DownCheveron,
+    name: "down-chevron",
+    icon: DownChevron,
     keywords: ["arrow", "down", "expand", "more"],
   },
   {
@@ -913,8 +924,8 @@ const ICON_LIST: IconType[] = [
     keywords: ["refresh", "reload", "sync", "update"],
   },
   {
-    name: "right-cheveron",
-    icon: RightCheveron,
+    name: "right-chevron",
+    icon: RightChevron,
     keywords: ["arrow", "right", "next", "forward"],
   },
   {
@@ -1474,6 +1485,11 @@ const ICON_LIST: IconType[] = [
     keywords: ["aws", "brand", "cloud", "amazon"],
   },
   {
+    name: "brand-bags-fm-icon",
+    icon: BrandBagsFmIcon,
+    keywords: ["bags", "fm", "brand", "logo", "shopping", "ecommerce"],
+  },
+  {
     name: "brand-threads-icon",
     icon: BrandThreadsIcon,
     keywords: ["threads", "brand", "social", "meta"],
@@ -1545,6 +1561,56 @@ const ICON_LIST: IconType[] = [
     name: "brand-grok-icon",
     icon: BrandGrokIcon,
     keywords: ["grok", "grok-icon", "ai", "chatbot", "conversation"],
+  },
+  {
+    name: "bug-icon",
+    icon: BugIcon,
+    keywords: ["bug", "insect", "debug", "error", "pest", "crawl"],
+  },
+  {
+    name: "layout-dashboard-icon",
+    icon: LayoutDashboardIcon,
+    keywords: ["layout", "dashboard", "grid", "panel", "widgets", "admin"],
+  },
+  {
+    name: "user-icon",
+    icon: UserIcon,
+    keywords: ["user", "person", "profile", "account", "avatar"],
+  },
+  {
+    name: "wallet-icon",
+    icon: WalletIcon,
+    keywords: ["wallet", "money", "payment", "finance", "cash", "billfold"],
+  },
+  {
+    name: "brand-anthropic-icon",
+    icon: BrandAnthropicIcon,
+    keywords: ["anthropic", "ai", "chatbot", "conversation"],
+  },
+  {
+    name: "brand-aistudio-icon",
+    icon: BrandAiStudioIcon,
+    keywords: ["aistudio", "ai", "chatbot", "conversation", "brand"],
+  },
+  {
+    name: "brand-xai-icon",
+    icon: BrandXaiIcon,
+    keywords: ["xai", "ai", "chatbot", "conversation", "brand"],
+  },
+  {
+    name: "brand-lmstudio-icon",
+    icon: BrandLmStudioIcon,
+    keywords: ["lmstudio", "ai", "chatbot", "conversation", "brand"],
+  },
+  {
+    name: "brand-midjourney-icon",
+    icon: BrandMidJourneyIcon,
+    keywords: ["midjourney", "ai", "chatbot", "conversation", "brand"],
+  },
+  {
+    name: "brand-ollama-icon",
+    icon: BrandOllamaIcon,
+    keywords: ["ollama", "ai", "chatbot", "conversation", "brand"],
   },
 ].sort((a, b) => a.name.localeCompare(b.name));
 export { ICON_LIST };

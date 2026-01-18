@@ -13,7 +13,7 @@ export interface Example {
   description?: string;
   tags?: string[];
   code: string;
-
+  fullWidth?: boolean;
   component: React.ComponentType<{ isAnimated?: boolean }>;
 }
 
@@ -84,8 +84,13 @@ export const ExampleDetail = ({ example }: { example: Example }) => {
         </div>
 
         <TabsContent value="preview" className="mt-0 flex-1 p-0">
-          <div className="bg-muted/50 flex h-full min-h-[500px] w-full overflow-x-auto p-8">
-            <div className="m-auto">
+          <div
+            className={cn(
+              "bg-muted/50 flex h-full min-h-[500px] w-full overflow-x-auto",
+              example.fullWidth ? "items-center p-4" : "p-8",
+            )}
+          >
+            <div className={example.fullWidth ? "w-full" : "m-auto"}>
               <example.component isAnimated={isAnimated} />
             </div>
           </div>

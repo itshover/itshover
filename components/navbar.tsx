@@ -8,7 +8,7 @@ import GithubIcon from "@/icons/github-icon";
 import TwitterXIcon from "@/icons/twitter-x-icon";
 import MagnifierIcon from "@/icons/magnifier-icon";
 import { useCommandMenu } from "./command-menu-context";
-import { LINKS, TOKEN } from "@/constants";
+import { LINKS } from "@/constants";
 import LayersIcon from "@/icons/layers-icon";
 import AlignCenterIcon from "@/icons/align-center-icon";
 import XIcon from "@/icons/x-icon";
