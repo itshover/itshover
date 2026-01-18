@@ -702,23 +702,6 @@
       ]
     },
     {
-      "name": "brand-appstore-icon",
-      "type": "registry:ui",
-      "registryDependencies": [],
-      "dependencies": ["motion"],
-      "devDependencies": [],
-      "files": [
-        {
-          "path": "icons/brand-appstore-icon.tsx",
-          "type": "registry:ui"
-        },
-        {
-          "path": "icons/types.ts",
-          "type": "registry:ui"
-        }
-      ]
-    },
-     {
       "name": "brand-aistudio-icon",
       "type": "registry:ui",
       "registryDependencies": [],
@@ -734,7 +717,7 @@
           "type": "registry:ui"
         }
       ]
-    }
+    },
     {
       "name": "brand-anthropic-icon",
       "type": "registry:ui",
@@ -744,6 +727,23 @@
       "files": [
         {
           "path": "icons/brand-anthropic-icon.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "icons/types.ts",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "brand-appstore-icon",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": ["motion"],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "icons/brand-appstore-icon.tsx",
           "type": "registry:ui"
         },
         {
@@ -855,23 +855,6 @@
       ]
     },
     {
-      "name": "brand-mastercard-icon",
-      "type": "registry:ui",
-      "registryDependencies": [],
-      "dependencies": ["motion"],
-      "devDependencies": [],
-      "files": [
-        {
-          "path": "icons/brand-mastercard-icon.tsx",
-          "type": "registry:ui"
-        },
-        {
-          "path": "icons/types.ts",
-          "type": "registry:ui"
-        }
-      ]
-    },
-  {
       "name": "brand-lmstudio-icon",
       "type": "registry:ui",
       "registryDependencies": [],
@@ -880,6 +863,23 @@
       "files": [
         {
           "path": "icons/brand-lmstudio-icon.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "icons/types.ts",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "brand-mastercard-icon",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": ["motion"],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "icons/brand-mastercard-icon.tsx",
           "type": "registry:ui"
         },
         {
