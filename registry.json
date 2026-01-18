@@ -703,7 +703,6 @@
     },
     {
       "name": "brand-appstore-icon",
-      "name": "brand-aistudio-icon",
       "type": "registry:ui",
       "registryDependencies": [],
       "dependencies": ["motion"],
@@ -711,7 +710,6 @@
       "files": [
         {
           "path": "icons/brand-appstore-icon.tsx",
-          "path": "icons/brand-aistudio-icon.tsx",
           "type": "registry:ui"
         },
         {
