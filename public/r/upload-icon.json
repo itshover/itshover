@@ -1,0 +1,20 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "upload-icon",
+  "dependencies": ["motion"],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "icons/upload-icon.tsx",
+      "content": "import { forwardRef, useImperativeHandle } from \"react\";\nimport type { AnimatedIconHandle, AnimatedIconProps } from \"./types\";\nimport { motion, useAnimate } from \"motion/react\";\n\nconst UploadIcon = forwardRef<AnimatedIconHandle, AnimatedIconProps>(\n  (\n    { size = 24, color = \"currentColor\", strokeWidth = 2, className = \"\" },\n    ref,\n  ) => {\n    const [scope, animate] = useAnimate();\n\n    const start = async () => {\n      await animate(\n        \".arrow\",\n        { y: -20, opacity: 0 },\n        { duration: 0.3, ease: \"easeIn\" },\n      );\n      await animate(\n        \".arrow\",\n        { y: 10, opacity: 0 },\n        { duration: 0.001 },\n      );\n      await animate(\n        \".arrow\",\n        { y: 0, opacity: 1 },\n        { duration: 0.3, ease: \"easeOut\" },\n      );\n    };\n\n    const stop = () => {\n      animate(\".arrow\", { y: 0, opacity: 1 }, { duration: 0.2 });\n    };\n\n    useImperativeHandle(ref, () => ({\n      startAnimation: start,\n      stopAnimation: stop,\n    }));\n\n    return (\n      <motion.svg\n        ref={scope}\n        onHoverStart={start}\n        onHoverEnd={stop}\n        xmlns=\"http://www.w3.org/2000/svg\"\n        width={size}\n        height={size}\n        viewBox=\"0 0 24 24\"\n        fill=\"none\"\n        stroke={color}\n        strokeWidth={strokeWidth}\n        strokeLinecap=\"round\"\n        strokeLinejoin=\"round\"\n        className={`inline-flex cursor-pointer items-center justify-center ${className}`}\n        style={{ overflow: \"hidden\" }}\n      >\n        <motion.g style={{ transformOrigin: \"center\" }}>\n          <path d=\"M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4\" />\n          <motion.g className=\"arrow\" style={{ transformOrigin: \"center\" }}>\n            <polyline points=\"17 8 12 3 7 8\" />\n            <line x1=\"12\" y1=\"3\" x2=\"12\" y2=\"15\" />\n          </motion.g>\n        </motion.g>\n      </motion.svg>\n    );\n  },\n);\n\nUploadIcon.displayName = \"UploadIcon\";\nexport default UploadIcon;\n",
+      "type": "registry:ui"
+    },
+    {
+      "path": "icons/types.ts",
+      "content": "export interface AnimatedIconProps {\n  /** Icon size in pixels or CSS string */\n  size?: number | string;\n  /** Icon color (defaults to currentColor) */\n  color?: string;\n  /** SVG stroke width */\n  strokeWidth?: number;\n  /** Additional CSS classes */\n  className?: string;\n}\n\nexport interface AnimatedIconHandle {\n  startAnimation: () => void;\n  stopAnimation: () => void;\n}\n",
+      "type": "registry:ui"
+    }
+  ],
+  "type": "registry:ui"
+}

@@ -100,6 +100,10 @@ export const ICONS = [
     path: "/icons/arrow-narrow-up-icon",
   },
   {
+    name: "avatar-icon",
+    path: "/icons/avatar-icon",
+  },
+  {
     name: "banana icon",
     path: "/icons/banana-icon",
   },
@@ -190,6 +194,10 @@ export const ICONS = [
   {
     name: "bulb svg",
     path: "/icons/bulb-svg",
+  },
+  {
+    name: "hammer icon",
+    path: "/icons/hammer-icon",
   },
   {
     name: "camera icon",
@@ -300,6 +308,10 @@ export const ICONS = [
     path: "/icons/docker-icon",
   },
   {
+    name: "document scan icon",
+    path: "/icons/document-scan-icon",
+  },
+  {
     name: "dots horizontal icon",
     path: "/icons/dots-horizontal-icon",
   },
@@ -390,6 +402,10 @@ export const ICONS = [
   {
     name: "globe icon",
     path: "/icons/globe-icon",
+  },
+  {
+    name: "grid loader icon",
+    path: "/icons/grid-loader-icon",
   },
   {
     name: "gmail icon",
@@ -684,6 +700,10 @@ export const ICONS = [
     path: "/icons/target-icon",
   },
   {
+    name: "tag icon",
+    path: "/icons/tag-icon",
+  },
+  {
     name: "triangle alert icon",
     path: "/icons/triangle-alert-icon",
   },
@@ -698,6 +718,10 @@ export const ICONS = [
   {
     name: "unlink icon",
     path: "/icons/unlink-icon",
+  },
+  {
+    name: "upload icon",
+    path: "/icons/upload-icon",
   },
   {
     name: "volume 2 icon",

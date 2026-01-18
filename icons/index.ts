@@ -53,6 +53,7 @@ import BrandTelegramIcon from "./brand-telegram-icon";
 import BrandWindowsIcon from "./brand-windows-icon";
 import BrightnessDownIcon from "./brightness-down-icon";
 import BulbSvg from "./bulb-svg";
+import HammerIcon from "./hammer-icon";
 import CameraIcon from "./camera-icon";
 import CameraOffIcon from "./camera-off-icon";
 import CandyCaneIcon from "./candy-cane-icon";
@@ -72,6 +73,7 @@ import CreditCard from "./credit-card";
 import CopyIcon from "./copy-icon";
 import DiscordIcon from "./discord-icon";
 import DockerIcon from "./docker-icon";
+import DocumentScanIcon from "./document-scan-icon";
 import CopyOffIcon from "./copy-off-icon";
 import CpuIcon from "./cpu-icon";
 import CurrencyBitcoinIcon from "./currency-bitcoin-icon";
@@ -158,6 +160,7 @@ import SpotifyIcon from "./spotify-icon";
 import StarIcon from "./star-icon";
 import SubscriptIcon from "./subscript-icon";
 import TargetIcon from "./target-icon";
+import TagIcon from "./tag-icon";
 import TelephoneIcon from "./telephone-icon";
 import ArrowDownAZIcon from "./arrow-down-a-z-icon";
 import ToggleIcon from "./toggle-icon";
@@ -173,6 +176,7 @@ import VinylIcon from "./vinyl-icon";
 import WalletIcon from "./wallet-icon";
 import WashingMachineIcon from "./washing-machine-icon";
 import GlobeIcon from "./globe-icon";
+import GridLoaderIcon from "./grid-loader-icon";
 import HashtagIcon from "./hashtag-icon";
 import KeyframesIcon from "./keyframes-icon";
 import LayersIcon from "./layers-icon";
@@ -194,6 +198,7 @@ import TwitterIcon from "./twitter-icon";
 import TwitterXIcon from "./twitter-x-icon";
 import TypeScriptIcon from "./typescript-icon";
 import UnlinkIcon from "./unlink-icon";
+import UploadIcon from "./upload-icon";
 import BrandVercelIcon from "./brand-vercel-icon";
 import Volume2Icon from "./volume-2-icon";
 import VolumeXIcon from "./volume-x-icon";
@@ -207,6 +212,7 @@ import GolangIcon from "./golang-icon";
 import BrandCursorIcon from "./brand-cursor-icon";
 import BrandGeminiIcon from "./brand-gemini-icon";
 import BrandGrokIcon from "./brand-grok-icon";
+import AvatarIcon from "./avatar-icon";
 import BrandNotionIcon from "./brand-notion-icon";
 import BrandQwenIcon from "./brand-qwen-icon";
 import BrandRailwayIcon from "./brand-railway-icon";
@@ -401,6 +407,11 @@ const ICON_LIST: IconType[] = [
     keywords: ["at", "sign", "@", "email", "mention", "tag", "social"],
   },
   {
+    name: "avatar-icon",
+    icon: AvatarIcon,
+    keywords: ["avatar", "user", "profile", "person", "human", "account"],
+  },
+  {
     name: "banana-icon",
     icon: BananaIcon,
     keywords: ["banana", "fruit", "food", "tropical", "yellow"],
@@ -474,6 +485,19 @@ const ICON_LIST: IconType[] = [
     name: "bulb-svg",
     icon: BulbSvg,
     keywords: ["bulb", "light", "idea", "creativity"],
+  },
+  {
+    name: "hammer-icon",
+    icon: HammerIcon,
+    keywords: [
+      "build",
+      "hammer",
+      "tool",
+      "construct",
+      "repair",
+      "fix",
+      "settings",
+    ],
   },
   {
     name: "camera-icon",
@@ -1048,6 +1072,19 @@ const ICON_LIST: IconType[] = [
     keywords: ["globe", "world", "earth", "planet"],
   },
   {
+    name: "grid-loader-icon",
+    icon: GridLoaderIcon,
+    keywords: [
+      "grid",
+      "loader",
+      "loading",
+      "spinner",
+      "dots",
+      "circle",
+      "progress",
+    ],
+  },
+  {
     name: "hashtag-icon",
     icon: HashtagIcon,
     keywords: [
@@ -1296,6 +1333,19 @@ const ICON_LIST: IconType[] = [
     keywords: ["docker", "container", "devops", "deployment", "whale"],
   },
   {
+    name: "document-scan-icon",
+    icon: DocumentScanIcon,
+    keywords: [
+      "document",
+      "scan",
+      "scanner",
+      "file",
+      "paper",
+      "ocr",
+      "digitize",
+    ],
+  },
+  {
     name: "typescript-icon",
     icon: TypeScriptIcon,
     keywords: ["typescript", "ts", "code", "programming", "javascript"],
@@ -1319,6 +1369,11 @@ const ICON_LIST: IconType[] = [
     name: "unlink-icon",
     icon: UnlinkIcon,
     keywords: ["unlink", "disconnect", "break", "chain", "separate", "detach"],
+  },
+  {
+    name: "upload-icon",
+    icon: UploadIcon,
+    keywords: ["upload", "arrow", "up", "cloud", "file", "transfer", "import"],
   },
   {
     name: "volume-2-icon",
@@ -1390,6 +1445,11 @@ const ICON_LIST: IconType[] = [
     name: "target-icon",
     icon: TargetIcon,
     keywords: ["target", "aim", "goal", "focus", "bullseye", "center"],
+  },
+  {
+    name: "tag-icon",
+    icon: TagIcon,
+    keywords: ["tag", "label", "price", "sale", "badge", "category", "mark"],
   },
   {
     name: "layout-sidebar-right-collapse-icon",

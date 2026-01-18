@@ -1,0 +1,20 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "document-scan-icon",
+  "dependencies": ["motion"],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "icons/document-scan-icon.tsx",
+      "content": "import { forwardRef, useImperativeHandle } from \"react\";\nimport type { AnimatedIconHandle, AnimatedIconProps } from \"./types\";\nimport { motion, useAnimate } from \"motion/react\";\n\nconst DocumentScanIcon = forwardRef<AnimatedIconHandle, AnimatedIconProps>(\n  (\n    { size = 24, color = \"currentColor\", strokeWidth = 2, className = \"\" },\n    ref,\n  ) => {\n    const [scope, animate] = useAnimate();\n\n    const start = async () => {\n      animate(scope.current, { scale: 1.05 }, { duration: 0.3 });\n\n      animate(\n        \".scan-line\",\n        { y: [0, 6, -6, 0] },\n        {\n          duration: 1.5,\n          ease: \"easeInOut\",\n        },\n      );\n    };\n\n    const stop = () => {\n      animate(scope.current, { scale: 1 }, { duration: 0.3 });\n      animate(\".scan-line\", { y: 0 }, { duration: 0.3 });\n    };\n\n    useImperativeHandle(ref, () => ({\n      startAnimation: start,\n      stopAnimation: stop,\n    }));\n\n    return (\n      <motion.svg\n        ref={scope}\n        onHoverStart={start}\n        onHoverEnd={stop}\n        xmlns=\"http://www.w3.org/2000/svg\"\n        width={size}\n        height={size}\n        viewBox=\"0 0 24 24\"\n        fill=\"none\"\n        stroke={color}\n        strokeWidth={strokeWidth}\n        strokeLinecap=\"round\"\n        strokeLinejoin=\"round\"\n        className={`inline-flex cursor-pointer items-center justify-center ${className}`}\n      >\n        <g className=\"corners\">\n          <path d=\"M8 3H5a2 2 0 0 0-2 2v3\" />\n          <path d=\"M21 8V5a2 2 0 0 0-2-2h-3\" />\n          <path d=\"M3 16v3a2 2 0 0 0 2 2h3\" />\n          <path d=\"M16 21h3a2 2 0 0 0 2-2v-3\" />\n        </g>\n\n        <motion.line\n          className=\"scan-line\"\n          x1=\"5\"\n          y1=\"12\"\n          x2=\"19\"\n          y2=\"12\"\n          strokeWidth={strokeWidth}\n        />\n      </motion.svg>\n    );\n  },\n);\n\nDocumentScanIcon.displayName = \"DocumentScanIcon\";\nexport default DocumentScanIcon;\n",
+      "type": "registry:ui"
+    },
+    {
+      "path": "icons/types.ts",
+      "content": "export interface AnimatedIconProps {\n  /** Icon size in pixels or CSS string */\n  size?: number | string;\n  /** Icon color (defaults to currentColor) */\n  color?: string;\n  /** SVG stroke width */\n  strokeWidth?: number;\n  /** Additional CSS classes */\n  className?: string;\n}\n\nexport interface AnimatedIconHandle {\n  startAnimation: () => void;\n  stopAnimation: () => void;\n}\n",
+      "type": "registry:ui"
+    }
+  ],
+  "type": "registry:ui"
+}
