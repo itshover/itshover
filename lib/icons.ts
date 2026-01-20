@@ -735,4 +735,108 @@ export const ICONS = [
     name: "brand-grok-icon",
     path: "/icons/brand-grok-icon",
   },
+  {
+    name: "letter-a-icon",
+    path: "/icons/letter-a-icon",
+  },
+  {
+    name: "letter-b-icon",
+    path: "/icons/letter-b-icon",
+  },
+  {
+    name: "letter-c-icon",
+    path: "/icons/letter-c-icon",
+  },
+  {
+    name: "letter-d-icon",
+    path: "/icons/letter-d-icon",
+  },
+  {
+    name: "letter-e-icon",
+    path: "/icons/letter-e-icon",
+  },
+  {
+    name: "letter-f-icon",
+    path: "/icons/letter-f-icon",
+  },
+  {
+    name: "letter-g-icon",
+    path: "/icons/letter-g-icon",
+  },
+  {
+    name: "letter-h-icon",
+    path: "/icons/letter-h-icon",
+  },
+  {
+    name: "letter-i-icon",
+    path: "/icons/letter-i-icon",
+  },
+  {
+    name: "letter-j-icon",
+    path: "/icons/letter-j-icon",
+  },
+  {
+    name: "letter-k-icon",
+    path: "/icons/letter-k-icon",
+  },
+  {
+    name: "letter-l-icon",
+    path: "/icons/letter-l-icon",
+  },
+  {
+    name: "letter-m-icon",
+    path: "/icons/letter-m-icon",
+  },
+  {
+    name: "letter-n-icon",
+    path: "/icons/letter-n-icon",
+  },
+  {
+    name: "letter-o-icon",
+    path: "/icons/letter-o-icon",
+  },
+  {
+    name: "letter-p-icon",
+    path: "/icons/letter-p-icon",
+  },
+  {
+    name: "letter-q-icon",
+    path: "/icons/letter-q-icon",
+  },
+  {
+    name: "letter-r-icon",
+    path: "/icons/letter-r-icon",
+  },
+  {
+    name: "letter-s-icon",
+    path: "/icons/letter-s-icon",
+  },
+  {
+    name: "letter-t-icon",
+    path: "/icons/letter-t-icon",
+  },
+  {
+    name: "letter-u-icon",
+    path: "/icons/letter-u-icon",
+  },
+  {
+    name: "letter-v-icon",
+    path: "/icons/letter-v-icon",
+  },
+  {
+    name: "letter-w-icon",
+    path: "/icons/letter-w-icon",
+  },
+  {
+    name: "letter-x-icon",
+    path: "/icons/letter-x-icon",
+  },
+  {
+    name: "letter-y-icon",
+    path: "/icons/letter-y-icon",
+  },
+  {
+    name: "letter-z-icon",
+    path: "/icons/letter-z-icon",
+  },
 ];

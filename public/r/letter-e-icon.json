@@ -1,0 +1,20 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "letter-e-icon",
+  "dependencies": ["motion"],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "icons/letter-e-icon.tsx",
+      "content": "import { forwardRef, useImperativeHandle } from \"react\";\r\nimport type { AnimatedIconHandle, AnimatedIconProps } from \"./types\";\r\nimport { motion, useAnimate } from \"motion/react\";\r\n\r\nconst LetterEIcon = forwardRef<AnimatedIconHandle, AnimatedIconProps>(\r\n    (\r\n        { size = 24, color = \"currentColor\", strokeWidth = 2, className = \"\" },\r\n        ref,\r\n    ) => {\r\n        const [scope, animate] = useAnimate();\r\n\r\n        const start = async () => {\r\n            // Top arm extends\r\n            animate(\r\n                \".arm-top\",\r\n                { scaleX: [0.3, 1.1, 1] },\r\n                { duration: 0.25, ease: \"easeOut\" },\r\n            );\r\n\r\n            // Middle arm extends\r\n            animate(\r\n                \".arm-middle\",\r\n                { scaleX: [0.3, 1.1, 1] },\r\n                { duration: 0.25, ease: \"easeOut\", delay: 0.1 },\r\n            );\r\n\r\n            // Bottom arm extends\r\n            animate(\r\n                \".arm-bottom\",\r\n                { scaleX: [0.3, 1.1, 1] },\r\n                { duration: 0.25, ease: \"easeOut\", delay: 0.2 },\r\n            );\r\n        };\r\n\r\n        const stop = () => {\r\n            animate(\".arm-top, .arm-middle, .arm-bottom\", { scaleX: 1 }, { duration: 0.2 });\r\n        };\r\n\r\n        useImperativeHandle(ref, () => ({\r\n            startAnimation: start,\r\n            stopAnimation: stop,\r\n        }));\r\n\r\n        return (\r\n            <motion.svg\r\n                ref={scope}\r\n                onHoverStart={start}\r\n                onHoverEnd={stop}\r\n                xmlns=\"http://www.w3.org/2000/svg\"\r\n                width={size}\r\n                height={size}\r\n                viewBox=\"0 0 24 24\"\r\n                fill=\"none\"\r\n                stroke={color}\r\n                strokeWidth={strokeWidth}\r\n                strokeLinecap=\"round\"\r\n                strokeLinejoin=\"round\"\r\n                className={`cursor-pointer ${className}`}\r\n                style={{ overflow: \"visible\" }}\r\n            >\r\n                {/* Vertical stem */}\r\n                <motion.path d=\"M6 4V20\" />\r\n\r\n                {/* Top arm */}\r\n                <motion.path\r\n                    className=\"arm-top\"\r\n                    d=\"M6 4H18\"\r\n                    style={{ transformOrigin: \"6px 4px\" }}\r\n                />\r\n\r\n                {/* Middle arm */}\r\n                <motion.path\r\n                    className=\"arm-middle\"\r\n                    d=\"M6 12H16\"\r\n                    style={{ transformOrigin: \"6px 12px\" }}\r\n                />\r\n\r\n                {/* Bottom arm */}\r\n                <motion.path\r\n                    className=\"arm-bottom\"\r\n                    d=\"M6 20H18\"\r\n                    style={{ transformOrigin: \"6px 20px\" }}\r\n                />\r\n            </motion.svg>\r\n        );\r\n    },\r\n);\r\n\r\nLetterEIcon.displayName = \"LetterEIcon\";\r\nexport default LetterEIcon;\r\n",
+      "type": "registry:ui"
+    },
+    {
+      "path": "icons/types.ts",
+      "content": "export interface AnimatedIconProps {\n  /** Icon size in pixels or CSS string */\n  size?: number | string;\n  /** Icon color (defaults to currentColor) */\n  color?: string;\n  /** SVG stroke width */\n  strokeWidth?: number;\n  /** Additional CSS classes */\n  className?: string;\n}\n\nexport interface AnimatedIconHandle {\n  startAnimation: () => void;\n  stopAnimation: () => void;\n}\n",
+      "type": "registry:ui"
+    }
+  ],
+  "type": "registry:ui"
+}

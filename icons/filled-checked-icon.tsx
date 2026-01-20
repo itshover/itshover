@@ -3,7 +3,10 @@ import type { AnimatedIconHandle, AnimatedIconProps } from "./types";
 import { motion, useAnimate } from "motion/react";
 
 const FilledCheckedIcon = forwardRef<AnimatedIconHandle, AnimatedIconProps>(
-  ({ size = 24, className = "" }, ref) => {
+  (
+    { size = 24, className = "", color = "currentColor", strokeWidth = "1" },
+    ref,
+  ) => {
     const [scope, animate] = useAnimate();
 
     const start = useCallback(async () => {
@@ -92,6 +95,11 @@ const FilledCheckedIcon = forwardRef<AnimatedIconHandle, AnimatedIconProps>(
           height={size}
           viewBox="0 0 24 24"
           fill="currentColor"
+          stroke="currentColor"
+          strokeWidth={strokeWidth}
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          color={color}
           className=""
         >
           <path stroke="none" d="M0 0h24v24H0z" fill="none" />

@@ -1,0 +1,20 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "letter-u-icon",
+  "dependencies": ["motion"],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "icons/letter-u-icon.tsx",
+      "content": "import { forwardRef, useImperativeHandle } from \"react\";\r\nimport type { AnimatedIconHandle, AnimatedIconProps } from \"./types\";\r\nimport { motion, useAnimate } from \"motion/react\";\r\n\r\nconst LetterUIcon = forwardRef<AnimatedIconHandle, AnimatedIconProps>(\r\n    (\r\n        { size = 24, color = \"currentColor\", strokeWidth = 2, className = \"\" },\r\n        ref,\r\n    ) => {\r\n        const [scope, animate] = useAnimate();\r\n\r\n        const start = async () => {\r\n            // Cup fill - liquid fills up from bottom\r\n            animate(\r\n                \".u-fill\",\r\n                {\r\n                    pathLength: [0, 1],\r\n                    opacity: [0.5, 1]\r\n                },\r\n                { duration: 0.6, ease: \"easeOut\" },\r\n            );\r\n\r\n            // Slight scale on the U shape\r\n            animate(\r\n                \".u-shape\",\r\n                { scaleY: [1, 1.02, 1] },\r\n                { duration: 0.4, ease: \"easeOut\" },\r\n            );\r\n        };\r\n\r\n        const stop = () => {\r\n            animate(\".u-fill\", { pathLength: 1, opacity: 1 }, { duration: 0.2 });\r\n            animate(\".u-shape\", { scaleY: 1 }, { duration: 0.2 });\r\n        };\r\n\r\n        useImperativeHandle(ref, () => ({\r\n            startAnimation: start,\r\n            stopAnimation: stop,\r\n        }));\r\n\r\n        return (\r\n            <motion.svg\r\n                ref={scope}\r\n                onHoverStart={start}\r\n                onHoverEnd={stop}\r\n                xmlns=\"http://www.w3.org/2000/svg\"\r\n                width={size}\r\n                height={size}\r\n                viewBox=\"0 0 24 24\"\r\n                fill=\"none\"\r\n                stroke={color}\r\n                strokeWidth={strokeWidth}\r\n                strokeLinecap=\"round\"\r\n                strokeLinejoin=\"round\"\r\n                className={`cursor-pointer ${className}`}\r\n                style={{ overflow: \"visible\" }}\r\n            >\r\n                <motion.path\r\n                    className=\"u-shape u-fill\"\r\n                    d=\"M6 4V14C6 17.3137 8.68629 20 12 20C15.3137 20 18 17.3137 18 14V4\"\r\n                    style={{ transformOrigin: \"12px 20px\" }}\r\n                />\r\n            </motion.svg>\r\n        );\r\n    },\r\n);\r\n\r\nLetterUIcon.displayName = \"LetterUIcon\";\r\nexport default LetterUIcon;\r\n",
+      "type": "registry:ui"
+    },
+    {
+      "path": "icons/types.ts",
+      "content": "export interface AnimatedIconProps {\n  /** Icon size in pixels or CSS string */\n  size?: number | string;\n  /** Icon color (defaults to currentColor) */\n  color?: string;\n  /** SVG stroke width */\n  strokeWidth?: number;\n  /** Additional CSS classes */\n  className?: string;\n}\n\nexport interface AnimatedIconHandle {\n  startAnimation: () => void;\n  stopAnimation: () => void;\n}\n",
+      "type": "registry:ui"
+    }
+  ],
+  "type": "registry:ui"
+}

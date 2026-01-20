@@ -1,0 +1,20 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "letter-s-icon",
+  "dependencies": ["motion"],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "icons/letter-s-icon.tsx",
+      "content": "import { forwardRef, useImperativeHandle } from \"react\";\r\nimport type { AnimatedIconHandle, AnimatedIconProps } from \"./types\";\r\nimport { motion, useAnimate } from \"motion/react\";\r\n\r\nconst LetterSIcon = forwardRef<AnimatedIconHandle, AnimatedIconProps>(\r\n    (\r\n        { size = 24, color = \"currentColor\", strokeWidth = 2, className = \"\" },\r\n        ref,\r\n    ) => {\r\n        const [scope, animate] = useAnimate();\r\n\r\n        const start = async () => {\r\n            // Snake slither - wiggles in serpentine motion\r\n            animate(\r\n                \".s-shape\",\r\n                {\r\n                    x: [0, 2, -2, 2, -1, 0],\r\n                    rotate: [0, 3, -3, 2, -1, 0]\r\n                },\r\n                { duration: 0.5, ease: \"easeInOut\" },\r\n            );\r\n        };\r\n\r\n        const stop = () => {\r\n            animate(\".s-shape\", { x: 0, rotate: 0 }, { duration: 0.2 });\r\n        };\r\n\r\n        useImperativeHandle(ref, () => ({\r\n            startAnimation: start,\r\n            stopAnimation: stop,\r\n        }));\r\n\r\n        return (\r\n            <motion.svg\r\n                ref={scope}\r\n                onHoverStart={start}\r\n                onHoverEnd={stop}\r\n                xmlns=\"http://www.w3.org/2000/svg\"\r\n                width={size}\r\n                height={size}\r\n                viewBox=\"0 0 24 24\"\r\n                fill=\"none\"\r\n                stroke={color}\r\n                strokeWidth={strokeWidth}\r\n                strokeLinecap=\"round\"\r\n                strokeLinejoin=\"round\"\r\n                className={`cursor-pointer ${className}`}\r\n                style={{ overflow: \"visible\" }}\r\n            >\r\n                <motion.path\r\n                    className=\"s-shape\"\r\n                    d=\"M18 6C18 6 16 4 12 4C8 4 6 6 6 8C6 10 8 11 12 12C16 13 18 14 18 16C18 18 16 20 12 20C8 20 6 18 6 18\"\r\n                    style={{ transformOrigin: \"12px 12px\" }}\r\n                />\r\n            </motion.svg>\r\n        );\r\n    },\r\n);\r\n\r\nLetterSIcon.displayName = \"LetterSIcon\";\r\nexport default LetterSIcon;\r\n",
+      "type": "registry:ui"
+    },
+    {
+      "path": "icons/types.ts",
+      "content": "export interface AnimatedIconProps {\n  /** Icon size in pixels or CSS string */\n  size?: number | string;\n  /** Icon color (defaults to currentColor) */\n  color?: string;\n  /** SVG stroke width */\n  strokeWidth?: number;\n  /** Additional CSS classes */\n  className?: string;\n}\n\nexport interface AnimatedIconHandle {\n  startAnimation: () => void;\n  stopAnimation: () => void;\n}\n",
+      "type": "registry:ui"
+    }
+  ],
+  "type": "registry:ui"
+}

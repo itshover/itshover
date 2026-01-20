@@ -1,0 +1,20 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "letter-o-icon",
+  "dependencies": ["motion"],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "icons/letter-o-icon.tsx",
+      "content": "import { forwardRef, useImperativeHandle } from \"react\";\r\nimport type { AnimatedIconHandle, AnimatedIconProps } from \"./types\";\r\nimport { motion, useAnimate } from \"motion/react\";\r\n\r\nconst LetterOIcon = forwardRef<AnimatedIconHandle, AnimatedIconProps>(\r\n    (\r\n        { size = 24, color = \"currentColor\", strokeWidth = 2, className = \"\" },\r\n        ref,\r\n    ) => {\r\n        const [scope, animate] = useAnimate();\r\n\r\n        const start = async () => {\r\n            // Portal spin - 3D rotation like a spinning portal\r\n            animate(\r\n                \".o-circle\",\r\n                { rotateY: [0, 360] },\r\n                { duration: 0.8, ease: [0.25, 0.1, 0.25, 1] },\r\n            );\r\n        };\r\n\r\n        const stop = () => {\r\n            animate(\".o-circle\", { rotateY: 0 }, { duration: 0.3 });\r\n        };\r\n\r\n        useImperativeHandle(ref, () => ({\r\n            startAnimation: start,\r\n            stopAnimation: stop,\r\n        }));\r\n\r\n        return (\r\n            <motion.svg\r\n                ref={scope}\r\n                onHoverStart={start}\r\n                onHoverEnd={stop}\r\n                xmlns=\"http://www.w3.org/2000/svg\"\r\n                width={size}\r\n                height={size}\r\n                viewBox=\"0 0 24 24\"\r\n                fill=\"none\"\r\n                stroke={color}\r\n                strokeWidth={strokeWidth}\r\n                strokeLinecap=\"round\"\r\n                strokeLinejoin=\"round\"\r\n                className={`cursor-pointer ${className}`}\r\n                style={{ overflow: \"visible\", perspective: \"100px\" }}\r\n            >\r\n                <motion.circle\r\n                    className=\"o-circle\"\r\n                    cx=\"12\"\r\n                    cy=\"12\"\r\n                    r=\"8\"\r\n                    style={{ transformOrigin: \"12px 12px\" }}\r\n                />\r\n            </motion.svg>\r\n        );\r\n    },\r\n);\r\n\r\nLetterOIcon.displayName = \"LetterOIcon\";\r\nexport default LetterOIcon;\r\n",
+      "type": "registry:ui"
+    },
+    {
+      "path": "icons/types.ts",
+      "content": "export interface AnimatedIconProps {\n  /** Icon size in pixels or CSS string */\n  size?: number | string;\n  /** Icon color (defaults to currentColor) */\n  color?: string;\n  /** SVG stroke width */\n  strokeWidth?: number;\n  /** Additional CSS classes */\n  className?: string;\n}\n\nexport interface AnimatedIconHandle {\n  startAnimation: () => void;\n  stopAnimation: () => void;\n}\n",
+      "type": "registry:ui"
+    }
+  ],
+  "type": "registry:ui"
+}
