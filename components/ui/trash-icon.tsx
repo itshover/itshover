@@ -69,10 +69,10 @@ const TrashIcon = forwardRef<AnimatedIconHandle, TrashIconProps>(
 
       await animate(
         ".trash-icon",
-        { stroke: "currentColor" },
+        { stroke: color },
         { duration: 0.2, ease: "easeInOut" },
       );
-    }, [animate, dangerHover]);
+    }, [animate, dangerHover, color]);
 
     const hoverAnimation = useCallback(async () => {
       await openLid();

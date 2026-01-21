@@ -51,6 +51,11 @@ const PenIcon = forwardRef<AnimatedIconHandle, AnimatedIconProps>(
         { x: 0, y: 0, rotate: 0 },
         { duration: 0.2, ease: "easeInOut" },
       );
+      animate(
+        ".pen-slash",
+        { pathLength: 0, opacity: 0 },
+        { duration: 0.2, ease: "easeInOut" },
+      );
     }, [animate]);
 
     useImperativeHandle(ref, () => ({
