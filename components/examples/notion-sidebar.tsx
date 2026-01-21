@@ -4,48 +4,51 @@ import React, { useRef, useEffect } from "react";
 import Link from "next/link";
 import MagnifierIcon from "../ui/magnifier-icon";
 import HomeIcon from "../ui/home-icon";
-import UsersIcon from "../ui/users-icon";
-import BugIcon from "../ui/bug-icon";
+import UsersGroupIcon from "../ui/users-group-icon";
+import GithubCopilotIcon from "../ui/github-copilot-icon";
 import MailFilledIcon from "../ui/mail-filled-icon";
-import UserCheckIcon from "../ui/user-check-icon";
-import BookmarkIcon from "../ui/bookmark-icon";
+import UserPlusIcon from "../ui/user-plus-icon";
+import SendIcon from "../ui/send-icon";
+import BrandNotionIcon from "../ui/brand-notion-icon";
 import GearIcon from "../ui/gear-icon";
-import WalletIcon from "../ui/wallet-icon";
-import LogoutIcon from "../ui/logout-icon";
-import QuestionMark from "../ui/question-mark";
-import MoonIcon from "../ui/moon-icon";
-import UnorderedListIcon from "../ui/unordered-list-icon";
+import ShoppingCartIcon from "../ui/shopping-cart-icon";
+import TrashIcon from "../ui/trash-icon";
+import InfoCircleIcon from "../ui/info-circle-icon";
+import SparklesIcon from "../ui/sparkles-icon";
+import BookIcon from "../ui/book-icon";
+import UsersIcon from "../ui/users-icon";
+import PenIcon from "../ui/pen-icon";
 import type { AnimatedIconHandle, AnimatedIconProps } from "../ui/types";
 
 const mainNavItems = [
   { icon: MagnifierIcon, label: "Search", href: "#" },
   { icon: HomeIcon, label: "Home", href: "#" },
-  { icon: UsersIcon, label: "Meetings", href: "#" },
-  { icon: BugIcon, label: "Notion AI", href: "#" },
+  { icon: UsersGroupIcon, label: "Meetings", href: "#" },
+  { icon: GithubCopilotIcon, label: "Notion AI", href: "#" },
   { icon: MailFilledIcon, label: "Inbox", href: "#" },
 ];
 
 const sharedItems = [
-  { icon: UserCheckIcon, label: "Start collaborating", href: "#" },
+  { icon: UserPlusIcon, label: "Start collaborating", href: "#" },
 ];
 
 const notionApps = [
-  { icon: MailFilledIcon, label: "Notion Mail", href: "#" },
-  { icon: BookmarkIcon, label: "Notion Calendar", href: "#" },
+  { icon: SendIcon, label: "Notion Mail", href: "#" },
+  { icon: BrandNotionIcon, label: "Notion Calendar", href: "#" },
 ];
 
 const privateItems = [
-  { icon: MoonIcon, label: "Welcome to Notion!", href: "#" },
-  { icon: BookmarkIcon, label: "Student Planner", href: "#" },
+  { icon: SparklesIcon, label: "Welcome to Notion!", href: "#" },
+  { icon: BookIcon, label: "Student Planner", href: "#" },
   { icon: UsersIcon, label: "Group Project Planner", href: "#" },
-  { icon: UnorderedListIcon, label: "Lesson Plans", href: "#" },
+  { icon: PenIcon, label: "Lesson Plans", href: "#" },
 ];
 
 const footerItems = [
   { icon: GearIcon, label: "Settings", href: "#" },
-  { icon: WalletIcon, label: "Marketplace", href: "#" },
-  { icon: LogoutIcon, label: "Trash", href: "#" },
-  { icon: QuestionMark, label: "Need help", href: "#" },
+  { icon: ShoppingCartIcon, label: "Marketplace", href: "#" },
+  { icon: TrashIcon, label: "Trash", href: "#" },
+  { icon: InfoCircleIcon, label: "Need help", href: "#" },
 ];
 
 interface SidebarItemProps {
