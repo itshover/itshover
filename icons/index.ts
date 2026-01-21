@@ -204,12 +204,18 @@ import AirplaneIcon from "./airplane-icon";
 import TravelBag from "./travel-bag";
 import HotelIcon from "./hotel-icon";
 import GolangIcon from "./golang-icon";
-import BrandRailwayIcon from "./brand-railway-icon";
 import BrandCursorIcon from "./brand-cursor-icon";
-import BrandNotionIcon from "./brand-notion-icon";
 import BrandGeminiIcon from "./brand-gemini-icon";
-import BrandQwenIcon from "./brand-qwen-icon";
 import BrandGrokIcon from "./brand-grok-icon";
+import BrandNotionIcon from "./brand-notion-icon";
+import BrandQwenIcon from "./brand-qwen-icon";
+import BrandRailwayIcon from "./brand-railway-icon";
+import BrandAnthropicIcon from "./brand-anthropic-icon";
+import BrandAiStudioIcon from "./brand-aistudio-icon";
+import BrandXaiIcon from "./brand-xai-icon";
+import BrandLmStudioIcon from "./brand-lmstudio-icon";
+import BrandMidJourneyIcon from "./brand-midjourney-icon";
+import BrandOllamaIcon from "./brand-ollama-icon";
 
 export interface IconType {
   name: string;
@@ -1515,6 +1521,36 @@ const ICON_LIST: IconType[] = [
     name: "wallet-icon",
     icon: WalletIcon,
     keywords: ["wallet", "money", "payment", "finance", "cash", "billfold"],
+  },
+  {
+    name: "brand-anthropic-icon",
+    icon: BrandAnthropicIcon,
+    keywords: ["anthropic", "ai", "chatbot", "conversation"],
+  },
+  {
+    name: "brand-aistudio-icon",
+    icon: BrandAiStudioIcon,
+    keywords: ["aistudio", "ai", "chatbot", "conversation", "brand"],
+  },
+  {
+    name: "brand-xai-icon",
+    icon: BrandXaiIcon,
+    keywords: ["xai", "ai", "chatbot", "conversation", "brand"],
+  },
+  {
+    name: "brand-lmstudio-icon",
+    icon: BrandLmStudioIcon,
+    keywords: ["lmstudio", "ai", "chatbot", "conversation", "brand"],
+  },
+  {
+    name: "brand-midjourney-icon",
+    icon: BrandMidJourneyIcon,
+    keywords: ["midjourney", "ai", "chatbot", "conversation", "brand"],
+  },
+  {
+    name: "brand-ollama-icon",
+    icon: BrandOllamaIcon,
+    keywords: ["ollama", "ai", "chatbot", "conversation", "brand"],
   },
 ].sort((a, b) => a.name.localeCompare(b.name));
 export { ICON_LIST };
