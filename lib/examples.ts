@@ -66,6 +66,8 @@ const EXAMPLE_REGISTRY = [
     description:
       "A Notion-inspired sidebar navigation with hierarchical sections for apps, shared items, private sections and settings. Features icon animations and a clean, minimal design.",
     tags: ["Sidebar", "Navigation", "Notion", "Framer Motion", "Minimal"],
+  },
+  {
     componentName: "Dock",
     slug: "dock",
     createdBy: "https://github.com/AyushGuleria2005",
