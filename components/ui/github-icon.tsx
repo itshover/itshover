@@ -5,7 +5,13 @@ import { motion, useAnimate } from "motion/react";
 
 const GithubIcon = forwardRef<AnimatedIconHandle, AnimatedIconProps>(
   (
-    { size = 24, color = "currentColor", strokeWidth = 2, className = "" },
+    {
+      size = 24,
+      color = "currentColor",
+      strokeWidth = 2,
+      className = "",
+      disableHover = false,
+    },
     ref,
   ) => {
     const [scope, animate] = useAnimate();
@@ -42,8 +48,8 @@ const GithubIcon = forwardRef<AnimatedIconHandle, AnimatedIconProps>(
     return (
       <motion.svg
         ref={scope}
-        onHoverStart={handleHoverStart}
-        onHoverEnd={handleHoverEnd}
+        onHoverStart={disableHover ? undefined : start}
+        onHoverEnd={disableHover ? undefined : stop}
         xmlns="http://www.w3.org/2000/svg"
         width={size}
         height={size}

@@ -736,6 +736,7 @@ export const ICONS = [
     path: "/icons/brand-grok-icon",
   },
   {
+<<<<<<< HEAD
     name: "letter-a-icon",
     path: "/icons/letter-a-icon",
   },
@@ -838,5 +839,53 @@ export const ICONS = [
   {
     name: "letter-z-icon",
     path: "/icons/letter-z-icon",
+=======
+    name: "brand-ollama-icon",
+    path: "/icons/brand-ollama-icon",
+  },
+  {
+    name: "brand-xai-icon",
+    path: "/icons/brand-xai-icon",
+  },
+  {
+    name: "brand-anthropic-icon",
+    path: "/icons/brand-anthropic-icon",
+  },
+  {
+    name: "brand-aistudio-icon",
+    path: "/icons/brand-aistudio-icon",
+  },
+  {
+    name: "brand-midjourney-icon",
+    path: "/icons/brand-midjourney-icon",
+  },
+  {
+    name: "brand-lmstudio-icon",
+    path: "/icons/brand-lmstudio-icon",
+  },
+  {
+    name: "brand-ollama",
+    path: "/icons/brand-ollama-icon",
+  },
+  {
+    name: "brand-xai",
+    path: "/icons/brand-xai-icon",
+  },
+  {
+    name: "brand-anthropic",
+    path: "/icons/brand-anthropic-icon",
+  },
+  {
+    name: "brand-aistudio",
+    path: "/icons/brand-aistudio-icon",
+  },
+  {
+    name: "brand-midjourney",
+    path: "/icons/brand-midjourney-icon",
+  },
+  {
+    name: "brand-lmstudio",
+    path: "/icons/brand-lmstudio-icon",
+>>>>>>> 734fd68e5e197f04505bdabfc17728e178b1d83a
   },
 ];
