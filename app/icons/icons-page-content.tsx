@@ -128,7 +128,7 @@ const HeroSection = () => {
               <div className="relative w-full max-w-xl">
                 <div className="from-primary/20 via-primary/10 absolute inset-0 -z-10 translate-y-4 scale-95 rounded-2xl bg-linear-to-br to-transparent opacity-50 blur-2xl" />
                 <CodeBlock
-                  command={`${LINKS.SITE_URL}/plug-connected-icon.json`}
+                  command={`${LINKS.SITE_URL}/r/plug-connected-icon.json`}
                   className="shadow-2xl"
                 />
               </div>

@@ -3,7 +3,10 @@ import type { AnimatedIconHandle, AnimatedIconProps } from "./types";
 import { motion, useAnimate } from "motion/react";
 
 const ArrowDownAZIcon = forwardRef<AnimatedIconHandle, AnimatedIconProps>(
-  ({ size = 40, className = "" }, ref) => {
+  (
+    { size = 40, className = "", color = "currentColor", strokeWidth = "1" },
+    ref,
+  ) => {
     const [scope, animate] = useAnimate();
 
     const swapDistance = 24;
@@ -71,6 +74,11 @@ const ArrowDownAZIcon = forwardRef<AnimatedIconHandle, AnimatedIconProps>(
         height={size}
         viewBox="0 0 48 48"
         fill="currentColor"
+        stroke="currentColor"
+        strokeWidth={strokeWidth}
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        color={color}
         className={`cursor-pointer ${className}`}
       >
         <motion.path className="text-line" d="M35.5 3.5V43H32.5V3.5H35.5Z" />
