@@ -95,11 +95,14 @@ const SidebarItem = ({
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
     >
-      <Icon
-        className={`${isSmall ? "h-4 w-4" : "h-5 w-5"}`}
-        ref={ref}
-        disableHover={!isAnimated}
-      />
+      <div className="flex h-5 w-5 items-center justify-center">
+        <Icon
+          size={isSmall ? 16 : 20}
+          className={`${isSmall ? "h-4 w-4" : "h-5 w-5"}`}
+          ref={ref}
+          disableHover={!isAnimated}
+        />
+      </div>
       <span className="text-foreground font-normal">{label}</span>
     </Link>
   );
