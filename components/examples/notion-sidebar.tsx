@@ -103,7 +103,7 @@ const SidebarItem = ({
           disableHover={!isAnimated}
         />
       </div>
-      <span className="text-foreground font-normal">{label}</span>
+      <span className="text-foreground leading-tight font-normal">{label}</span>
     </Link>
   );
 };
@@ -114,13 +114,13 @@ interface NotionSidebarProps {
 
 const NotionSidebar = ({ isAnimated = true }: NotionSidebarProps) => {
   return (
-    <div className="bg-background text-foreground flex h-screen w-full flex-col border-r p-2 md:w-[240px]">
-      <nav className="mb-5 flex flex-col gap-0.5">
+    <div className="bg-background text-foreground custom-scrollbar flex h-fit max-h-screen w-full flex-col overflow-x-hidden overflow-y-auto border-r p-2 md:w-[240px]">
+      <nav className="mb-5 flex shrink-0 flex-col gap-0.5">
         {mainNavItems.map((item) => (
           <SidebarItem key={item.label} {...item} isAnimated={isAnimated} />
         ))}
       </nav>
-      <div className="mb-5">
+      <div className="mb-5 shrink-0">
         <h3 className="text-muted-foreground mb-1 px-2 text-xs font-medium">
           Shared
         </h3>
@@ -130,7 +130,7 @@ const NotionSidebar = ({ isAnimated = true }: NotionSidebarProps) => {
           ))}
         </div>
       </div>
-      <div className="mb-5">
+      <div className="mb-5 shrink-0">
         <h3 className="text-muted-foreground mb-1 px-2 text-xs font-medium">
           Notion apps
         </h3>
@@ -140,7 +140,7 @@ const NotionSidebar = ({ isAnimated = true }: NotionSidebarProps) => {
           ))}
         </div>
       </div>
-      <div>
+      <div className="mb-5 shrink-0">
         <h3 className="text-muted-foreground mb-1 px-2 text-xs font-medium">
           Private
         </h3>
@@ -150,8 +150,8 @@ const NotionSidebar = ({ isAnimated = true }: NotionSidebarProps) => {
           ))}
         </div>
       </div>
-      <div className="my-2 border-t" />
-      <div className="flex flex-col gap-0.5">
+      <div className="my-2 shrink-0 border-t" />
+      <div className="flex shrink-0 flex-col gap-0.5 pb-2">
         {footerItems.map((item) => (
           <SidebarItem
             key={item.label}
