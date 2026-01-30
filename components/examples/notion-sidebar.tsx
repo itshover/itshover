@@ -99,6 +99,7 @@ const SidebarItem = ({
       <TooltipTrigger asChild>
         <Link
           href={href}
+          aria-label={label}
           className="hover:bg-accent hover:text-accent-foreground flex items-center justify-center gap-3 rounded-md px-2 py-1.5 text-sm transition-colors md:justify-start"
           onMouseEnter={handleMouseEnter}
           onMouseLeave={handleMouseLeave}
