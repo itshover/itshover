@@ -4,6 +4,7 @@ import CollapsibleSidebar from "@/components/examples/collapsible-sidebar";
 import fs from "fs";
 import path from "path";
 import TakeuforwardNavbar from "@/components/examples/takeuforward-navbar";
+import NotionSidebar from "@/components/examples/notion-sidebar";
 import Dock from "@/components/examples/dock";
 
 // Define the registry of examples
@@ -55,6 +56,16 @@ const EXAMPLE_REGISTRY = [
       "A modern, interactive component featuring advanced animations and smooth state transitions.",
     tags: ["UI", "Animation", "Framer Motion", "Interactive"],
     fullWidth: true,
+  },
+  {
+    componentName: "Notion Sidebar",
+    slug: "notion-sidebar",
+    createdBy: "https://github.com/shubhanshu2006",
+    filePath: "components/examples/notion-sidebar.tsx",
+    component: NotionSidebar,
+    description:
+      "A Notion-inspired sidebar navigation with hierarchical sections for apps, shared items, private sections and settings. Features icon animations and a clean, minimal design.",
+    tags: ["Sidebar", "Navigation", "Notion", "Framer Motion", "Minimal"],
   },
   {
     componentName: "Dock",
