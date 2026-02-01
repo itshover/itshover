@@ -28,6 +28,23 @@ export default function IconDetailContent({
   const iconRef = React.useRef<AnimatedIconHandle>(null);
   const [codeCopied, setCodeCopied] = React.useState(false);
   const [depCopied, setDepCopied] = React.useState(false);
+  const [typesCopied, setTypesCopied] = React.useState(false);
+
+  const TYPES_CODE = `export interface AnimatedIconProps {
+  /** Icon size in pixels or CSS string */
+  size?: number | string;
+  /** Icon color (defaults to currentColor) */
+  color?: string;
+  /** SVG stroke width */
+  strokeWidth?: number;
+  /** Additional CSS classes */
+  className?: string;
+}
+
+export interface AnimatedIconHandle {
+  startAnimation: () => void;
+  stopAnimation: () => void;
+}`;
 
   const iconData = ICON_LIST.find((icon) => icon.name === slug);
   const IconComponent = iconData?.icon as React.ForwardRefExoticComponent<
@@ -44,6 +61,12 @@ export default function IconDetailContent({
     await navigator.clipboard.writeText("npm install motion");
     setDepCopied(true);
     setTimeout(() => setDepCopied(false), 2000);
+  };
+
+  const copyTypes = async () => {
+    await navigator.clipboard.writeText(TYPES_CODE);
+    setTypesCopied(true);
+    setTimeout(() => setTypesCopied(false), 2000);
   };
 
   const playAnimation = () => {
@@ -179,7 +202,7 @@ export default function IconDetailContent({
                         </span>
                         <button
                           onClick={copyDependency}
-                          className="text-muted-foreground hover:text-foreground flex items-center gap-1.5 text-xs opacity-0 transition-opacity group-hover:opacity-100"
+                          className="text-muted-foreground hover:text-foreground flex items-center gap-1.5 text-xs opacity-0 transition-opacity group-hover:opacity-100 focus-visible:opacity-100"
                         >
                           {depCopied ? (
                             <>
@@ -206,11 +229,50 @@ export default function IconDetailContent({
                     </div>
                   </div>
 
-                  {/* Step 2: Copy Code */}
+                  {/* Step 2: Add types.ts */}
                   <div>
                     <div className="mb-4 flex items-center gap-3">
                       <span className="bg-primary text-primary-foreground flex h-7 w-7 items-center justify-center rounded-full text-sm font-medium">
                         2
+                      </span>
+                      <h2 className="text-lg font-semibold">Add types.ts</h2>
+                    </div>
+                    <div className="bg-muted/30 group relative overflow-hidden rounded-xl border">
+                      <div className="flex items-center justify-between border-b px-4 py-2">
+                        <span className="text-muted-foreground text-xs">
+                          types.ts
+                        </span>
+                        <button
+                          onClick={copyTypes}
+                          className="text-muted-foreground hover:text-foreground flex items-center gap-1.5 text-xs opacity-0 transition-opacity group-hover:opacity-100 focus-visible:opacity-100"
+                        >
+                          {typesCopied ? (
+                            <>
+                              <SimpleCheckedIcon
+                                size={14}
+                                className="text-green-500"
+                              />
+                              Copied
+                            </>
+                          ) : (
+                            <>
+                              <CopyIcon size={14} />
+                              Copy
+                            </>
+                          )}
+                        </button>
+                      </div>
+                      <pre className="p-4 text-sm">
+                        <code className="text-foreground/90">{TYPES_CODE}</code>
+                      </pre>
+                    </div>
+                  </div>
+
+                  {/* Step 3: Copy Code */}
+                  <div>
+                    <div className="mb-4 flex items-center gap-3">
+                      <span className="bg-primary text-primary-foreground flex h-7 w-7 items-center justify-center rounded-full text-sm font-medium">
+                        3
                       </span>
                       <h2 className="text-lg font-semibold">Copy the Code</h2>
                     </div>
@@ -261,7 +323,7 @@ export default function IconDetailContent({
                     <div>
                       <div className="mb-4 flex items-center gap-3">
                         <span className="bg-primary text-primary-foreground flex h-7 w-7 items-center justify-center rounded-full text-sm font-medium">
-                          3
+                          4
                         </span>
                         <h2 className="text-lg font-semibold">Custom Props</h2>
                       </div>
