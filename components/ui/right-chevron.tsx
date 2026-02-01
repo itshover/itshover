@@ -4,7 +4,13 @@ import { motion, useAnimate } from "motion/react";
 
 const RightChevron = forwardRef<AnimatedIconHandle, AnimatedIconProps>(
   (
-    { size = 24, color = "currentColor", strokeWidth = 2, className = "" },
+    {
+      size = 24,
+      color = "currentColor",
+      strokeWidth = 2,
+      className = "",
+      disableHover = false,
+    },
     ref,
   ) => {
     const [scope, animate] = useAnimate();
@@ -33,8 +39,8 @@ const RightChevron = forwardRef<AnimatedIconHandle, AnimatedIconProps>(
       <motion.div
         ref={scope}
         className={`flex w-8 items-center justify-center ${className}`}
-        onHoverStart={start}
-        onHoverEnd={stop}
+        onHoverStart={disableHover ? undefined : start}
+        onHoverEnd={disableHover ? undefined : stop}
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"

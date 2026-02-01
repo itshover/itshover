@@ -1,7 +1,8 @@
 "use client";
 
-import React, { useRef, useEffect } from "react";
+import React, { useRef, useEffect, useState } from "react";
 import Link from "next/link";
+import { motion, AnimatePresence } from "motion/react";
 import MagnifierIcon from "../ui/magnifier-icon";
 import HomeIcon from "../ui/home-icon";
 import UsersGroupIcon from "../ui/users-group-icon";
@@ -18,6 +19,8 @@ import SparklesIcon from "../ui/sparkles-icon";
 import BookIcon from "../ui/book-icon";
 import UsersIcon from "../ui/users-icon";
 import PenIcon from "../ui/pen-icon";
+import ArrowNarrowLeftIcon from "../ui/arrow-narrow-left-icon";
+import RightChevron from "../ui/right-chevron";
 import type { AnimatedIconHandle, AnimatedIconProps } from "../ui/types";
 import {
   Tooltip,
@@ -65,6 +68,7 @@ interface SidebarItemProps {
   href: string;
   isAnimated?: boolean;
   isSmall?: boolean;
+  isOpen?: boolean;
 }
 
 const SidebarItem = ({
@@ -73,6 +77,7 @@ const SidebarItem = ({
   href,
   isAnimated = true,
   isSmall = false,
+  isOpen = true,
 }: SidebarItemProps) => {
   const ref = useRef<AnimatedIconHandle>(null);
 
@@ -95,12 +100,14 @@ const SidebarItem = ({
   }, [isAnimated]);
 
   return (
-    <Tooltip>
+    <Tooltip delayDuration={0}>
       <TooltipTrigger asChild>
         <Link
           href={href}
           aria-label={label}
-          className="hover:bg-accent hover:text-accent-foreground flex items-center justify-center gap-3 rounded-md px-2 py-1.5 text-sm transition-colors md:justify-start"
+          className={`hover:bg-accent hover:text-accent-foreground flex items-center gap-3 rounded-md px-2 py-1.5 text-sm transition-colors ${
+            isOpen ? "justify-start" : "justify-center"
+          }`}
           onMouseEnter={handleMouseEnter}
           onMouseLeave={handleMouseLeave}
         >
@@ -112,12 +119,28 @@ const SidebarItem = ({
               disableHover={!isAnimated}
             />
           </div>
-          <span className="text-foreground hidden leading-tight font-normal md:block">
-            {label}
-          </span>
+          <AnimatePresence>
+            {isOpen && (
+              <motion.div
+                initial={{ opacity: 0, width: 0 }}
+                animate={{ opacity: 1, width: "auto" }}
+                exit={{ opacity: 0, width: 0 }}
+                transition={{ duration: 0.2, ease: "easeInOut" }}
+                className="overflow-hidden"
+              >
+                <span className="text-foreground block w-[170px] leading-tight font-normal">
+                  {label}
+                </span>
+              </motion.div>
+            )}
+          </AnimatePresence>
         </Link>
       </TooltipTrigger>
-      <TooltipContent side="right" sideOffset={10} className="md:hidden">
+      <TooltipContent
+        side="right"
+        sideOffset={10}
+        className={isOpen ? "hidden" : ""}
+      >
         {label}
       </TooltipContent>
     </Tooltip>
@@ -129,41 +152,113 @@ interface NotionSidebarProps {
 }
 
 const NotionSidebar = ({ isAnimated = true }: NotionSidebarProps) => {
+  const [isOpen, setIsOpen] = useState(true);
+  const triggerRef = useRef<AnimatedIconHandle>(null);
+
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth < 768) {
+        setIsOpen(false);
+      } else {
+        setIsOpen(true);
+      }
+    };
+
+    // Set initial state
+    handleResize();
+
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  const toggleSidebar = () => {
+    setIsOpen(!isOpen);
+  };
+
   return (
     <TooltipProvider>
-      <div className="bg-background text-foreground custom-scrollbar flex h-fit max-h-screen w-14 flex-col overflow-x-hidden overflow-y-auto border-r p-2 transition-all duration-300 md:w-[240px]">
-        <nav className="mb-5 flex shrink-0 flex-col gap-0.5">
+      <motion.div
+        initial={false}
+        animate={{ width: isOpen ? 240 : 56 }}
+        transition={{ duration: 0.3, ease: "easeInOut" }}
+        className="bg-background text-foreground custom-scrollbar flex h-fit max-h-screen flex-col overflow-x-hidden overflow-y-auto border-r p-2"
+      >
+        <nav className="mb-4 flex shrink-0 flex-col gap-0.5">
           {mainNavItems.map((item) => (
-            <SidebarItem key={item.label} {...item} isAnimated={isAnimated} />
+            <SidebarItem
+              key={item.label}
+              {...item}
+              isAnimated={isAnimated}
+              isOpen={isOpen}
+            />
           ))}
         </nav>
-        <div className="mb-5 shrink-0">
-          <h3 className="text-muted-foreground mb-1 hidden px-2 text-xs font-medium md:block">
-            Shared
-          </h3>
+        <div className="mb-4 shrink-0">
+          {isOpen && (
+            <motion.h3
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.2 }}
+              className="text-muted-foreground mb-1 px-2 text-xs font-medium"
+            >
+              Shared
+            </motion.h3>
+          )}
           <div className="flex flex-col gap-0.5">
             {sharedItems.map((item) => (
-              <SidebarItem key={item.label} {...item} isAnimated={isAnimated} />
+              <SidebarItem
+                key={item.label}
+                {...item}
+                isAnimated={isAnimated}
+                isOpen={isOpen}
+              />
             ))}
           </div>
         </div>
-        <div className="mb-5 shrink-0">
-          <h3 className="text-muted-foreground mb-1 hidden px-2 text-xs font-medium md:block">
-            Notion apps
-          </h3>
+        <div className="mb-4 shrink-0">
+          {isOpen && (
+            <motion.h3
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.2 }}
+              className="text-muted-foreground mb-1 px-2 text-xs font-medium"
+            >
+              Notion apps
+            </motion.h3>
+          )}
           <div className="flex flex-col gap-0.5">
             {notionApps.map((item) => (
-              <SidebarItem key={item.label} {...item} isAnimated={isAnimated} />
+              <SidebarItem
+                key={item.label}
+                {...item}
+                isAnimated={isAnimated}
+                isOpen={isOpen}
+              />
             ))}
           </div>
         </div>
-        <div className="mb-5 shrink-0">
-          <h3 className="text-muted-foreground mb-1 hidden px-2 text-xs font-medium md:block">
-            Private
-          </h3>
+        <div className="shrink-0">
+          {isOpen && (
+            <motion.h3
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.2 }}
+              className="text-muted-foreground mb-1 px-2 text-xs font-medium"
+            >
+              Private
+            </motion.h3>
+          )}
           <div className="flex flex-col gap-0.5">
             {privateItems.map((item) => (
-              <SidebarItem key={item.label} {...item} isAnimated={isAnimated} />
+              <SidebarItem
+                key={item.label}
+                {...item}
+                isAnimated={isAnimated}
+                isOpen={isOpen}
+              />
             ))}
           </div>
         </div>
@@ -175,10 +270,36 @@ const NotionSidebar = ({ isAnimated = true }: NotionSidebarProps) => {
               {...item}
               isAnimated={isAnimated}
               isSmall
+              isOpen={isOpen}
             />
           ))}
         </div>
-      </div>
+
+        {/* Toggle Button */}
+        <div className="flex justify-center">
+          <button
+            onClick={toggleSidebar}
+            className="hover:bg-accent hover:text-accent-foreground flex h-8 w-8 items-center justify-center rounded-md transition-colors"
+            aria-label={isOpen ? "Collapse sidebar" : "Expand sidebar"}
+          >
+            {isOpen ? (
+              <ArrowNarrowLeftIcon
+                ref={triggerRef}
+                size={20}
+                className="text-foreground"
+                disableHover={!isAnimated}
+              />
+            ) : (
+              <RightChevron
+                ref={triggerRef}
+                size={20}
+                className="text-foreground"
+                disableHover={!isAnimated}
+              />
+            )}
+          </button>
+        </div>
+      </motion.div>
     </TooltipProvider>
   );
 };
