@@ -95,12 +95,11 @@ const FilledCheckedIcon = forwardRef<AnimatedIconHandle, AnimatedIconProps>(
           height={size}
           viewBox="0 0 24 24"
           fill="currentColor"
-          stroke="currentColor"
+          stroke={color || "currentColor"}
           strokeWidth={strokeWidth}
           strokeLinecap="round"
           strokeLinejoin="round"
-          color={color}
-          className=""
+          className={className}
         >
           <path stroke="none" d="M0 0h24v24H0z" fill="none" />
           <motion.path
