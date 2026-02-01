@@ -2,21 +2,21 @@ import { forwardRef, useImperativeHandle, useCallback } from "react";
 import type { AnimatedIconHandle, AnimatedIconProps } from "./types";
 import { motion, useAnimate } from "motion/react";
 
+const lines = [
+  ".lm-line-1",
+  ".lm-line-2",
+  ".lm-line-3",
+  ".lm-line-4",
+  ".lm-line-5",
+  ".lm-line-6",
+];
+
 const BrandLmStudioIcon = forwardRef<AnimatedIconHandle, AnimatedIconProps>(
   (
     { size = 24, color = "currentColor", strokeWidth = 1, className = "" },
     ref,
   ) => {
     const [scope, animate] = useAnimate();
-
-    const lines = [
-      ".lm-line-1",
-      ".lm-line-2",
-      ".lm-line-3",
-      ".lm-line-4",
-      ".lm-line-5",
-      ".lm-line-6",
-    ];
 
     const start = useCallback(() => {
       lines.forEach((line, i) => {

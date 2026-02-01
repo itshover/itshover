@@ -48,8 +48,8 @@ const GithubIcon = forwardRef<AnimatedIconHandle, AnimatedIconProps>(
     return (
       <motion.svg
         ref={scope}
-        onHoverStart={disableHover ? undefined : start}
-        onHoverEnd={disableHover ? undefined : stop}
+        onHoverStart={disableHover ? undefined : handleHoverStart}
+        onHoverEnd={disableHover ? undefined : handleHoverEnd}
         xmlns="http://www.w3.org/2000/svg"
         width={size}
         height={size}

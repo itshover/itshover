@@ -207,7 +207,6 @@ import GolangIcon from "./golang-icon";
 import BrandCursorIcon from "./brand-cursor-icon";
 import BrandGeminiIcon from "./brand-gemini-icon";
 import BrandGrokIcon from "./brand-grok-icon";
-<<<<<<< HEAD
 import LetterAIcon from "./letter-a-icon";
 import LetterBIcon from "./letter-b-icon";
 import LetterCIcon from "./letter-c-icon";
@@ -234,7 +233,6 @@ import LetterWIcon from "./letter-w-icon";
 import LetterXIcon from "./letter-x-icon";
 import LetterYIcon from "./letter-y-icon";
 import LetterZIcon from "./letter-z-icon";
-=======
 import BrandNotionIcon from "./brand-notion-icon";
 import BrandQwenIcon from "./brand-qwen-icon";
 import BrandRailwayIcon from "./brand-railway-icon";
@@ -244,7 +242,6 @@ import BrandXaiIcon from "./brand-xai-icon";
 import BrandLmStudioIcon from "./brand-lmstudio-icon";
 import BrandMidJourneyIcon from "./brand-midjourney-icon";
 import BrandOllamaIcon from "./brand-ollama-icon";
->>>>>>> 734fd68e5e197f04505bdabfc17728e178b1d83a
 
 export interface IconType {
   name: string;
@@ -1552,7 +1549,6 @@ const ICON_LIST: IconType[] = [
     keywords: ["wallet", "money", "payment", "finance", "cash", "billfold"],
   },
   {
-<<<<<<< HEAD
     name: "letter-a-icon",
     icon: LetterAIcon,
     keywords: ["letter", "a", "alphabet", "text", "character", "typography"],
@@ -1681,7 +1677,8 @@ const ICON_LIST: IconType[] = [
     name: "letter-z-icon",
     icon: LetterZIcon,
     keywords: ["letter", "z", "alphabet", "text", "character", "typography"],
-=======
+  },
+  {
     name: "brand-anthropic-icon",
     icon: BrandAnthropicIcon,
     keywords: ["anthropic", "ai", "chatbot", "conversation"],
@@ -1710,7 +1707,6 @@ const ICON_LIST: IconType[] = [
     name: "brand-ollama-icon",
     icon: BrandOllamaIcon,
     keywords: ["ollama", "ai", "chatbot", "conversation", "brand"],
->>>>>>> 734fd68e5e197f04505bdabfc17728e178b1d83a
   },
 ].sort((a, b) => a.name.localeCompare(b.name));
 export { ICON_LIST };

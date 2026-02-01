@@ -736,7 +736,6 @@ export const ICONS = [
     path: "/icons/brand-grok-icon",
   },
   {
-<<<<<<< HEAD
     name: "letter-a-icon",
     path: "/icons/letter-a-icon",
   },
@@ -839,7 +838,8 @@ export const ICONS = [
   {
     name: "letter-z-icon",
     path: "/icons/letter-z-icon",
-=======
+  },
+  {
     name: "brand-ollama-icon",
     path: "/icons/brand-ollama-icon",
   },
@@ -886,6 +886,5 @@ export const ICONS = [
   {
     name: "brand-lmstudio",
     path: "/icons/brand-lmstudio-icon",
->>>>>>> 734fd68e5e197f04505bdabfc17728e178b1d83a
   },
 ];
