@@ -3,7 +3,10 @@ import type { AnimatedIconHandle, AnimatedIconProps } from "./types";
 import { motion, useAnimate } from "motion/react";
 
 const ArrowBigDownDashIcon = forwardRef<AnimatedIconHandle, AnimatedIconProps>(
-  ({ size = 40, className = "" }, ref) => {
+  (
+    { size = 40, className = "", color = "currentColor", strokeWidth = "2" },
+    ref,
+  ) => {
     const [scope, animate] = useAnimate();
 
     const start = async () => {
@@ -42,9 +45,10 @@ const ArrowBigDownDashIcon = forwardRef<AnimatedIconHandle, AnimatedIconProps>(
         viewBox="0 0 24 24"
         fill="none"
         stroke="currentColor"
-        strokeWidth="2"
+        strokeWidth={strokeWidth}
         strokeLinecap="round"
         strokeLinejoin="round"
+        color={color}
         className={`cursor-pointer ${className}`}
       >
         <motion.path

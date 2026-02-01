@@ -1,0 +1,20 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "letter-w-icon",
+  "dependencies": ["motion"],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "icons/letter-w-icon.tsx",
+      "content": "import { forwardRef, useImperativeHandle } from \"react\";\nimport type { AnimatedIconHandle, AnimatedIconProps } from \"./types\";\nimport { motion, useAnimate } from \"motion/react\";\n\nconst LetterWIcon = forwardRef<AnimatedIconHandle, AnimatedIconProps>(\n  (\n    { size = 24, color = \"currentColor\", strokeWidth = 2, className = \"\" },\n    ref,\n  ) => {\n    const [scope, animate] = useAnimate();\n\n    const start = async () => {\n      // Water wave - peaks ripple like water waves\n      animate(\n        \".peak-1\",\n        { y: [0, -3, 0] },\n        { duration: 0.4, ease: \"easeInOut\" },\n      );\n\n      animate(\n        \".peak-2\",\n        { y: [0, -3, 0] },\n        { duration: 0.4, ease: \"easeInOut\", delay: 0.1 },\n      );\n\n      animate(\n        \".peak-3\",\n        { y: [0, -3, 0] },\n        { duration: 0.4, ease: \"easeInOut\", delay: 0.2 },\n      );\n    };\n\n    const stop = () => {\n      animate(\".peak-1, .peak-2, .peak-3\", { y: 0 }, { duration: 0.2 });\n    };\n\n    useImperativeHandle(ref, () => ({\n      startAnimation: start,\n      stopAnimation: stop,\n    }));\n\n    return (\n      <motion.svg\n        ref={scope}\n        onHoverStart={start}\n        onHoverEnd={stop}\n        xmlns=\"http://www.w3.org/2000/svg\"\n        width={size}\n        height={size}\n        viewBox=\"0 0 24 24\"\n        fill=\"none\"\n        stroke={color}\n        strokeWidth={strokeWidth}\n        strokeLinecap=\"round\"\n        strokeLinejoin=\"round\"\n        className={`cursor-pointer ${className}`}\n        style={{ overflow: \"visible\" }}\n      >\n        {/* First down stroke */}\n        <motion.path\n          className=\"peak-1\"\n          d=\"M4 4L8 20\"\n          style={{ transformOrigin: \"4px 4px\" }}\n        />\n\n        {/* First valley to peak */}\n        <motion.path\n          className=\"peak-2\"\n          d=\"M8 20L12 8\"\n          style={{ transformOrigin: \"12px 8px\" }}\n        />\n\n        {/* Second peak to valley */}\n        <motion.path\n          className=\"peak-3\"\n          d=\"M12 8L16 20\"\n          style={{ transformOrigin: \"12px 8px\" }}\n        />\n\n        {/* Last up stroke */}\n        <motion.path d=\"M16 20L20 4\" />\n      </motion.svg>\n    );\n  },\n);\n\nLetterWIcon.displayName = \"LetterWIcon\";\nexport default LetterWIcon;\n",
+      "type": "registry:ui"
+    },
+    {
+      "path": "icons/types.ts",
+      "content": "export interface AnimatedIconProps {\n  /** Icon size in pixels or CSS string */\n  size?: number | string;\n  /** Icon color (defaults to currentColor) */\n  color?: string;\n  /** SVG stroke width */\n  strokeWidth?: number;\n  /** Additional CSS classes */\n  className?: string;\n}\n\nexport interface AnimatedIconHandle {\n  startAnimation: () => void;\n  stopAnimation: () => void;\n}\n",
+      "type": "registry:ui"
+    }
+  ],
+  "type": "registry:ui"
+}

@@ -33,6 +33,7 @@
     "next-themes": "^0.4.6",
     "react": ">=18.0.0",
     "react-dom": ">=18.0.0",
+    "react-draggable": "^4.5.0",
     "shadcn": "^3.6.2",
     "tabler": "^1.0.0",
     "tailwind-merge": "^3.4.0"

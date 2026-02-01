@@ -93,7 +93,7 @@ const IconList = () => {
       transition={{ duration: 0.4 }}
     >
       <motion.div
-        className="mx-4 mb-10 px-4 sm:ml-20 sm:px-0"
+        className="mx-4 mb-10 flex gap-2 px-4 sm:ml-20 sm:px-0"
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.4, delay: 0.1 }}

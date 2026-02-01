@@ -1,0 +1,20 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "letter-x-icon",
+  "dependencies": ["motion"],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "icons/letter-x-icon.tsx",
+      "content": "import { forwardRef, useImperativeHandle } from \"react\";\nimport type { AnimatedIconHandle, AnimatedIconProps } from \"./types\";\nimport { motion, useAnimate } from \"motion/react\";\n\nconst LetterXIcon = forwardRef<AnimatedIconHandle, AnimatedIconProps>(\n  (\n    { size = 24, color = \"currentColor\", strokeWidth = 2, className = \"\" },\n    ref,\n  ) => {\n    const [scope, animate] = useAnimate();\n\n    const start = async () => {\n      // X-ray flash animation\n      animate(\n        \".x-stroke-1\",\n        { opacity: [1, 0.3, 1], scale: [1, 1.05, 1] },\n        { duration: 0.3, ease: \"easeOut\" },\n      );\n      animate(\n        \".x-stroke-2\",\n        { opacity: [1, 0.3, 1], scale: [1, 1.05, 1] },\n        { duration: 0.3, ease: \"easeOut\", delay: 0.05 },\n      );\n    };\n\n    const stop = () => {\n      animate(\n        \".x-stroke-1, .x-stroke-2\",\n        { opacity: 1, scale: 1 },\n        { duration: 0.2 },\n      );\n    };\n\n    useImperativeHandle(ref, () => ({\n      startAnimation: start,\n      stopAnimation: stop,\n    }));\n\n    return (\n      <motion.svg\n        ref={scope}\n        onHoverStart={start}\n        onHoverEnd={stop}\n        xmlns=\"http://www.w3.org/2000/svg\"\n        width={size}\n        height={size}\n        viewBox=\"0 0 24 24\"\n        fill=\"none\"\n        stroke={color}\n        strokeWidth={strokeWidth}\n        strokeLinecap=\"round\"\n        strokeLinejoin=\"round\"\n        className={`cursor-pointer ${className}`}\n        style={{ overflow: \"visible\" }}\n      >\n        <motion.path\n          className=\"x-stroke-1\"\n          d=\"M7 4l10 16\"\n          style={{ transformOrigin: \"12px 12px\" }}\n        />\n        <motion.path\n          className=\"x-stroke-2\"\n          d=\"M17 4l-10 16\"\n          style={{ transformOrigin: \"12px 12px\" }}\n        />\n      </motion.svg>\n    );\n  },\n);\n\nLetterXIcon.displayName = \"LetterXIcon\";\nexport default LetterXIcon;\n",
+      "type": "registry:ui"
+    },
+    {
+      "path": "icons/types.ts",
+      "content": "export interface AnimatedIconProps {\n  /** Icon size in pixels or CSS string */\n  size?: number | string;\n  /** Icon color (defaults to currentColor) */\n  color?: string;\n  /** SVG stroke width */\n  strokeWidth?: number;\n  /** Additional CSS classes */\n  className?: string;\n}\n\nexport interface AnimatedIconHandle {\n  startAnimation: () => void;\n  stopAnimation: () => void;\n}\n",
+      "type": "registry:ui"
+    }
+  ],
+  "type": "registry:ui"
+}

@@ -207,6 +207,32 @@ import GolangIcon from "./golang-icon";
 import BrandCursorIcon from "./brand-cursor-icon";
 import BrandGeminiIcon from "./brand-gemini-icon";
 import BrandGrokIcon from "./brand-grok-icon";
+import LetterAIcon from "./letter-a-icon";
+import LetterBIcon from "./letter-b-icon";
+import LetterCIcon from "./letter-c-icon";
+import LetterDIcon from "./letter-d-icon";
+import LetterEIcon from "./letter-e-icon";
+import LetterFIcon from "./letter-f-icon";
+import LetterGIcon from "./letter-g-icon";
+import LetterHIcon from "./letter-h-icon";
+import LetterIIcon from "./letter-i-icon";
+import LetterJIcon from "./letter-j-icon";
+import LetterKIcon from "./letter-k-icon";
+import LetterLIcon from "./letter-l-icon";
+import LetterMIcon from "./letter-m-icon";
+import LetterNIcon from "./letter-n-icon";
+import LetterOIcon from "./letter-o-icon";
+import LetterPIcon from "./letter-p-icon";
+import LetterQIcon from "./letter-q-icon";
+import LetterRIcon from "./letter-r-icon";
+import LetterSIcon from "./letter-s-icon";
+import LetterTIcon from "./letter-t-icon";
+import LetterUIcon from "./letter-u-icon";
+import LetterVIcon from "./letter-v-icon";
+import LetterWIcon from "./letter-w-icon";
+import LetterXIcon from "./letter-x-icon";
+import LetterYIcon from "./letter-y-icon";
+import LetterZIcon from "./letter-z-icon";
 import BrandNotionIcon from "./brand-notion-icon";
 import BrandQwenIcon from "./brand-qwen-icon";
 import BrandRailwayIcon from "./brand-railway-icon";
@@ -1521,6 +1547,136 @@ const ICON_LIST: IconType[] = [
     name: "wallet-icon",
     icon: WalletIcon,
     keywords: ["wallet", "money", "payment", "finance", "cash", "billfold"],
+  },
+  {
+    name: "letter-a-icon",
+    icon: LetterAIcon,
+    keywords: ["letter", "a", "alphabet", "text", "character", "typography"],
+  },
+  {
+    name: "letter-b-icon",
+    icon: LetterBIcon,
+    keywords: ["letter", "b", "alphabet", "text", "character", "typography"],
+  },
+  {
+    name: "letter-c-icon",
+    icon: LetterCIcon,
+    keywords: ["letter", "c", "alphabet", "text", "character", "typography"],
+  },
+  {
+    name: "letter-d-icon",
+    icon: LetterDIcon,
+    keywords: ["letter", "d", "alphabet", "text", "character", "typography"],
+  },
+  {
+    name: "letter-e-icon",
+    icon: LetterEIcon,
+    keywords: ["letter", "e", "alphabet", "text", "character", "typography"],
+  },
+  {
+    name: "letter-f-icon",
+    icon: LetterFIcon,
+    keywords: ["letter", "f", "alphabet", "text", "character", "typography"],
+  },
+  {
+    name: "letter-g-icon",
+    icon: LetterGIcon,
+    keywords: ["letter", "g", "alphabet", "text", "character", "typography"],
+  },
+  {
+    name: "letter-h-icon",
+    icon: LetterHIcon,
+    keywords: ["letter", "h", "alphabet", "text", "character", "typography"],
+  },
+  {
+    name: "letter-i-icon",
+    icon: LetterIIcon,
+    keywords: ["letter", "i", "alphabet", "text", "character", "typography"],
+  },
+  {
+    name: "letter-j-icon",
+    icon: LetterJIcon,
+    keywords: ["letter", "j", "alphabet", "text", "character", "typography"],
+  },
+  {
+    name: "letter-k-icon",
+    icon: LetterKIcon,
+    keywords: ["letter", "k", "alphabet", "text", "character", "typography"],
+  },
+  {
+    name: "letter-l-icon",
+    icon: LetterLIcon,
+    keywords: ["letter", "l", "alphabet", "text", "character", "typography"],
+  },
+  {
+    name: "letter-m-icon",
+    icon: LetterMIcon,
+    keywords: ["letter", "m", "alphabet", "text", "character", "typography"],
+  },
+  {
+    name: "letter-n-icon",
+    icon: LetterNIcon,
+    keywords: ["letter", "n", "alphabet", "text", "character", "typography"],
+  },
+  {
+    name: "letter-o-icon",
+    icon: LetterOIcon,
+    keywords: ["letter", "o", "alphabet", "text", "character", "typography"],
+  },
+  {
+    name: "letter-p-icon",
+    icon: LetterPIcon,
+    keywords: ["letter", "p", "alphabet", "text", "character", "typography"],
+  },
+  {
+    name: "letter-q-icon",
+    icon: LetterQIcon,
+    keywords: ["letter", "q", "alphabet", "text", "character", "typography"],
+  },
+  {
+    name: "letter-r-icon",
+    icon: LetterRIcon,
+    keywords: ["letter", "r", "alphabet", "text", "character", "typography"],
+  },
+  {
+    name: "letter-s-icon",
+    icon: LetterSIcon,
+    keywords: ["letter", "s", "alphabet", "text", "character", "typography"],
+  },
+  {
+    name: "letter-t-icon",
+    icon: LetterTIcon,
+    keywords: ["letter", "t", "alphabet", "text", "character", "typography"],
+  },
+  {
+    name: "letter-u-icon",
+    icon: LetterUIcon,
+    keywords: ["letter", "u", "alphabet", "text", "character", "typography"],
+  },
+  {
+    name: "letter-v-icon",
+    icon: LetterVIcon,
+    keywords: ["letter", "v", "alphabet", "text", "character", "typography"],
+  },
+  {
+    name: "letter-w-icon",
+    icon: LetterWIcon,
+    keywords: ["letter", "w", "alphabet", "text", "character", "typography"],
+  },
+  {
+    name: "letter-x-icon",
+    icon: LetterXIcon,
+    keywords: ["letter", "x", "alphabet", "text", "character", "typography"],
+  },
+  {
+    name: "letter-y-icon",
+    icon: LetterYIcon,
+    keywords: ["letter", "y", "alphabet", "text", "character", "typography"],
+  },
+  {
+    name: "letter-z-icon",
+    icon: LetterZIcon,
+    keywords: ["letter", "z", "alphabet", "text", "character", "typography"],
   },
   {
     name: "brand-anthropic-icon",
