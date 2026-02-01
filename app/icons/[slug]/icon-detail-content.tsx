@@ -202,7 +202,7 @@ export interface AnimatedIconHandle {
                         </span>
                         <button
                           onClick={copyDependency}
-                          className="text-muted-foreground hover:text-foreground flex items-center gap-1.5 text-xs opacity-0 transition-opacity group-hover:opacity-100"
+                          className="text-muted-foreground hover:text-foreground flex items-center gap-1.5 text-xs opacity-0 transition-opacity group-hover:opacity-100 focus-visible:opacity-100"
                         >
                           {depCopied ? (
                             <>
@@ -244,7 +244,7 @@ export interface AnimatedIconHandle {
                         </span>
                         <button
                           onClick={copyTypes}
-                          className="text-muted-foreground hover:text-foreground flex items-center gap-1.5 text-xs opacity-0 transition-opacity group-hover:opacity-100"
+                          className="text-muted-foreground hover:text-foreground flex items-center gap-1.5 text-xs opacity-0 transition-opacity group-hover:opacity-100 focus-visible:opacity-100"
                         >
                           {typesCopied ? (
                             <>
