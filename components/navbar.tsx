@@ -59,14 +59,6 @@ const Navbar = () => {
           >
             example
           </Link>
-          <Link
-            className="bg-primary hover:bg-primary/90 inline-flex items-center rounded-full px-3 py-1 text-sm font-semibold text-white transition-all duration-200 hover:scale-105"
-            href={LINKS.BAGS_FM}
-            target="_blank"
-            rel="noreferrer"
-          >
-            $hover
-          </Link>
         </nav>
 
         <div className="hidden flex-1 items-center justify-end gap-2 sm:gap-2 md:flex md:justify-end">
@@ -147,15 +139,6 @@ const Navbar = () => {
               onClick={() => setIsMobileMenuOpen(false)}
             >
               Example
-            </Link>
-            <Link
-              className="bg-primary hover:bg-primary/90 inline-flex w-fit items-center rounded-full px-3 py-2 text-sm font-semibold text-white transition-all duration-200 hover:scale-105"
-              href={LINKS.BAGS_FM}
-              target="_blank"
-              rel="noreferrer"
-              onClick={() => setIsMobileMenuOpen(false)}
-            >
-              $hover
             </Link>
             <button
               onClick={() => {
