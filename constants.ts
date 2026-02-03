@@ -4,8 +4,6 @@ export const LINKS = {
   GITHUB: "https://github.com/itshover/itshover",
   SITE_URL: "https://itshover.com",
   CREATOR: "https://x.com/abhijitwt",
-  PRODUCT_HUNT: "https://www.producthunt.com/products/its-hover",
-  BAGS_FM: "https://bags.fm/AUsbqN5AddEhVsPDaBLWhXNWwubdm8ArF7SZfyUfBAGS",
 } as const;
 
 export const TOKEN = {
