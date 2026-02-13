@@ -2,9 +2,26 @@ import { forwardRef, useImperativeHandle, useCallback } from "react";
 import type { AnimatedIconHandle, AnimatedIconProps } from "./types";
 import { motion, useAnimate } from "motion/react";
 
-const AirplaneIcon = forwardRef<AnimatedIconHandle, AnimatedIconProps>(
+type CustomAnimation = {
+  airPlaneDuration: number;
+  windDuration: number;
+  exitDuration: number;
+};
+
+const AirplaneIcon = forwardRef<
+  AnimatedIconHandle,
+  AnimatedIconProps & CustomAnimation
+>(
   (
-    { size = 24, color = "currentColor", strokeWidth = 2, className = "" },
+    {
+      size = 24,
+      color = "currentColor",
+      strokeWidth = 2,
+      className = "",
+      airPlaneDuration = 0.3,
+      windDuration = 0.8,
+      exitDuration = 0.3,
+    },
     ref,
   ) => {
     const [scope, animate] = useAnimate();
@@ -14,7 +31,7 @@ const AirplaneIcon = forwardRef<AnimatedIconHandle, AnimatedIconProps>(
       animate(
         ".airplane",
         { x: [0, 0.5, 0], y: [0, -0.5, 0] },
-        { duration: 0.3 },
+        { duration: airPlaneDuration },
       );
 
       // Streak 1: Upper Wing (Top-right streak)
@@ -25,7 +42,7 @@ const AirplaneIcon = forwardRef<AnimatedIconHandle, AnimatedIconProps>(
           y: 24,
           opacity: 1,
         },
-        { duration: 0.8, ease: "easeOut" },
+        { duration: windDuration, ease: "easeOut" },
       );
 
       // Streak 2: Lower Wing (Middle-left streak)
@@ -36,15 +53,23 @@ const AirplaneIcon = forwardRef<AnimatedIconHandle, AnimatedIconProps>(
           y: 26,
           opacity: 1,
         },
-        { duration: 0.8, ease: "easeOut", delay: 0.2 },
+        { duration: windDuration, ease: "easeOut", delay: 0.2 },
       );
-    }, [animate]);
+    }, [animate, airPlaneDuration, windDuration]);
 
     const stop = useCallback(async () => {
-      animate(".airplane", { x: 0, y: 0 }, { duration: 0.3 });
-      animate(".wind1", { opacity: 0, x: 12, y: -4 }, { duration: 0.3 });
-      animate(".wind2", { opacity: 0, x: 26, y: 8 }, { duration: 0.3 });
-    }, [animate]);
+      animate(".airplane", { x: 0, y: 0 }, { duration: exitDuration });
+      animate(
+        ".wind1",
+        { opacity: 0, x: 12, y: -4 },
+        { duration: exitDuration },
+      );
+      animate(
+        ".wind2",
+        { opacity: 0, x: 26, y: 8 },
+        { duration: exitDuration },
+      );
+    }, [animate, exitDuration]);
 
     useImperativeHandle(
       ref,

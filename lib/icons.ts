@@ -176,6 +176,10 @@ export const ICONS = [
     path: "/icons/brand-telegram-icon",
   },
   {
+    name: "brand-twitch-icon",
+    path: "/icons/brand-twitch-icon",
+  },
+  {
     name: "brand-windows-icon",
     path: "/icons/brand-windows-icon",
   },
@@ -228,6 +232,18 @@ export const ICONS = [
     path: "/icons/chart-pie-icon",
   },
   {
+    name: "cloud 1 icon",
+    path: "/icons/cloud-1-icon",
+  },
+  {
+    name: "cloud 2 icon",
+    path: "/icons/cloud-2-icon",
+  },
+  {
+    name: "cloud 3 icon",
+    path: "/icons/cloud-3-icon",
+  },
+  {
     name: "checked icon",
     path: "/icons/checked-icon",
   },
@@ -254,6 +270,10 @@ export const ICONS = [
   {
     name: "copy off icon",
     path: "/icons/copy-off-icon",
+  },
+  {
+    name: "copyright icon",
+    path: "/icons/copyright-icon",
   },
   {
     name: "cpu icon",
@@ -312,12 +332,20 @@ export const ICONS = [
     path: "/icons/double-check-icon",
   },
   {
+    name: "download icon",
+    path: "/icons/download-icon",
+  },
+  {
     name: "down chevron",
     path: "/icons/down-chevron",
   },
   {
     name: "drum icon",
     path: "/icons/drum-icon",
+  },
+  {
+    name: "gamepad icon",
+    path: "/icons/gamepad-icon",
   },
   {
     name: "external link icon",
@@ -342,6 +370,10 @@ export const ICONS = [
   {
     name: "figma icon",
     path: "/icons/figma-icon",
+  },
+  {
+    name: "filter icon",
+    path: "/icons/filter-icon",
   },
   {
     name: "focus icon",
@@ -424,6 +456,10 @@ export const ICONS = [
     path: "/icons/layout-bottombar-collapse-icon",
   },
   {
+    name: "library icon",
+    path: "/icons/library-icon",
+  },
+  {
     name: "like icon",
     path: "/icons/like-icon",
   },
@@ -436,12 +472,20 @@ export const ICONS = [
     path: "/icons/link-icon",
   },
   {
+    name: "locate icon",
+    path: "/icons/locate-icon",
+  },
+  {
     name: "logout icon",
     path: "/icons/logout-icon",
   },
   {
     name: "magnifier icon",
     path: "/icons/magnifier-icon",
+  },
+  {
+    name: "map pin icon",
+    path: "/icons/map-pin-icon",
   },
   {
     name: "meh icon",
@@ -486,6 +530,10 @@ export const ICONS = [
   {
     name: "player icon",
     path: "/icons/player-icon",
+  },
+  {
+    name: "paw print icon",
+    path: "/icons/paw-print-icon",
   },
   {
     name: "plug connected icon",
@@ -568,6 +616,10 @@ export const ICONS = [
     path: "/icons/sparkles-icon",
   },
   {
+    name: "sliders horizontal icon",
+    path: "/icons/sliders-horizontal-icon",
+  },
+  {
     name: "spotify icon",
     path: "/icons/spotify-icon",
   },
@@ -610,6 +662,14 @@ export const ICONS = [
   {
     name: "trash icon",
     path: "/icons/trash-icon",
+  },
+  {
+    name: "trophy icon",
+    path: "/icons/trophy-icon",
+  },
+  {
+    name: "upload icon",
+    path: "/icons/upload-icon",
   },
   {
     name: "travel bag",
@@ -662,6 +722,10 @@ export const ICONS = [
   {
     name: "satellite dish icon",
     path: "/icons/satellite-dish-icon",
+  },
+  {
+    name: "save icon",
+    path: "/icons/save-icon",
   },
   {
     name: "scan barcode icon",
