@@ -12,7 +12,7 @@
     },
     {
       "path": "icons/types.ts",
-      "content": "export interface AnimatedIconProps {\n  /** Icon size in pixels or CSS string */\n  size?: number | string;\n  /** Icon color (defaults to currentColor) */\n  color?: string;\n  /** SVG stroke width */\n  strokeWidth?: number;\n  /** Additional CSS classes */\n  className?: string;\n}\n\nexport interface AnimatedIconHandle {\n  startAnimation: () => void;\n  stopAnimation: () => void;\n}\n",
+      "content": "import type { SVGProps } from \"react\";\n\nexport type IconEasing =\n  | \"linear\"\n  | \"easeIn\"\n  | \"easeOut\"\n  | \"easeInOut\"\n  | \"circIn\"\n  | \"circOut\"\n  | \"circInOut\"\n  | \"backIn\"\n  | \"backOut\"\n  | \"backInOut\"\n  | \"anticipate\";\n\nexport interface AnimatedIconProps extends Omit<SVGProps<SVGSVGElement>, \"ref\" | \"onAnimationStart\" | \"onAnimationEnd\" | \"onAnimationIteration\" | \"onDrag\" | \"onDragEnd\" | \"onDragEnter\" | \"onDragExit\" | \"onDragLeave\" | \"onDragOver\" | \"onDragStart\" | \"onDrop\" | \"values\"> {\n  /** Icon size in pixels or CSS string */\n  size?: number | string;\n  /** Icon color (defaults to currentColor) */\n  color?: string;\n  /** SVG stroke width */\n  strokeWidth?: number;\n  /** Additional CSS classes */\n  className?: string;\n}\n\nexport interface AnimatedIconHandle {\n  startAnimation: () => void;\n  stopAnimation: () => void;\n}\n",
       "type": "registry:ui"
     }
   ],

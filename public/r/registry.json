@@ -1059,6 +1059,23 @@
       ]
     },
     {
+      "name": "brand-twitch-icon",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": ["motion"],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "icons/brand-twitch-icon.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "icons/types.ts",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
       "name": "brand-vercel-icon",
       "type": "registry:ui",
       "registryDependencies": [],
@@ -1084,6 +1101,23 @@
       "files": [
         {
           "path": "icons/brand-windows-icon.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "icons/types.ts",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "brand-wordpress-icon",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": ["motion"],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "icons/brand-wordpress-icon.tsx",
           "type": "registry:ui"
         },
         {
@@ -1365,6 +1399,57 @@
       ]
     },
     {
+      "name": "cloud-1-icon",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": ["motion"],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "icons/cloud-1-icon.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "icons/types.ts",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "cloud-2-icon",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": ["motion"],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "icons/cloud-2-icon.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "icons/types.ts",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "cloud-3-icon",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": ["motion"],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "icons/cloud-3-icon.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "icons/types.ts",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
       "name": "code-icon",
       "type": "registry:ui",
       "registryDependencies": [],
@@ -1458,6 +1543,23 @@
       "files": [
         {
           "path": "icons/copy-off-icon.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "icons/types.ts",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "copyright-icon",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": ["motion"],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "icons/copyright-icon.tsx",
           "type": "registry:ui"
         },
         {
@@ -1722,6 +1824,23 @@
       ]
     },
     {
+      "name": "download-icon",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": ["motion"],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "icons/download-icon.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "icons/types.ts",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
       "name": "drum-icon",
       "type": "registry:ui",
       "registryDependencies": [],
@@ -1892,6 +2011,23 @@
       ]
     },
     {
+      "name": "filter-icon",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": ["motion"],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "icons/filter-icon.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "icons/types.ts",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
       "name": "flame-icon",
       "type": "registry:ui",
       "registryDependencies": [],
@@ -1917,6 +2053,23 @@
       "files": [
         {
           "path": "icons/focus-icon.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "icons/types.ts",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "gamepad-icon",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": ["motion"],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "icons/gamepad-icon.tsx",
           "type": "registry:ui"
         },
         {
@@ -2776,6 +2929,23 @@
       ]
     },
     {
+      "name": "library-icon",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": ["motion"],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "icons/library-icon.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "icons/types.ts",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
       "name": "like-icon",
       "type": "registry:ui",
       "registryDependencies": [],
@@ -2818,6 +2988,23 @@
       "files": [
         {
           "path": "icons/linkedin-icon.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "icons/types.ts",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "locate-icon",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": ["motion"],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "icons/locate-icon.tsx",
           "type": "registry:ui"
         },
         {
@@ -2886,6 +3073,23 @@
       "files": [
         {
           "path": "icons/mail-filled-icon.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "icons/types.ts",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "map-pin-icon",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": ["motion"],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "icons/map-pin-icon.tsx",
           "type": "registry:ui"
         },
         {
@@ -3039,6 +3243,23 @@
       "files": [
         {
           "path": "icons/passport-icon.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "icons/types.ts",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "paw-print-icon",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": ["motion"],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "icons/paw-print-icon.tsx",
           "type": "registry:ui"
         },
         {
@@ -3354,6 +3575,23 @@
       ]
     },
     {
+      "name": "save-icon",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": ["motion"],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "icons/save-icon.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "icons/types.ts",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
       "name": "scan-barcode-icon",
       "type": "registry:ui",
       "registryDependencies": [],
@@ -3498,6 +3736,23 @@
       "files": [
         {
           "path": "icons/slack-icon.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "icons/types.ts",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "sliders-horizontal-icon",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": ["motion"],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "icons/sliders-horizontal-icon.tsx",
           "type": "registry:ui"
         },
         {
@@ -3762,6 +4017,23 @@
       ]
     },
     {
+      "name": "trophy-icon",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": ["motion"],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "icons/trophy-icon.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "icons/types.ts",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
       "name": "truck-electric-icon",
       "type": "registry:ui",
       "registryDependencies": [],
@@ -3855,6 +4127,23 @@
       "files": [
         {
           "path": "icons/unordered-list-icon.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "icons/types.ts",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "upload-icon",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": ["motion"],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "icons/upload-icon.tsx",
           "type": "registry:ui"
         },
         {

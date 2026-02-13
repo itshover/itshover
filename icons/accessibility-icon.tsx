@@ -1,10 +1,39 @@
 import { forwardRef, useImperativeHandle, useRef } from "react";
-import type { AnimatedIconHandle, AnimatedIconProps } from "./types";
+import type {
+  AnimatedIconHandle,
+  AnimatedIconProps,
+  IconEasing,
+} from "./types";
 import { motion, useAnimate } from "motion/react";
 
-const AccessibilityIcon = forwardRef<AnimatedIconHandle, AnimatedIconProps>(
+type CustomAnimation = {
+  rotateFrom: number;
+  rotateTo: number;
+  duration: number;
+  ease: IconEasing;
+  personDuration: number;
+  personEase: IconEasing;
+  exitDuration: number;
+};
+
+const AccessibilityIcon = forwardRef<
+  AnimatedIconHandle,
+  AnimatedIconProps & CustomAnimation
+>(
   (
-    { size = 24, color = "currentColor", strokeWidth = 2, className = "" },
+    {
+      size = 24,
+      color = "currentColor",
+      strokeWidth = 2,
+      className = "",
+      rotateFrom = 0,
+      rotateTo = 360,
+      duration = 1,
+      ease = "easeInOut",
+      personDuration = 0.6,
+      personEase = "easeInOut",
+      exitDuration = 0.3,
+    },
     ref,
   ) => {
     const [scope, animate] = useAnimate();
@@ -17,14 +46,14 @@ const AccessibilityIcon = forwardRef<AnimatedIconHandle, AnimatedIconProps>(
       animationControls.current.push(
         animate(
           ".wheel",
-          { rotate: [0, 360] },
-          { duration: 1, ease: "easeInOut", repeat: Infinity },
+          { rotate: [rotateFrom, rotateTo] },
+          { duration: duration, ease: ease, repeat: Infinity },
         ),
       );
       animate(
         ".person",
         { y: [0, -2, 0] },
-        { duration: 0.6, ease: "easeInOut" },
+        { duration: personDuration, ease: personEase },
       );
     };
 
@@ -32,8 +61,8 @@ const AccessibilityIcon = forwardRef<AnimatedIconHandle, AnimatedIconProps>(
       animationControls.current.forEach((control) => control.stop());
       animationControls.current = [];
 
-      animate(".wheel", { rotate: 0 }, { duration: 0.3 });
-      animate(".person", { y: 0 }, { duration: 0.2 });
+      animate(".wheel", { rotate: 0 }, { duration: exitDuration });
+      animate(".person", { y: 0 }, { duration: exitDuration });
     };
 
     useImperativeHandle(ref, () => {

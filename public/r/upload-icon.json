@@ -1,0 +1,20 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "upload-icon",
+  "dependencies": ["motion"],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "icons/upload-icon.tsx",
+      "content": "import { forwardRef, useImperativeHandle, useCallback, useRef } from \"react\";\nimport type { AnimatedIconHandle, AnimatedIconProps } from \"./types\";\nimport { motion, useAnimate } from \"motion/react\";\n\nconst UploadIcon = forwardRef<AnimatedIconHandle, AnimatedIconProps>(\n  (\n    { size = 24, color = \"currentColor\", strokeWidth = 2, className = \"\" },\n    ref,\n  ) => {\n    const [scope, animate] = useAnimate();\n    const isAnimatingRef = useRef(false);\n\n    const start = useCallback(async () => {\n      if (isAnimatingRef.current) return;\n      isAnimatingRef.current = true;\n\n      while (isAnimatingRef.current) {\n        // 1. Fly Up and Fade Out\n        await animate(\n          \".arrow-group\",\n          { y: -12, opacity: 0 },\n          { duration: 0.4, ease: \"easeIn\" },\n        );\n\n        if (!isAnimatingRef.current) break;\n\n        // 2. Instant Reset to Bottom\n        await animate(\".arrow-group\", { y: 12, opacity: 0 }, { duration: 0 });\n\n        // 3. Fly In from Bottom to Center\n        await animate(\n          \".arrow-group\",\n          { y: 0, opacity: 1 },\n          { duration: 0.4, ease: \"easeOut\" },\n        );\n\n        if (!isAnimatingRef.current) break;\n\n        // Small pause at center for \"intention\"\n        await new Promise((resolve) => setTimeout(resolve, 200));\n      }\n    }, [animate]);\n\n    const stop = useCallback(() => {\n      isAnimatingRef.current = false;\n      animate(\n        \".arrow-group\",\n        { y: 0, opacity: 1 },\n        { duration: 0.3, ease: \"easeOut\" },\n      );\n    }, [animate]);\n\n    useImperativeHandle(ref, () => ({\n      startAnimation: start,\n      stopAnimation: stop,\n    }));\n\n    return (\n      <motion.svg\n        ref={scope}\n        onHoverStart={start}\n        onHoverEnd={stop}\n        xmlns=\"http://www.w3.org/2000/svg\"\n        width={size}\n        height={size}\n        viewBox=\"0 0 24 24\"\n        fill=\"none\"\n        stroke={color}\n        strokeWidth={strokeWidth}\n        strokeLinecap=\"round\"\n        strokeLinejoin=\"round\"\n        className={`cursor-pointer ${className}`}\n        style={{ overflow: \"visible\" }}\n      >\n        {/* Base bracket */}\n        <path d=\"M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4\" />\n\n        {/* Arrow (Main & Only) */}\n        <motion.g className=\"arrow-group\">\n          <path d=\"M12 3v12\" />\n          <path d=\"m17 8-5-5-5 5\" />\n        </motion.g>\n      </motion.svg>\n    );\n  },\n);\n\nUploadIcon.displayName = \"UploadIcon\";\nexport default UploadIcon;\n",
+      "type": "registry:ui"
+    },
+    {
+      "path": "icons/types.ts",
+      "content": "import type { SVGProps } from \"react\";\n\nexport type IconEasing =\n  | \"linear\"\n  | \"easeIn\"\n  | \"easeOut\"\n  | \"easeInOut\"\n  | \"circIn\"\n  | \"circOut\"\n  | \"circInOut\"\n  | \"backIn\"\n  | \"backOut\"\n  | \"backInOut\"\n  | \"anticipate\";\n\nexport interface AnimatedIconProps extends Omit<SVGProps<SVGSVGElement>, \"ref\" | \"onAnimationStart\" | \"onAnimationEnd\" | \"onAnimationIteration\" | \"onDrag\" | \"onDragEnd\" | \"onDragEnter\" | \"onDragExit\" | \"onDragLeave\" | \"onDragOver\" | \"onDragStart\" | \"onDrop\" | \"values\"> {\n  /** Icon size in pixels or CSS string */\n  size?: number | string;\n  /** Icon color (defaults to currentColor) */\n  color?: string;\n  /** SVG stroke width */\n  strokeWidth?: number;\n  /** Additional CSS classes */\n  className?: string;\n}\n\nexport interface AnimatedIconHandle {\n  startAnimation: () => void;\n  stopAnimation: () => void;\n}\n",
+      "type": "registry:ui"
+    }
+  ],
+  "type": "registry:ui"
+}
