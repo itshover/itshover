@@ -242,6 +242,8 @@ import BrandXaiIcon from "./brand-xai-icon";
 import BrandLmStudioIcon from "./brand-lmstudio-icon";
 import BrandMidJourneyIcon from "./brand-midjourney-icon";
 import BrandOllamaIcon from "./brand-ollama-icon";
+import LaptopIcon from "./laptop-icon";
+
 
 export interface IconType {
   name: string;
@@ -257,6 +259,11 @@ export interface IconType {
 }
 
 const ICON_LIST: IconType[] = [
+  {
+  name: "laptop-icon", 
+  icon: LaptopIcon,
+  keywords: ["computer", "device", "tech", "laptop", "macbook", "notebook"],
+  },
   {
     name: "accessibility-icon",
     icon: AccessibilityIcon,
