@@ -1,5 +1,9 @@
 export const ICONS = [
   {
+  name: "laptop icon",  
+  path: "/icons/laptop-icon",
+  },
+  {
     name: "accessibility icon",
     path: "/icons/accessibility-icon",
   },
