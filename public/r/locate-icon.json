@@ -1,0 +1,20 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "locate-icon",
+  "dependencies": ["motion"],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "icons/locate-icon.tsx",
+      "content": "import { forwardRef, useImperativeHandle, useCallback } from \"react\";\nimport type { AnimatedIconHandle, AnimatedIconProps } from \"./types\";\nimport { motion, useAnimate } from \"motion/react\";\n\nconst LocateIcon = forwardRef<AnimatedIconHandle, AnimatedIconProps>(\n  (\n    { size = 24, color = \"currentColor\", strokeWidth = 2, className = \"\" },\n    ref,\n  ) => {\n    const [scope, animate] = useAnimate();\n\n    const start = useCallback(() => {\n      // 1. Snappy Appearance of center target\n      animate(\n        \".locate-target\",\n        { opacity: 1, scale: 1 },\n        { duration: 0.3, ease: \"backOut\" },\n      );\n      // 2. Subtle rotation for mechanical feel\n      animate(\n        \".locate-crosshairs\",\n        { rotate: 90 },\n        { duration: 0.3, ease: \"easeInOut\" },\n      );\n    }, [animate]);\n\n    const stop = useCallback(() => {\n      animate(\n        \".locate-target\",\n        { opacity: 0, scale: 0 },\n        { duration: 0.2, ease: \"easeIn\" },\n      );\n      animate(\n        \".locate-crosshairs\",\n        { rotate: 0 },\n        { duration: 0.3, ease: \"easeInOut\" },\n      );\n    }, [animate]);\n\n    useImperativeHandle(ref, () => ({\n      startAnimation: start,\n      stopAnimation: stop,\n    }));\n\n    return (\n      <motion.svg\n        ref={scope}\n        onHoverStart={start}\n        onHoverEnd={stop}\n        xmlns=\"http://www.w3.org/2000/svg\"\n        width={size}\n        height={size}\n        viewBox=\"0 0 24 24\"\n        fill=\"none\"\n        stroke={color}\n        strokeWidth={strokeWidth}\n        strokeLinecap=\"round\"\n        strokeLinejoin=\"round\"\n        className={`cursor-pointer ${className}`}\n        style={{ overflow: \"visible\" }}\n      >\n        <motion.g\n          className=\"locate-crosshairs\"\n          style={{ transformOrigin: \"center\" }}\n        >\n          <line x1=\"2\" x2=\"5\" y1=\"12\" y2=\"12\" />\n          <line x1=\"19\" x2=\"22\" y1=\"12\" y2=\"12\" />\n          <line x1=\"12\" x2=\"12\" y1=\"2\" y2=\"5\" />\n          <line x1=\"12\" x2=\"12\" y1=\"19\" y2=\"22\" />\n        </motion.g>\n\n        {/* Ring */}\n        <circle cx=\"12\" cy=\"12\" r=\"7\" />\n\n        {/* The \"Fix\" Target - Appears on Hover */}\n        <motion.circle\n          className=\"locate-target\"\n          cx=\"12\"\n          cy=\"12\"\n          r=\"3\"\n          initial={{ opacity: 0, scale: 0 }}\n          style={{ transformOrigin: \"center\" }}\n        />\n      </motion.svg>\n    );\n  },\n);\n\nLocateIcon.displayName = \"LocateIcon\";\nexport default LocateIcon;\n",
+      "type": "registry:ui"
+    },
+    {
+      "path": "icons/types.ts",
+      "content": "import type { SVGProps } from \"react\";\n\nexport type IconEasing =\n  | \"linear\"\n  | \"easeIn\"\n  | \"easeOut\"\n  | \"easeInOut\"\n  | \"circIn\"\n  | \"circOut\"\n  | \"circInOut\"\n  | \"backIn\"\n  | \"backOut\"\n  | \"backInOut\"\n  | \"anticipate\";\n\nexport interface AnimatedIconProps extends Omit<SVGProps<SVGSVGElement>, \"ref\" | \"onAnimationStart\" | \"onAnimationEnd\" | \"onAnimationIteration\" | \"onDrag\" | \"onDragEnd\" | \"onDragEnter\" | \"onDragExit\" | \"onDragLeave\" | \"onDragOver\" | \"onDragStart\" | \"onDrop\" | \"values\"> {\n  /** Icon size in pixels or CSS string */\n  size?: number | string;\n  /** Icon color (defaults to currentColor) */\n  color?: string;\n  /** SVG stroke width */\n  strokeWidth?: number;\n  /** Additional CSS classes */\n  className?: string;\n}\n\nexport interface AnimatedIconHandle {\n  startAnimation: () => void;\n  stopAnimation: () => void;\n}\n",
+      "type": "registry:ui"
+    }
+  ],
+  "type": "registry:ui"
+}

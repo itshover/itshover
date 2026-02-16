@@ -1,0 +1,20 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "library-icon",
+  "dependencies": ["motion"],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "icons/library-icon.tsx",
+      "content": "import { forwardRef, useImperativeHandle, useCallback } from \"react\";\nimport type { AnimatedIconHandle, AnimatedIconProps } from \"./types\";\nimport { motion, useAnimate } from \"motion/react\";\n\nconst LibraryIcon = forwardRef<AnimatedIconHandle, AnimatedIconProps>(\n  (\n    { size = 24, color = \"currentColor\", strokeWidth = 2, className = \"\" },\n    ref,\n  ) => {\n    const [scope, animate] = useAnimate();\n\n    const start = useCallback(() => {\n      // The Book Pick Cycle\n      // Book 2 (Selected): Lifts and tilts\n      animate(\n        \".book-2\",\n        { y: -3, rotate: -8 },\n        { duration: 0.4, ease: [0.175, 0.885, 0.32, 1.275] }, // BackOut feel\n      );\n\n      // Book 3 (Neighbor): Leans Left\n      animate(\".book-3\", { rotate: -12 }, { duration: 0.4, ease: \"easeOut\" });\n\n      // Book 4 (Outer): Subtle Lean Left\n      animate(\".book-4\", { rotate: -5 }, { duration: 0.4, ease: \"easeOut\" });\n\n      // Book 1 (Tilted Book): Leans further Right\n      animate(\".book-1\", { rotate: 12 }, { duration: 0.4, ease: \"easeOut\" });\n    }, [animate]);\n\n    const stop = useCallback(() => {\n      animate(\n        \".book-1, .book-2, .book-3, .book-4\",\n        { rotate: 0, y: 0 },\n        { duration: 0.3, ease: \"easeInOut\" },\n      );\n    }, [animate]);\n\n    useImperativeHandle(ref, () => ({\n      startAnimation: start,\n      stopAnimation: stop,\n    }));\n\n    return (\n      <motion.svg\n        ref={scope}\n        onHoverStart={start}\n        onHoverEnd={stop}\n        xmlns=\"http://www.w3.org/2000/svg\"\n        width={size}\n        height={size}\n        viewBox=\"0 0 24 24\"\n        fill=\"none\"\n        stroke={color}\n        strokeWidth={strokeWidth}\n        strokeLinecap=\"round\"\n        strokeLinejoin=\"round\"\n        className={`cursor-pointer ${className}`}\n        style={{ overflow: \"visible\" }}\n      >\n        {/* Book 1 (The tilted book) */}\n        <motion.path\n          className=\"book-1\"\n          d=\"m16 6 4 14\"\n          style={{ transformOrigin: \"18px 20px\" }}\n        />\n        {/* Book 2 (The picked book) */}\n        <motion.path\n          className=\"book-2\"\n          d=\"M12 6v14\"\n          style={{ transformOrigin: \"12px 20px\" }}\n        />\n        {/* Book 3 */}\n        <motion.path\n          className=\"book-3\"\n          d=\"M8 8v12\"\n          style={{ transformOrigin: \"8px 20px\" }}\n        />\n        {/* Book 4 */}\n        <motion.path\n          className=\"book-4\"\n          d=\"M4 4v16\"\n          style={{ transformOrigin: \"4px 20px\" }}\n        />\n      </motion.svg>\n    );\n  },\n);\n\nLibraryIcon.displayName = \"LibraryIcon\";\nexport default LibraryIcon;\n",
+      "type": "registry:ui"
+    },
+    {
+      "path": "icons/types.ts",
+      "content": "import type { SVGProps } from \"react\";\n\nexport type IconEasing =\n  | \"linear\"\n  | \"easeIn\"\n  | \"easeOut\"\n  | \"easeInOut\"\n  | \"circIn\"\n  | \"circOut\"\n  | \"circInOut\"\n  | \"backIn\"\n  | \"backOut\"\n  | \"backInOut\"\n  | \"anticipate\";\n\nexport interface AnimatedIconProps extends Omit<SVGProps<SVGSVGElement>, \"ref\" | \"onAnimationStart\" | \"onAnimationEnd\" | \"onAnimationIteration\" | \"onDrag\" | \"onDragEnd\" | \"onDragEnter\" | \"onDragExit\" | \"onDragLeave\" | \"onDragOver\" | \"onDragStart\" | \"onDrop\" | \"values\"> {\n  /** Icon size in pixels or CSS string */\n  size?: number | string;\n  /** Icon color (defaults to currentColor) */\n  color?: string;\n  /** SVG stroke width */\n  strokeWidth?: number;\n  /** Additional CSS classes */\n  className?: string;\n}\n\nexport interface AnimatedIconHandle {\n  startAnimation: () => void;\n  stopAnimation: () => void;\n}\n",
+      "type": "registry:ui"
+    }
+  ],
+  "type": "registry:ui"
+}

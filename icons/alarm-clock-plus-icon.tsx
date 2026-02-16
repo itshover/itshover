@@ -1,10 +1,36 @@
 import { forwardRef, useImperativeHandle, useRef } from "react";
-import type { AnimatedIconHandle, AnimatedIconProps } from "./types";
+import type {
+  AnimatedIconHandle,
+  AnimatedIconProps,
+  IconEasing,
+} from "./types";
 import { motion, useAnimate } from "motion/react";
 
-const AlarmClockPlusIcon = forwardRef<AnimatedIconHandle, AnimatedIconProps>(
+type CustomStyleProps = {
+  stiffness?: number;
+  damping?: number;
+  durationY?: number;
+  durationX?: number;
+  ease?: IconEasing;
+};
+
+const AlarmClockPlusIcon = forwardRef<
+  AnimatedIconHandle,
+  AnimatedIconProps & CustomStyleProps
+>(
   (
-    { size = 24, color = "currentColor", strokeWidth = 2, className = "" },
+    {
+      size = 24,
+      color = "currentColor",
+      strokeWidth = 2,
+      className = "",
+      stiffness = 200,
+      damping = 25,
+      durationY = 0.2,
+      durationX = 0.3,
+      ease = "linear",
+      ...props
+    },
     ref,
   ) => {
     const [scope, animate] = useAnimate();
@@ -22,8 +48,13 @@ const AlarmClockPlusIcon = forwardRef<AnimatedIconHandle, AnimatedIconProps>(
             x: [-1, 1, -1, 1, -1, 0],
           },
           {
-            y: { duration: 0.2, type: "spring", stiffness: 200, damping: 25 },
-            x: { duration: 0.3, repeat: Infinity, ease: "linear" },
+            y: {
+              duration: durationY,
+              type: "spring",
+              stiffness: stiffness,
+              damping: damping,
+            },
+            x: { duration: durationX, repeat: Infinity, ease: ease },
           },
         ),
       );
@@ -36,8 +67,13 @@ const AlarmClockPlusIcon = forwardRef<AnimatedIconHandle, AnimatedIconProps>(
             x: [-2, 2, -2, 2, -2, 0],
           },
           {
-            y: { duration: 0.2, type: "spring", stiffness: 200, damping: 25 },
-            x: { duration: 0.3, repeat: Infinity, ease: "linear" },
+            y: {
+              duration: durationY,
+              type: "spring",
+              stiffness: stiffness,
+              damping: damping,
+            },
+            x: { duration: durationX, repeat: Infinity, ease: ease },
           },
         ),
       );
@@ -45,7 +81,7 @@ const AlarmClockPlusIcon = forwardRef<AnimatedIconHandle, AnimatedIconProps>(
       await animate(
         ".plus",
         { scale: [1, 1.2, 1] },
-        { duration: 0.4, ease: "easeOut" },
+        { duration: durationY, ease: "easeOut" },
       );
     };
 
@@ -53,8 +89,8 @@ const AlarmClockPlusIcon = forwardRef<AnimatedIconHandle, AnimatedIconProps>(
       animationControls.current.forEach((control) => control.stop());
       animationControls.current = [];
 
-      animate(".clock", { y: 0, x: 0 }, { duration: 0.2 });
-      animate(".bells", { y: 0, x: 0 }, { duration: 0.2 });
+      animate(".clock", { y: 0, x: 0 }, { duration: durationY * 2 });
+      animate(".bells", { y: 0, x: 0 }, { duration: durationY * 2 });
     };
 
     useImperativeHandle(ref, () => {
@@ -89,6 +125,8 @@ const AlarmClockPlusIcon = forwardRef<AnimatedIconHandle, AnimatedIconProps>(
         strokeLinejoin="round"
         className={`cursor-pointer ${className}`}
         style={{ overflow: "visible" }}
+        aria-hidden="true"
+        {...props}
       >
         <motion.circle className="clock" cx="12" cy="13" r="8" />
         <motion.path
