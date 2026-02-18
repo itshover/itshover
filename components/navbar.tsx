@@ -77,19 +77,6 @@ const Navbar = () => {
         </nav>
 
         <div className="hidden flex-1 items-center justify-end gap-2 sm:gap-2 md:flex md:justify-end">
-          <Tooltip>
-            <TooltipTrigger asChild>
-              <button
-                onClick={handleCopyCA}
-                className="hover:text-foreground/80 text-foreground/60 mr-2 flex items-center justify-center text-sm font-bold transition-colors"
-              >
-                $
-              </button>
-            </TooltipTrigger>
-            <TooltipContent>
-              <p className="font-mono">{copied ? "Copied!" : CA}</p>
-            </TooltipContent>
-          </Tooltip>
           <GithubStars />
           <Link
             target="__blank"
@@ -108,25 +95,33 @@ const Navbar = () => {
 
           <ModeToggle />
 
-          <button
-            onClick={toggleCommandMenu}
-            className="text-muted-foreground dark:bg-muted/20 relative flex w-fit cursor-pointer items-center justify-start rounded-xl border border-transparent bg-white px-4 py-2 text-sm shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),0px_1px_0px_0px_rgba(25,28,33,0.02),0px_0px_0px_1px_rgba(25,28,33,0.08)] dark:border-white/20"
-          >
-            <div className="flex items-center">
-              <MagnifierIcon className="text-neutral-500" size={18} />
-            </div>
-            <input
-              type="text"
-              readOnly
-              placeholder="Search Components..."
+          <div className="flex flex-col items-end gap-1">
+            <button
               onClick={toggleCommandMenu}
-              onFocus={toggleCommandMenu}
-              className="hover:text-foreground/80 text-foreground/60 w-32 cursor-pointer bg-transparent pr-4 pl-2 text-xs font-medium transition-colors outline-none sm:text-sm xl:w-40"
-            />
-            <Kbd>
-              <span className="text-xs">{isMac() ? "⌘" : "Ctrl+"}</span>K
-            </Kbd>
-          </button>
+              className="text-muted-foreground dark:bg-muted/20 relative flex w-fit cursor-pointer items-center justify-start rounded-xl border border-transparent bg-white px-4 py-2 text-sm shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),0px_1px_0px_0px_rgba(25,28,33,0.02),0px_0px_0px_1px_rgba(25,28,33,0.08)] dark:border-white/20"
+            >
+              <div className="flex items-center">
+                <MagnifierIcon className="text-neutral-500" size={18} />
+              </div>
+              <input
+                type="text"
+                readOnly
+                placeholder="Search Components..."
+                onClick={toggleCommandMenu}
+                onFocus={toggleCommandMenu}
+                className="hover:text-foreground/80 text-foreground/60 w-32 cursor-pointer bg-transparent pr-4 pl-2 text-xs font-medium transition-colors outline-none sm:text-sm xl:w-40"
+              />
+              <Kbd>
+                <span className="text-xs">{isMac() ? "⌘" : "Ctrl+"}</span>K
+              </Kbd>
+            </button>
+            <button
+              onClick={handleCopyCA}
+              className="text-muted-foreground hover:text-foreground font-mono text-[10px] transition-colors"
+            >
+              {copied ? "Copied!" : `CA: ${CA.slice(0, 6)}...${CA.slice(-4)}`}
+            </button>
+          </div>
         </div>
 
         <div className="flex items-center md:hidden">
@@ -168,34 +163,31 @@ const Navbar = () => {
             >
               Example
             </Link>
-            <button
-              onClick={() => {
-                setIsMobileMenuOpen(false);
-                toggleCommandMenu();
-              }}
-              className="text-muted-foreground flex w-full items-center justify-between rounded-lg border border-white/10 bg-white/5 px-3 py-2 text-sm"
-            >
-              <div className="flex items-center gap-2">
-                <MagnifierIcon className="text-neutral-500" size={16} />
-                <span>Search...</span>
-              </div>
-            </button>
+            <div className="flex flex-col gap-2">
+              <button
+                onClick={() => {
+                  setIsMobileMenuOpen(false);
+                  toggleCommandMenu();
+                }}
+                className="text-muted-foreground flex w-full items-center justify-between rounded-lg border border-white/10 bg-white/5 px-3 py-2 text-sm"
+              >
+                <div className="flex items-center gap-2">
+                  <MagnifierIcon className="text-neutral-500" size={16} />
+                  <span>Search...</span>
+                </div>
+              </button>
+              <button
+                onClick={handleCopyCA}
+                className="text-muted-foreground hover:text-foreground self-start font-mono text-xs transition-colors"
+              >
+                {copied
+                  ? "Copied!"
+                  : `CA: ${CA.slice(0, 10)}...${CA.slice(-6)}`}
+              </button>
+            </div>
 
             <div className="flex items-center justify-between border-t border-white/10 pt-4">
               <div className="flex items-center gap-4">
-                <Tooltip>
-                  <TooltipTrigger asChild>
-                    <button
-                      onClick={handleCopyCA}
-                      className="hover:text-foreground/80 text-foreground/60 flex items-center justify-center text-sm font-bold transition-colors"
-                    >
-                      $
-                    </button>
-                  </TooltipTrigger>
-                  <TooltipContent>
-                    <p className="font-mono">{copied ? "Copied!" : CA}</p>
-                  </TooltipContent>
-                </Tooltip>
                 <Link
                   target="_blank"
                   className="hover:text-foreground/80 text-foreground/60 text-sm font-medium transition-colors"
