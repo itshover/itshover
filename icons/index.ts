@@ -259,6 +259,7 @@ import BrandLmStudioIcon from "./brand-lmstudio-icon";
 import BrandMidJourneyIcon from "./brand-midjourney-icon";
 import BrandOllamaIcon from "./brand-ollama-icon";
 import BrandWordPressIcon from "./brand-wordpress-icon";
+import BrainCircuitIcon from "./brain-circuit-icon";
 
 export interface IconType {
   name: string;
@@ -1800,6 +1801,11 @@ const ICON_LIST: IconType[] = [
     name: "letter-z-icon",
     icon: LetterZIcon,
     keywords: ["letter", "z", "alphabet", "text", "character", "typography"],
+  },
+  {
+    name: "brain-circuit-icon",
+    icon: BrainCircuitIcon,
+    keywords: ["brain", "ai", "circuit", "intelligence", "neural", "mind"],
   },
   {
     name: "brand-anthropic-icon",

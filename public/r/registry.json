@@ -685,6 +685,23 @@
       ]
     },
     {
+      "name": "brain-circuit-icon",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": ["motion"],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "icons/brain-circuit-icon.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "icons/types.ts",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
       "name": "brand-aistudio-icon",
       "type": "registry:ui",
       "registryDependencies": [],
