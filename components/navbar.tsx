@@ -14,27 +14,12 @@ import AlignCenterIcon from "@/icons/align-center-icon";
 import XIcon from "@/icons/x-icon";
 import { isMac } from "@/lib/utils";
 
-import {
-  Tooltip,
-  TooltipContent,
-  TooltipTrigger,
-} from "@/components/ui/tooltip";
-
-const CA = "4mJWmrjmB3hfYkP1F7rExKd31Shh4yUFNZ3EKvCupump";
-
 const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const [copied, setCopied] = useState(false);
   const { toggle: toggleCommandMenu } = useCommandMenu();
 
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
-  };
-
-  const handleCopyCA = () => {
-    navigator.clipboard.writeText(CA);
-    setCopied(true);
-    setTimeout(() => setCopied(false), 2000);
   };
 
   return (
@@ -77,19 +62,6 @@ const Navbar = () => {
         </nav>
 
         <div className="hidden flex-1 items-center justify-end gap-2 sm:gap-2 md:flex md:justify-end">
-          <Tooltip>
-            <TooltipTrigger asChild>
-              <button
-                onClick={handleCopyCA}
-                className="hover:text-foreground/80 text-foreground/60 mr-2 flex items-center justify-center text-sm font-bold transition-colors"
-              >
-                $
-              </button>
-            </TooltipTrigger>
-            <TooltipContent>
-              <p className="font-mono">{copied ? "Copied!" : CA}</p>
-            </TooltipContent>
-          </Tooltip>
           <GithubStars />
           <Link
             target="__blank"
@@ -183,19 +155,6 @@ const Navbar = () => {
 
             <div className="flex items-center justify-between border-t border-white/10 pt-4">
               <div className="flex items-center gap-4">
-                <Tooltip>
-                  <TooltipTrigger asChild>
-                    <button
-                      onClick={handleCopyCA}
-                      className="hover:text-foreground/80 text-foreground/60 flex items-center justify-center text-sm font-bold transition-colors"
-                    >
-                      $
-                    </button>
-                  </TooltipTrigger>
-                  <TooltipContent>
-                    <p className="font-mono">{copied ? "Copied!" : CA}</p>
-                  </TooltipContent>
-                </Tooltip>
                 <Link
                   target="_blank"
                   className="hover:text-foreground/80 text-foreground/60 text-sm font-medium transition-colors"
