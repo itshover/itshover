@@ -132,10 +132,6 @@ export const ICONS = [
     path: "/icons/bookmark-icon",
   },
   {
-    name: "brain circuit icon",
-    path: "/icons/brain-circuit-icon",
-  },
-  {
     name: "brand google icon",
     path: "/icons/brand-google-icon",
   },
