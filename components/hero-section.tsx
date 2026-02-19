@@ -15,18 +15,8 @@ import SendIcon from "@/icons/send-icon";
 import GhostIcon from "@/icons/ghost-icon";
 import ArrowNarrowRightIcon from "@/icons/arrow-narrow-right-icon";
 import type { AnimatedIconHandle } from "@/icons/types";
-import { useState } from "react";
-
-const CA = "4mJWmrjmB3hfYkP1F7rExKd31Shh4yUFNZ3EKvCupump";
 
 const Hero = () => {
-  const [copied, setCopied] = useState(false);
-
-  const handleCopyCA = () => {
-    navigator.clipboard.writeText(CA);
-    setCopied(true);
-    setTimeout(() => setCopied(false), 2000);
-  };
   const textAnimation = {
     initial: {
       opacity: 0,
@@ -72,27 +62,19 @@ const Hero = () => {
         initial="initial"
         animate="animate"
         transition={textAnimation.transition}
-        className="mt-8 flex flex-col items-center gap-4"
+        className="mt-8 flex flex-col items-center gap-4 sm:flex-row"
       >
-        <div className="flex flex-col items-center gap-4 sm:flex-row">
-          <Link href="/icons">
-            <PrimaryButton className="cursor-pointer lowercase">
-              Browse Icons
-              <ArrowNarrowRightIcon className="ml-2 h-4 w-4" />
-            </PrimaryButton>
-          </Link>
-          <Link href="/sponsor">
-            <SecondaryButton className="cursor-pointer lowercase">
-              Sponsor
-            </SecondaryButton>
-          </Link>
-        </div>
-        <button
-          onClick={handleCopyCA}
-          className="text-muted-foreground hover:text-foreground mt-2 font-mono text-sm transition-colors"
-        >
-          {copied ? "Copied!" : `CA: ${CA}`}
-        </button>
+        <Link href="/icons">
+          <PrimaryButton className="cursor-pointer lowercase">
+            Browse Icons
+            <ArrowNarrowRightIcon className="ml-2 h-4 w-4" />
+          </PrimaryButton>
+        </Link>
+        <Link href="/sponsor">
+          <SecondaryButton className="cursor-pointer lowercase">
+            Sponsor
+          </SecondaryButton>
+        </Link>
       </motion.div>
     </section>
   );
