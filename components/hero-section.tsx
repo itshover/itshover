@@ -15,18 +15,8 @@ import SendIcon from "@/icons/send-icon";
 import GhostIcon from "@/icons/ghost-icon";
 import ArrowNarrowRightIcon from "@/icons/arrow-narrow-right-icon";
 import type { AnimatedIconHandle } from "@/icons/types";
-import { useState } from "react";
-
-const CA = "4mJWmrjmB3hfYkP1F7rExKd31Shh4yUFNZ3EKvCupump";
 
 const Hero = () => {
-  const [copied, setCopied] = useState(false);
-
-  const handleCopyCA = () => {
-    navigator.clipboard.writeText(CA);
-    setCopied(true);
-    setTimeout(() => setCopied(false), 2000);
-  };
   const textAnimation = {
     initial: {
       opacity: 0,
@@ -87,12 +77,6 @@ const Hero = () => {
             </SecondaryButton>
           </Link>
         </div>
-        <button
-          onClick={handleCopyCA}
-          className="text-muted-foreground hover:text-foreground mt-2 font-mono text-sm transition-colors"
-        >
-          {copied ? "Copied!" : `CA: ${CA}`}
-        </button>
       </motion.div>
     </section>
   );
