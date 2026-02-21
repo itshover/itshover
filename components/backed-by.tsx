@@ -3,9 +3,10 @@
 import { motion } from "motion/react";
 import Link from "next/link";
 import SecondaryButton from "./ui/secondary-button";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Image from "next/image";
 import PenIcon from "./ui/pen-icon";
+import { LINKS } from "@/constants";
 
 interface SponsorProps {
   name: string;
@@ -34,6 +35,14 @@ const SponsorCard = ({ sponsor }: { sponsor: SponsorProps }) => {
       setLogoPreview(url);
     }
   };
+
+  useEffect(() => {
+    return () => {
+      if (logoPreview) {
+        URL.revokeObjectURL(logoPreview);
+      }
+    };
+  }, [logoPreview]);
 
   return (
     <motion.div
@@ -203,7 +212,7 @@ export default function BackedBy() {
       editable: true,
       action: {
         label: "Contact Us",
-        href: "https://x.com/abhijitwt",
+        href: LINKS.CREATOR,
       },
     },
   ];
@@ -217,10 +226,7 @@ export default function BackedBy() {
         viewport={{ once: true }}
         className="mb-16 flex flex-col items-center space-y-4 text-center"
       >
-        <h2
-          className="font-serif text-3xl md:text-4xl"
-          style={{ fontFamily: "Georgia, serif" }}
-        >
+        <h2 className="font-serif text-3xl md:text-4xl">
           Backed By
         </h2>
         <p className="text-muted-foreground max-w-2xl px-4">
