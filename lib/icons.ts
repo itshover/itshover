@@ -8,6 +8,10 @@ export const ICONS = [
     path: "/icons/airplane-icon",
   },
   {
+    name: "calendar icon",
+    path: "/icons/calendar-icon",
+  },
+  {
     name: "alarm clock plus icon",
     path: "/icons/alarm-clock-plus-icon",
   },
