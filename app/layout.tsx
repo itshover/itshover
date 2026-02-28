@@ -9,6 +9,7 @@ import { CommandMenuProvider } from "@/components/command-menu-context";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { LINKS } from "@/constants";
 import { Analytics } from "@vercel/analytics/react";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import { GithubStarsProvider } from "@/components/github-stars-context";
 import UmamiAnalytics from "@/components/UmamiAnalytics";
 
@@ -73,6 +74,7 @@ export default function RootLayout({
           </GithubStarsProvider>
         </ThemeProvider>
         <Analytics />
+        <SpeedInsights />
         <UmamiAnalytics />
       </body>
     </html>
