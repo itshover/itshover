@@ -73,8 +73,8 @@ export default function VideoCard({
       viewport={{ once: true }}
       className={`group hover:border-primary/40 hover:shadow-primary/10 relative flex flex-col overflow-hidden rounded-3xl border border-white/10 bg-black/40 backdrop-blur-md transition-all hover:shadow-2xl ${
         aspectRatio === "reel"
-          ? "mx-auto h-[500px] w-full max-w-[320px]"
-          : "h-[500px] w-full"
+          ? "mx-auto aspect-[9/16] w-full max-w-[320px]"
+          : "aspect-video w-full"
       } ${className}`}
     >
       <video
