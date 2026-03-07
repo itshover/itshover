@@ -2,15 +2,12 @@
 
 import React, { useRef, useState } from "react";
 import Link from "next/link";
-
 import UserCheckIcon from "../ui/user-check-icon";
 import GearIcon from "../ui/gear-icon";
 import FilledBellIcon from "../ui/filled-bell-icon";
 import MoonIcon from "../ui/moon-icon";
 import LogoutIcon from "../ui/logout-icon";
-
 import type { AnimatedIconHandle, AnimatedIconProps } from "../ui/types";
-import { log } from "console";
 
 interface DropdownItemProps {
   icon: React.ComponentType<
@@ -46,19 +43,21 @@ const DropdownItem = ({
 
   const content = (
     <>
-      <div className="flex items-center gap-3">
+      <div className="flex items-center gap-3 min-w-0">
         <Icon
           ref={ref}
-          className="text-muted-foreground group-hover:text-foreground h-5 w-5 transition-colors"
+          className="text-muted-foreground group-hover:text-foreground h-5 w-5 shrink-0 transition-colors"
           disableHover={!isAnimated}
         />
-        <span className="text-muted-foreground group-hover:text-foreground text-sm font-medium">
+        <span className="text-muted-foreground group-hover:text-foreground text-sm font-medium truncate">
           {label}
         </span>
       </div>
 
       {rightElement && (
-        <div className="ml-auto flex items-center">{rightElement}</div>
+        <div className="ml-auto flex items-center shrink-0">
+          {rightElement}
+        </div>
       )}
     </>
   );
@@ -79,16 +78,16 @@ const DropdownItem = ({
   }
 
   if (rightElement) {
-  return (
-    <div
-      className="flex items-center rounded-xl px-4 py-3"
-      onMouseEnter={startAnimation}
-      onMouseLeave={stopAnimation}
-    >
-      {content}
-    </div>
-  );
-}
+    return (
+      <div
+        className="flex items-center rounded-xl px-4 py-3 w-full hover:bg-muted transition-all"
+        onMouseEnter={startAnimation}
+        onMouseLeave={stopAnimation}
+      >
+        {content}
+      </div>
+    );
+  }
 
   return (
     <button
@@ -113,19 +112,21 @@ const ProfileDropdown = ({ isAnimated = true }: ProfileDropdownProps) => {
   const [darkMode, setDarkMode] = useState(false);
 
   return (
-    <div className="bg-card border-border/50 w-[280px] overflow-hidden rounded-2xl border shadow-xl">
+    <div className="bg-card border-border/80 w-full min-w-[260px] max-w-xs overflow-hidden rounded-2xl border shadow-xl">
 
-      <div className="border-border/20 flex items-center gap-3 border-b p-4">
-        <div className="h-10 w-10 rounded-full bg-[linear-gradient(135deg,#020024,#090979,#00d4ff)]" />
+      <div className="border-border/80 flex items-center gap-3 border-b p-4">
 
-        <div className="flex flex-col">
-          <span className="text-foreground text-sm font-semibold">
+        <div className="h-10 w-10 shrink-0 rounded-full bg-[linear-gradient(135deg,#020024,#090979,#00d4ff)]" />
+
+        <div className="flex flex-col min-w-0">
+          <span className="text-foreground text-sm font-semibold truncate">
             John Doe
           </span>
-          <span className="text-muted-foreground text-xs">
+          <span className="text-muted-foreground text-xs truncate">
             johndoe@email.com
           </span>
         </div>
+
       </div>
 
       <div className="space-y-1 p-2">
@@ -133,22 +134,21 @@ const ProfileDropdown = ({ isAnimated = true }: ProfileDropdownProps) => {
         <DropdownItem
           icon={UserCheckIcon}
           label="Profile"
-            onClick={() => console.log("Profile clicked")}
-
+          onClick={() => {}}
           isAnimated={isAnimated}
         />
 
         <DropdownItem
           icon={GearIcon}
           label="Account Settings"
-            onClick={() => console.log("Account Settings clicked")}
+          onClick={() => {}}
           isAnimated={isAnimated}
         />
 
         <DropdownItem
           icon={FilledBellIcon}
           label="Notifications"
-            onClick={() => console.log("Notifications clicked")}
+          onClick={() => {}}
           isAnimated={isAnimated}
         />
 
@@ -162,7 +162,7 @@ const ProfileDropdown = ({ isAnimated = true }: ProfileDropdownProps) => {
               aria-label="Toggle dark mode"
               aria-pressed={darkMode}
               onClick={() => setDarkMode(!darkMode)}
-              className={`relative flex h-5 w-9 items-center rounded-full transition-colors ${darkMode ? "bg-primary" : "bg-muted"
+              className={`relative flex h-5 w-9 items-center rounded-full transition-colors ${darkMode ? "bg-primary" : "bg-gray-400"
                 }`}
             >
               <span
@@ -176,7 +176,7 @@ const ProfileDropdown = ({ isAnimated = true }: ProfileDropdownProps) => {
         <DropdownItem
           icon={LogoutIcon}
           label="Logout"
-          onClick={() => console.log("Logout clicked")}
+          onClick={() => {}}
           isAnimated={isAnimated}
         />
 
