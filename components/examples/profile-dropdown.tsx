@@ -43,21 +43,19 @@ const DropdownItem = ({
 
   const content = (
     <>
-      <div className="flex items-center gap-3 min-w-0">
+      <div className="flex min-w-0 items-center gap-3">
         <Icon
           ref={ref}
           className="text-muted-foreground group-hover:text-foreground h-5 w-5 shrink-0 transition-colors"
           disableHover={!isAnimated}
         />
-        <span className="text-muted-foreground group-hover:text-foreground text-sm font-medium truncate">
+        <span className="text-muted-foreground group-hover:text-foreground truncate text-sm font-medium">
           {label}
         </span>
       </div>
 
       {rightElement && (
-        <div className="ml-auto flex items-center shrink-0">
-          {rightElement}
-        </div>
+        <div className="ml-auto flex shrink-0 items-center">{rightElement}</div>
       )}
     </>
   );
@@ -80,7 +78,7 @@ const DropdownItem = ({
   if (rightElement) {
     return (
       <div
-        className="flex items-center rounded-xl px-4 py-3 w-full hover:bg-muted transition-all"
+        className="group hover:bg-muted flex w-full items-center rounded-xl px-4 py-3 transition-all"
         onMouseEnter={startAnimation}
         onMouseLeave={stopAnimation}
       >
@@ -112,25 +110,21 @@ const ProfileDropdown = ({ isAnimated = true }: ProfileDropdownProps) => {
   const [darkMode, setDarkMode] = useState(false);
 
   return (
-    <div className="bg-card border-border/80 w-full min-w-[260px] max-w-xs overflow-hidden rounded-2xl border shadow-xl">
-
+    <div className="bg-card border-border/80 w-full max-w-xs min-w-[260px] overflow-hidden rounded-2xl border shadow-xl">
       <div className="border-border/80 flex items-center gap-3 border-b p-4">
-
         <div className="h-10 w-10 shrink-0 rounded-full bg-[linear-gradient(135deg,#020024,#090979,#00d4ff)]" />
 
-        <div className="flex flex-col min-w-0">
-          <span className="text-foreground text-sm font-semibold truncate">
+        <div className="flex min-w-0 flex-col">
+          <span className="text-foreground truncate text-sm font-semibold">
             John Doe
           </span>
-          <span className="text-muted-foreground text-xs truncate">
+          <span className="text-muted-foreground truncate text-xs">
             johndoe@email.com
           </span>
         </div>
-
       </div>
 
       <div className="space-y-1 p-2">
-
         <DropdownItem
           icon={UserCheckIcon}
           label="Profile"
@@ -162,12 +156,14 @@ const ProfileDropdown = ({ isAnimated = true }: ProfileDropdownProps) => {
               aria-label="Toggle dark mode"
               aria-pressed={darkMode}
               onClick={() => setDarkMode(!darkMode)}
-              className={`relative flex h-5 w-9 items-center rounded-full transition-colors ${darkMode ? "bg-primary" : "bg-gray-400"
-                }`}
+              className={`relative flex h-5 w-9 items-center rounded-full transition-colors ${
+                darkMode ? "bg-primary" : "bg-gray-400"
+              }`}
             >
               <span
-                className={`h-4 w-4 transform rounded-full bg-white transition-transform ${darkMode ? "translate-x-4" : "translate-x-0.5"
-                  }`}
+                className={`h-4 w-4 transform rounded-full bg-white transition-transform ${
+                  darkMode ? "translate-x-4" : "translate-x-0.5"
+                }`}
               />
             </button>
           }
@@ -179,7 +175,6 @@ const ProfileDropdown = ({ isAnimated = true }: ProfileDropdownProps) => {
           onClick={() => {}}
           isAnimated={isAnimated}
         />
-
       </div>
     </div>
   );
