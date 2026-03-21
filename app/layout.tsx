@@ -12,6 +12,8 @@ import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { GithubStarsProvider } from "@/components/github-stars-context";
 import UmamiAnalytics from "@/components/UmamiAnalytics";
+import { ProductBanner } from "@/components/product-banner";
+import { CenterPopup } from "@/components/center-popup";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -66,10 +68,12 @@ export default function RootLayout({
             <CommandMenuProvider>
               <TooltipProvider>
                 <CommandMenu />
-                <Navbar />
-                {children}
-                <Footer />
-              </TooltipProvider>
+                  <ProductBanner />
+                  <Navbar />
+                  {children}
+                  <Footer />
+                  <CenterPopup />
+                </TooltipProvider>
             </CommandMenuProvider>
           </GithubStarsProvider>
         </ThemeProvider>
