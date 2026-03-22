@@ -24,6 +24,7 @@ import type { AnimatedIconHandle } from "@/icons/types";
 import UsersIcon from "@/icons/users-icon";
 import RocketIcon from "@/icons/rocket-icon";
 import DownChevron from "@/icons/down-chevron";
+import HistoryCircleIcon from "@/icons/history-circle-icon";
 
 const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -80,7 +81,9 @@ const Navbar = () => {
               onClick={() => setProductsDropdownOpen(!productsDropdownOpen)}
               onMouseEnter={() => productsIconRef.current?.startAnimation()}
               onMouseLeave={() => productsIconRef.current?.stopAnimation()}
-              onBlur={() => setTimeout(() => setProductsDropdownOpen(false), 200)}
+              onBlur={() =>
+                setTimeout(() => setProductsDropdownOpen(false), 200)
+              }
               className={cn(
                 "hover:text-foreground/80 text-muted-foreground flex items-center gap-1 transition-colors",
                 productsDropdownOpen && "text-foreground",
@@ -108,7 +111,9 @@ const Navbar = () => {
                   <Link
                     href={LINKS.HOLDERS}
                     target="_blank"
-                    onMouseEnter={() => holdersIconRef.current?.startAnimation()}
+                    onMouseEnter={() =>
+                      holdersIconRef.current?.startAnimation()
+                    }
                     onMouseLeave={() => holdersIconRef.current?.stopAnimation()}
                     className="hover:bg-muted flex w-full items-center gap-2 rounded-lg px-3 py-2 text-left text-sm transition-colors"
                   >
@@ -137,6 +142,12 @@ const Navbar = () => {
               )}
             </AnimatePresence>
           </div>
+          <Link
+            className="hover:text-foreground/80 text-muted-foreground transition-colors"
+            href={LINKS.TIMELINE}
+          >
+            timeline
+          </Link>
           <Link
             className="hover:text-foreground/80 text-muted-foreground transition-colors"
             href="/example"
@@ -301,6 +312,13 @@ const Navbar = () => {
               onClick={() => setIsMobileMenuOpen(false)}
             >
               Tools
+            </Link>
+            <Link
+              className="hover:text-foreground/80 text-muted-foreground text-sm font-medium transition-colors"
+              href={LINKS.TIMELINE}
+              onClick={() => setIsMobileMenuOpen(false)}
+            >
+              Timeline
             </Link>
             <Link
               className="hover:text-foreground/80 text-muted-foreground text-sm font-medium transition-colors"

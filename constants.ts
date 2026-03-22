@@ -12,6 +12,7 @@ export const LINKS = {
   HOLDERS: "https://holders.itshover.com",
   TOKEN_SITE: "https://token.itshover.com",
   TOOLS: "https://tools.itshover.com",
+  TIMELINE: "/timeline",
 } as const;
 
 export const SPONSOR = {
