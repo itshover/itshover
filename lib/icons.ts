@@ -136,6 +136,10 @@ export const ICONS = [
     path: "/icons/brain-circuit-icon",
   },
   {
+    name: "brand chrome icon",
+    path: "/icons/brand-chrome-icon",
+  },
+  {
     name: "brand google icon",
     path: "/icons/brand-google-icon",
   },
