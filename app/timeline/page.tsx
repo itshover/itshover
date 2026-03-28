@@ -476,6 +476,16 @@ const entries: TimelineEntry[] = [
     category: "milestone",
     content: "2035035562604978304",
   },
+  {
+    id: "45",
+    date: "Mar 23, 2026",
+    title: "the first real utility for $HOVER",
+    description:
+      "introducing the first real utility for $HOVER. meet tools.itshover.com. built for devs who care about performance and control.",
+    type: "tweet",
+    category: ["bags-hackathon", "release"],
+    content: "2036097990759502186",
+  },
 ];
 
 export default function TimelinePage() {

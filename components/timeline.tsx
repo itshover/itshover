@@ -27,7 +27,7 @@ export interface TimelineEntry {
   content: string; // tweet ID, image URL, video ID, or link URL
   link?: string;
   image?: string;
-  category: TimelineCategory;
+  category: TimelineCategory | TimelineCategory[];
   action?: {
     label: string;
     href: string;
@@ -199,7 +199,11 @@ export const Timeline = ({ entries }: { entries: TimelineEntry[] }) => {
     let result = entries
       .map((entry, index) => ({ ...entry, originalIndex: index }))
       .filter((entry) => {
-        const matchesCategory = selectedCategory === "all" || entry.category === selectedCategory;
+        const matchesCategory =
+          selectedCategory === "all" ||
+          (Array.isArray(entry.category)
+            ? entry.category.includes(selectedCategory)
+            : entry.category === selectedCategory);
         const searchLower = search.toLowerCase();
         const matchesSearch = 
           entry.title.toLowerCase().includes(searchLower) ||
