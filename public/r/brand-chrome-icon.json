@@ -1,0 +1,20 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "brand-chrome-icon",
+  "dependencies": ["motion"],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "icons/brand-chrome-icon.tsx",
+      "content": "\"use client\";\r\nimport { forwardRef, useImperativeHandle } from \"react\";\r\nimport type { AnimatedIconHandle, AnimatedIconProps } from \"./types\";\r\nimport { motion, useAnimate } from \"motion/react\";\r\n\r\nconst BrandChromeIcon = forwardRef<AnimatedIconHandle, AnimatedIconProps>(\r\n  (\r\n    { size = 24, color = \"currentColor\", strokeWidth = 2, className = \"\" },\r\n    ref,\r\n  ) => {\r\n    const [scope, animate] = useAnimate();\r\n\r\n    const start = () => {\r\n      animate(\".chrome-center\", { scale: [1, 1.15, 1] }, { duration: 0.3 });\r\n      animate(\r\n        \".chrome-rotator\",\r\n        { rotate: 90 },\r\n        { duration: 0.5, ease: [0.34, 1.56, 0.64, 1] },\r\n      );\r\n    };\r\n\r\n    const stop = () => {\r\n      animate(\".chrome-rotator\", { rotate: 0 }, { duration: 0.3 });\r\n      animate(\".chrome-center\", { scale: 1 }, { duration: 0.2 });\r\n    };\r\n\r\n    useImperativeHandle(ref, () => ({\r\n      startAnimation: start,\r\n      stopAnimation: stop,\r\n    }));\r\n\r\n    return (\r\n      <motion.svg\r\n        ref={scope}\r\n        onHoverStart={start}\r\n        onHoverEnd={stop}\r\n        xmlns=\"http://www.w3.org/2000/svg\"\r\n        width={size}\r\n        height={size}\r\n        viewBox=\"0 0 24 24\"\r\n        fill=\"none\"\r\n        stroke={color}\r\n        strokeWidth={strokeWidth}\r\n        strokeLinecap=\"round\"\r\n        strokeLinejoin=\"round\"\r\n        className={`cursor-pointer ${className}`}\r\n      >\r\n        <path stroke=\"none\" d=\"M0 0h24v24H0z\" fill=\"none\" />\r\n        <motion.g className=\"chrome-rotator\" style={{ transformOrigin: \"center\" }}>\r\n          <path d=\"M3 12a9 9 0 1 0 18 0a9 9 0 1 0 -18 0\" />\r\n          <path d=\"M12 9h8.4\" />\r\n          <path d=\"M14.598 13.5l-4.2 7.275\" />\r\n          <path d=\"M9.402 13.5l-4.2 -7.275\" />\r\n          <circle cx=\"12\" cy=\"12\" r=\"3\" stroke=\"none\" className=\"fill-background\" />\r\n          <motion.path\r\n            className=\"chrome-center\"\r\n            d=\"M9 12a3 3 0 1 0 6 0a3 3 0 1 0 -6 0\"\r\n            style={{ transformOrigin: \"center\" }}\r\n          />\r\n        </motion.g>\r\n      </motion.svg>\r\n    );\r\n  },\r\n);\r\n\r\nBrandChromeIcon.displayName = \"BrandChromeIcon\";\r\n\r\nexport default BrandChromeIcon;\r\n",
+      "type": "registry:ui"
+    },
+    {
+      "path": "icons/types.ts",
+      "content": "import type { SVGProps } from \"react\";\r\n\r\nexport type IconEasing =\r\n  | \"linear\"\r\n  | \"easeIn\"\r\n  | \"easeOut\"\r\n  | \"easeInOut\"\r\n  | \"circIn\"\r\n  | \"circOut\"\r\n  | \"circInOut\"\r\n  | \"backIn\"\r\n  | \"backOut\"\r\n  | \"backInOut\"\r\n  | \"anticipate\";\r\n\r\nexport interface AnimatedIconProps extends Omit<\r\n  SVGProps<SVGSVGElement>,\r\n  | \"ref\"\r\n  | \"onAnimationStart\"\r\n  | \"onAnimationEnd\"\r\n  | \"onAnimationIteration\"\r\n  | \"onDrag\"\r\n  | \"onDragEnd\"\r\n  | \"onDragEnter\"\r\n  | \"onDragExit\"\r\n  | \"onDragLeave\"\r\n  | \"onDragOver\"\r\n  | \"onDragStart\"\r\n  | \"onDrop\"\r\n  | \"values\"\r\n> {\r\n  /** Icon size in pixels or CSS string */\r\n  size?: number | string;\r\n  /** Icon color (defaults to currentColor) */\r\n  color?: string;\r\n  /** SVG stroke width */\r\n  strokeWidth?: number;\r\n  /** Additional CSS classes */\r\n  className?: string;\r\n}\r\n\r\nexport interface AnimatedIconHandle {\r\n  startAnimation: () => void;\r\n  stopAnimation: () => void;\r\n}\r\n",
+      "type": "registry:ui"
+    }
+  ],
+  "type": "registry:ui"
+}
