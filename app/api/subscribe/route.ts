@@ -10,7 +10,7 @@ export async function POST(req: Request) {
     if (!email || !email.includes("@")) {
       return NextResponse.json(
         { error: "invalid email address" },
-        { status: 400 }
+        { status: 400 },
       );
     }
 
@@ -27,7 +27,7 @@ export async function POST(req: Request) {
       }
     }
 
-    // 2. Send the welcome email using the Resend REST API 
+    // 2. Send the welcome email using the Resend REST API
     // Trying the 'variables' key which matches your template definition snippet
     const response = await fetch("https://api.resend.com/emails", {
       method: "POST",
@@ -53,15 +53,15 @@ export async function POST(req: Request) {
 
     if (!response.ok) {
       console.error("Resend API error:", result);
-      return NextResponse.json({ error: result.message || "failed to send email" }, { status: 400 });
+      return NextResponse.json(
+        { error: result.message || "failed to send email" },
+        { status: 400 },
+      );
     }
 
     return NextResponse.json({ success: true });
-  } catch (err: any) {
+  } catch (err: unknown) {
     console.error("Subscription error:", err);
-    return NextResponse.json(
-      { error: "failed to subscribe" },
-      { status: 500 }
-    );
+    return NextResponse.json({ error: "failed to subscribe" }, { status: 500 });
   }
 }

@@ -1,21 +1,23 @@
 "use client";
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { LINKS } from "@/constants";
 import Link from "next/link";
 
 export const ProductBanner = () => {
-  const [show, setShow] = useState(false);
+  const [show, setShow] = useState(() => {
+    if (typeof window === "undefined") return true;
+    return !sessionStorage.getItem("banner_dismissed");
+  });
 
-  useEffect(() => {
-    if (!sessionStorage.getItem("banner_dismissed")) {
-      setShow(true);
-    }
-  }, []);
+  const handleDismiss = () => {
+    setShow(false);
+    sessionStorage.setItem("banner_dismissed", "true");
+  };
 
   if (!show) return null;
 
   return (
-    <div className="bg-primary relative flex w-full flex-wrap items-center justify-center gap-2 px-12 py-2 text-black text-xs sm:text-sm font-semibold">
+    <div className="bg-primary relative flex w-full flex-wrap items-center justify-center gap-2 px-12 py-2 text-xs font-semibold text-black sm:text-sm">
       {"Hold "}
       <Link
         href={LINKS.BAGS}
@@ -25,7 +27,7 @@ export const ProductBanner = () => {
         {"$HOVER tokens"}
       </Link>
       {" to unlock premium features — or burn them instantly for access."}
-      <div className="flex items-center gap-2 ml-1">
+      <div className="ml-1 flex items-center gap-2">
         <Link
           href={LINKS.HOLDERS}
           target="_blank"
@@ -42,11 +44,13 @@ export const ProductBanner = () => {
         </Link>
       </div>
       <button
-        onClick={() => {
-          setShow(false);
-          sessionStorage.setItem("banner_dismissed", "true");
+        onClick={handleDismiss}
+        style={{
+          position: "absolute",
+          right: "12px",
+          top: "50%",
+          transform: "translateY(-50%)",
         }}
-        style={{ position: "absolute", right: "12px", top: "50%", transform: "translateY(-50%)" }}
         className="cursor-pointer text-lg font-bold text-black/50 hover:text-black"
         aria-label="Close"
       >

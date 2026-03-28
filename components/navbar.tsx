@@ -24,7 +24,6 @@ import type { AnimatedIconHandle } from "@/icons/types";
 import UsersIcon from "@/icons/users-icon";
 import RocketIcon from "@/icons/rocket-icon";
 import DownChevron from "@/icons/down-chevron";
-import HistoryCircleIcon from "@/icons/history-circle-icon";
 
 const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);

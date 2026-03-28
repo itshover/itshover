@@ -47,7 +47,7 @@ export const StickyBanner = ({
       }}
     >
       <div className="bg-background/80 relative flex w-full max-w-4xl items-center justify-between gap-4 overflow-hidden rounded-2xl border border-white/10 p-4 shadow-[0_8px_32px_0_rgba(0,0,0,0.3)] backdrop-blur-md dark:bg-black/60">
-        <div className="absolute inset-0 bg-linear-to-r from-primary/10 via-transparent to-primary/10 opacity-50" />
+        <div className="from-primary/10 to-primary/10 absolute inset-0 bg-linear-to-r via-transparent opacity-50" />
         {children}
       </div>
     </motion.div>

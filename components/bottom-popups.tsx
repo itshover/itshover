@@ -45,7 +45,7 @@ export const BottomPopups = () => {
   }, []);
 
   return (
-    <div className="fixed bottom-20 right-4 z-50 sm:bottom-24 sm:right-8">
+    <div className="fixed right-4 bottom-20 z-50 sm:right-8 sm:bottom-24">
       <AnimatePresence mode="wait">
         {isVisible && (
           <motion.div
@@ -53,9 +53,9 @@ export const BottomPopups = () => {
             initial={{ opacity: 0, x: 50, scale: 0.9 }}
             animate={{ opacity: 1, x: 0, scale: 1 }}
             exit={{ opacity: 0, x: 50, scale: 0.9 }}
-            className="bg-background/80 flex max-w-[280px] items-center gap-3 overflow-hidden rounded-xl border border-white/10 p-3 shadow-2xl backdrop-blur-xl dark:bg-black/60 sm:max-w-xs"
+            className="bg-background/80 flex max-w-[280px] items-center gap-3 overflow-hidden rounded-xl border border-white/10 p-3 shadow-2xl backdrop-blur-xl sm:max-w-xs dark:bg-black/60"
           >
-            <div className="bg-white/5 flex h-8 w-8 shrink-0 items-center justify-center rounded-lg">
+            <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-white/5">
               {POPUPS[currentIndex].icon}
             </div>
             <p className="text-xs font-medium text-white/90">
@@ -63,7 +63,7 @@ export const BottomPopups = () => {
             </p>
             <button
               onClick={() => setIsVisible(false)}
-              className="hover:text-white ml-auto text-neutral-500 transition-colors"
+              className="ml-auto text-neutral-500 transition-colors hover:text-white"
             >
               <XIcon size={14} />
             </button>

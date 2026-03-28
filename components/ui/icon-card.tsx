@@ -8,6 +8,11 @@ import {
   TooltipContent,
   TooltipTrigger,
 } from "@/components/ui/tooltip";
+import { getIconsContent } from "@/actions/get-icons-content";
+import SimpleCheckedIcon from "@/icons/simple-checked-icon";
+import CopyIcon from "@/icons/copy-icon";
+import TerminalIcon from "@/icons/terminal-icon";
+import { LINKS } from "@/constants";
 import PlayerIcon from "@/icons/player-icon";
 
 const IconCard = ({
@@ -21,10 +26,27 @@ const IconCard = ({
 }) => {
   const iconRef = React.useRef<AnimatedIconHandle>(null);
 
+  const [isCopied, setIsCopied] = React.useState(false);
+  const [isCommandCopied, setIsCommandCopied] = React.useState(false);
+
+  const copyFileToClipboard = async () => {
+    const content = await getIconsContent(name);
+    window.navigator.clipboard.writeText(content);
+    setIsCopied(true);
+    setTimeout(() => setIsCopied(false), 1000);
+  };
+
+  const copyCommandToClipboard = () => {
+    window.navigator.clipboard.writeText(
+      `npx shadcn@latest add ${LINKS.SITE_URL}/r/${name}.json`,
+    );
+    setIsCommandCopied(true);
+    setTimeout(() => setIsCommandCopied(false), 1000);
+  };
+
   const playAnimation = () => {
     iconRef.current?.startAnimation();
 
-    // optional auto-stop so it doesn't loop forever
     setTimeout(() => {
       iconRef.current?.stopAnimation();
     }, 1500);
@@ -56,6 +78,50 @@ const IconCard = ({
         </Tooltip>
       </Link>
 
+      {/* Actions */}
+      <div className="flex items-center gap-2">
+        <Tooltip>
+          <TooltipTrigger asChild>
+            <button
+              className="text-muted-foreground hover:text-foreground transition-colors"
+              onClick={copyFileToClipboard}
+            >
+              {isCopied ? (
+                <SimpleCheckedIcon size={16} className="text-green-500" />
+              ) : (
+                <CopyIcon size={16} />
+              )}
+            </button>
+          </TooltipTrigger>
+          <TooltipContent
+            side="bottom"
+            className="bg-foreground text-background"
+          >
+            <p>Copy {name}.tsx file</p>
+          </TooltipContent>
+        </Tooltip>
+
+        <Tooltip>
+          <TooltipTrigger asChild>
+            <button
+              onClick={copyCommandToClipboard}
+              className="text-muted-foreground hover:text-foreground transition-colors"
+            >
+              {isCommandCopied ? (
+                <SimpleCheckedIcon size={16} className="text-green-500" />
+              ) : (
+                <TerminalIcon size={16} />
+              )}
+            </button>
+          </TooltipTrigger>
+          <TooltipContent
+            side="bottom"
+            className="bg-foreground text-background"
+          >
+            <p>Copy shadcn command</p>
+          </TooltipContent>
+        </Tooltip>
+      </div>
     </div>
   );
 };

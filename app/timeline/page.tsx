@@ -334,7 +334,8 @@ const entries: TimelineEntry[] = [
     id: "33-alt",
     date: "Mar 8, 2026",
     title: "applied to $4M bags hackathon",
-    description: "officially submitted 'bags terminal' to the massive bags hackathon.",
+    description:
+      "officially submitted 'bags terminal' to the massive bags hackathon.",
     type: "tweet",
     category: "bags-hackathon",
     content: "2030196819704303766",
@@ -343,7 +344,8 @@ const entries: TimelineEntry[] = [
     id: "33-demo",
     date: "Mar 8, 2026",
     title: "bagstracker demo",
-    description: "first look at bagstracker, built specifically for the bags ecosystem.",
+    description:
+      "first look at bagstracker, built specifically for the bags ecosystem.",
     type: "tweet",
     category: "bags-hackathon",
     content: "2030197213457183089",
@@ -352,7 +354,8 @@ const entries: TimelineEntry[] = [
     id: "33-win",
     date: "Mar 8, 2026",
     title: "early success celebration",
-    description: "celebrating the momentum and early 'wins' in the bags community.",
+    description:
+      "celebrating the momentum and early 'wins' in the bags community.",
     type: "tweet",
     category: "social",
     content: "2029883540956139688",
@@ -432,7 +435,8 @@ const entries: TimelineEntry[] = [
     id: "40-official",
     date: "Mar 17, 2026",
     title: "official welcome from bags",
-    description: "the bags hackathon official account welcomes itshover to the cohort!",
+    description:
+      "the bags hackathon official account welcomes itshover to the cohort!",
     type: "tweet",
     category: "social",
     content: "2033691713303114188",
@@ -485,6 +489,24 @@ const entries: TimelineEntry[] = [
     type: "tweet",
     category: ["bags-hackathon", "release"],
     content: "2036097990759502186",
+  },
+  {
+    id: "46",
+    date: "Mar 26, 2026",
+    title: "top 10 in bags hackathon",
+    description: "ranked in the top 10 at the bags hackathon!",
+    type: "tweet",
+    category: "bags-hackathon",
+    content: "2037145814389448706",
+  },
+  {
+    id: "47",
+    date: "Mar 26, 2026",
+    title: "why to vote for itshover.com",
+    description: "pitching itshover.com at the bags hackathon.",
+    type: "tweet",
+    category: "bags-hackathon",
+    content: "2037007872262103235",
   },
 ];
 

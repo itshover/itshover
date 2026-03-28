@@ -42,7 +42,7 @@ export const CenterPopup = () => {
             animate={{ opacity: 1, scale: 1, y: 0 }}
             exit={{ opacity: 0, scale: 0.9, y: 20 }}
             transition={{ duration: 0.35, ease: [0.23, 1, 0.32, 1] }}
-            className="dark:bg-zinc-950 fixed inset-x-4 top-1/2 z-[80] mx-auto max-w-md -translate-y-1/2 overflow-hidden rounded-2xl border border-border bg-white shadow-2xl"
+            className="border-border fixed inset-x-4 top-1/2 z-[80] mx-auto max-w-md -translate-y-1/2 overflow-hidden rounded-2xl border bg-white shadow-2xl dark:bg-zinc-950"
           >
             {/* Gradient strip */}
             <div className="from-primary/80 to-primary h-1 w-full bg-gradient-to-r" />
@@ -67,7 +67,8 @@ export const CenterPopup = () => {
               </h2>
               <p className="text-muted-foreground mb-5 text-sm leading-relaxed">
                 You&apos;re currently on the{" "}
-                <span className="font-semibold text-foreground">free tier</span>. Hold{" "}
+                <span className="text-foreground font-semibold">free tier</span>
+                . Hold{" "}
                 <Link
                   href={LINKS.BAGS}
                   target="_blank"
