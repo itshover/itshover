@@ -9,6 +9,10 @@ export const LINKS = {
   CREATOR: "https://x.com/abhijitwt",
   BAGS: `https://bags.fm/AUsbqN5AddEhVsPDaBLWhXNWwubdm8ArF7SZfyUfBAGS`,
   DEXSCREENER: `https://dexscreener.com/solana/${TOKEN.CA}`,
+  HOLDERS: "https://holders.itshover.com",
+  TOKEN_SITE: "https://token.itshover.com",
+  TOOLS: "https://tools.itshover.com",
+  TIMELINE: "/timeline",
 } as const;
 
 export const SPONSOR = {

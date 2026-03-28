@@ -47,7 +47,6 @@ const IconCard = ({
   const playAnimation = () => {
     iconRef.current?.startAnimation();
 
-    // optional auto-stop so it doesn't loop forever
     setTimeout(() => {
       iconRef.current?.stopAnimation();
     }, 1500);

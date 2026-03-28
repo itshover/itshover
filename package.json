@@ -35,6 +35,8 @@
     "react": ">=18.0.0",
     "react-dom": ">=18.0.0",
     "react-draggable": "^4.5.0",
+    "react-tweet": "^3.3.0",
+    "resend": "^6.9.4",
     "shadcn": "^3.6.2",
     "tabler": "^1.0.0",
     "tailwind-merge": "^3.4.0"
