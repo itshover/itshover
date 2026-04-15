@@ -3,7 +3,7 @@ export const TOKEN = {
 } as const;
 
 export const LINKS = {
-  TWITTER: "https://x.com/itshoverr",
+  TWITTER: "https://x.com/abhijitwt",
   GITHUB: "https://github.com/itshover/itshover",
   SITE_URL: "https://itshover.com",
   CREATOR: "https://x.com/abhijitwt",
