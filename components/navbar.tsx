@@ -21,13 +21,20 @@ import ChartLineIcon from "@/icons/chart-line-icon";
 import CheckedIcon from "@/icons/checked-icon";
 import { AnimatePresence, motion } from "motion/react";
 import type { AnimatedIconHandle } from "@/icons/types";
+import UsersIcon from "@/icons/users-icon";
+import RocketIcon from "@/icons/rocket-icon";
+import DownChevron from "@/icons/down-chevron";
 
 const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [bagsDropdownOpen, setBagsDropdownOpen] = useState(false);
+  const [productsDropdownOpen, setProductsDropdownOpen] = useState(false);
   const [copiedCA, setCopiedCA] = useState(false);
   const bagsIconRef = useRef<AnimatedIconHandle>(null);
   const mobileBagsIconRef = useRef<AnimatedIconHandle>(null);
+  const productsIconRef = useRef<AnimatedIconHandle>(null);
+  const holdersIconRef = useRef<AnimatedIconHandle>(null);
+  const toolsIconRef = useRef<AnimatedIconHandle>(null);
   const copyIconRef = useRef<AnimatedIconHandle>(null);
   const bagsLinkIconRef = useRef<AnimatedIconHandle>(null);
   const dexIconRef = useRef<AnimatedIconHandle>(null);
@@ -68,11 +75,77 @@ const Navbar = () => {
           >
             icons
           </Link>
+          <div className="relative">
+            <button
+              onClick={() => setProductsDropdownOpen(!productsDropdownOpen)}
+              onMouseEnter={() => productsIconRef.current?.startAnimation()}
+              onMouseLeave={() => productsIconRef.current?.stopAnimation()}
+              onBlur={() =>
+                setTimeout(() => setProductsDropdownOpen(false), 200)
+              }
+              className={cn(
+                "hover:text-foreground/80 text-muted-foreground flex items-center gap-1 transition-colors",
+                productsDropdownOpen && "text-foreground",
+              )}
+            >
+              products
+              <DownChevron
+                ref={productsIconRef}
+                size={14}
+                className={cn(
+                  "transition-transform duration-200",
+                  productsDropdownOpen && "rotate-180",
+                )}
+              />
+            </button>
+
+            <AnimatePresence>
+              {productsDropdownOpen && (
+                <motion.div
+                  initial={{ opacity: 0, scale: 0.95, y: 10 }}
+                  animate={{ opacity: 1, scale: 1, y: 0 }}
+                  exit={{ opacity: 0, scale: 0.95, y: 10 }}
+                  className="bg-background absolute top-full left-0 z-50 mt-2 w-40 overflow-hidden rounded-xl border p-1 shadow-xl"
+                >
+                  <Link
+                    href={LINKS.HOLDERS}
+                    target="_blank"
+                    onMouseEnter={() =>
+                      holdersIconRef.current?.startAnimation()
+                    }
+                    onMouseLeave={() => holdersIconRef.current?.stopAnimation()}
+                    className="hover:bg-muted flex w-full items-center gap-2 rounded-lg px-3 py-2 text-left text-sm transition-colors"
+                  >
+                    <UsersIcon
+                      ref={holdersIconRef}
+                      size={14}
+                      className="text-muted-foreground"
+                    />
+                    <span>Holders</span>
+                  </Link>
+                  <Link
+                    href={LINKS.TOOLS}
+                    target="_blank"
+                    onMouseEnter={() => toolsIconRef.current?.startAnimation()}
+                    onMouseLeave={() => toolsIconRef.current?.stopAnimation()}
+                    className="hover:bg-muted flex w-full items-center gap-2 rounded-lg px-3 py-2 text-left text-sm transition-colors"
+                  >
+                    <RocketIcon
+                      ref={toolsIconRef}
+                      size={14}
+                      className="text-muted-foreground"
+                    />
+                    <span>Tools</span>
+                  </Link>
+                </motion.div>
+              )}
+            </AnimatePresence>
+          </div>
           <Link
             className="hover:text-foreground/80 text-muted-foreground transition-colors"
-            href="/sponsor"
+            href={LINKS.TIMELINE}
           >
-            sponsor
+            timeline
           </Link>
           <Link
             className="hover:text-foreground/80 text-muted-foreground transition-colors"
@@ -225,10 +298,26 @@ const Navbar = () => {
             </Link>
             <Link
               className="hover:text-foreground/80 text-muted-foreground text-sm font-medium transition-colors"
-              href="/sponsor"
+              href={LINKS.HOLDERS}
+              target="_blank"
               onClick={() => setIsMobileMenuOpen(false)}
             >
-              Sponsor
+              Holders
+            </Link>
+            <Link
+              className="hover:text-foreground/80 text-muted-foreground text-sm font-medium transition-colors"
+              href={LINKS.TOOLS}
+              target="_blank"
+              onClick={() => setIsMobileMenuOpen(false)}
+            >
+              Tools
+            </Link>
+            <Link
+              className="hover:text-foreground/80 text-muted-foreground text-sm font-medium transition-colors"
+              href={LINKS.TIMELINE}
+              onClick={() => setIsMobileMenuOpen(false)}
+            >
+              Timeline
             </Link>
             <Link
               className="hover:text-foreground/80 text-muted-foreground text-sm font-medium transition-colors"
