@@ -29,6 +29,7 @@ import ArrowNarrowUpDashedIcon from "./arrow-narrow-up-dashed-icon";
 import ArrowNarrowUpIcon from "./arrow-narrow-up-icon";
 import AppleBrandLogo from "./apple-brand-logo";
 import AtSignIcon from "./at-sign-icon";
+import BalloonIcon from "./balloon-icon";
 import BananaIcon from "./banana-icon";
 import BatteryIcon from "./battery-icon";
 import BatteryChargingIcon from "./battery-charging-icon";
@@ -262,6 +263,7 @@ import BrandMidJourneyIcon from "./brand-midjourney-icon";
 import BrandOllamaIcon from "./brand-ollama-icon";
 import BrandWordPressIcon from "./brand-wordpress-icon";
 import BrainCircuitIcon from "./brain-circuit-icon";
+import SmileIcon from "./smile-icon";
 
 export interface IconType {
   name: string;
@@ -446,6 +448,11 @@ const ICON_LIST: IconType[] = [
     name: "at-sign-icon",
     icon: AtSignIcon,
     keywords: ["at", "sign", "@", "email", "mention", "tag", "social"],
+  },
+  {
+    name: "balloon-icon",
+    icon: BalloonIcon,
+    keywords: ["balloon", "party", "celebration", "fly", "float", "air"],
   },
   {
     name: "banana-icon",
@@ -1883,6 +1890,11 @@ const ICON_LIST: IconType[] = [
     name: "upload-icon",
     icon: UploadIcon,
     keywords: ["upload", "submit", "send", "transfer", "cloud"],
+  },
+  {
+    name: "smile-icon",
+    icon: SmileIcon,
+    keywords: ["smile", "happy", "face", "emotion", "emoji", "glad"],
   },
 ].sort((a, b) => a.name.localeCompare(b.name));
 export { ICON_LIST };

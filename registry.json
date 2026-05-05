@@ -549,6 +549,23 @@
       ]
     },
     {
+      "name": "balloon-icon",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": ["motion"],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "icons/balloon-icon.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "icons/types.ts",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
       "name": "banana-icon",
       "type": "registry:ui",
       "registryDependencies": [],
@@ -3804,6 +3821,23 @@
       "files": [
         {
           "path": "icons/sliders-horizontal-icon.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "icons/types.ts",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "smile-icon",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": ["motion"],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "icons/smile-icon.tsx",
           "type": "registry:ui"
         },
         {
