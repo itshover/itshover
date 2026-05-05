@@ -963,4 +963,12 @@ export const ICONS = [
     name: "brand-lmstudio",
     path: "/icons/brand-lmstudio-icon",
   },
+  {
+    name: "smile icon",
+    path: "/icons/smile-icon",
+  },
+  {
+    name: "balloon icon",
+    path: "/icons/balloon-icon",
+  },
 ];
