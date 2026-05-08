@@ -57,7 +57,17 @@ const CommandItem = ({
   onHover,
 }: CommandItemProps) => {
   const ref = useRef<AnimatedIconHandle>(null);
+  const buttonRef = useRef<HTMLButtonElement>(null);
   const { icon: Icon, label } = command;
+
+  useEffect(() => {
+    if (isSelected) {
+      buttonRef.current?.scrollIntoView({ block: "nearest" });
+      if (isAnimated) ref.current?.startAnimation();
+    } else {
+      ref.current?.stopAnimation();
+    }
+  }, [isSelected, isAnimated]);
 
   const handleMouseEnter = () => {
     onHover();
@@ -70,6 +80,7 @@ const CommandItem = ({
 
   return (
     <button
+      ref={buttonRef}
       className={`flex w-full items-center gap-3 rounded-lg px-3 py-2.5 text-left transition-colors ${
         isSelected ? "bg-accent text-accent-foreground" : "hover:bg-accent/50"
       }`}
@@ -135,7 +146,7 @@ const CommandPalette = ({ isAnimated = true }: CommandPaletteProps) => {
 
   useEffect(() => {
     const handler = (e: KeyboardEvent) => {
-      if ((e.metaKey || e.ctrlKey) && e.shiftKey && e.key === "p") {
+      if ((e.metaKey || e.ctrlKey) && e.shiftKey && e.key.toLowerCase() === "p") {
         e.preventDefault();
         if (open) {
           closePalette();
@@ -152,10 +163,11 @@ const CommandPalette = ({ isAnimated = true }: CommandPaletteProps) => {
     if (!open) return;
     const handler = (e: KeyboardEvent) => {
       if (e.key === "Escape") {
+        e.stopPropagation();
         closePalette();
       } else if (e.key === "ArrowDown") {
         e.preventDefault();
-        setSelectedIndex((i) => Math.min(i + 1, filtered.length - 1));
+        setSelectedIndex((i) => Math.min(i + 1, Math.max(0, filtered.length - 1)));
       } else if (e.key === "ArrowUp") {
         e.preventDefault();
         setSelectedIndex((i) => Math.max(i - 1, 0));
@@ -202,6 +214,12 @@ const CommandPalette = ({ isAnimated = true }: CommandPaletteProps) => {
           className="fixed inset-0 z-50 flex items-start justify-center bg-black/50 pt-[20vh]"
           onClick={(e) => {
             if (e.target === e.currentTarget) closePalette();
+          }}
+          onKeyDown={(e) => {
+            if (e.key === "Escape") {
+              e.stopPropagation();
+              closePalette();
+            }
           }}
         >
           <div className="border-border bg-background mx-4 w-full max-w-lg overflow-hidden rounded-xl border shadow-2xl">

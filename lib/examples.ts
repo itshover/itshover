@@ -97,7 +97,7 @@ const EXAMPLE_REGISTRY = [
     filePath: "components/examples/command-palette.tsx",
     component: CommandPalette,
     description:
-      "A VS Code-style command palette triggered by ⌘K. Features real-time search, keyboard navigation, grouped commands, and animated icons per result row.",
+      "A VS Code-style command palette triggered by ⌘⇧P. Features real-time search, keyboard navigation, grouped commands, and animated icons per result row.",
     tags: ["Command Palette", "Search", "Keyboard", "Overlay", "Framer Motion"],
   },
 ];
