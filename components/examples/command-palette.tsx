@@ -146,7 +146,11 @@ const CommandPalette = ({ isAnimated = true }: CommandPaletteProps) => {
 
   useEffect(() => {
     const handler = (e: KeyboardEvent) => {
-      if ((e.metaKey || e.ctrlKey) && e.shiftKey && e.key.toLowerCase() === "p") {
+      if (
+        (e.metaKey || e.ctrlKey) &&
+        e.shiftKey &&
+        e.key.toLowerCase() === "p"
+      ) {
         e.preventDefault();
         if (open) {
           closePalette();
@@ -167,7 +171,9 @@ const CommandPalette = ({ isAnimated = true }: CommandPaletteProps) => {
         closePalette();
       } else if (e.key === "ArrowDown") {
         e.preventDefault();
-        setSelectedIndex((i) => Math.min(i + 1, Math.max(0, filtered.length - 1)));
+        setSelectedIndex((i) =>
+          Math.min(i + 1, Math.max(0, filtered.length - 1)),
+        );
       } else if (e.key === "ArrowUp") {
         e.preventDefault();
         setSelectedIndex((i) => Math.max(i - 1, 0));
