@@ -10,10 +10,10 @@ export default function Home() {
   return (
     <div>
       <Container>
-        <Hero />
-        <Features />
-        <BackedBy />
+        <Hero /> 
+        <BackedBy />      
         <TestimonialSection />
+        <Features />
         <CTASection />
       </Container>
     </div>

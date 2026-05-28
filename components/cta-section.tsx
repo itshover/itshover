@@ -5,6 +5,7 @@ import PrimaryButton from "@/components/ui/primary-button";
 import SecondaryButton from "@/components/ui/secondary-button";
 import { motion } from "motion/react";
 import ArrowNarrowRightIcon from "@/icons/arrow-narrow-right-icon";
+import GithubIcon from "@/icons/github-icon";
 import { LINKS } from "@/constants";
 
 const CTASection = () => {
@@ -16,11 +17,11 @@ const CTASection = () => {
       viewport={{ once: true }}
       className="flex flex-col items-center justify-center py-20 text-center md:py-32"
     >
-      <div className="max-w-4xl space-y-6">
-        <h2 className="text-2xl font-bold tracking-tight lowercase sm:text-3xl md:text-4xl">
+      <div className="max-w-4xl space-y-4">
+        <h2 className="text-2xl font-bold tracking-tight font-serif italic sm:text-3xl md:text-4xl">
           Ready to Bring your icons to life?
         </h2>
-        <p className="text-muted-foreground text-md mx-auto max-w-xl lowercase sm:text-lg">
+        <p className="text-muted-foreground text-md mx-auto max-w-xl font-medium sm:text-lg">
           A growing open source library of animated icons built for real
           interfaces.
         </p>
@@ -36,6 +37,8 @@ const CTASection = () => {
             onClick={() => window.open(LINKS.GITHUB, "_blank")}
           >
             Star on GitHub
+            <GithubIcon size={15} />
+
           </SecondaryButton>
         </div>
       </div>
