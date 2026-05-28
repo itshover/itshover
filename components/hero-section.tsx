@@ -45,8 +45,8 @@ const Hero = () => {
     },
   };
   return (
-    <section className="flex flex-col items-center justify-center py-20 text-center md:py-32">
-         <HexagonPattern
+    <section className="relative flex flex-col items-center justify-center py-20 text-center md:py-32">
+      <HexagonPattern
         radius={40}
         x={-1}
         y={-1}
@@ -75,8 +75,8 @@ const Hero = () => {
           transition={textAnimation.transition}
           className="text-muted-foreground font-semibold mx-auto max-w-xl text-lg  sm:text-xl"
         >
-          Editable React components with motion baked in. Works seamlessly with
-all design system        </motion.p>
+          Editable React components with motion baked in. Works seamlessly with all design system
+        </motion.p>
         <motion.div
           variants={textAnimation}
           initial="initial"
@@ -112,7 +112,7 @@ all design system        </motion.p>
         <div className="flex flex-col items-center gap-4 sm:flex-row">
           <Link href="/icons">
             <PrimaryButton className="cursor-pointer lowercase">
-               Icons
+              Icons
               <ArrowNarrowRightIcon className="ml-2 h-4 w-4" />
             </PrimaryButton>
           </Link>
@@ -209,7 +209,7 @@ const HeroBackground = () => {
             className="h-14 w-14 md:h-16 md:w-16 lg:h-20 lg:w-20 xl:h-40 xl:w-24"
           />
         </FloatingIcon>
-      <FloatingIcon className="top-22 left-40 rotate-[-20deg]">
+        <FloatingIcon className="top-22 left-40 rotate-[-20deg]">
           <Stack3Icon
             ref={stackRef}
             className="h-14 w-14 md:h-16 md:w-16 lg:h-20 lg:w-20 xl:h-40 xl:w-24"

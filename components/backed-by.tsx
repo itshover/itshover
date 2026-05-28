@@ -192,7 +192,7 @@ export default function BackedBy() {
           viewBox="0 0 512 512"
           width="64"
           height="64"
-          className="text-white hover:group:text-black"
+          className="text-white"
         >
           <path d="M256 48l240 416H16z" />
         </svg>
