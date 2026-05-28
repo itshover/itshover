@@ -44,8 +44,9 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="bg-background/95 supports-backdrop-filter:bg-background/60 sticky top-0 z-50 flex w-full justify-between border-b p-2 backdrop-blur">
-      <div className="mx-auto flex h-16 w-full items-center justify-between px-4 md:px-8">
+    <nav className="bg-background/95 supports-backdrop-filter:bg-background/60 sticky top-0 z-50 flex w-full justify-between 
+     p-2 backdrop-blur">
+      <div className="mx-auto flex h-12 w-[90%] items-center justify-between px-4 md:px-8">
         <div className="flex items-center">
           <Link
             className="mr-10 flex items-center justify-center space-x-2 py-6 text-center text-2xl font-bold text-neutral-600 selection:bg-emerald-500 dark:text-gray-100"
@@ -63,19 +64,19 @@ const Navbar = () => {
 
         <nav className="hidden items-center space-x-6 text-sm font-medium xl:flex">
           <Link
-            className="hover:text-foreground/80 text-muted-foreground transition-colors"
+            className="hover:text-foreground/80  font-serif italic text-muted-foreground transition-colors"
             href="/icons"
           >
             icons
           </Link>
           <Link
-            className="hover:text-foreground/80 text-muted-foreground transition-colors"
+            className="hover:text-foreground/80 font-serif italic text-muted-foreground transition-colors"
             href="/sponsor"
           >
             sponsor
           </Link>
           <Link
-            className="hover:text-foreground/80 text-muted-foreground transition-colors"
+            className="hover:text-foreground/80 font-serif italic text-muted-foreground transition-colors"
             href="/example"
           >
             example
@@ -161,7 +162,6 @@ const Navbar = () => {
             </AnimatePresence>
           </div>
 
-          <GithubStars />
           <Link
             target="__blank"
             className="hover:text-foreground/80 text-foreground/60 mr-1 flex items-center justify-center text-sm font-medium transition-colors"
@@ -178,6 +178,7 @@ const Navbar = () => {
           </Link>
 
           <ModeToggle />
+          <GithubStars />
 
           <button
             onClick={toggleCommandMenu}

@@ -6,6 +6,7 @@ import SecondaryButton from "@/components/ui/secondary-button";
 import GithubBadge from "./github-badge";
 import { motion } from "motion/react";
 import GithubIcon from "@/icons/github-icon";
+
 import Stack3Icon from "@/icons/stack-3-icon";
 import FloatingIcon from "./ui/floating-icon";
 import TerminalIcon from "@/icons/terminal-icon";
@@ -14,8 +15,10 @@ import LikeIcon from "@/icons/like-icon";
 import SendIcon from "@/icons/send-icon";
 import GhostIcon from "@/icons/ghost-icon";
 import ArrowNarrowRightIcon from "@/icons/arrow-narrow-right-icon";
+import { HexagonPattern } from "@/components/ui/hexagon-pattern"
 import CopyIcon from "@/icons/copy-icon";
 import CheckedIcon from "@/icons/checked-icon";
+import cn from "clsx";
 import { TOKEN } from "@/constants";
 import type { AnimatedIconHandle } from "@/icons/types";
 
@@ -42,7 +45,15 @@ const Hero = () => {
     },
   };
   return (
-    <section className="flex flex-col items-center justify-center py-20 text-center md:py-32">
+    <section className="relative flex flex-col items-center justify-center py-20 text-center md:py-32">
+      <HexagonPattern
+        radius={40}
+        x={-1}
+        y={-1}
+        className={cn(
+          "[mask-image:linear-gradient(to_bottom_right,white,transparent,transparent)]"
+        )}
+      />
       <HeroBackground />
       <div className="mb-6 flex flex-col items-center gap-3">
         <GithubBadge />
@@ -53,19 +64,18 @@ const Hero = () => {
           initial="initial"
           animate="animate"
           transition={textAnimation.transition}
-          className="text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl lg:text-7xl"
+          className="text-4xl font-light tracking-tight font-serif italic sm:text-5xl md:text-6xl lg:text-7xl"
         >
-          icons that move with <span className="text-primary">intent</span>
+          Icons that move with <span className="text-primary">intent</span>
         </motion.h1>
         <motion.p
           variants={textAnimation}
           initial="initial"
           animate="animate"
           transition={textAnimation.transition}
-          className="text-muted-foreground mx-auto max-w-xl text-lg lowercase sm:text-xl"
+          className="text-muted-foreground font-semibold mx-auto max-w-xl text-lg  sm:text-xl"
         >
-          Editable React components with motion baked in. Works seamlessly with
-          Next.js, shadcn, and modern design systems.
+          Editable React components with motion baked in. Works seamlessly with all design system
         </motion.p>
         <motion.div
           variants={textAnimation}
@@ -102,12 +112,12 @@ const Hero = () => {
         <div className="flex flex-col items-center gap-4 sm:flex-row">
           <Link href="/icons">
             <PrimaryButton className="cursor-pointer lowercase">
-              Browse Icons
+              Icons
               <ArrowNarrowRightIcon className="ml-2 h-4 w-4" />
             </PrimaryButton>
           </Link>
           <Link href="/sponsor">
-            <SecondaryButton className="cursor-pointer lowercase">
+            <SecondaryButton className="cursor-pointer lowercase font-serif italic font-semibold">
               Sponsor
             </SecondaryButton>
           </Link>
@@ -123,8 +133,8 @@ const HeroBackground = () => {
   const ANIMATION_DURATION_MS = 1000;
 
   const githubRef = useRef<AnimatedIconHandle>(null);
-  const likeRef = useRef<AnimatedIconHandle>(null);
   const stackRef = useRef<AnimatedIconHandle>(null);
+  const likeRef = useRef<AnimatedIconHandle>(null);
   const sendRef = useRef<AnimatedIconHandle>(null);
   const currencyRef = useRef<AnimatedIconHandle>(null);
   const terminalRef = useRef<AnimatedIconHandle>(null);
@@ -199,17 +209,16 @@ const HeroBackground = () => {
             className="h-14 w-14 md:h-16 md:w-16 lg:h-20 lg:w-20 xl:h-40 xl:w-24"
           />
         </FloatingIcon>
-
+        <FloatingIcon className="top-22 left-40 rotate-[-20deg]">
+          <Stack3Icon
+            ref={stackRef}
+            className="h-14 w-14 md:h-16 md:w-16 lg:h-20 lg:w-20 xl:h-40 xl:w-24"
+          />
+        </FloatingIcon>
         <FloatingIcon className="top-40 left-36 rotate-15 xl:top-60">
           <LikeIcon
             ref={likeRef}
             className="h-32 w-32 md:h-40 md:w-40 lg:h-48 lg:w-48 xl:h-52 xl:w-52"
-          />
-        </FloatingIcon>
-        <FloatingIcon className="top-40 right-20 rotate-25">
-          <Stack3Icon
-            ref={stackRef}
-            className="h-24 w-24 md:h-28 md:w-28 lg:h-32 lg:w-32 xl:h-36 xl:w-36"
           />
         </FloatingIcon>
 
@@ -220,7 +229,7 @@ const HeroBackground = () => {
           />
         </FloatingIcon>
 
-        <FloatingIcon className="bottom-52 left-24 rotate-10">
+        <FloatingIcon className="top-22 right-54 rotate-10">
           <CurrencyRupeeIcon
             ref={currencyRef}
             className="h-12 w-12 md:h-14 md:w-14 lg:h-16 lg:w-16 xl:h-20 xl:w-20"
@@ -233,7 +242,7 @@ const HeroBackground = () => {
             className="h-14 w-14 md:h-16 md:w-16 lg:h-20 lg:w-20 xl:h-24 xl:w-24"
           />
         </FloatingIcon>
-        <FloatingIcon className="right-120 bottom-40 rotate-[-10deg]">
+        <FloatingIcon className="right-120 top-40 rotate-[-10deg]">
           <GhostIcon
             ref={ghostRef}
             className="h-14 w-14 md:h-16 md:w-16 lg:h-20 lg:w-20 xl:h-24 xl:w-24"
