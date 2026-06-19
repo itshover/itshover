@@ -69,6 +69,7 @@ import Cloud1Icon from "./cloud-1-icon";
 import Cloud2Icon from "./cloud-2-icon";
 import Cloud3Icon from "./cloud-3-icon";
 import ClockIcon from "./clock-icon";
+import ClaudeCodeIcon from "./claude-code";
 import CodeIcon from "./code-icon";
 import CodeXmlIcon from "./code-xml-icon";
 import CoffeeIcon from "./coffee-icon";
@@ -604,6 +605,19 @@ const ICON_LIST: IconType[] = [
     name: "clock-icon",
     icon: ClockIcon,
     keywords: ["clock", "time", "watch", "timer", "schedule"],
+  },
+  {
+    name: "claude-code",
+    icon: ClaudeCodeIcon,
+    keywords: [
+      "claude",
+      "code",
+      "anthropic",
+      "ai",
+      "terminal",
+      "cli",
+      "brand",
+    ],
   },
   {
     name: "code-icon",

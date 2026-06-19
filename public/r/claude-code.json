@@ -1,0 +1,20 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "claude-code",
+  "dependencies": ["motion"],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "icons/claude-code.tsx",
+      "content": "import {\n  forwardRef,\n  useCallback,\n  useId,\n  useImperativeHandle,\n} from \"react\";\nimport type { AnimatedIconHandle, AnimatedIconProps } from \"./types\";\nimport { motion, useAnimate } from \"motion/react\";\n\nconst CLAUDE_CODE_PATH =\n  \"M21 10.5h3v3h-3v3h-1.5v3H18v-3h-1.5v3H15v-3H9v3H7.5v-3H6v3H4.5v-3H3v-3H0v-3h3v-6h18Zm-15 0h1.5v-3H6Zm10.5 0H18v-3h-1.5z\";\n\nconst CURSOR = { x: 10.5, y: 16.5, width: 4.5, height: 1.5 };\n\nconst ClaudeCodeIcon = forwardRef<AnimatedIconHandle, AnimatedIconProps>(\n  ({ size = 24, color = \"currentColor\", className = \"\" }, ref) => {\n    const [scope, animate] = useAnimate();\n    const maskId = useId();\n\n    const start = useCallback(async () => {\n      animate(\n        \".claude-prompt\",\n        { x: [0, 1.5, 0] },\n        { duration: 0.35, ease: \"easeInOut\" },\n      );\n      animate(\n        \".claude-cursor\",\n        { opacity: [1, 0, 1, 0, 1] },\n        { duration: 0.8, ease: \"linear\" },\n      );\n    }, [animate]);\n\n    const stop = useCallback(() => {\n      animate(\n        \".claude-prompt\",\n        { x: 0 },\n        { duration: 0.2, ease: \"easeOut\" },\n      );\n      animate(\n        \".claude-cursor\",\n        { opacity: 1 },\n        { duration: 0.15, ease: \"easeOut\" },\n      );\n    }, [animate]);\n\n    useImperativeHandle(\n      ref,\n      () => ({\n        startAnimation: start,\n        stopAnimation: stop,\n      }),\n      [start, stop],\n    );\n\n    return (\n      <motion.svg\n        ref={scope}\n        onHoverStart={start}\n        onHoverEnd={stop}\n        xmlns=\"http://www.w3.org/2000/svg\"\n        width={size}\n        height={size}\n        viewBox=\"0 0 24 24\"\n        fill={color}\n        fillRule=\"evenodd\"\n        className={`cursor-pointer ${className}`}\n        style={{ flex: \"none\", lineHeight: 1 }}\n      >\n        <title>Claude Code</title>\n\n        <defs>\n          <mask id={maskId}>\n            <rect width=\"24\" height=\"24\" fill=\"white\" />\n            <rect\n              x={CURSOR.x}\n              y={CURSOR.y}\n              width={CURSOR.width}\n              height={CURSOR.height}\n              fill=\"black\"\n            />\n          </mask>\n        </defs>\n\n        <motion.g className=\"claude-prompt\">\n          <path d={CLAUDE_CODE_PATH} mask={`url(#${maskId})`} />\n          <motion.rect\n            className=\"claude-cursor\"\n            x={CURSOR.x}\n            y={CURSOR.y}\n            width={CURSOR.width}\n            height={CURSOR.height}\n            fill={color}\n          />\n        </motion.g>\n      </motion.svg>\n    );\n  },\n);\n\nClaudeCodeIcon.displayName = \"ClaudeCodeIcon\";\nexport default ClaudeCodeIcon;\n",
+      "type": "registry:ui"
+    },
+    {
+      "path": "icons/types.ts",
+      "content": "import type { SVGProps } from \"react\";\n\nexport type IconEasing =\n  | \"linear\"\n  | \"easeIn\"\n  | \"easeOut\"\n  | \"easeInOut\"\n  | \"circIn\"\n  | \"circOut\"\n  | \"circInOut\"\n  | \"backIn\"\n  | \"backOut\"\n  | \"backInOut\"\n  | \"anticipate\";\n\nexport interface AnimatedIconProps extends Omit<\n  SVGProps<SVGSVGElement>,\n  | \"ref\"\n  | \"onAnimationStart\"\n  | \"onAnimationEnd\"\n  | \"onAnimationIteration\"\n  | \"onDrag\"\n  | \"onDragEnd\"\n  | \"onDragEnter\"\n  | \"onDragExit\"\n  | \"onDragLeave\"\n  | \"onDragOver\"\n  | \"onDragStart\"\n  | \"onDrop\"\n  | \"values\"\n> {\n  /** Icon size in pixels or CSS string */\n  size?: number | string;\n  /** Icon color (defaults to currentColor) */\n  color?: string;\n  /** SVG stroke width */\n  strokeWidth?: number;\n  /** Additional CSS classes */\n  className?: string;\n}\n\nexport interface AnimatedIconHandle {\n  startAnimation: () => void;\n  stopAnimation: () => void;\n}\n",
+      "type": "registry:ui"
+    }
+  ],
+  "type": "registry:ui"
+}

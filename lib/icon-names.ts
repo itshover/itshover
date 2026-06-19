@@ -46,6 +46,7 @@ export const ICON_NAMES = [
   "bulb-svg",
   "cart-icon",
   "checked-icon",
+  "claude-code",
   "credit-card",
   "copy-icon",
   "copy-off-icon",

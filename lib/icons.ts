@@ -260,6 +260,10 @@ export const ICONS = [
     path: "/icons/clock-icon",
   },
   {
+    name: "claude code",
+    path: "/icons/claude-code",
+  },
+  {
     name: "code icon",
     path: "/icons/code-icon",
   },
