@@ -1416,6 +1416,23 @@
       ]
     },
     {
+      "name": "claude-code",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": ["motion"],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "icons/claude-code.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "icons/types.ts",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
       "name": "clock-icon",
       "type": "registry:ui",
       "registryDependencies": [],
@@ -3804,6 +3821,23 @@
       "files": [
         {
           "path": "icons/sliders-horizontal-icon.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "icons/types.ts",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "smartphone-icon",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": ["motion"],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "icons/smartphone-icon.tsx",
           "type": "registry:ui"
         },
         {

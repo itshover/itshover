@@ -69,6 +69,7 @@ import Cloud1Icon from "./cloud-1-icon";
 import Cloud2Icon from "./cloud-2-icon";
 import Cloud3Icon from "./cloud-3-icon";
 import ClockIcon from "./clock-icon";
+import ClaudeCodeIcon from "./claude-code";
 import CodeIcon from "./code-icon";
 import CodeXmlIcon from "./code-xml-icon";
 import CoffeeIcon from "./coffee-icon";
@@ -167,6 +168,7 @@ import ShoppingCartIcon from "./shopping-cart-icon";
 import SimpleCheckedIcon from "./simple-checked-icon";
 import SkullEmoji from "./skull-emoji";
 import SlackIcon from "./slack-icon";
+import SmartphoneIcon from "./smartphone-icon";
 import SnapchatIcon from "./snapchat-icon";
 import SparklesIcon from "./sparkles-icon";
 import SoupIcon from "./soup-icon";
@@ -603,6 +605,19 @@ const ICON_LIST: IconType[] = [
     name: "clock-icon",
     icon: ClockIcon,
     keywords: ["clock", "time", "watch", "timer", "schedule"],
+  },
+  {
+    name: "claude-code",
+    icon: ClaudeCodeIcon,
+    keywords: [
+      "claude",
+      "code",
+      "anthropic",
+      "ai",
+      "terminal",
+      "cli",
+      "brand",
+    ],
   },
   {
     name: "code-icon",
@@ -1066,6 +1081,19 @@ const ICON_LIST: IconType[] = [
     name: "sparkles-icon",
     icon: SparklesIcon,
     keywords: ["sparkles", "stars", "magic", "shine", "glitter", "ai", "new"],
+  },
+  {
+    name: "smartphone-icon",
+    icon: SmartphoneIcon,
+    keywords: [
+      "smartphone",
+      "phone",
+      "mobile",
+      "device",
+      "cell",
+      "handset",
+      "screen",
+    ],
   },
   {
     name: "telephone-icon",

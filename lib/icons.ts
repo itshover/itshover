@@ -260,6 +260,10 @@ export const ICONS = [
     path: "/icons/clock-icon",
   },
   {
+    name: "claude code",
+    path: "/icons/claude-code",
+  },
+  {
     name: "code icon",
     path: "/icons/code-icon",
   },
@@ -626,6 +630,10 @@ export const ICONS = [
   {
     name: "sparkles icon",
     path: "/icons/sparkles-icon",
+  },
+  {
+    name: "smartphone icon",
+    path: "/icons/smartphone-icon",
   },
   {
     name: "sliders horizontal icon",
