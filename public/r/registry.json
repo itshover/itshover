@@ -3813,6 +3813,23 @@
       ]
     },
     {
+      "name": "smartphone-icon",
+      "type": "registry:ui",
+      "registryDependencies": [],
+      "dependencies": ["motion"],
+      "devDependencies": [],
+      "files": [
+        {
+          "path": "icons/smartphone-icon.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "icons/types.ts",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
       "name": "snapchat-icon",
       "type": "registry:ui",
       "registryDependencies": [],

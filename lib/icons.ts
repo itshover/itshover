@@ -628,6 +628,10 @@ export const ICONS = [
     path: "/icons/sparkles-icon",
   },
   {
+    name: "smartphone icon",
+    path: "/icons/smartphone-icon",
+  },
+  {
     name: "sliders horizontal icon",
     path: "/icons/sliders-horizontal-icon",
   },

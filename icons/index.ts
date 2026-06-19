@@ -167,6 +167,7 @@ import ShoppingCartIcon from "./shopping-cart-icon";
 import SimpleCheckedIcon from "./simple-checked-icon";
 import SkullEmoji from "./skull-emoji";
 import SlackIcon from "./slack-icon";
+import SmartphoneIcon from "./smartphone-icon";
 import SnapchatIcon from "./snapchat-icon";
 import SparklesIcon from "./sparkles-icon";
 import SoupIcon from "./soup-icon";
@@ -1066,6 +1067,19 @@ const ICON_LIST: IconType[] = [
     name: "sparkles-icon",
     icon: SparklesIcon,
     keywords: ["sparkles", "stars", "magic", "shine", "glitter", "ai", "new"],
+  },
+  {
+    name: "smartphone-icon",
+    icon: SmartphoneIcon,
+    keywords: [
+      "smartphone",
+      "phone",
+      "mobile",
+      "device",
+      "cell",
+      "handset",
+      "screen",
+    ],
   },
   {
     name: "telephone-icon",
