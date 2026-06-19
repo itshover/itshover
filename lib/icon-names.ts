@@ -105,6 +105,7 @@ export const ICON_NAMES = [
   "simple-checked-icon",
   "skull-emoji",
   "slack-icon",
+  "smartphone-icon",
   "snapchat-icon",
   "soup-icon",
   "spotify-icon",
