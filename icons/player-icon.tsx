@@ -4,7 +4,7 @@ import { motion, useAnimate } from "motion/react";
 
 const PlayerIcon = forwardRef<AnimatedIconHandle, AnimatedIconProps>(
   (
-    { size = 24, className = "", color = "currentColor", strokeWidth = "2" },
+    { size = 24, className = "", color = "currentColor", strokeWidth = 2 },
     ref,
   ) => {
     const [scope, animate] = useAnimate();

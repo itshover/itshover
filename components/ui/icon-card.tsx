@@ -73,7 +73,53 @@ const IconCard = ({
       >
         <Tooltip>
           <TooltipTrigger>
-            <Icon ref={iconRef} size={56} />
+            <div
+              ref={(el) => {
+                // #region agent log
+                if (
+                  el &&
+                  [
+                    "arrow-down-a-z-icon",
+                    "brand-windows-icon",
+                    "filled-checked-icon",
+                    "filled-bell-icon",
+                    "brand-midjourney-icon",
+                  ].includes(name)
+                ) {
+                  const svg = el.querySelector("svg");
+                  const computed = svg ? window.getComputedStyle(svg) : null;
+                  fetch(
+                    "http://127.0.0.1:7404/ingest/a7900ee3-4acd-44a0-b25a-931f6ffdccb3",
+                    {
+                      method: "POST",
+                      headers: {
+                        "Content-Type": "application/json",
+                        "X-Debug-Session-Id": "954e14",
+                      },
+                      body: JSON.stringify({
+                        sessionId: "954e14",
+                        runId: "reapply-v2",
+                        hypothesisId: "A",
+                        location: "icon-card.tsx:render",
+                        message: "icon stroke metrics",
+                        data: {
+                          name,
+                          svgStrokeWidth:
+                            svg?.getAttribute("stroke-width") ?? null,
+                          svgFill: svg?.getAttribute("fill") ?? null,
+                          computedStrokeWidth: computed?.strokeWidth ?? null,
+                          viewBox: svg?.getAttribute("viewBox") ?? null,
+                        },
+                        timestamp: Date.now(),
+                      }),
+                    },
+                  ).catch(() => {});
+                }
+                // #endregion
+              }}
+            >
+              <Icon ref={iconRef} size={56} />
+            </div>
           </TooltipTrigger>
           <TooltipContent>{name}</TooltipContent>
         </Tooltip>

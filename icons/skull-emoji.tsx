@@ -1,5 +1,6 @@
 import { forwardRef, useImperativeHandle, useCallback } from "react";
 import type { AnimatedIconHandle, AnimatedIconProps } from "./types";
+import { scaledStrokeWidth } from "./types";
 import { motion, useAnimate } from "motion/react";
 
 const SkullEmoji = forwardRef<AnimatedIconHandle, AnimatedIconProps>(
@@ -84,7 +85,7 @@ const SkullEmoji = forwardRef<AnimatedIconHandle, AnimatedIconProps>(
           viewBox="0 0 32 32"
           fill="none"
           stroke={color}
-          strokeWidth={strokeWidth}
+          strokeWidth={scaledStrokeWidth(strokeWidth, 32)}
           strokeMiterlimit="10"
           strokeLinecap="square"
         >

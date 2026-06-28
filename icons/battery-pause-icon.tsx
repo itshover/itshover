@@ -5,7 +5,7 @@ import { motion, useAnimate } from "motion/react";
 
 const BatteryPauseIcon = forwardRef<AnimatedIconHandle, AnimatedIconProps>(
   (
-    { size = 24, color = "currentColor", strokeWidth = 2, className = "" },
+    { size = 24, color = "currentColor", strokeWidth = 2.5, className = "" },
     ref,
   ) => {
     const [scope, animate] = useAnimate();

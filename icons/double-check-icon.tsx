@@ -1,5 +1,6 @@
 import { forwardRef, useImperativeHandle, useCallback } from "react";
 import type { AnimatedIconHandle, AnimatedIconProps } from "./types";
+import { scaledStrokeWidth } from "./types";
 import { motion, useAnimate } from "motion/react";
 
 const DoubleCheckIcon = forwardRef<AnimatedIconHandle, AnimatedIconProps>(
@@ -62,7 +63,7 @@ const DoubleCheckIcon = forwardRef<AnimatedIconHandle, AnimatedIconProps>(
           viewBox="0 0 48 48"
           fill="none"
           stroke={color}
-          strokeWidth={strokeWidth}
+          strokeWidth={scaledStrokeWidth(strokeWidth, 48)}
           strokeMiterlimit="10"
           strokeLinecap="square"
         >

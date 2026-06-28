@@ -4,7 +4,7 @@ import { motion, useAnimate } from "motion/react";
 
 const ArrowBigDownIcon = forwardRef<AnimatedIconHandle, AnimatedIconProps>(
   (
-    { size = 40, className = "", color = "currentColor", strokeWidth = "2" },
+    { size = 40, className = "", color = "currentColor", strokeWidth = 2 },
     ref,
   ) => {
     const [scope, animate] = useAnimate();
