@@ -54,7 +54,6 @@ const FilledBellIcon = forwardRef<AnimatedIconHandle, AnimatedIconProps>(
         width={size}
         height={size}
         viewBox="0 0 24 24"
-        strokeWidth={strokeWidth}
         fill={color}
         onHoverStart={start}
         onHoverEnd={stop}

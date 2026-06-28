@@ -1,5 +1,6 @@
 import { forwardRef, useImperativeHandle, useRef } from "react";
 import type { AnimatedIconHandle, AnimatedIconProps } from "./types";
+import { scaledStrokeWidth } from "./types";
 import { motion, useAnimate } from "motion/react";
 
 const QrcodeIcon = forwardRef<AnimatedIconHandle, AnimatedIconProps>(
@@ -99,7 +100,7 @@ const QrcodeIcon = forwardRef<AnimatedIconHandle, AnimatedIconProps>(
           width="9"
           height="9"
           stroke={color}
-          strokeWidth={strokeWidth}
+          strokeWidth={scaledStrokeWidth(strokeWidth, 32)}
           fill="none"
           initial={{ pathLength: 1 }}
         />
@@ -111,7 +112,7 @@ const QrcodeIcon = forwardRef<AnimatedIconHandle, AnimatedIconProps>(
           width="9"
           height="9"
           stroke={color}
-          strokeWidth={strokeWidth}
+          strokeWidth={scaledStrokeWidth(strokeWidth, 32)}
           fill="none"
           initial={{ pathLength: 1 }}
         />
@@ -123,7 +124,7 @@ const QrcodeIcon = forwardRef<AnimatedIconHandle, AnimatedIconProps>(
           width="9"
           height="9"
           stroke={color}
-          strokeWidth={strokeWidth}
+          strokeWidth={scaledStrokeWidth(strokeWidth, 32)}
           fill="none"
           initial={{ pathLength: 1 }}
         />
@@ -135,7 +136,7 @@ const QrcodeIcon = forwardRef<AnimatedIconHandle, AnimatedIconProps>(
           width="2"
           height="2"
           stroke={color}
-          strokeWidth={strokeWidth}
+          strokeWidth={scaledStrokeWidth(strokeWidth, 32)}
           fill="none"
           style={{ transformOrigin: "center" }}
         />
@@ -147,7 +148,7 @@ const QrcodeIcon = forwardRef<AnimatedIconHandle, AnimatedIconProps>(
           width="2"
           height="2"
           stroke={color}
-          strokeWidth={strokeWidth}
+          strokeWidth={scaledStrokeWidth(strokeWidth, 32)}
           fill="none"
           style={{ transformOrigin: "center" }}
         />
@@ -156,7 +157,7 @@ const QrcodeIcon = forwardRef<AnimatedIconHandle, AnimatedIconProps>(
           className="inner-element"
           d="M3 16H7"
           stroke={color}
-          strokeWidth={strokeWidth}
+          strokeWidth={scaledStrokeWidth(strokeWidth, 32)}
           strokeLinecap="square"
           fill="none"
           style={{ transformOrigin: "center" }}
@@ -166,7 +167,7 @@ const QrcodeIcon = forwardRef<AnimatedIconHandle, AnimatedIconProps>(
           className="inner-element"
           d="M13 16H18M22 16V23H29M22 16H26M22 16H18M18 16V20H16"
           stroke={color}
-          strokeWidth={strokeWidth}
+          strokeWidth={scaledStrokeWidth(strokeWidth, 32)}
           strokeLinecap="square"
           fill="none"
           style={{ transformOrigin: "center" }}
@@ -176,7 +177,7 @@ const QrcodeIcon = forwardRef<AnimatedIconHandle, AnimatedIconProps>(
           className="inner-element"
           d="M16 7V10"
           stroke={color}
-          strokeWidth={strokeWidth}
+          strokeWidth={scaledStrokeWidth(strokeWidth, 32)}
           strokeLinecap="square"
           fill="none"
           style={{ transformOrigin: "center" }}
@@ -186,7 +187,7 @@ const QrcodeIcon = forwardRef<AnimatedIconHandle, AnimatedIconProps>(
           className="inner-element"
           d="M16 25V29H23V27"
           stroke={color}
-          strokeWidth={strokeWidth}
+          strokeWidth={scaledStrokeWidth(strokeWidth, 32)}
           strokeLinecap="square"
           fill="none"
           style={{ transformOrigin: "center" }}
@@ -196,7 +197,7 @@ const QrcodeIcon = forwardRef<AnimatedIconHandle, AnimatedIconProps>(
           className="inner-element"
           d="M29.01 29H29"
           stroke={color}
-          strokeWidth={strokeWidth}
+          strokeWidth={scaledStrokeWidth(strokeWidth, 32)}
           strokeLinecap="square"
           fill="none"
           style={{ transformOrigin: "center" }}
@@ -209,7 +210,7 @@ const QrcodeIcon = forwardRef<AnimatedIconHandle, AnimatedIconProps>(
           width="1"
           height="1"
           stroke={color}
-          strokeWidth={strokeWidth}
+          strokeWidth={scaledStrokeWidth(strokeWidth, 32)}
           fill="none"
           style={{ transformOrigin: "24.5px 7.5px" }}
         />
@@ -221,7 +222,7 @@ const QrcodeIcon = forwardRef<AnimatedIconHandle, AnimatedIconProps>(
           width="1"
           height="1"
           stroke={color}
-          strokeWidth={strokeWidth}
+          strokeWidth={scaledStrokeWidth(strokeWidth, 32)}
           fill="none"
           style={{ transformOrigin: "7.5px 7.5px" }}
         />
@@ -233,7 +234,7 @@ const QrcodeIcon = forwardRef<AnimatedIconHandle, AnimatedIconProps>(
           width="1"
           height="1"
           stroke={color}
-          strokeWidth={strokeWidth}
+          strokeWidth={scaledStrokeWidth(strokeWidth, 32)}
           fill="none"
           style={{ transformOrigin: "7.5px 24.5px" }}
         />

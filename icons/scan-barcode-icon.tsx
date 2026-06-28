@@ -82,7 +82,7 @@ const ScanBarcodeIcon = forwardRef<AnimatedIconHandle, AnimatedIconProps>(
           x2="17"
           y1="12"
           y2="12"
-          strokeWidth={1}
+          strokeWidth={strokeWidth}
           initial={{ opacity: 0.3 }}
         />
       </motion.svg>

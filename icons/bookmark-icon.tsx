@@ -1,5 +1,6 @@
 import { forwardRef, useImperativeHandle } from "react";
 import type { AnimatedIconHandle, AnimatedIconProps } from "./types";
+import { scaledStrokeWidth } from "./types";
 import { motion, useAnimate } from "motion/react";
 
 const BookmarkIcon = forwardRef<AnimatedIconHandle, AnimatedIconProps>(
@@ -66,7 +67,7 @@ const BookmarkIcon = forwardRef<AnimatedIconHandle, AnimatedIconProps>(
           viewBox="0 0 48 48"
           fill="none"
           stroke={color}
-          strokeWidth={strokeWidth}
+          strokeWidth={scaledStrokeWidth(strokeWidth, 48)}
           strokeMiterlimit="10"
           strokeLinecap="square"
         >
