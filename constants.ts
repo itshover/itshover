@@ -1,5 +1,5 @@
 export const TOKEN = {
-  CA: "8xWZjSGD4LdmGGYwr4NYNVCxLzWJF2SWyapJFrz7pump",
+  CA: "",
 } as const;
 
 export const LINKS = {
