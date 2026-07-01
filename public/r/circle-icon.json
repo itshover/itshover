@@ -1,0 +1,20 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "circle-icon",
+  "dependencies": ["motion"],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "icons/circle-icon.tsx",
+      "content": "import { forwardRef, useImperativeHandle } from \"react\";\nimport type { AnimatedIconHandle, AnimatedIconProps } from \"./types\";\nimport { motion, useAnimate } from \"motion/react\";\n\nconst CircleIcon = forwardRef<AnimatedIconHandle, AnimatedIconProps>(\n  (\n    { size = 24, color = \"currentColor\", strokeWidth = 2, className = \"\" },\n    ref,\n  ) => {\n    const [scope, animate] = useAnimate();\n\n    const start = async () => {\n      // collapse to a dot at the top, then elongate all the way around into a\n      // full circle.\n      await animate(\".circle-draw\", { pathLength: 0 }, { duration: 0.12, ease: \"easeInOut\" });\n      await animate(\n        \".circle-draw\",\n        { pathLength: 1 },\n        { duration: 0.6, ease: \"easeInOut\" },\n      );\n    };\n\n    const stop = () => {\n      animate(\".circle-draw\", { pathLength: 1 }, { duration: 0.2, ease: \"easeInOut\" });\n    };\n\n    useImperativeHandle(ref, () => ({\n      startAnimation: start,\n      stopAnimation: stop,\n    }));\n\n    return (\n      <motion.div ref={scope} onHoverStart={start} onHoverEnd={stop}>\n        <motion.svg\n          xmlns=\"http://www.w3.org/2000/svg\"\n          width={size}\n          height={size}\n          viewBox=\"0 0 24 24\"\n          fill=\"none\"\n          stroke={color}\n          strokeWidth={strokeWidth}\n          strokeLinecap=\"round\"\n          strokeLinejoin=\"round\"\n          className={`cursor-pointer ${className}`}\n        >\n          <motion.path stroke=\"none\" d=\"M0 0h24v24H0z\" fill=\"none\" />\n          {/* rotate -90° so the draw begins at the top and sweeps clockwise */}\n          <motion.circle\n            cx=\"12\"\n            cy=\"12\"\n            r=\"9\"\n            className=\"circle-draw\"\n            style={{ rotate: -90, transformOrigin: \"center\" }}\n          />\n        </motion.svg>\n      </motion.div>\n    );\n  },\n);\n\nCircleIcon.displayName = \"CircleIcon\";\n\nexport default CircleIcon;\n",
+      "type": "registry:ui"
+    },
+    {
+      "path": "icons/types.ts",
+      "content": "import type { SVGProps } from \"react\";\n\n/** Standard stroke width for 24×24 outline icons */\nexport const DEFAULT_STROKE_WIDTH = 2;\n\n/** Scale stroke to match DEFAULT_STROKE_WIDTH on non-24 viewBoxes */\nexport function scaledStrokeWidth(\n  strokeWidth: number,\n  viewBoxSize: number,\n): number {\n  return strokeWidth * (viewBoxSize / 24);\n}\n\nexport type IconEasing =\n  | \"linear\"\n  | \"easeIn\"\n  | \"easeOut\"\n  | \"easeInOut\"\n  | \"circIn\"\n  | \"circOut\"\n  | \"circInOut\"\n  | \"backIn\"\n  | \"backOut\"\n  | \"backInOut\"\n  | \"anticipate\";\n\nexport interface AnimatedIconProps extends Omit<\n  SVGProps<SVGSVGElement>,\n  | \"ref\"\n  | \"onAnimationStart\"\n  | \"onAnimationEnd\"\n  | \"onAnimationIteration\"\n  | \"onDrag\"\n  | \"onDragEnd\"\n  | \"onDragEnter\"\n  | \"onDragExit\"\n  | \"onDragLeave\"\n  | \"onDragOver\"\n  | \"onDragStart\"\n  | \"onDrop\"\n  | \"values\"\n> {\n  /** Icon size in pixels or CSS string */\n  size?: number | string;\n  /** Icon color (defaults to currentColor) */\n  color?: string;\n  /** SVG stroke width */\n  strokeWidth?: number;\n  /** Additional CSS classes */\n  className?: string;\n}\n\nexport interface AnimatedIconHandle {\n  startAnimation: () => void;\n  stopAnimation: () => void;\n}\n",
+      "type": "registry:ui"
+    }
+  ],
+  "type": "registry:ui"
+}
