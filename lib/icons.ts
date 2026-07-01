@@ -963,4 +963,32 @@ export const ICONS = [
     name: "brand-lmstudio",
     path: "/icons/brand-lmstudio-icon",
   },
+  {
+    name: "plus icon",
+    path: "/icons/plus-icon",
+  },
+  {
+    name: "circle icon",
+    path: "/icons/circle-icon",
+  },
+  {
+    name: "calendar icon",
+    path: "/icons/calendar-icon",
+  },
+  {
+    name: "calendar days icon",
+    path: "/icons/calendar-days-icon",
+  },
+  {
+    name: "flask icon",
+    path: "/icons/flask-icon",
+  },
+  {
+    name: "key icon",
+    path: "/icons/key-icon",
+  },
+  {
+    name: "arrow left right icon",
+    path: "/icons/arrow-left-right-icon",
+  },
 ];

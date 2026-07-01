@@ -262,6 +262,13 @@ import BrandMidJourneyIcon from "./brand-midjourney-icon";
 import BrandOllamaIcon from "./brand-ollama-icon";
 import BrandWordPressIcon from "./brand-wordpress-icon";
 import BrainCircuitIcon from "./brain-circuit-icon";
+import PlusIcon from "./plus-icon";
+import CircleIcon from "./circle-icon";
+import CalendarIcon from "./calendar-icon";
+import CalendarDaysIcon from "./calendar-days-icon";
+import FlaskIcon from "./flask-icon";
+import KeyIcon from "./key-icon";
+import ArrowLeftRightIcon from "./arrow-left-right-icon";
 
 export interface IconType {
   name: string;
@@ -1883,6 +1890,65 @@ const ICON_LIST: IconType[] = [
     name: "upload-icon",
     icon: UploadIcon,
     keywords: ["upload", "submit", "send", "transfer", "cloud"],
+  },
+  {
+    name: "plus-icon",
+    icon: PlusIcon,
+    keywords: ["plus", "add", "new", "create", "increment", "cross"],
+  },
+  {
+    name: "circle-icon",
+    icon: CircleIcon,
+    keywords: ["circle", "ring", "round", "shape", "outline", "dot"],
+  },
+  {
+    name: "calendar-icon",
+    icon: CalendarIcon,
+    keywords: ["calendar", "date", "schedule", "event", "day", "month"],
+  },
+  {
+    name: "calendar-days-icon",
+    icon: CalendarDaysIcon,
+    keywords: ["calendar", "days", "date", "schedule", "month", "agenda"],
+  },
+  {
+    name: "flask-icon",
+    icon: FlaskIcon,
+    keywords: [
+      "flask",
+      "lab",
+      "experiment",
+      "test",
+      "science",
+      "chemistry",
+      "beaker",
+    ],
+  },
+  {
+    name: "key-icon",
+    icon: KeyIcon,
+    keywords: [
+      "key",
+      "password",
+      "access",
+      "security",
+      "credential",
+      "unlock",
+      "auth",
+    ],
+  },
+  {
+    name: "arrow-left-right-icon",
+    icon: ArrowLeftRightIcon,
+    keywords: [
+      "arrow",
+      "left",
+      "right",
+      "swap",
+      "transfer",
+      "exchange",
+      "horizontal",
+    ],
   },
 ].sort((a, b) => a.name.localeCompare(b.name));
 export { ICON_LIST };
