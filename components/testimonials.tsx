@@ -35,9 +35,13 @@ export default function TestimonialSection() {
           <div className="border-primary/20 bg-primary/5 text-primary rounded-full border px-4 py-1.5 text-xs font-medium tracking-wider lowercase">
             community love
           </div>
-          <h2 className="text-4xl font-bold tracking-tight lowercase md:text-5xl">
+          <h2 className="text-4xl font-light font-serif italic tracking-tight lowercase md:text-5xl">
             loved by creators
           </h2>
+          <p className="max-w-2xl text-muted-foreground/80 text-sm">
+            its hover has been embraced by creators worldwide, fostering a vibrant
+            community that celebrates creativity and innovation. 
+          </p>
         </motion.div>
 
         {/* Featured Videos Row */}

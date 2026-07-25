@@ -19,9 +19,12 @@ interface SponsorProps {
   };
   placeholderText?: string;
   editable?: boolean;
+  imageClassName?: string;
 }
 
 const SponsorCard = ({ sponsor }: { sponsor: SponsorProps }) => {
+  // we use local state here to handle the "live" editing experience
+  // it feels way more snappy than waiting for a roundtrip
   const [isEditing, setIsEditing] = useState(false);
   const [name, setName] = useState(sponsor.name);
   const [description, setDescription] = useState(sponsor.description);
@@ -37,31 +40,31 @@ const SponsorCard = ({ sponsor }: { sponsor: SponsorProps }) => {
 
   return (
     <motion.div
-      whileHover={{ y: -2 }}
-      transition={{ duration: 0.25, ease: "easeOut" }}
-      className={`group border-border bg-card relative flex min-h-[300px] flex-col overflow-hidden rounded-2xl border sm:flex-row ${
-        isEditing ? "ring-primary/50 ring-2" : ""
+      whileHover={{ y: -6 }}
+      transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
+      className={`group border-border bg-background/50 hover:bg-background/80 relative flex flex-col overflow-hidden rounded-3xl border backdrop-blur-sm transition-all duration-500 ${
+        isEditing ? "ring-primary/30 ring-4" : "hover:shadow-2xl hover:shadow-primary/5"
       }`}
     >
-      {/* glow effect */}
-      <div className="pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
-        <div className="from-primary/5 absolute inset-0 bg-linear-to-br via-transparent to-transparent" />
+      {/* bit of a glow here, because they bring the light! */}
+      <div className="pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-500 group-hover:opacity-100">
+        <div className="from-primary/10 absolute inset-0 bg-linear-to-br via-transparent to-transparent" />
       </div>
 
       {sponsor.editable && !isEditing && (
         <button
           onClick={() => setIsEditing(true)}
-          className="bg-background/50 border-border/50 text-muted-foreground hover:text-foreground hover:bg-background absolute top-4 right-4 z-20 flex items-center justify-center rounded-full border p-2 opacity-0 backdrop-blur-sm transition-all group-hover:opacity-100"
+          className="bg-background/50 border-border/50 text-muted-foreground hover:text-foreground hover:bg-background absolute top-6 right-6 z-20 flex items-center justify-center rounded-full border p-2.5 opacity-0 backdrop-blur-md transition-all duration-300 group-hover:opacity-100"
           title="Edit this card"
         >
-          <PenIcon size={16} className="h-4 w-4" />
+          <PenIcon size={18} className="h-4.5 w-4.5" />
         </button>
       )}
 
-      {/* Left side / Image area */}
-      <div className="border-border/50 relative flex min-h-[200px] flex-1 items-center justify-center border-b bg-black/20 p-8 sm:border-r sm:border-b-0">
+      {/* Top area / Image - making it feel like a gallery piece */}
+      <div className={`border-border/50 relative flex h-64 items-center justify-center border-b p-12 transition-colors duration-500  ${sponsor.imageClassName || "bg-gray-200/80 dark:bg-white/20"} `}>
         {isEditing ? (
-          <label className="border-primary/50 bg-primary/5 text-primary/80 hover:border-primary hover:bg-primary/10 relative z-10 flex h-48 w-full cursor-pointer flex-col items-center justify-center overflow-hidden rounded-lg border-2 border-dashed text-sm transition-colors sm:h-64">
+          <label className="border-primary/50 bg-primary/5 text-primary/80 hover:border-primary hover:bg-primary/10 relative z-10 flex h-48 w-full cursor-pointer flex-col items-center justify-center overflow-hidden rounded-xl border-2 border-dashed text-sm transition-all sm:h-56">
             <input
               type="file"
               className="hidden"
@@ -74,54 +77,54 @@ const SponsorCard = ({ sponsor }: { sponsor: SponsorProps }) => {
                   src={logoPreview}
                   alt="Logo preview"
                   fill
-                  className="object-contain p-4"
+                  className="object-contain p-8"
                 />
-                <div className="absolute inset-0 flex items-center justify-center bg-black/50 opacity-0 transition-opacity hover:opacity-100">
-                  <span className="font-medium text-white">Change Image</span>
+                <div className="absolute inset-0 flex items-center justify-center bg-black/40 opacity-0 transition-opacity backdrop-blur-[2px] hover:opacity-100">
+                  <span className="font-medium text-white text-xs tracking-widest uppercase">Change Image</span>
                 </div>
               </>
             ) : (
-              <span className="text-xs lowercase">Upload Logo</span>
+              <span className="text-xs font-light tracking-widest uppercase opacity-60">Upload Logo</span>
             )}
           </label>
         ) : logoPreview ? (
-          <div className="relative z-10 h-48 w-full sm:h-64">
+          <div className="relative z-10 h-48 w-full sm:h-56">
             <Image
               src={logoPreview}
               alt={`${name} logo`}
               fill
-              className="object-contain p-4"
+              className="object-contain p-8"
             />
           </div>
         ) : sponsor.logo ? (
-          <div className="text-foreground z-10">{sponsor.logo}</div>
+          <div className="text-foreground z-10 transition-transform duration-500 group-hover:scale-110">{sponsor.logo}</div>
         ) : (
-          <div className="border-border/60 text-muted-foreground/60 group-hover:border-border group-hover:text-muted-foreground/80 z-10 flex h-48 w-full items-center justify-center rounded-lg border border-dashed text-sm lowercase transition-colors sm:h-64">
+          <div className="border-border/60 text-muted-foreground/40 group-hover:border-border group-hover:text-muted-foreground/60 z-10 flex h-48 w-full items-center justify-center rounded-2xl border border-dashed text-xs font-light tracking-widest uppercase transition-all duration-500 sm:h-56">
             {sponsor.placeholderText || "your image here"}
           </div>
         )}
       </div>
 
-      {/* Right side / Content area */}
-      <div className="relative z-10 flex w-full flex-1 flex-col justify-center p-8 sm:p-10">
-        <div className="mb-4 flex items-center gap-3">
+      {/* Content area - keeping it airy with serif fonts and light weights */}
+      <div className="relative z-10 flex w-full flex-col p-10">
+        <div className="mb-6 flex items-center justify-between gap-4">
           {isEditing ? (
             <input
               value={name}
               onChange={(e) => setName(e.target.value)}
-              className="border-primary/50 focus:border-primary placeholder:text-muted-foreground/50 max-w-full border-b bg-transparent py-1 text-2xl font-semibold tracking-tight lowercase outline-none"
+              className="border-primary/50 focus:border-primary placeholder:text-muted-foreground/50 max-w-full border-b bg-transparent py-1 text-3xl font-light tracking-tight lowercase outline-none font-serif italic"
               placeholder="company name"
               autoFocus
             />
           ) : (
-            <h3 className="text-2xl font-semibold tracking-tight lowercase">
+            <h3 className="text-3xl font-light tracking-tight lowercase font-serif italic">
               {name || "company name"}
             </h3>
           )}
 
           {sponsor.badge && (
             <span
-              className={`rounded-md border px-2.5 py-1 text-[10px] font-medium whitespace-nowrap lowercase ${
+              className={`rounded-full border px-3 py-1 text-[10px] font-bold tracking-wider uppercase ${
                 sponsor.badgeColor === "success"
                   ? "border-green-500/20 bg-green-500/10 text-green-500"
                   : "bg-muted text-muted-foreground border-border/50"
@@ -136,11 +139,11 @@ const SponsorCard = ({ sponsor }: { sponsor: SponsorProps }) => {
           <textarea
             value={description}
             onChange={(e) => setDescription(e.target.value)}
-            className="text-muted-foreground border-primary/50 focus:border-primary placeholder:text-muted-foreground/50 mb-8 h-32 w-full resize-none rounded-md border bg-transparent p-3 text-[15px] leading-relaxed lowercase outline-none"
+            className="text-muted-foreground/80 border-primary/50 focus:border-primary placeholder:text-muted-foreground/50 mb-8 h-32 w-full resize-none rounded-xl border bg-transparent p-4 text-[15px] leading-relaxed font-light lowercase outline-none"
             placeholder="write a short description about how your company supports developers or open source..."
           />
         ) : (
-          <p className="text-muted-foreground mb-8 line-clamp-4 max-w-md text-[15px] leading-relaxed lowercase">
+          <p className="text-muted-foreground/70 mb-10 line-clamp-4 text-[15px] leading-relaxed font-light lowercase">
             {description}
           </p>
         )}
@@ -162,7 +165,7 @@ const SponsorCard = ({ sponsor }: { sponsor: SponsorProps }) => {
 
           {isEditing && (
             <SecondaryButton
-              className="border-primary/50 text-primary hover:bg-primary/10 ml-auto text-sm lowercase"
+              className="border-primary/50 text-primary hover:bg-primary/10 ml-auto text-xs font-bold tracking-widest uppercase transition-all"
               onClick={() => setIsEditing(false)}
             >
               done editing
@@ -180,6 +183,7 @@ export default function BackedBy() {
       name: "vercel",
       badge: "open source program",
       badgeColor: "default",
+      imageClassName: "bg-black dark:bg-black",
       description:
         "providing the robust infrastructure that keeps its hover fast, reliable, and accessible to creators worldwide. vercel enables seamless deployment with zero configuration.",
       logo: (
@@ -208,29 +212,30 @@ export default function BackedBy() {
   ];
 
   return (
-    <section className="border-border/40 mx-auto max-w-6xl border-t px-6 py-24">
+    <section className="relative mx-auto max-w-7xl  px-6 py-32 overflow-hidden">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5 }}
+        transition={{ duration: 0.7 }}
         viewport={{ once: true }}
-        className="mb-16 flex flex-col items-center space-y-4 text-center"
+        className="mb-24 flex flex-col items-center space-y-6 text-center"
       >
-        <h2 className="text-4xl font-bold tracking-tight lowercase md:text-5xl">
-          backed by
+        <h2 className="text-5xl font-light tracking-tighter font-serif italic md:text-7xl">
+          Backed by
         </h2>
-        <p className="text-muted-foreground max-w-2xl px-4 lowercase">
-          its hover is supported by incredible tools and companies.
+          <p className="max-w-2xl text-muted-foreground/80 text-sm">
+         <span className="text-primary font-medium">Its hover</span> is built on the shoulders of giants. We&apos;re grateful for the tools and people that make this possible.
         </p>
       </motion.div>
 
-      <div className="grid grid-cols-1 gap-6">
+      {/* using a responsive grid that gives cards room to breathe */}
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-10 lg:gap-16 mx-auto">
         {sponsors.map((sponsor, index) => (
           <motion.div
             key={sponsor.name}
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.1 * (index + 1) }}
+            transition={{ duration: 0.8, delay: 0.15 * index, ease: [0.16, 1, 0.3, 1] }}
             viewport={{ once: true }}
           >
             <SponsorCard sponsor={sponsor} />
