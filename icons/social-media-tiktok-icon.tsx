@@ -9,13 +9,15 @@ interface CustomTikTokProps extends AnimatedIconProps {
 
 const TikTokIcon = forwardRef<AnimatedIconHandle, CustomTikTokProps>(
   (
-    { 
-      size = 24, 
-      color = "currentColor", 
-      strokeWidth = 2.25,    // Default is now 2.25 (one-quarter thinner than 3)
+    {
+      size = 24,
+      color = "currentColor",
+      strokeWidth = 2.25,
       className = "",
-      opacity = 1,           
-      hoverOpacity = 1,       
+      opacity = 1,
+      hoverOpacity = 1,
+      style, // Destructure style to merge safely
+      ...svgProps // Collect all remaining standard SVG / HTML attributes
     },
     ref,
   ) => {
@@ -26,30 +28,29 @@ const TikTokIcon = forwardRef<AnimatedIconHandle, CustomTikTokProps>(
       await animate(
         scope.current,
         { scale: 1.25, rotate: 12, opacity: hoverOpacity },
-        { duration: 0.2, ease: "easeOut" }
+        { duration: 0.2, ease: "easeOut" },
       );
-      
-      // Step 2: Tilt to the left (counter-clockwise) while staying zoomed in the same spot
+
+      // Step 2: Tilt to the left (counter-clockwise) in the same spot
       await animate(
         scope.current,
         { rotate: -12 },
-        { duration: 0.18, ease: "easeInOut" }
+        { duration: 0.18, ease: "easeInOut" },
       );
 
       // Step 3: Zoom back out to the original rest scale and reset rotation
       await animate(
         scope.current,
         { scale: 1, rotate: 0 },
-        { duration: 0.2, ease: "easeIn" }
+        { duration: 0.2, ease: "easeIn" },
       );
     }, [animate, scope, hoverOpacity]);
 
     const stop = useCallback(() => {
-      // Instantly kills any ongoing timeline steps and resets safely to absolute zero rest position
       animate(
         scope.current,
         { scale: 1, rotate: 0, opacity: opacity },
-        { duration: 0.15, ease: "easeOut" }
+        { duration: 0.15, ease: "easeOut" },
       );
     }, [animate, scope, opacity]);
 
@@ -60,6 +61,8 @@ const TikTokIcon = forwardRef<AnimatedIconHandle, CustomTikTokProps>(
 
     return (
       <motion.svg
+        // 1. Spread standard props FIRST so internal controllers take precedence
+        {...svgProps}
         ref={scope}
         onHoverStart={start}
         onHoverEnd={stop}
@@ -69,13 +72,15 @@ const TikTokIcon = forwardRef<AnimatedIconHandle, CustomTikTokProps>(
         viewBox="0 0 24 24"
         fill="none"
         stroke={color}
-        strokeWidth={strokeWidth} // Dynamically controlled by the parameter prop
+        strokeWidth={strokeWidth}
         strokeLinecap="round"
         strokeLinejoin="round"
         className={`cursor-pointer ${className}`}
-        style={{ 
-          transformOrigin: "center center", // Crucial for clean, centered rotation tracking
-          opacity: opacity 
+        style={{
+          // 2. Spread incoming styles so users can pass inline layouts externally
+          ...style,
+          transformOrigin: "center center",
+          opacity: opacity,
         }}
       >
         <path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5" />
