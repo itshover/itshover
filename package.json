@@ -4,7 +4,7 @@
   "private": true,
   "description": "icons that move with intent",
   "author": "Abhij",
-  "license": "MIT",
+  "license": "Apache-2.0",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
