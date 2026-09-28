@@ -62,7 +62,7 @@ const PythonIcon = forwardRef<AnimatedIconHandle, AnimatedIconProps>(
           d="M12 9h-7a2 2 0 0 0 -2 2v4a2 2 0 0 0 2 2h3"
         />
         <motion.path
-          className="snake-top"
+          className="snake-bottom"
           d="M12 15h7a2 2 0 0 0 2 -2v-4a2 2 0 0 0 -2 -2h-3"
         />
         <motion.path
