@@ -65,7 +65,14 @@ const LayoutBottombarCollapseIcon = forwardRef<
     >
       <path stroke="none" d="M0 0h24v24H0z" fill="none" />
 
-      <path d="M18 3a3 3 0 0 1 2.995 2.824l.005 .176v12a3 3 0 0 1 -2.824 2.995l-.176 .005h-12a3 3 0 0 1 -2.995 -2.824l-.005 -.176v-12a3 3 0 0 1 2.824 -2.995l.176 -.005h12zm0 2h-12a1 1 0 0 0 -.993 .883l-.007 .117v9h14v-9a1 1 0 0 0 -.883 -.993l-.117 -.007z" />
+      {/* Panel frame: outer rounded rect + full-height inner cutout → renders the border ring only */}
+      <path d="M18 3a3 3 0 0 1 2.995 2.824l.005 .176v12a3 3 0 0 1 -2.824 2.995l-.176 .005h-12a3 3 0 0 1 -2.995 -2.824l-.005 -.176v-12a3 3 0 0 1 2.824 -2.995l.176 -.005h12zm0 2h-12a1 1 0 0 0 -.993 .883l-.007 .117v11.117a1 1 0 0 0 .883 .883l.117 .007h12a1 1 0 0 0 .993 -.883l.007 -.117v-11a1 1 0 0 0 -.883 -.993l-.117 -.007z" />
+
+      {/* Bottom bar: separate element so it can be dimmed independently on hover */}
+      <motion.path
+        className="bottombar"
+        d="M5 15h14v3a1 1 0 0 1 -1 1h-12a1 1 0 0 1 -1 -1z"
+      />
 
       <motion.g className="chevron">
         <path d="M10.613 8.21l.094 .083l1.293 1.292l1.293 -1.292a1 1 0 0 1 1.32 -.083l.094 .083a1 1 0 0 1 .083 1.32l-.083 .094l-2 2a1 1 0 0 1 -1.32 .083l-.094 -.083l-2 -2a1 1 0 0 1 1.32 -1.497z" />
