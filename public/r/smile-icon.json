@@ -1,0 +1,20 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "smile-icon",
+  "dependencies": ["motion"],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "icons/smile-icon.tsx",
+      "content": "import { forwardRef, useImperativeHandle } from \"react\";\nimport type { AnimatedIconHandle, AnimatedIconProps } from \"./types\";\nimport { motion, useAnimate } from \"motion/react\";\n\nconst SmileIcon = forwardRef<AnimatedIconHandle, AnimatedIconProps>(\n  (\n    { size = 24, color = \"currentColor\", strokeWidth = 2, className = \"\" },\n    ref,\n  ) => {\n    const [scope, animate] = useAnimate();\n\n    const start = async () => {\n      // Waggle the face\n      animate(\n        \".smile-icon\",\n        { rotate: [0, -5, 5, -5, 5, 0] },\n        { duration: 0.5, ease: \"easeInOut\" },\n      );\n      // Draw the smile from left to right\n      animate(\n        \".smile-path\",\n        { pathLength: [0, 1] },\n        { duration: 0.5, ease: \"easeOut\" },\n      );\n      // Make the eyes blink\n      animate(\n        \".smile-eye\",\n        { scaleY: [1, 0.1, 1] },\n        { duration: 0.2, delay: 0.2 },\n      );\n    };\n\n    const stop = () => {\n      animate(\".smile-icon\", { rotate: 0 }, { duration: 0.2 });\n      animate(\".smile-path\", { pathLength: 1 }, { duration: 0.2 });\n      animate(\".smile-eye\", { scaleY: 1 }, { duration: 0.2 });\n    };\n\n    useImperativeHandle(ref, () => ({\n      startAnimation: start,\n      stopAnimation: stop,\n    }));\n\n    const handleHoverStart = () => {\n      start();\n    };\n\n    const handleHoverEnd = () => {\n      stop();\n    };\n\n    return (\n      <motion.svg\n        ref={scope}\n        onHoverStart={handleHoverStart}\n        onHoverEnd={handleHoverEnd}\n        xmlns=\"http://www.w3.org/2000/svg\"\n        width={size}\n        height={size}\n        viewBox=\"0 0 24 24\"\n        fill=\"none\"\n        stroke={color}\n        strokeWidth={strokeWidth}\n        strokeLinecap=\"round\"\n        strokeLinejoin=\"round\"\n        className={`inline-flex cursor-pointer items-center justify-center ${className}`}\n        style={{ overflow: \"visible\" }}\n      >\n        <motion.g className=\"smile-icon\" style={{ transformOrigin: \"center\" }}>\n          <circle cx=\"12\" cy=\"12\" r=\"10\" />\n          <motion.path className=\"smile-path\" d=\"M8 14s1.5 2 4 2 4-2 4-2\" />\n          <motion.line\n            className=\"smile-eye\"\n            x1=\"9\"\n            x2=\"9.01\"\n            y1=\"9\"\n            y2=\"9\"\n            style={{ transformOrigin: \"9px 9px\" }}\n          />\n          <motion.line\n            className=\"smile-eye\"\n            x1=\"15\"\n            x2=\"15.01\"\n            y1=\"9\"\n            y2=\"9\"\n            style={{ transformOrigin: \"15px 9px\" }}\n          />\n        </motion.g>\n      </motion.svg>\n    );\n  },\n);\n\nSmileIcon.displayName = \"SmileIcon\";\n\nexport default SmileIcon;\n",
+      "type": "registry:ui"
+    },
+    {
+      "path": "icons/types.ts",
+      "content": "import type { SVGProps } from \"react\";\n\nexport type IconEasing =\n  | \"linear\"\n  | \"easeIn\"\n  | \"easeOut\"\n  | \"easeInOut\"\n  | \"circIn\"\n  | \"circOut\"\n  | \"circInOut\"\n  | \"backIn\"\n  | \"backOut\"\n  | \"backInOut\"\n  | \"anticipate\";\n\nexport interface AnimatedIconProps extends Omit<\n  SVGProps<SVGSVGElement>,\n  | \"ref\"\n  | \"onAnimationStart\"\n  | \"onAnimationEnd\"\n  | \"onAnimationIteration\"\n  | \"onDrag\"\n  | \"onDragEnd\"\n  | \"onDragEnter\"\n  | \"onDragExit\"\n  | \"onDragLeave\"\n  | \"onDragOver\"\n  | \"onDragStart\"\n  | \"onDrop\"\n  | \"values\"\n> {\n  /** Icon size in pixels or CSS string */\n  size?: number | string;\n  /** Icon color (defaults to currentColor) */\n  color?: string;\n  /** SVG stroke width */\n  strokeWidth?: number;\n  /** Additional CSS classes */\n  className?: string;\n}\n\nexport interface AnimatedIconHandle {\n  startAnimation: () => void;\n  stopAnimation: () => void;\n}\n",
+      "type": "registry:ui"
+    }
+  ],
+  "type": "registry:ui"
+}
