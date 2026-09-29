@@ -7,6 +7,7 @@ import TakeuforwardNavbar from "@/components/examples/takeuforward-navbar";
 import NotionSidebar from "@/components/examples/notion-sidebar";
 import Dock from "@/components/examples/dock";
 import ProfileDropdown from "@/components/examples/profile-dropdown";
+import CommandPalette from "@/components/examples/command-palette";
 
 // Define the registry of examples
 // Add new examples to this array
@@ -88,6 +89,16 @@ const EXAMPLE_REGISTRY = [
     description:
       "A sleek profile dropdown menu with animated icons, user information, and a theme toggle. ",
     tags: ["Dropdown", "Profile", "Navigation", "Framer Motion", "UI"],
+  },
+  {
+    componentName: "Command Palette",
+    slug: "command-palette",
+    createdBy: "https://github.com/itsaryanchauhan",
+    filePath: "components/examples/command-palette.tsx",
+    component: CommandPalette,
+    description:
+      "A VS Code-style command palette triggered by ⌘⇧P. Features real-time search, keyboard navigation, grouped commands, and animated icons per result row.",
+    tags: ["Command Palette", "Search", "Keyboard", "Overlay", "Framer Motion"],
   },
 ];
 
