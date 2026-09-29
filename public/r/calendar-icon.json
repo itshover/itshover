@@ -1,0 +1,20 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "calendar-icon",
+  "dependencies": ["motion"],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "icons/calendar-icon.tsx",
+      "content": "import { forwardRef, useImperativeHandle } from \"react\";\nimport type { AnimatedIconHandle, AnimatedIconProps } from \"./types\";\nimport { motion, useAnimate } from \"motion/react\";\n\nconst CalendarIcon = forwardRef<AnimatedIconHandle, AnimatedIconProps>(\n  (\n    { size = 24, color = \"currentColor\", strokeWidth = 2, className = \"\" },\n    ref,\n  ) => {\n    const [scope, animate] = useAnimate();\n\n    const start = async () => {\n      await animate(\".cal-draw\", { pathLength: 0 }, { duration: 0.12, ease: \"easeInOut\" });\n      animate(\".cal-ring\", { y: [0, -3, 0] }, { duration: 0.5, ease: \"easeOut\", delay: 0.15 });\n      await animate(\".cal-draw\", { pathLength: 1 }, { duration: 0.5, ease: \"easeInOut\" });\n    };\n\n    const stop = () => {\n      animate(\".cal-draw\", { pathLength: 1 }, { duration: 0.2, ease: \"easeInOut\" });\n      animate(\".cal-ring\", { y: 0 }, { duration: 0.2 });\n    };\n\n    useImperativeHandle(ref, () => ({\n      startAnimation: start,\n      stopAnimation: stop,\n    }));\n\n    return (\n      <motion.div ref={scope} onHoverStart={start} onHoverEnd={stop}>\n        <motion.svg\n          xmlns=\"http://www.w3.org/2000/svg\"\n          width={size}\n          height={size}\n          viewBox=\"0 0 24 24\"\n          fill=\"none\"\n          stroke={color}\n          strokeWidth={strokeWidth}\n          strokeLinecap=\"round\"\n          strokeLinejoin=\"round\"\n          className={`cursor-pointer ${className}`}\n        >\n          <motion.path stroke=\"none\" d=\"M0 0h24v24H0z\" fill=\"none\" />\n          <motion.rect x=\"3\" y=\"4\" width=\"18\" height=\"18\" rx=\"2\" className=\"cal-draw\" />\n          <motion.path d=\"M3 10h18\" className=\"cal-draw\" />\n          <motion.path d=\"M8 2v4\" className=\"cal-ring\" />\n          <motion.path d=\"M16 2v4\" className=\"cal-ring\" />\n        </motion.svg>\n      </motion.div>\n    );\n  },\n);\n\nCalendarIcon.displayName = \"CalendarIcon\";\n\nexport default CalendarIcon;\n",
+      "type": "registry:ui"
+    },
+    {
+      "path": "icons/types.ts",
+      "content": "import type { SVGProps } from \"react\";\n\n/** Standard stroke width for 24×24 outline icons */\nexport const DEFAULT_STROKE_WIDTH = 2;\n\n/** Scale stroke to match DEFAULT_STROKE_WIDTH on non-24 viewBoxes */\nexport function scaledStrokeWidth(\n  strokeWidth: number,\n  viewBoxSize: number,\n): number {\n  return strokeWidth * (viewBoxSize / 24);\n}\n\nexport type IconEasing =\n  | \"linear\"\n  | \"easeIn\"\n  | \"easeOut\"\n  | \"easeInOut\"\n  | \"circIn\"\n  | \"circOut\"\n  | \"circInOut\"\n  | \"backIn\"\n  | \"backOut\"\n  | \"backInOut\"\n  | \"anticipate\";\n\nexport interface AnimatedIconProps extends Omit<\n  SVGProps<SVGSVGElement>,\n  | \"ref\"\n  | \"onAnimationStart\"\n  | \"onAnimationEnd\"\n  | \"onAnimationIteration\"\n  | \"onDrag\"\n  | \"onDragEnd\"\n  | \"onDragEnter\"\n  | \"onDragExit\"\n  | \"onDragLeave\"\n  | \"onDragOver\"\n  | \"onDragStart\"\n  | \"onDrop\"\n  | \"values\"\n> {\n  /** Icon size in pixels or CSS string */\n  size?: number | string;\n  /** Icon color (defaults to currentColor) */\n  color?: string;\n  /** SVG stroke width */\n  strokeWidth?: number;\n  /** Additional CSS classes */\n  className?: string;\n}\n\nexport interface AnimatedIconHandle {\n  startAnimation: () => void;\n  stopAnimation: () => void;\n}\n",
+      "type": "registry:ui"
+    }
+  ],
+  "type": "registry:ui"
+}

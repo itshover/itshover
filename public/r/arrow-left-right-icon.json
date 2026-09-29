@@ -1,0 +1,20 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "arrow-left-right-icon",
+  "dependencies": ["motion"],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "icons/arrow-left-right-icon.tsx",
+      "content": "import { forwardRef, useImperativeHandle } from \"react\";\nimport type { AnimatedIconHandle, AnimatedIconProps } from \"./types\";\nimport { motion, useAnimate } from \"motion/react\";\n\nconst ArrowLeftRightIcon = forwardRef<AnimatedIconHandle, AnimatedIconProps>(\n  (\n    { size = 24, color = \"currentColor\", strokeWidth = 2, className = \"\" },\n    ref,\n  ) => {\n    const [scope, animate] = useAnimate();\n\n    const start = async () => {\n      await animate(\".alr-draw\", { pathLength: 0 }, { duration: 0.12, ease: \"easeInOut\" });\n      await animate(\".alr-draw\", { pathLength: 1 }, { duration: 0.4, ease: \"easeOut\" });\n      // a small outward nudge, like a transfer completing\n      animate(\".alr-right\", { x: [0, 3, 0] }, { duration: 0.45, ease: \"easeInOut\" });\n      animate(\".alr-left\", { x: [0, -3, 0] }, { duration: 0.45, ease: \"easeInOut\" });\n    };\n\n    const stop = () => {\n      animate(\".alr-draw\", { pathLength: 1 }, { duration: 0.2, ease: \"easeInOut\" });\n      animate(\".alr-right, .alr-left\", { x: 0 }, { duration: 0.2 });\n    };\n\n    useImperativeHandle(ref, () => ({\n      startAnimation: start,\n      stopAnimation: stop,\n    }));\n\n    return (\n      <motion.div ref={scope} onHoverStart={start} onHoverEnd={stop}>\n        <motion.svg\n          xmlns=\"http://www.w3.org/2000/svg\"\n          width={size}\n          height={size}\n          viewBox=\"0 0 24 24\"\n          fill=\"none\"\n          stroke={color}\n          strokeWidth={strokeWidth}\n          strokeLinecap=\"round\"\n          strokeLinejoin=\"round\"\n          className={`cursor-pointer ${className}`}\n          style={{ overflow: \"visible\" }}\n        >\n          <motion.path stroke=\"none\" d=\"M0 0h24v24H0z\" fill=\"none\" />\n          <motion.g className=\"alr-right\">\n            <motion.path d=\"M20 7H4\" className=\"alr-draw\" />\n            <motion.path d=\"M16 3l4 4l-4 4\" className=\"alr-draw\" />\n          </motion.g>\n          <motion.g className=\"alr-left\">\n            <motion.path d=\"M4 17h16\" className=\"alr-draw\" />\n            <motion.path d=\"M8 21l-4-4l4-4\" className=\"alr-draw\" />\n          </motion.g>\n        </motion.svg>\n      </motion.div>\n    );\n  },\n);\n\nArrowLeftRightIcon.displayName = \"ArrowLeftRightIcon\";\n\nexport default ArrowLeftRightIcon;\n",
+      "type": "registry:ui"
+    },
+    {
+      "path": "icons/types.ts",
+      "content": "import type { SVGProps } from \"react\";\n\n/** Standard stroke width for 24×24 outline icons */\nexport const DEFAULT_STROKE_WIDTH = 2;\n\n/** Scale stroke to match DEFAULT_STROKE_WIDTH on non-24 viewBoxes */\nexport function scaledStrokeWidth(\n  strokeWidth: number,\n  viewBoxSize: number,\n): number {\n  return strokeWidth * (viewBoxSize / 24);\n}\n\nexport type IconEasing =\n  | \"linear\"\n  | \"easeIn\"\n  | \"easeOut\"\n  | \"easeInOut\"\n  | \"circIn\"\n  | \"circOut\"\n  | \"circInOut\"\n  | \"backIn\"\n  | \"backOut\"\n  | \"backInOut\"\n  | \"anticipate\";\n\nexport interface AnimatedIconProps extends Omit<\n  SVGProps<SVGSVGElement>,\n  | \"ref\"\n  | \"onAnimationStart\"\n  | \"onAnimationEnd\"\n  | \"onAnimationIteration\"\n  | \"onDrag\"\n  | \"onDragEnd\"\n  | \"onDragEnter\"\n  | \"onDragExit\"\n  | \"onDragLeave\"\n  | \"onDragOver\"\n  | \"onDragStart\"\n  | \"onDrop\"\n  | \"values\"\n> {\n  /** Icon size in pixels or CSS string */\n  size?: number | string;\n  /** Icon color (defaults to currentColor) */\n  color?: string;\n  /** SVG stroke width */\n  strokeWidth?: number;\n  /** Additional CSS classes */\n  className?: string;\n}\n\nexport interface AnimatedIconHandle {\n  startAnimation: () => void;\n  stopAnimation: () => void;\n}\n",
+      "type": "registry:ui"
+    }
+  ],
+  "type": "registry:ui"
+}
