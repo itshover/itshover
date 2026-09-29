@@ -348,6 +348,10 @@ export const ICONS = [
     path: "/icons/download-icon",
   },
   {
+    name: "droplets icon",
+    path: "/icons/droplets-icon",
+  },
+  {
     name: "down chevron",
     path: "/icons/down-chevron",
   },

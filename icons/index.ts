@@ -92,6 +92,7 @@ import DoubleCheckIcon from "./double-check-icon";
 import DownloadIcon from "./download-icon";
 import DotsHorizontalIcon from "./dots-horizontal-icon";
 import DotsVerticalIcon from "./dots-vertical-icon";
+import DropletsIcon from "./droplets-icon";
 import DrumIcon from "./drum-icon";
 import DownChevron from "./down-chevron";
 import EyeIcon from "./eye-icon";
@@ -760,6 +761,11 @@ const ICON_LIST: IconType[] = [
     name: "download-icon",
     icon: DownloadIcon,
     keywords: ["download", "save", "save-as", "collect", "store", "receive"],
+  },
+  {
+    name: "droplets-icon",
+    icon: DropletsIcon,
+    keywords: ["droplets", "water", "liquid", "humidity", "rain", "moisture"],
   },
   {
     name: "drum-icon",
