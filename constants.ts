@@ -4,6 +4,7 @@ export const LINKS = {
   SITE_URL: "https://itshover.com",
   CREATOR: "https://x.com/abhijitwt",
   TOOLS: "https://isthereanytool.app",
+  VULTR: "https://www.vultr.com",
 } as const;
 
 export const SPONSOR = {

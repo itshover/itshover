@@ -112,6 +112,18 @@ Contributions welcome. Each icon follows this pattern:
 
 Built by [@abhijitwt](https://x.com/abhijitwt)
 
+## Partners
+
+Cloud Infrastructure partner
+
+<a href="https://www.vultr.com">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="public/assets/vultr-white.png" />
+    <source media="(prefers-color-scheme: light)" srcset="public/assets/vultr.png" />
+    <img alt="Vultr" src="public/assets/vultr.png" height="32" />
+  </picture>
+</a>
+
 ## Code of Conduct
 
 Please note that this project is released with a [Contributor Code of Conduct](CODE_OF_CONDUCT.md). By participating in this project you agree to abide by its terms.
