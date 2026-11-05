@@ -25,6 +25,7 @@ import MessageCircleIcon from "@/icons/message-circle-icon";
 import SendIcon from "@/icons/send-icon";
 import CheckedIcon from "@/icons/checked-icon";
 import RequestIconModal from "./request-icon-modal";
+import VultrMark from "./vultr-mark";
 
 const CryptoAddress = ({
   label,
@@ -172,6 +173,23 @@ const Footer = () => {
         </div>
 
         <div className="mt-12 border-t pt-8">
+          <div className="mb-8 flex justify-center md:justify-start">
+            <Link
+              href={LINKS.VULTR}
+              target="_blank"
+              rel="noreferrer"
+              className="group focus-visible:ring-ring inline-flex max-w-full flex-wrap items-center gap-x-3 gap-y-2 rounded-md focus-visible:ring-2 focus-visible:outline-none"
+            >
+              <span className="text-muted-foreground group-hover:text-foreground text-xs tracking-wide transition-colors">
+                Cloud infrastructure partner
+              </span>
+              <VultrMark
+                height={22}
+                className="opacity-90 transition-opacity group-hover:opacity-100"
+              />
+            </Link>
+          </div>
+
           <div className="flex flex-col items-center justify-between gap-4 md:flex-row">
             <p className="text-muted-foreground text-center text-sm md:text-left">
               Built by{" "}

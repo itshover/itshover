@@ -6,6 +6,8 @@ import SecondaryButton from "./ui/secondary-button";
 import { useState } from "react";
 import Image from "next/image";
 import PenIcon from "./ui/pen-icon";
+import VultrMark from "./vultr-mark";
+import { LINKS } from "@/constants";
 
 interface SponsorProps {
   name: string;
@@ -193,6 +195,27 @@ export default function BackedBy() {
           <path d="M256 48l240 416H16z" />
         </svg>
       ),
+    },
+    {
+      name: "vultr",
+      badge: "cloud infrastructure partner",
+      badgeColor: "default",
+      description:
+        "supporting its hover through vultr's open source credits program.",
+      logo: (
+        <Link
+          href={LINKS.VULTR}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="focus-visible:ring-ring inline-flex rounded-md focus-visible:ring-2 focus-visible:outline-none"
+        >
+          <VultrMark height={44} />
+        </Link>
+      ),
+      action: {
+        label: "visit vultr",
+        href: LINKS.VULTR,
+      },
     },
     {
       name: "your company here",
