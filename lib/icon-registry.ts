@@ -30,14 +30,10 @@ function parseCustomProps(raw: string): IconRegistryEntry["customProps"] {
   let match: RegExpExecArray | null;
   while ((match = propPattern.exec(raw)) !== null) {
     const defaultRaw = match[3].trim();
-    let defaultValue: string | boolean | number = defaultRaw.replace(
-      /["']/g,
-      "",
-    );
+    let defaultValue: string | boolean | number = defaultRaw.replace(/["']/g, "");
     if (defaultRaw === "true") defaultValue = true;
     else if (defaultRaw === "false") defaultValue = false;
-    else if (/^\d+(\.\d+)?$/.test(defaultRaw))
-      defaultValue = Number(defaultRaw);
+    else if (/^\d+(\.\d+)?$/.test(defaultRaw)) defaultValue = Number(defaultRaw);
     props.push({ name: match[1], type: match[2], defaultValue });
   }
   return props.length > 0 ? props : undefined;
@@ -54,14 +50,15 @@ export function getIconRegistry(): IconRegistryEntry[] {
   }
 
   const listBody = content.slice(listStart);
+
   const icons: IconRegistryEntry[] = [];
   const entryPattern =
-    /name:\s*["']([^"']+)["'][\s\S]*?keywords:\s*\[([\s\S]*?)\]/g;
+    /\{\s*name:\s*["']([^"']+)["'],\s*icon:\s*[A-Za-z0-9_]+,[\s\S]*?keywords:\s*\[([\s\S]*?)\]/g;
 
   let match: RegExpExecArray | null;
   while ((match = entryPattern.exec(listBody)) !== null) {
     const name = match[1];
-    const trailing = listBody.slice(match.index, match.index + 1200);
+    const trailing = listBody.slice(match.index, match.index + 2000);
     const customMatch = trailing.match(
       /customProps:\s*\[([\s\S]*?)\]\s*,?\s*\}/,
     );
