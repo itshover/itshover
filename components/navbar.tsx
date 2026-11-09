@@ -33,9 +33,9 @@ const Navbar = () => {
             {/* <Image src="/logo.png" alt="Logo" width={24} height={24} className=""/> */}
             <LayersIcon className="text-primary" />
             <div className="flex flex-col">
-              <h1 className="text-foreground font-sans">
+              <span className="text-foreground font-sans">
                 <span className="text-primary">its</span>hover
-              </h1>
+              </span>
             </div>
           </Link>
         </div>

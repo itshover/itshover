@@ -45,7 +45,7 @@ export default function Example() {
 
 ## Icon Library
 
-186+ animated icons covering:
+260+ animated icons covering:
 
 - UI essentials (arrows, checks, navigation)
 - Social (GitHub, Twitter, Discord, LinkedIn)

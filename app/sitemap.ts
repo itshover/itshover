@@ -1,39 +1,30 @@
 import { MetadataRoute } from "next";
-import { ICON_NAMES } from "@/lib/icon-names";
 import { LINKS } from "@/constants";
+import { getIconSlugs } from "@/lib/icons-data";
+import { getExamples } from "@/lib/examples";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = LINKS.SITE_URL;
 
-  // Static pages
   const staticPages: MetadataRoute.Sitemap = [
-    {
-      url: baseUrl,
-      lastModified: new Date(),
-      changeFrequency: "weekly",
-      priority: 1,
-    },
-    {
-      url: `${baseUrl}/icons`,
-      lastModified: new Date(),
-      changeFrequency: "weekly",
-      priority: 0.9,
-    },
-    {
-      url: `${baseUrl}/sponsor`,
-      lastModified: new Date(),
-      changeFrequency: "monthly",
-      priority: 0.7,
-    },
+    { url: baseUrl, changeFrequency: "weekly", priority: 1 },
+    { url: `${baseUrl}/icons`, changeFrequency: "weekly", priority: 0.9 },
+    { url: `${baseUrl}/example`, changeFrequency: "monthly", priority: 0.8 },
+    { url: `${baseUrl}/sponsor`, changeFrequency: "monthly", priority: 0.7 },
   ];
 
-  // Dynamic icon pages
-  const iconPages: MetadataRoute.Sitemap = ICON_NAMES.map((name) => ({
+  const slugs = [...new Set(getIconSlugs())];
+  const iconPages: MetadataRoute.Sitemap = slugs.map((name) => ({
     url: `${baseUrl}/icons/${name}`,
-    lastModified: new Date(),
     changeFrequency: "monthly" as const,
     priority: 0.6,
   }));
 
-  return [...staticPages, ...iconPages];
+  const examplePages: MetadataRoute.Sitemap = getExamples().map((example) => ({
+    url: `${baseUrl}/example/${example.slug}`,
+    changeFrequency: "monthly" as const,
+    priority: 0.7,
+  }));
+
+  return [...staticPages, ...iconPages, ...examplePages];
 }

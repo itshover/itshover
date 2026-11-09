@@ -1,7 +1,7 @@
 export const LINKS = {
   TWITTER: "https://x.com/abhijitwt",
   GITHUB: "https://github.com/itshover/itshover",
-  SITE_URL: "https://itshover.com",
+  SITE_URL: "https://www.itshover.com",
   CREATOR: "https://x.com/abhijitwt",
   TOOLS: "https://isthereanytool.app",
   VULTR: "https://www.vultr.com",
