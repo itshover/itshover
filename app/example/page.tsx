@@ -3,7 +3,9 @@ import Link from "next/link";
 import { Metadata } from "next";
 import { getExamples } from "@/lib/examples";
 import { Example } from "@/components/examples/component-wrapper";
-import { buildPageMetadata } from "@/lib/seo";
+import { buildPageMetadata, pageUrl } from "@/lib/seo";
+import { JsonLd } from "@/components/json-ld";
+import { LINKS } from "@/constants";
 
 const examples = getExamples();
 
@@ -15,23 +17,47 @@ export const metadata: Metadata = buildPageMetadata({
 });
 
 const ExamplePage = () => {
-  return (
-    <div className="bg-background min-h-screen p-8">
-      <div className="w-full">
-        <div className="mb-12">
-          <h1 className="text-foreground mb-4 text-4xl font-bold">Examples</h1>
-          <p className="text-muted-foreground text-lg">
-            Explore our collection of animated components.
-          </p>
-        </div>
+  const breadcrumbJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Home",
+        item: LINKS.SITE_URL,
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "Examples",
+        item: pageUrl("/example"),
+      },
+    ],
+  };
 
-        <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-          {examples.map((example) => (
-            <ExampleCard key={example.slug} example={example} />
-          ))}
+  return (
+    <>
+      <JsonLd data={breadcrumbJsonLd} />
+      <div className="bg-background min-h-screen p-8">
+        <div className="w-full">
+          <div className="mb-12">
+            <h1 className="text-foreground mb-4 text-4xl font-bold">
+              Examples
+            </h1>
+            <p className="text-muted-foreground text-lg">
+              Explore our collection of animated components.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+            {examples.map((example) => (
+              <ExampleCard key={example.slug} example={example} />
+            ))}
+          </div>
         </div>
       </div>
-    </div>
+    </>
   );
 };
 
