@@ -30,10 +30,14 @@ function parseCustomProps(raw: string): IconRegistryEntry["customProps"] {
   let match: RegExpExecArray | null;
   while ((match = propPattern.exec(raw)) !== null) {
     const defaultRaw = match[3].trim();
-    let defaultValue: string | boolean | number = defaultRaw.replace(/["']/g, "");
+    let defaultValue: string | boolean | number = defaultRaw.replace(
+      /["']/g,
+      "",
+    );
     if (defaultRaw === "true") defaultValue = true;
     else if (defaultRaw === "false") defaultValue = false;
-    else if (/^\d+(\.\d+)?$/.test(defaultRaw)) defaultValue = Number(defaultRaw);
+    else if (/^\d+(\.\d+)?$/.test(defaultRaw))
+      defaultValue = Number(defaultRaw);
     props.push({ name: match[1], type: match[2], defaultValue });
   }
   return props.length > 0 ? props : undefined;
