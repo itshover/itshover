@@ -12,6 +12,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { LINKS } from "@/constants";
 import type { AnimatedIconProps } from "@/icons/types";
 import PlayerIcon from "@/icons/player-icon";
+import RelatedIconsSection from "@/components/related-icons-section";
 
 type AnimatedIconHandle = {
   startAnimation: () => void;
@@ -21,9 +22,13 @@ type AnimatedIconHandle = {
 export default function IconDetailContent({
   slug,
   code,
+  displayName,
+  relatedIconSlugs = [],
 }: {
   slug: string;
   code: string;
+  displayName: string;
+  relatedIconSlugs?: string[];
 }) {
   const iconRef = React.useRef<AnimatedIconHandle>(null);
   const [codeCopied, setCodeCopied] = React.useState(false);
@@ -133,7 +138,7 @@ export interface AnimatedIconHandle {
                 animate={{ opacity: 1 }}
                 transition={{ delay: 0.2 }}
               >
-                {iconData.name}
+                {displayName}
               </motion.h1>
 
               <motion.div
@@ -159,6 +164,31 @@ export interface AnimatedIconHandle {
               animate={{ opacity: 1, x: 0 }}
               transition={{ delay: 0.2 }}
             >
+              <p className="text-muted-foreground mb-6 text-sm leading-relaxed">
+                {displayName} is a free animated React icon from Its Hover,
+                built with Motion. It animates on hover and can be triggered
+                from code with startAnimation() and stopAnimation(). Install it
+                with one shadcn command or copy the TSX.
+              </p>
+
+              <div className="mb-8">
+                <h2 className="mb-3 text-lg font-semibold">At a glance</h2>
+                <ul className="text-muted-foreground list-inside list-disc space-y-1 text-sm">
+                  <li>Dependency: motion</li>
+                  <li>Props: size, color, strokeWidth, className</li>
+                  {iconData.customProps && iconData.customProps.length > 0 && (
+                    <li>
+                      Custom props:{" "}
+                      {iconData.customProps.map((p) => p.name).join(", ")}
+                    </li>
+                  )}
+                  <li>File: icons/{slug}.tsx</li>
+                  <li>License: Apache-2.0</li>
+                </ul>
+              </div>
+
+              <RelatedIconsSection relatedIconSlugs={relatedIconSlugs} />
+
               <h2 className="mb-4 text-xl font-semibold">Installation</h2>
               <Tabs defaultValue="cli" className="w-full">
                 <TabsList className="border-border mb-6 h-auto gap-4 rounded-none border-b bg-transparent">
