@@ -1,6 +1,8 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "brand-bags-fm-icon",
+  "title": "Bags Fm",
+  "description": "Animated Bags Fm icon for React, built with Motion. Animates on hover and exposes startAnimation() and stopAnimation() through a ref.",
   "dependencies": ["motion"],
   "devDependencies": [],
   "registryDependencies": [],
@@ -16,5 +18,10 @@
       "type": "registry:ui"
     }
   ],
+  "meta": {
+    "keywords": ["bags", "fm", "brand", "logo", "shopping", "ecommerce"]
+  },
+  "docs": "https://www.itshover.com/icons/brand-bags-fm-icon",
+  "categories": ["icons", "brand"],
   "type": "registry:ui"
 }

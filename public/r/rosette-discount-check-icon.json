@@ -1,6 +1,8 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "rosette-discount-check-icon",
+  "title": "Rosette Discount Check",
+  "description": "Animated Rosette Discount Check icon for React, built with Motion. Animates on hover and exposes startAnimation() and stopAnimation() through a ref.",
   "dependencies": ["motion"],
   "devDependencies": [],
   "registryDependencies": [],
@@ -16,5 +18,18 @@
       "type": "registry:ui"
     }
   ],
+  "meta": {
+    "keywords": [
+      "rosette",
+      "discount",
+      "check",
+      "badge",
+      "verified",
+      "offer",
+      "sale"
+    ]
+  },
+  "docs": "https://www.itshover.com/icons/rosette-discount-check-icon",
+  "categories": ["icons"],
   "type": "registry:ui"
 }

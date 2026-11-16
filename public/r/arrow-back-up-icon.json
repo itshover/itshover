@@ -1,6 +1,8 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "arrow-back-up-icon",
+  "title": "Arrow Back Up",
+  "description": "Animated Arrow Back Up icon for React, built with Motion. Animates on hover and exposes startAnimation() and stopAnimation() through a ref.",
   "dependencies": ["motion"],
   "devDependencies": [],
   "registryDependencies": [],
@@ -16,5 +18,10 @@
       "type": "registry:ui"
     }
   ],
+  "meta": {
+    "keywords": ["arrow", "back", "up", "undo", "return"]
+  },
+  "docs": "https://www.itshover.com/icons/arrow-back-up-icon",
+  "categories": ["icons"],
   "type": "registry:ui"
 }

@@ -5,8 +5,6 @@ export const dynamic = "force-static";
 const ROBOTS_BODY = `# Its Hover: open-source animated React icons.
 # AI agents: a plain-text index is at ${LINKS.SITE_URL}/llms.txt (full: /llms-full.txt); usage notes at /ai.txt
 User-agent: *
-Allow: /
-
 User-agent: OAI-SearchBot
 User-agent: ChatGPT-User
 User-agent: GPTBot
@@ -16,6 +14,7 @@ User-agent: ClaudeBot
 User-agent: PerplexityBot
 User-agent: Perplexity-User
 User-agent: Google-Extended
+User-agent: Applebot-Extended
 Allow: /
 
 Sitemap: ${LINKS.SITE_URL}/sitemap.xml

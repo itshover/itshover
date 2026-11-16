@@ -54,7 +54,9 @@ export default function Example() {
 - Currency (Bitcoin, Ethereum, Dollar, Rupee)
 - Status (alerts, notifications, loading states)
 
-Browse all icons at [itshover.com/icons](https://itshover.com/icons)
+Browse all icons at [www.itshover.com/icons](https://www.itshover.com/icons)
+
+The shadcn registry index is at [www.itshover.com/r/registry.json](https://www.itshover.com/r/registry.json).
 
 ## Tech Stack
 

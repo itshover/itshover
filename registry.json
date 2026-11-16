@@ -2,11 +2,24 @@
   "_generated": "AUTO-GENERATED FILE - DO NOT EDIT. Run 'npm run registry:build' to regenerate.",
   "$schema": "https://ui.shadcn.com/schema/registry.json",
   "name": "itshover",
-  "homepage": "https://itshover.com",
+  "homepage": "https://www.itshover.com",
   "items": [
     {
       "name": "accessibility-icon",
       "type": "registry:ui",
+      "title": "Accessibility",
+      "description": "Animated Accessibility icon for React, built with Motion. Animates on hover and exposes startAnimation() and stopAnimation() through a ref.",
+      "categories": ["icons"],
+      "docs": "https://www.itshover.com/icons/accessibility-icon",
+      "meta": {
+        "keywords": [
+          "accessibility",
+          "a11y",
+          "wheelchair",
+          "disabled",
+          "inclusive"
+        ]
+      },
       "registryDependencies": [],
       "dependencies": ["motion"],
       "devDependencies": [],
@@ -24,6 +37,13 @@
     {
       "name": "airplane-icon",
       "type": "registry:ui",
+      "title": "Airplane",
+      "description": "Animated Airplane icon for React, built with Motion. Animates on hover and exposes startAnimation() and stopAnimation() through a ref.",
+      "categories": ["icons"],
+      "docs": "https://www.itshover.com/icons/airplane-icon",
+      "meta": {
+        "keywords": ["airplane", "plane", "airport", "travel", "transportation"]
+      },
       "registryDependencies": [],
       "dependencies": ["motion"],
       "devDependencies": [],
@@ -41,6 +61,21 @@
     {
       "name": "alarm-clock-plus-icon",
       "type": "registry:ui",
+      "title": "Alarm Clock Plus",
+      "description": "Animated Alarm Clock Plus icon for React, built with Motion. Animates on hover and exposes startAnimation() and stopAnimation() through a ref.",
+      "categories": ["icons"],
+      "docs": "https://www.itshover.com/icons/alarm-clock-plus-icon",
+      "meta": {
+        "keywords": [
+          "alarm",
+          "clock",
+          "plus",
+          "add",
+          "timer",
+          "time",
+          "reminder"
+        ]
+      },
       "registryDependencies": [],
       "dependencies": ["motion"],
       "devDependencies": [],
@@ -58,6 +93,13 @@
     {
       "name": "align-center-icon",
       "type": "registry:ui",
+      "title": "Align Center",
+      "description": "Animated Align Center icon for React, built with Motion. Animates on hover and exposes startAnimation() and stopAnimation() through a ref.",
+      "categories": ["icons"],
+      "docs": "https://www.itshover.com/icons/align-center-icon",
+      "meta": {
+        "keywords": ["align", "center", "text", "format", "paragraph"]
+      },
       "registryDependencies": [],
       "dependencies": ["motion"],
       "devDependencies": [],
@@ -75,6 +117,20 @@
     {
       "name": "align-vertical-space-around-icon",
       "type": "registry:ui",
+      "title": "Align Vertical Space Around",
+      "description": "Animated Align Vertical Space Around icon for React, built with Motion. Animates on hover and exposes startAnimation() and stopAnimation() through a ref.",
+      "categories": ["icons"],
+      "docs": "https://www.itshover.com/icons/align-vertical-space-around-icon",
+      "meta": {
+        "keywords": [
+          "align",
+          "vertical",
+          "space",
+          "around",
+          "distribute",
+          "layout"
+        ]
+      },
       "registryDependencies": [],
       "dependencies": ["motion"],
       "devDependencies": [],
@@ -92,6 +148,20 @@
     {
       "name": "ambulance-icon",
       "type": "registry:ui",
+      "title": "Ambulance",
+      "description": "Animated Ambulance icon for React, built with Motion. Animates on hover and exposes startAnimation() and stopAnimation() through a ref.",
+      "categories": ["icons"],
+      "docs": "https://www.itshover.com/icons/ambulance-icon",
+      "meta": {
+        "keywords": [
+          "ambulance",
+          "emergency",
+          "medical",
+          "hospital",
+          "vehicle",
+          "health"
+        ]
+      },
       "registryDependencies": [],
       "dependencies": ["motion"],
       "devDependencies": [],
@@ -109,6 +179,13 @@
     {
       "name": "ampersand-icon",
       "type": "registry:ui",
+      "title": "Ampersand",
+      "description": "Animated Ampersand icon for React, built with Motion. Animates on hover and exposes startAnimation() and stopAnimation() through a ref.",
+      "categories": ["icons"],
+      "docs": "https://www.itshover.com/icons/ampersand-icon",
+      "meta": {
+        "keywords": ["ampersand", "and", "symbol", "typography", "character"]
+      },
       "registryDependencies": [],
       "dependencies": ["motion"],
       "devDependencies": [],
@@ -126,6 +203,13 @@
     {
       "name": "angry-icon",
       "type": "registry:ui",
+      "title": "Angry",
+      "description": "Animated Angry icon for React, built with Motion. Animates on hover and exposes startAnimation() and stopAnimation() through a ref.",
+      "categories": ["icons"],
+      "docs": "https://www.itshover.com/icons/angry-icon",
+      "meta": {
+        "keywords": ["angry", "mad", "emotion", "face", "emoji", "upset"]
+      },
       "registryDependencies": [],
       "dependencies": ["motion"],
       "devDependencies": [],
@@ -143,6 +227,20 @@
     {
       "name": "annoyed-icon",
       "type": "registry:ui",
+      "title": "Annoyed",
+      "description": "Animated Annoyed icon for React, built with Motion. Animates on hover and exposes startAnimation() and stopAnimation() through a ref.",
+      "categories": ["icons"],
+      "docs": "https://www.itshover.com/icons/annoyed-icon",
+      "meta": {
+        "keywords": [
+          "annoyed",
+          "irritated",
+          "emotion",
+          "face",
+          "emoji",
+          "frustrated"
+        ]
+      },
       "registryDependencies": [],
       "dependencies": ["motion"],
       "devDependencies": [],
@@ -160,6 +258,13 @@
     {
       "name": "apple-brand-logo",
       "type": "registry:ui",
+      "title": "Apple Brand",
+      "description": "Animated Apple Brand icon for React, built with Motion. Animates on hover and exposes startAnimation() and stopAnimation() through a ref.",
+      "categories": ["icons", "brand"],
+      "docs": "https://www.itshover.com/icons/apple-brand-logo",
+      "meta": {
+        "keywords": ["apple", "brand", "logo", "mac", "ios"]
+      },
       "registryDependencies": [],
       "dependencies": ["motion"],
       "devDependencies": [],
@@ -177,6 +282,13 @@
     {
       "name": "arrow-back-icon",
       "type": "registry:ui",
+      "title": "Arrow Back",
+      "description": "Animated Arrow Back icon for React, built with Motion. Animates on hover and exposes startAnimation() and stopAnimation() through a ref.",
+      "categories": ["icons"],
+      "docs": "https://www.itshover.com/icons/arrow-back-icon",
+      "meta": {
+        "keywords": ["arrow", "back", "return", "undo", "previous"]
+      },
       "registryDependencies": [],
       "dependencies": ["motion"],
       "devDependencies": [],
@@ -194,6 +306,13 @@
     {
       "name": "arrow-back-up-icon",
       "type": "registry:ui",
+      "title": "Arrow Back Up",
+      "description": "Animated Arrow Back Up icon for React, built with Motion. Animates on hover and exposes startAnimation() and stopAnimation() through a ref.",
+      "categories": ["icons"],
+      "docs": "https://www.itshover.com/icons/arrow-back-up-icon",
+      "meta": {
+        "keywords": ["arrow", "back", "up", "undo", "return"]
+      },
       "registryDependencies": [],
       "dependencies": ["motion"],
       "devDependencies": [],
@@ -211,6 +330,13 @@
     {
       "name": "arrow-big-down-dash-icon",
       "type": "registry:ui",
+      "title": "Arrow Big Down Dash",
+      "description": "Animated Arrow Big Down Dash icon for React, built with Motion. Animates on hover and exposes startAnimation() and stopAnimation() through a ref.",
+      "categories": ["icons"],
+      "docs": "https://www.itshover.com/icons/arrow-big-down-dash-icon",
+      "meta": {
+        "keywords": ["arrow", "big", "down", "dash", "download", "bottom"]
+      },
       "registryDependencies": [],
       "dependencies": ["motion"],
       "devDependencies": [],
@@ -228,6 +354,13 @@
     {
       "name": "arrow-big-down-icon",
       "type": "registry:ui",
+      "title": "Arrow Big Down",
+      "description": "Animated Arrow Big Down icon for React, built with Motion. Animates on hover and exposes startAnimation() and stopAnimation() through a ref.",
+      "categories": ["icons"],
+      "docs": "https://www.itshover.com/icons/arrow-big-down-icon",
+      "meta": {
+        "keywords": ["arrow", "big", "down", "download", "bottom", "navigation"]
+      },
       "registryDependencies": [],
       "dependencies": ["motion"],
       "devDependencies": [],
@@ -245,6 +378,13 @@
     {
       "name": "arrow-big-left-dash-icon",
       "type": "registry:ui",
+      "title": "Arrow Big Left Dash",
+      "description": "Animated Arrow Big Left Dash icon for React, built with Motion. Animates on hover and exposes startAnimation() and stopAnimation() through a ref.",
+      "categories": ["icons"],
+      "docs": "https://www.itshover.com/icons/arrow-big-left-dash-icon",
+      "meta": {
+        "keywords": ["arrow", "big", "left", "dash", "back", "previous"]
+      },
       "registryDependencies": [],
       "dependencies": ["motion"],
       "devDependencies": [],
@@ -262,6 +402,13 @@
     {
       "name": "arrow-big-left-icon",
       "type": "registry:ui",
+      "title": "Arrow Big Left",
+      "description": "Animated Arrow Big Left icon for React, built with Motion. Animates on hover and exposes startAnimation() and stopAnimation() through a ref.",
+      "categories": ["icons"],
+      "docs": "https://www.itshover.com/icons/arrow-big-left-icon",
+      "meta": {
+        "keywords": ["arrow", "big", "left", "back", "previous", "navigation"]
+      },
       "registryDependencies": [],
       "dependencies": ["motion"],
       "devDependencies": [],
@@ -279,6 +426,13 @@
     {
       "name": "arrow-big-right-dash-icon",
       "type": "registry:ui",
+      "title": "Arrow Big Right Dash",
+      "description": "Animated Arrow Big Right Dash icon for React, built with Motion. Animates on hover and exposes startAnimation() and stopAnimation() through a ref.",
+      "categories": ["icons"],
+      "docs": "https://www.itshover.com/icons/arrow-big-right-dash-icon",
+      "meta": {
+        "keywords": ["arrow", "big", "right", "dash", "next", "forward"]
+      },
       "registryDependencies": [],
       "dependencies": ["motion"],
       "devDependencies": [],
@@ -296,6 +450,13 @@
     {
       "name": "arrow-big-right-icon",
       "type": "registry:ui",
+      "title": "Arrow Big Right",
+      "description": "Animated Arrow Big Right icon for React, built with Motion. Animates on hover and exposes startAnimation() and stopAnimation() through a ref.",
+      "categories": ["icons"],
+      "docs": "https://www.itshover.com/icons/arrow-big-right-icon",
+      "meta": {
+        "keywords": ["arrow", "big", "right", "next", "forward", "navigation"]
+      },
       "registryDependencies": [],
       "dependencies": ["motion"],
       "devDependencies": [],
@@ -313,6 +474,13 @@
     {
       "name": "arrow-big-up-dash-icon",
       "type": "registry:ui",
+      "title": "Arrow Big Up Dash",
+      "description": "Animated Arrow Big Up Dash icon for React, built with Motion. Animates on hover and exposes startAnimation() and stopAnimation() through a ref.",
+      "categories": ["icons"],
+      "docs": "https://www.itshover.com/icons/arrow-big-up-dash-icon",
+      "meta": {
+        "keywords": ["arrow", "big", "up", "dash", "upload", "top"]
+      },
       "registryDependencies": [],
       "dependencies": ["motion"],
       "devDependencies": [],
@@ -330,6 +498,13 @@
     {
       "name": "arrow-big-up-icon",
       "type": "registry:ui",
+      "title": "Arrow Big Up",
+      "description": "Animated Arrow Big Up icon for React, built with Motion. Animates on hover and exposes startAnimation() and stopAnimation() through a ref.",
+      "categories": ["icons"],
+      "docs": "https://www.itshover.com/icons/arrow-big-up-icon",
+      "meta": {
+        "keywords": ["arrow", "big", "up", "upload", "top", "navigation"]
+      },
       "registryDependencies": [],
       "dependencies": ["motion"],
       "devDependencies": [],
@@ -347,6 +522,13 @@
     {
       "name": "arrow-down-0-1-icon",
       "type": "registry:ui",
+      "title": "Arrow Down 0 1",
+      "description": "Animated Arrow Down 0 1 icon for React, built with Motion. Animates on hover and exposes startAnimation() and stopAnimation() through a ref.",
+      "categories": ["icons"],
+      "docs": "https://www.itshover.com/icons/arrow-down-0-1-icon",
+      "meta": {
+        "keywords": ["arrow", "down", "sort", "ascending", "number", "order"]
+      },
       "registryDependencies": [],
       "dependencies": ["motion"],
       "devDependencies": [],
@@ -364,6 +546,13 @@
     {
       "name": "arrow-down-1-0-icon",
       "type": "registry:ui",
+      "title": "Arrow Down 1 0",
+      "description": "Animated Arrow Down 1 0 icon for React, built with Motion. Animates on hover and exposes startAnimation() and stopAnimation() through a ref.",
+      "categories": ["icons"],
+      "docs": "https://www.itshover.com/icons/arrow-down-1-0-icon",
+      "meta": {
+        "keywords": ["arrow", "down", "sort", "descending", "number", "order"]
+      },
       "registryDependencies": [],
       "dependencies": ["motion"],
       "devDependencies": [],
@@ -381,6 +570,13 @@
     {
       "name": "arrow-down-a-z-icon",
       "type": "registry:ui",
+      "title": "Arrow Down A Z",
+      "description": "Animated Arrow Down A Z icon for React, built with Motion. Animates on hover and exposes startAnimation() and stopAnimation() through a ref.",
+      "categories": ["icons"],
+      "docs": "https://www.itshover.com/icons/arrow-down-a-z-icon",
+      "meta": {
+        "keywords": ["text", "type", "font", "write", "sort", "alphabetical"]
+      },
       "registryDependencies": [],
       "dependencies": ["motion"],
       "devDependencies": [],
@@ -398,6 +594,13 @@
     {
       "name": "arrow-narrow-down-dashed-icon",
       "type": "registry:ui",
+      "title": "Arrow Narrow Down Dashed",
+      "description": "Animated Arrow Narrow Down Dashed icon for React, built with Motion. Animates on hover and exposes startAnimation() and stopAnimation() through a ref.",
+      "categories": ["icons"],
+      "docs": "https://www.itshover.com/icons/arrow-narrow-down-dashed-icon",
+      "meta": {
+        "keywords": ["arrow", "down", "dashed", "download", "scroll"]
+      },
       "registryDependencies": [],
       "dependencies": ["motion"],
       "devDependencies": [],
@@ -415,6 +618,13 @@
     {
       "name": "arrow-narrow-down-icon",
       "type": "registry:ui",
+      "title": "Arrow Narrow Down",
+      "description": "Animated Arrow Narrow Down icon for React, built with Motion. Animates on hover and exposes startAnimation() and stopAnimation() through a ref.",
+      "categories": ["icons"],
+      "docs": "https://www.itshover.com/icons/arrow-narrow-down-icon",
+      "meta": {
+        "keywords": ["arrow", "down", "download", "scroll"]
+      },
       "registryDependencies": [],
       "dependencies": ["motion"],
       "devDependencies": [],
@@ -432,6 +642,13 @@
     {
       "name": "arrow-narrow-left-dashed-icon",
       "type": "registry:ui",
+      "title": "Arrow Narrow Left Dashed",
+      "description": "Animated Arrow Narrow Left Dashed icon for React, built with Motion. Animates on hover and exposes startAnimation() and stopAnimation() through a ref.",
+      "categories": ["icons"],
+      "docs": "https://www.itshover.com/icons/arrow-narrow-left-dashed-icon",
+      "meta": {
+        "keywords": ["arrow", "left", "dashed", "back", "previous"]
+      },
       "registryDependencies": [],
       "dependencies": ["motion"],
       "devDependencies": [],
@@ -449,6 +666,13 @@
     {
       "name": "arrow-narrow-left-icon",
       "type": "registry:ui",
+      "title": "Arrow Narrow Left",
+      "description": "Animated Arrow Narrow Left icon for React, built with Motion. Animates on hover and exposes startAnimation() and stopAnimation() through a ref.",
+      "categories": ["icons"],
+      "docs": "https://www.itshover.com/icons/arrow-narrow-left-icon",
+      "meta": {
+        "keywords": ["arrow", "left", "back", "previous"]
+      },
       "registryDependencies": [],
       "dependencies": ["motion"],
       "devDependencies": [],
@@ -466,6 +690,13 @@
     {
       "name": "arrow-narrow-right-dashed-icon",
       "type": "registry:ui",
+      "title": "Arrow Narrow Right Dashed",
+      "description": "Animated Arrow Narrow Right Dashed icon for React, built with Motion. Animates on hover and exposes startAnimation() and stopAnimation() through a ref.",
+      "categories": ["icons"],
+      "docs": "https://www.itshover.com/icons/arrow-narrow-right-dashed-icon",
+      "meta": {
+        "keywords": ["arrow", "right", "dashed", "next", "forward"]
+      },
       "registryDependencies": [],
       "dependencies": ["motion"],
       "devDependencies": [],
@@ -483,6 +714,13 @@
     {
       "name": "arrow-narrow-right-icon",
       "type": "registry:ui",
+      "title": "Arrow Narrow Right",
+      "description": "Animated Arrow Narrow Right icon for React, built with Motion. Animates on hover and exposes startAnimation() and stopAnimation() through a ref.",
+      "categories": ["icons"],
+      "docs": "https://www.itshover.com/icons/arrow-narrow-right-icon",
+      "meta": {
+        "keywords": ["arrow", "right", "next", "forward"]
+      },
       "registryDependencies": [],
       "dependencies": ["motion"],
       "devDependencies": [],
@@ -500,6 +738,13 @@
     {
       "name": "arrow-narrow-up-dashed-icon",
       "type": "registry:ui",
+      "title": "Arrow Narrow Up Dashed",
+      "description": "Animated Arrow Narrow Up Dashed icon for React, built with Motion. Animates on hover and exposes startAnimation() and stopAnimation() through a ref.",
+      "categories": ["icons"],
+      "docs": "https://www.itshover.com/icons/arrow-narrow-up-dashed-icon",
+      "meta": {
+        "keywords": ["arrow", "up", "dashed", "upload", "scroll"]
+      },
       "registryDependencies": [],
       "dependencies": ["motion"],
       "devDependencies": [],
@@ -517,6 +762,13 @@
     {
       "name": "arrow-narrow-up-icon",
       "type": "registry:ui",
+      "title": "Arrow Narrow Up",
+      "description": "Animated Arrow Narrow Up icon for React, built with Motion. Animates on hover and exposes startAnimation() and stopAnimation() through a ref.",
+      "categories": ["icons"],
+      "docs": "https://www.itshover.com/icons/arrow-narrow-up-icon",
+      "meta": {
+        "keywords": ["arrow", "up", "upload", "scroll"]
+      },
       "registryDependencies": [],
       "dependencies": ["motion"],
       "devDependencies": [],
@@ -534,6 +786,13 @@
     {
       "name": "at-sign-icon",
       "type": "registry:ui",
+      "title": "At Sign",
+      "description": "Animated At Sign icon for React, built with Motion. Animates on hover and exposes startAnimation() and stopAnimation() through a ref.",
+      "categories": ["icons"],
+      "docs": "https://www.itshover.com/icons/at-sign-icon",
+      "meta": {
+        "keywords": ["at", "sign", "@", "email", "mention", "tag", "social"]
+      },
       "registryDependencies": [],
       "dependencies": ["motion"],
       "devDependencies": [],
@@ -551,6 +810,13 @@
     {
       "name": "banana-icon",
       "type": "registry:ui",
+      "title": "Banana",
+      "description": "Animated Banana icon for React, built with Motion. Animates on hover and exposes startAnimation() and stopAnimation() through a ref.",
+      "categories": ["icons"],
+      "docs": "https://www.itshover.com/icons/banana-icon",
+      "meta": {
+        "keywords": ["banana", "fruit", "food", "tropical", "yellow"]
+      },
       "registryDependencies": [],
       "dependencies": ["motion"],
       "devDependencies": [],
@@ -568,6 +834,13 @@
     {
       "name": "battery-charging-icon",
       "type": "registry:ui",
+      "title": "Battery Charging",
+      "description": "Animated Battery Charging icon for React, built with Motion. Animates on hover and exposes startAnimation() and stopAnimation() through a ref.",
+      "categories": ["icons"],
+      "docs": "https://www.itshover.com/icons/battery-charging-icon",
+      "meta": {
+        "keywords": ["battery", "charging", "power"]
+      },
       "registryDependencies": [],
       "dependencies": ["motion"],
       "devDependencies": [],
@@ -585,6 +858,13 @@
     {
       "name": "battery-icon",
       "type": "registry:ui",
+      "title": "Battery",
+      "description": "Animated Battery icon for React, built with Motion. Animates on hover and exposes startAnimation() and stopAnimation() through a ref.",
+      "categories": ["icons"],
+      "docs": "https://www.itshover.com/icons/battery-icon",
+      "meta": {
+        "keywords": ["battery", "charging", "bolt"]
+      },
       "registryDependencies": [],
       "dependencies": ["motion"],
       "devDependencies": [],
@@ -602,6 +882,13 @@
     {
       "name": "battery-pause-icon",
       "type": "registry:ui",
+      "title": "Battery Pause",
+      "description": "Animated Battery Pause icon for React, built with Motion. Animates on hover and exposes startAnimation() and stopAnimation() through a ref.",
+      "categories": ["icons"],
+      "docs": "https://www.itshover.com/icons/battery-pause-icon",
+      "meta": {
+        "keywords": ["battery", "pause", "hold", "wait"]
+      },
       "registryDependencies": [],
       "dependencies": ["motion"],
       "devDependencies": [],
@@ -619,6 +906,13 @@
     {
       "name": "bell-off-icon",
       "type": "registry:ui",
+      "title": "Bell Off",
+      "description": "Animated Bell Off icon for React, built with Motion. Animates on hover and exposes startAnimation() and stopAnimation() through a ref.",
+      "categories": ["icons"],
+      "docs": "https://www.itshover.com/icons/bell-off-icon",
+      "meta": {
+        "keywords": ["bell", "off", "mute", "notification", "disable", "silent"]
+      },
       "registryDependencies": [],
       "dependencies": ["motion"],
       "devDependencies": [],
@@ -636,6 +930,20 @@
     {
       "name": "bluetooth-connected-icon",
       "type": "registry:ui",
+      "title": "Bluetooth Connected",
+      "description": "Animated Bluetooth Connected icon for React, built with Motion. Animates on hover and exposes startAnimation() and stopAnimation() through a ref.",
+      "categories": ["icons"],
+      "docs": "https://www.itshover.com/icons/bluetooth-connected-icon",
+      "meta": {
+        "keywords": [
+          "bluetooth",
+          "wireless",
+          "connected",
+          "pairing",
+          "audio",
+          "device"
+        ]
+      },
       "registryDependencies": [],
       "dependencies": ["motion"],
       "devDependencies": [],
@@ -653,6 +961,13 @@
     {
       "name": "book-icon",
       "type": "registry:ui",
+      "title": "Book",
+      "description": "Animated Book icon for React, built with Motion. Animates on hover and exposes startAnimation() and stopAnimation() through a ref.",
+      "categories": ["icons"],
+      "docs": "https://www.itshover.com/icons/book-icon",
+      "meta": {
+        "keywords": ["book", "read", "library", "study"]
+      },
       "registryDependencies": [],
       "dependencies": ["motion"],
       "devDependencies": [],
@@ -670,6 +985,13 @@
     {
       "name": "bookmark-icon",
       "type": "registry:ui",
+      "title": "Bookmark",
+      "description": "Animated Bookmark icon for React, built with Motion. Animates on hover and exposes startAnimation() and stopAnimation() through a ref.",
+      "categories": ["icons"],
+      "docs": "https://www.itshover.com/icons/bookmark-icon",
+      "meta": {
+        "keywords": ["bookmark", "save", "favorite", "mark"]
+      },
       "registryDependencies": [],
       "dependencies": ["motion"],
       "devDependencies": [],
@@ -687,6 +1009,13 @@
     {
       "name": "brain-circuit-icon",
       "type": "registry:ui",
+      "title": "Brain Circuit",
+      "description": "Animated Brain Circuit icon for React, built with Motion. Animates on hover and exposes startAnimation() and stopAnimation() through a ref.",
+      "categories": ["icons"],
+      "docs": "https://www.itshover.com/icons/brain-circuit-icon",
+      "meta": {
+        "keywords": ["brain", "ai", "circuit", "intelligence", "neural", "mind"]
+      },
       "registryDependencies": [],
       "dependencies": ["motion"],
       "devDependencies": [],
@@ -704,6 +1033,13 @@
     {
       "name": "brand-aistudio-icon",
       "type": "registry:ui",
+      "title": "AI Studio",
+      "description": "Animated AI Studio icon for React, built with Motion. Animates on hover and exposes startAnimation() and stopAnimation() through a ref.",
+      "categories": ["icons", "brand"],
+      "docs": "https://www.itshover.com/icons/brand-aistudio-icon",
+      "meta": {
+        "keywords": ["aistudio", "ai", "chatbot", "conversation", "brand"]
+      },
       "registryDependencies": [],
       "dependencies": ["motion"],
       "devDependencies": [],
@@ -721,6 +1057,13 @@
     {
       "name": "brand-anthropic-icon",
       "type": "registry:ui",
+      "title": "Anthropic",
+      "description": "Animated Anthropic icon for React, built with Motion. Animates on hover and exposes startAnimation() and stopAnimation() through a ref.",
+      "categories": ["icons", "brand"],
+      "docs": "https://www.itshover.com/icons/brand-anthropic-icon",
+      "meta": {
+        "keywords": ["anthropic", "ai", "chatbot", "conversation"]
+      },
       "registryDependencies": [],
       "dependencies": ["motion"],
       "devDependencies": [],
@@ -738,6 +1081,13 @@
     {
       "name": "brand-aws-icon",
       "type": "registry:ui",
+      "title": "AWS",
+      "description": "Animated AWS icon for React, built with Motion. Animates on hover and exposes startAnimation() and stopAnimation() through a ref.",
+      "categories": ["icons", "brand"],
+      "docs": "https://www.itshover.com/icons/brand-aws-icon",
+      "meta": {
+        "keywords": ["aws", "brand", "cloud", "amazon"]
+      },
       "registryDependencies": [],
       "dependencies": ["motion"],
       "devDependencies": [],
@@ -755,6 +1105,13 @@
     {
       "name": "brand-bags-fm-icon",
       "type": "registry:ui",
+      "title": "Bags Fm",
+      "description": "Animated Bags Fm icon for React, built with Motion. Animates on hover and exposes startAnimation() and stopAnimation() through a ref.",
+      "categories": ["icons", "brand"],
+      "docs": "https://www.itshover.com/icons/brand-bags-fm-icon",
+      "meta": {
+        "keywords": ["bags", "fm", "brand", "logo", "shopping", "ecommerce"]
+      },
       "registryDependencies": [],
       "dependencies": ["motion"],
       "devDependencies": [],
@@ -772,6 +1129,13 @@
     {
       "name": "brand-chrome-icon",
       "type": "registry:ui",
+      "title": "Chrome",
+      "description": "Animated Chrome icon for React, built with Motion. Animates on hover and exposes startAnimation() and stopAnimation() through a ref.",
+      "categories": ["icons", "brand"],
+      "docs": "https://www.itshover.com/icons/brand-chrome-icon",
+      "meta": {
+        "keywords": ["chrome", "browser", "google", "web", "internet", "brand"]
+      },
       "registryDependencies": [],
       "dependencies": ["motion"],
       "devDependencies": [],
@@ -789,6 +1153,13 @@
     {
       "name": "brand-cursor-icon",
       "type": "registry:ui",
+      "title": "Cursor",
+      "description": "Animated Cursor icon for React, built with Motion. Animates on hover and exposes startAnimation() and stopAnimation() through a ref.",
+      "categories": ["icons", "brand"],
+      "docs": "https://www.itshover.com/icons/brand-cursor-icon",
+      "meta": {
+        "keywords": ["cursor", "ide", "code", "coding", "cursor-ide"]
+      },
       "registryDependencies": [],
       "dependencies": ["motion"],
       "devDependencies": [],
@@ -806,6 +1177,13 @@
     {
       "name": "brand-gemini-icon",
       "type": "registry:ui",
+      "title": "Gemini",
+      "description": "Animated Gemini icon for React, built with Motion. Animates on hover and exposes startAnimation() and stopAnimation() through a ref.",
+      "categories": ["icons", "brand"],
+      "docs": "https://www.itshover.com/icons/brand-gemini-icon",
+      "meta": {
+        "keywords": ["gemini", "gemini-icon", "ai", "chatbot", "conversation"]
+      },
       "registryDependencies": [],
       "dependencies": ["motion"],
       "devDependencies": [],
@@ -823,6 +1201,13 @@
     {
       "name": "brand-google-icon",
       "type": "registry:ui",
+      "title": "Google",
+      "description": "Animated Google icon for React, built with Motion. Animates on hover and exposes startAnimation() and stopAnimation() through a ref.",
+      "categories": ["icons", "brand"],
+      "docs": "https://www.itshover.com/icons/brand-google-icon",
+      "meta": {
+        "keywords": ["google", "brand", "logo", "search", "social"]
+      },
       "registryDependencies": [],
       "dependencies": ["motion"],
       "devDependencies": [],
@@ -840,6 +1225,13 @@
     {
       "name": "brand-grok-icon",
       "type": "registry:ui",
+      "title": "Grok",
+      "description": "Animated Grok icon for React, built with Motion. Animates on hover and exposes startAnimation() and stopAnimation() through a ref.",
+      "categories": ["icons", "brand"],
+      "docs": "https://www.itshover.com/icons/brand-grok-icon",
+      "meta": {
+        "keywords": ["grok", "grok-icon", "ai", "chatbot", "conversation"]
+      },
       "registryDependencies": [],
       "dependencies": ["motion"],
       "devDependencies": [],
@@ -857,6 +1249,13 @@
     {
       "name": "brand-lmstudio-icon",
       "type": "registry:ui",
+      "title": "LM Studio",
+      "description": "Animated LM Studio icon for React, built with Motion. Animates on hover and exposes startAnimation() and stopAnimation() through a ref.",
+      "categories": ["icons", "brand"],
+      "docs": "https://www.itshover.com/icons/brand-lmstudio-icon",
+      "meta": {
+        "keywords": ["lmstudio", "ai", "chatbot", "conversation", "brand"]
+      },
       "registryDependencies": [],
       "dependencies": ["motion"],
       "devDependencies": [],
@@ -874,6 +1273,13 @@
     {
       "name": "brand-midjourney-icon",
       "type": "registry:ui",
+      "title": "Midjourney",
+      "description": "Animated Midjourney icon for React, built with Motion. Animates on hover and exposes startAnimation() and stopAnimation() through a ref.",
+      "categories": ["icons", "brand"],
+      "docs": "https://www.itshover.com/icons/brand-midjourney-icon",
+      "meta": {
+        "keywords": ["midjourney", "ai", "chatbot", "conversation", "brand"]
+      },
       "registryDependencies": [],
       "dependencies": ["motion"],
       "devDependencies": [],
@@ -891,6 +1297,21 @@
     {
       "name": "brand-nextjs-icon",
       "type": "registry:ui",
+      "title": "Next.js",
+      "description": "Animated Next.js icon for React, built with Motion. Animates on hover and exposes startAnimation() and stopAnimation() through a ref.",
+      "categories": ["icons", "brand"],
+      "docs": "https://www.itshover.com/icons/brand-nextjs-icon",
+      "meta": {
+        "keywords": [
+          "nextjs",
+          "next",
+          "brand",
+          "logo",
+          "react",
+          "framework",
+          "vercel"
+        ]
+      },
       "registryDependencies": [],
       "dependencies": ["motion"],
       "devDependencies": [],
@@ -908,6 +1329,13 @@
     {
       "name": "brand-notion-icon",
       "type": "registry:ui",
+      "title": "Notion",
+      "description": "Animated Notion icon for React, built with Motion. Animates on hover and exposes startAnimation() and stopAnimation() through a ref.",
+      "categories": ["icons", "brand"],
+      "docs": "https://www.itshover.com/icons/brand-notion-icon",
+      "meta": {
+        "keywords": ["notion", "notion-icon", "notion-svg", "docs", "notes"]
+      },
       "registryDependencies": [],
       "dependencies": ["motion"],
       "devDependencies": [],
@@ -925,6 +1353,13 @@
     {
       "name": "brand-ollama-icon",
       "type": "registry:ui",
+      "title": "Ollama",
+      "description": "Animated Ollama icon for React, built with Motion. Animates on hover and exposes startAnimation() and stopAnimation() through a ref.",
+      "categories": ["icons", "brand"],
+      "docs": "https://www.itshover.com/icons/brand-ollama-icon",
+      "meta": {
+        "keywords": ["ollama", "ai", "chatbot", "conversation", "brand"]
+      },
       "registryDependencies": [],
       "dependencies": ["motion"],
       "devDependencies": [],
@@ -942,6 +1377,13 @@
     {
       "name": "brand-openai-icon",
       "type": "registry:ui",
+      "title": "OpenAI",
+      "description": "Animated OpenAI icon for React, built with Motion. Animates on hover and exposes startAnimation() and stopAnimation() through a ref.",
+      "categories": ["icons", "brand"],
+      "docs": "https://www.itshover.com/icons/brand-openai-icon",
+      "meta": {
+        "keywords": ["openai", "brand", "ai", "chatgpt"]
+      },
       "registryDependencies": [],
       "dependencies": ["motion"],
       "devDependencies": [],
@@ -959,6 +1401,13 @@
     {
       "name": "brand-paypal-icon",
       "type": "registry:ui",
+      "title": "PayPal",
+      "description": "Animated PayPal icon for React, built with Motion. Animates on hover and exposes startAnimation() and stopAnimation() through a ref.",
+      "categories": ["icons", "brand"],
+      "docs": "https://www.itshover.com/icons/brand-paypal-icon",
+      "meta": {
+        "keywords": ["paypal", "brand", "payment", "money"]
+      },
       "registryDependencies": [],
       "dependencies": ["motion"],
       "devDependencies": [],
@@ -976,6 +1425,13 @@
     {
       "name": "brand-qwen-icon",
       "type": "registry:ui",
+      "title": "Qwen",
+      "description": "Animated Qwen icon for React, built with Motion. Animates on hover and exposes startAnimation() and stopAnimation() through a ref.",
+      "categories": ["icons", "brand"],
+      "docs": "https://www.itshover.com/icons/brand-qwen-icon",
+      "meta": {
+        "keywords": ["qwen", "qwen-icon", "ai", "chatbot", "conversation"]
+      },
       "registryDependencies": [],
       "dependencies": ["motion"],
       "devDependencies": [],
@@ -993,6 +1449,21 @@
     {
       "name": "brand-railway-icon",
       "type": "registry:ui",
+      "title": "Railway",
+      "description": "Animated Railway icon for React, built with Motion. Animates on hover and exposes startAnimation() and stopAnimation() through a ref.",
+      "categories": ["icons", "brand"],
+      "docs": "https://www.itshover.com/icons/brand-railway-icon",
+      "meta": {
+        "keywords": [
+          "railway",
+          "train",
+          "transport",
+          "travel",
+          "traveling",
+          "journey",
+          "cloud"
+        ]
+      },
       "registryDependencies": [],
       "dependencies": ["motion"],
       "devDependencies": [],
@@ -1010,6 +1481,13 @@
     {
       "name": "brand-react-icon",
       "type": "registry:ui",
+      "title": "React",
+      "description": "Animated React icon for React, built with Motion. Animates on hover and exposes startAnimation() and stopAnimation() through a ref.",
+      "categories": ["icons", "brand"],
+      "docs": "https://www.itshover.com/icons/brand-react-icon",
+      "meta": {
+        "keywords": ["react", "brand", "library", "javascript"]
+      },
       "registryDependencies": [],
       "dependencies": ["motion"],
       "devDependencies": [],
@@ -1027,6 +1505,13 @@
     {
       "name": "brand-react-native-icon",
       "type": "registry:ui",
+      "title": "React Native",
+      "description": "Animated React Native icon for React, built with Motion. Animates on hover and exposes startAnimation() and stopAnimation() through a ref.",
+      "categories": ["icons", "brand"],
+      "docs": "https://www.itshover.com/icons/brand-react-native-icon",
+      "meta": {
+        "keywords": ["react native", "brand", "mobile", "app"]
+      },
       "registryDependencies": [],
       "dependencies": ["motion"],
       "devDependencies": [],
@@ -1044,6 +1529,13 @@
     {
       "name": "brand-stripe-icon",
       "type": "registry:ui",
+      "title": "Stripe",
+      "description": "Animated Stripe icon for React, built with Motion. Animates on hover and exposes startAnimation() and stopAnimation() through a ref.",
+      "categories": ["icons", "brand"],
+      "docs": "https://www.itshover.com/icons/brand-stripe-icon",
+      "meta": {
+        "keywords": ["stripe", "brand", "payment", "money"]
+      },
       "registryDependencies": [],
       "dependencies": ["motion"],
       "devDependencies": [],
@@ -1061,6 +1553,13 @@
     {
       "name": "brand-telegram-icon",
       "type": "registry:ui",
+      "title": "Telegram",
+      "description": "Animated Telegram icon for React, built with Motion. Animates on hover and exposes startAnimation() and stopAnimation() through a ref.",
+      "categories": ["icons", "brand"],
+      "docs": "https://www.itshover.com/icons/brand-telegram-icon",
+      "meta": {
+        "keywords": ["telegram", "brand", "chat", "message"]
+      },
       "registryDependencies": [],
       "dependencies": ["motion"],
       "devDependencies": [],
@@ -1078,6 +1577,13 @@
     {
       "name": "brand-threads-icon",
       "type": "registry:ui",
+      "title": "Threads",
+      "description": "Animated Threads icon for React, built with Motion. Animates on hover and exposes startAnimation() and stopAnimation() through a ref.",
+      "categories": ["icons", "brand"],
+      "docs": "https://www.itshover.com/icons/brand-threads-icon",
+      "meta": {
+        "keywords": ["threads", "brand", "social", "meta"]
+      },
       "registryDependencies": [],
       "dependencies": ["motion"],
       "devDependencies": [],
@@ -1095,6 +1601,13 @@
     {
       "name": "brand-twitch-icon",
       "type": "registry:ui",
+      "title": "Twitch",
+      "description": "Animated Twitch icon for React, built with Motion. Animates on hover and exposes startAnimation() and stopAnimation() through a ref.",
+      "categories": ["icons", "brand"],
+      "docs": "https://www.itshover.com/icons/brand-twitch-icon",
+      "meta": {
+        "keywords": ["twitch", "brand", "streaming", "live", "gaming"]
+      },
       "registryDependencies": [],
       "dependencies": ["motion"],
       "devDependencies": [],
@@ -1112,6 +1625,13 @@
     {
       "name": "brand-vercel-icon",
       "type": "registry:ui",
+      "title": "Vercel",
+      "description": "Animated Vercel icon for React, built with Motion. Animates on hover and exposes startAnimation() and stopAnimation() through a ref.",
+      "categories": ["icons", "brand"],
+      "docs": "https://www.itshover.com/icons/brand-vercel-icon",
+      "meta": {
+        "keywords": ["vercel", "deploy", "hosting", "nextjs", "triangle"]
+      },
       "registryDependencies": [],
       "dependencies": ["motion"],
       "devDependencies": [],
@@ -1129,6 +1649,13 @@
     {
       "name": "brand-windows-icon",
       "type": "registry:ui",
+      "title": "Windows",
+      "description": "Animated Windows icon for React, built with Motion. Animates on hover and exposes startAnimation() and stopAnimation() through a ref.",
+      "categories": ["icons", "brand"],
+      "docs": "https://www.itshover.com/icons/brand-windows-icon",
+      "meta": {
+        "keywords": ["windows", "brand", "microsoft", "os"]
+      },
       "registryDependencies": [],
       "dependencies": ["motion"],
       "devDependencies": [],
@@ -1146,6 +1673,13 @@
     {
       "name": "brand-wordpress-icon",
       "type": "registry:ui",
+      "title": "WordPress",
+      "description": "Animated WordPress icon for React, built with Motion. Animates on hover and exposes startAnimation() and stopAnimation() through a ref.",
+      "categories": ["icons", "brand"],
+      "docs": "https://www.itshover.com/icons/brand-wordpress-icon",
+      "meta": {
+        "keywords": ["wordpress", "brand", "logo", "cms", "blog", "publishing"]
+      },
       "registryDependencies": [],
       "dependencies": ["motion"],
       "devDependencies": [],
@@ -1163,6 +1697,13 @@
     {
       "name": "brand-xai-icon",
       "type": "registry:ui",
+      "title": "xAI",
+      "description": "Animated xAI icon for React, built with Motion. Animates on hover and exposes startAnimation() and stopAnimation() through a ref.",
+      "categories": ["icons", "brand"],
+      "docs": "https://www.itshover.com/icons/brand-xai-icon",
+      "meta": {
+        "keywords": ["xai", "ai", "chatbot", "conversation", "brand"]
+      },
       "registryDependencies": [],
       "dependencies": ["motion"],
       "devDependencies": [],
@@ -1180,6 +1721,13 @@
     {
       "name": "brand-zoom-icon",
       "type": "registry:ui",
+      "title": "Zoom",
+      "description": "Animated Zoom icon for React, built with Motion. Animates on hover and exposes startAnimation() and stopAnimation() through a ref.",
+      "categories": ["icons", "brand"],
+      "docs": "https://www.itshover.com/icons/brand-zoom-icon",
+      "meta": {
+        "keywords": ["zoom", "brand", "video", "call"]
+      },
       "registryDependencies": [],
       "dependencies": ["motion"],
       "devDependencies": [],
@@ -1197,6 +1745,13 @@
     {
       "name": "brightness-down-icon",
       "type": "registry:ui",
+      "title": "Brightness Down",
+      "description": "Animated Brightness Down icon for React, built with Motion. Animates on hover and exposes startAnimation() and stopAnimation() through a ref.",
+      "categories": ["icons"],
+      "docs": "https://www.itshover.com/icons/brightness-down-icon",
+      "meta": {
+        "keywords": ["brightness", "down", "dim", "light", "sun"]
+      },
       "registryDependencies": [],
       "dependencies": ["motion"],
       "devDependencies": [],
@@ -1214,6 +1769,13 @@
     {
       "name": "bug-icon",
       "type": "registry:ui",
+      "title": "Bug",
+      "description": "Animated Bug icon for React, built with Motion. Animates on hover and exposes startAnimation() and stopAnimation() through a ref.",
+      "categories": ["icons"],
+      "docs": "https://www.itshover.com/icons/bug-icon",
+      "meta": {
+        "keywords": ["bug", "insect", "debug", "error", "pest", "crawl"]
+      },
       "registryDependencies": [],
       "dependencies": ["motion"],
       "devDependencies": [],
@@ -1231,6 +1793,13 @@
     {
       "name": "bulb-svg",
       "type": "registry:ui",
+      "title": "Bulb",
+      "description": "Animated Bulb icon for React, built with Motion. Animates on hover and exposes startAnimation() and stopAnimation() through a ref.",
+      "categories": ["icons"],
+      "docs": "https://www.itshover.com/icons/bulb-svg",
+      "meta": {
+        "keywords": ["bulb", "light", "idea", "creativity"]
+      },
       "registryDependencies": [],
       "dependencies": ["motion"],
       "devDependencies": [],
@@ -1248,6 +1817,20 @@
     {
       "name": "camera-icon",
       "type": "registry:ui",
+      "title": "Camera",
+      "description": "Animated Camera icon for React, built with Motion. Animates on hover and exposes startAnimation() and stopAnimation() through a ref.",
+      "categories": ["icons"],
+      "docs": "https://www.itshover.com/icons/camera-icon",
+      "meta": {
+        "keywords": [
+          "camera",
+          "photo",
+          "picture",
+          "lens",
+          "photography",
+          "capture"
+        ]
+      },
       "registryDependencies": [],
       "dependencies": ["motion"],
       "devDependencies": [],
@@ -1265,6 +1848,13 @@
     {
       "name": "camera-off-icon",
       "type": "registry:ui",
+      "title": "Camera Off",
+      "description": "Animated Camera Off icon for React, built with Motion. Animates on hover and exposes startAnimation() and stopAnimation() through a ref.",
+      "categories": ["icons"],
+      "docs": "https://www.itshover.com/icons/camera-off-icon",
+      "meta": {
+        "keywords": ["camera", "off", "disabled", "no camera", "privacy"]
+      },
       "registryDependencies": [],
       "dependencies": ["motion"],
       "devDependencies": [],
@@ -1282,6 +1872,20 @@
     {
       "name": "candy-cane-icon",
       "type": "registry:ui",
+      "title": "Candy Cane",
+      "description": "Animated Candy Cane icon for React, built with Motion. Animates on hover and exposes startAnimation() and stopAnimation() through a ref.",
+      "categories": ["icons"],
+      "docs": "https://www.itshover.com/icons/candy-cane-icon",
+      "meta": {
+        "keywords": [
+          "candy",
+          "cane",
+          "christmas",
+          "sweet",
+          "holiday",
+          "festive"
+        ]
+      },
       "registryDependencies": [],
       "dependencies": ["motion"],
       "devDependencies": [],
@@ -1299,6 +1903,13 @@
     {
       "name": "cart-icon",
       "type": "registry:ui",
+      "title": "Cart",
+      "description": "Animated Cart icon for React, built with Motion. Animates on hover and exposes startAnimation() and stopAnimation() through a ref.",
+      "categories": ["icons"],
+      "docs": "https://www.itshover.com/icons/cart-icon",
+      "meta": {
+        "keywords": ["cart", "shopping", "buy", "store"]
+      },
       "registryDependencies": [],
       "dependencies": ["motion"],
       "devDependencies": [],
@@ -1316,6 +1927,13 @@
     {
       "name": "chart-bar-icon",
       "type": "registry:ui",
+      "title": "Chart Bar",
+      "description": "Animated Chart Bar icon for React, built with Motion. Animates on hover and exposes startAnimation() and stopAnimation() through a ref.",
+      "categories": ["icons"],
+      "docs": "https://www.itshover.com/icons/chart-bar-icon",
+      "meta": {
+        "keywords": ["chart", "bar", "graph", "statistics", "data", "analytics"]
+      },
       "registryDependencies": [],
       "dependencies": ["motion"],
       "devDependencies": [],
@@ -1333,6 +1951,20 @@
     {
       "name": "chart-covariate-icon",
       "type": "registry:ui",
+      "title": "Chart Covariate",
+      "description": "Animated Chart Covariate icon for React, built with Motion. Animates on hover and exposes startAnimation() and stopAnimation() through a ref.",
+      "categories": ["icons"],
+      "docs": "https://www.itshover.com/icons/chart-covariate-icon",
+      "meta": {
+        "keywords": [
+          "chart",
+          "covariate",
+          "scatter",
+          "plot",
+          "correlation",
+          "data"
+        ]
+      },
       "registryDependencies": [],
       "dependencies": ["motion"],
       "devDependencies": [],
@@ -1350,6 +1982,20 @@
     {
       "name": "chart-histogram-icon",
       "type": "registry:ui",
+      "title": "Chart Histogram",
+      "description": "Animated Chart Histogram icon for React, built with Motion. Animates on hover and exposes startAnimation() and stopAnimation() through a ref.",
+      "categories": ["icons"],
+      "docs": "https://www.itshover.com/icons/chart-histogram-icon",
+      "meta": {
+        "keywords": [
+          "chart",
+          "histogram",
+          "graph",
+          "distribution",
+          "statistics",
+          "data"
+        ]
+      },
       "registryDependencies": [],
       "dependencies": ["motion"],
       "devDependencies": [],
@@ -1367,6 +2013,13 @@
     {
       "name": "chart-line-icon",
       "type": "registry:ui",
+      "title": "Chart Line",
+      "description": "Animated Chart Line icon for React, built with Motion. Animates on hover and exposes startAnimation() and stopAnimation() through a ref.",
+      "categories": ["icons"],
+      "docs": "https://www.itshover.com/icons/chart-line-icon",
+      "meta": {
+        "keywords": ["chart", "line", "graph", "trend", "statistics", "data"]
+      },
       "registryDependencies": [],
       "dependencies": ["motion"],
       "devDependencies": [],
@@ -1384,6 +2037,20 @@
     {
       "name": "chart-pie-icon",
       "type": "registry:ui",
+      "title": "Chart Pie",
+      "description": "Animated Chart Pie icon for React, built with Motion. Animates on hover and exposes startAnimation() and stopAnimation() through a ref.",
+      "categories": ["icons"],
+      "docs": "https://www.itshover.com/icons/chart-pie-icon",
+      "meta": {
+        "keywords": [
+          "chart",
+          "pie",
+          "graph",
+          "percentage",
+          "statistics",
+          "data"
+        ]
+      },
       "registryDependencies": [],
       "dependencies": ["motion"],
       "devDependencies": [],
@@ -1401,6 +2068,13 @@
     {
       "name": "checked-icon",
       "type": "registry:ui",
+      "title": "Checked",
+      "description": "Animated Checked icon for React, built with Motion. Animates on hover and exposes startAnimation() and stopAnimation() through a ref.",
+      "categories": ["icons"],
+      "docs": "https://www.itshover.com/icons/checked-icon",
+      "meta": {
+        "keywords": ["check", "tick", "success", "done"]
+      },
       "registryDependencies": [],
       "dependencies": ["motion"],
       "devDependencies": [],
@@ -1418,6 +2092,13 @@
     {
       "name": "clock-icon",
       "type": "registry:ui",
+      "title": "Clock",
+      "description": "Animated Clock icon for React, built with Motion. Animates on hover and exposes startAnimation() and stopAnimation() through a ref.",
+      "categories": ["icons"],
+      "docs": "https://www.itshover.com/icons/clock-icon",
+      "meta": {
+        "keywords": ["clock", "time", "watch", "timer", "schedule"]
+      },
       "registryDependencies": [],
       "dependencies": ["motion"],
       "devDependencies": [],
@@ -1435,6 +2116,13 @@
     {
       "name": "cloud-1-icon",
       "type": "registry:ui",
+      "title": "Cloud 1",
+      "description": "Animated Cloud 1 icon for React, built with Motion. Animates on hover and exposes startAnimation() and stopAnimation() through a ref.",
+      "categories": ["icons"],
+      "docs": "https://www.itshover.com/icons/cloud-1-icon",
+      "meta": {
+        "keywords": ["cloud", "storage", "upload", "platform", "saas"]
+      },
       "registryDependencies": [],
       "dependencies": ["motion"],
       "devDependencies": [],
@@ -1452,6 +2140,13 @@
     {
       "name": "cloud-2-icon",
       "type": "registry:ui",
+      "title": "Cloud 2",
+      "description": "Animated Cloud 2 icon for React, built with Motion. Animates on hover and exposes startAnimation() and stopAnimation() through a ref.",
+      "categories": ["icons"],
+      "docs": "https://www.itshover.com/icons/cloud-2-icon",
+      "meta": {
+        "keywords": ["cloud", "weather", "rain", "sky", "atmosphere", "storm"]
+      },
       "registryDependencies": [],
       "dependencies": ["motion"],
       "devDependencies": [],
@@ -1469,6 +2164,20 @@
     {
       "name": "cloud-3-icon",
       "type": "registry:ui",
+      "title": "Cloud 3",
+      "description": "Animated Cloud 3 icon for React, built with Motion. Animates on hover and exposes startAnimation() and stopAnimation() through a ref.",
+      "categories": ["icons"],
+      "docs": "https://www.itshover.com/icons/cloud-3-icon",
+      "meta": {
+        "keywords": [
+          "cloud",
+          "hosting",
+          "server",
+          "data",
+          "computing",
+          "database"
+        ]
+      },
       "registryDependencies": [],
       "dependencies": ["motion"],
       "devDependencies": [],
@@ -1486,6 +2195,13 @@
     {
       "name": "code-icon",
       "type": "registry:ui",
+      "title": "Code",
+      "description": "Animated Code icon for React, built with Motion. Animates on hover and exposes startAnimation() and stopAnimation() through a ref.",
+      "categories": ["icons"],
+      "docs": "https://www.itshover.com/icons/code-icon",
+      "meta": {
+        "keywords": ["code", "brackets", "programming", "developer", "syntax"]
+      },
       "registryDependencies": [],
       "dependencies": ["motion"],
       "devDependencies": [],
@@ -1503,6 +2219,13 @@
     {
       "name": "code-xml-icon",
       "type": "registry:ui",
+      "title": "Code Xml",
+      "description": "Animated Code Xml icon for React, built with Motion. Animates on hover and exposes startAnimation() and stopAnimation() through a ref.",
+      "categories": ["icons"],
+      "docs": "https://www.itshover.com/icons/code-xml-icon",
+      "meta": {
+        "keywords": ["code", "xml", "html", "markup", "tag", "programming"]
+      },
       "registryDependencies": [],
       "dependencies": ["motion"],
       "devDependencies": [],
@@ -1520,6 +2243,21 @@
     {
       "name": "coffee-icon",
       "type": "registry:ui",
+      "title": "Coffee",
+      "description": "Animated Coffee icon for React, built with Motion. Animates on hover and exposes startAnimation() and stopAnimation() through a ref.",
+      "categories": ["icons"],
+      "docs": "https://www.itshover.com/icons/coffee-icon",
+      "meta": {
+        "keywords": [
+          "coffee",
+          "cup",
+          "drink",
+          "cafe",
+          "steam",
+          "hot",
+          "beverage"
+        ]
+      },
       "registryDependencies": [],
       "dependencies": ["motion"],
       "devDependencies": [],
@@ -1537,6 +2275,21 @@
     {
       "name": "coin-bitcoin-icon",
       "type": "registry:ui",
+      "title": "Coin Bitcoin",
+      "description": "Animated Coin Bitcoin icon for React, built with Motion. Animates on hover and exposes startAnimation() and stopAnimation() through a ref.",
+      "categories": ["icons"],
+      "docs": "https://www.itshover.com/icons/coin-bitcoin-icon",
+      "meta": {
+        "keywords": [
+          "coin",
+          "bitcoin",
+          "crypto",
+          "btc",
+          "cryptocurrency",
+          "money",
+          "digital"
+        ]
+      },
       "registryDependencies": [],
       "dependencies": ["motion"],
       "devDependencies": [],
@@ -1554,6 +2307,13 @@
     {
       "name": "copy-icon",
       "type": "registry:ui",
+      "title": "Copy",
+      "description": "Animated Copy icon for React, built with Motion. Animates on hover and exposes startAnimation() and stopAnimation() through a ref.",
+      "categories": ["icons"],
+      "docs": "https://www.itshover.com/icons/copy-icon",
+      "meta": {
+        "keywords": ["copy", "clipboard", "duplicate", "paste"]
+      },
       "registryDependencies": [],
       "dependencies": ["motion"],
       "devDependencies": [],
@@ -1571,6 +2331,13 @@
     {
       "name": "copy-off-icon",
       "type": "registry:ui",
+      "title": "Copy Off",
+      "description": "Animated Copy Off icon for React, built with Motion. Animates on hover and exposes startAnimation() and stopAnimation() through a ref.",
+      "categories": ["icons"],
+      "docs": "https://www.itshover.com/icons/copy-off-icon",
+      "meta": {
+        "keywords": ["copy", "off", "disabled", "no copy"]
+      },
       "registryDependencies": [],
       "dependencies": ["motion"],
       "devDependencies": [],
@@ -1588,6 +2355,13 @@
     {
       "name": "copyright-icon",
       "type": "registry:ui",
+      "title": "Copyright",
+      "description": "Animated Copyright icon for React, built with Motion. Animates on hover and exposes startAnimation() and stopAnimation() through a ref.",
+      "categories": ["icons"],
+      "docs": "https://www.itshover.com/icons/copyright-icon",
+      "meta": {
+        "keywords": ["copyright", "legal", "official", "license", "protection"]
+      },
       "registryDependencies": [],
       "dependencies": ["motion"],
       "devDependencies": [],
@@ -1605,6 +2379,20 @@
     {
       "name": "cpu-icon",
       "type": "registry:ui",
+      "title": "Cpu",
+      "description": "Animated Cpu icon for React, built with Motion. Animates on hover and exposes startAnimation() and stopAnimation() through a ref.",
+      "categories": ["icons"],
+      "docs": "https://www.itshover.com/icons/cpu-icon",
+      "meta": {
+        "keywords": [
+          "cpu",
+          "processor",
+          "chip",
+          "hardware",
+          "computing",
+          "performance"
+        ]
+      },
       "registryDependencies": [],
       "dependencies": ["motion"],
       "devDependencies": [],
@@ -1622,6 +2410,13 @@
     {
       "name": "credit-card",
       "type": "registry:ui",
+      "title": "Credit Card",
+      "description": "Animated Credit Card icon for React, built with Motion. Animates on hover and exposes startAnimation() and stopAnimation() through a ref.",
+      "categories": ["icons"],
+      "docs": "https://www.itshover.com/icons/credit-card",
+      "meta": {
+        "keywords": ["credit", "card", "payment", "money"]
+      },
       "registryDependencies": [],
       "dependencies": ["motion"],
       "devDependencies": [],
@@ -1639,6 +2434,21 @@
     {
       "name": "currency-bitcoin-icon",
       "type": "registry:ui",
+      "title": "Currency Bitcoin",
+      "description": "Animated Currency Bitcoin icon for React, built with Motion. Animates on hover and exposes startAnimation() and stopAnimation() through a ref.",
+      "categories": ["icons"],
+      "docs": "https://www.itshover.com/icons/currency-bitcoin-icon",
+      "meta": {
+        "keywords": [
+          "currency",
+          "bitcoin",
+          "crypto",
+          "btc",
+          "cryptocurrency",
+          "money",
+          "digital"
+        ]
+      },
       "registryDependencies": [],
       "dependencies": ["motion"],
       "devDependencies": [],
@@ -1656,6 +2466,21 @@
     {
       "name": "currency-dollar-icon",
       "type": "registry:ui",
+      "title": "Currency Dollar",
+      "description": "Animated Currency Dollar icon for React, built with Motion. Animates on hover and exposes startAnimation() and stopAnimation() through a ref.",
+      "categories": ["icons"],
+      "docs": "https://www.itshover.com/icons/currency-dollar-icon",
+      "meta": {
+        "keywords": [
+          "currency",
+          "dollar",
+          "money",
+          "finance",
+          "payment",
+          "cash",
+          "usd"
+        ]
+      },
       "registryDependencies": [],
       "dependencies": ["motion"],
       "devDependencies": [],
@@ -1673,6 +2498,20 @@
     {
       "name": "currency-ethereum-icon",
       "type": "registry:ui",
+      "title": "Currency Ethereum",
+      "description": "Animated Currency Ethereum icon for React, built with Motion. Animates on hover and exposes startAnimation() and stopAnimation() through a ref.",
+      "categories": ["icons"],
+      "docs": "https://www.itshover.com/icons/currency-ethereum-icon",
+      "meta": {
+        "keywords": [
+          "currency",
+          "ethereum",
+          "crypto",
+          "eth",
+          "cryptocurrency",
+          "blockchain"
+        ]
+      },
       "registryDependencies": [],
       "dependencies": ["motion"],
       "devDependencies": [],
@@ -1690,6 +2529,21 @@
     {
       "name": "currency-euro-icon",
       "type": "registry:ui",
+      "title": "Currency Euro",
+      "description": "Animated Currency Euro icon for React, built with Motion. Animates on hover and exposes startAnimation() and stopAnimation() through a ref.",
+      "categories": ["icons"],
+      "docs": "https://www.itshover.com/icons/currency-euro-icon",
+      "meta": {
+        "keywords": [
+          "currency",
+          "euro",
+          "money",
+          "finance",
+          "payment",
+          "eur",
+          "europe"
+        ]
+      },
       "registryDependencies": [],
       "dependencies": ["motion"],
       "devDependencies": [],
@@ -1707,6 +2561,21 @@
     {
       "name": "currency-rupee-icon",
       "type": "registry:ui",
+      "title": "Currency Rupee",
+      "description": "Animated Currency Rupee icon for React, built with Motion. Animates on hover and exposes startAnimation() and stopAnimation() through a ref.",
+      "categories": ["icons"],
+      "docs": "https://www.itshover.com/icons/currency-rupee-icon",
+      "meta": {
+        "keywords": [
+          "currency",
+          "rupee",
+          "money",
+          "finance",
+          "payment",
+          "inr",
+          "india"
+        ]
+      },
       "registryDependencies": [],
       "dependencies": ["motion"],
       "devDependencies": [],
@@ -1724,6 +2593,21 @@
     {
       "name": "device-airpods-icon",
       "type": "registry:ui",
+      "title": "Device Airpods",
+      "description": "Animated Device Airpods icon for React, built with Motion. Animates on hover and exposes startAnimation() and stopAnimation() through a ref.",
+      "categories": ["icons"],
+      "docs": "https://www.itshover.com/icons/device-airpods-icon",
+      "meta": {
+        "keywords": [
+          "device",
+          "airpods",
+          "earbuds",
+          "audio",
+          "wireless",
+          "headphones",
+          "apple"
+        ]
+      },
       "registryDependencies": [],
       "dependencies": ["motion"],
       "devDependencies": [],
@@ -1741,6 +2625,13 @@
     {
       "name": "dialpad-icon",
       "type": "registry:ui",
+      "title": "Dialpad",
+      "description": "Animated Dialpad icon for React, built with Motion. Animates on hover and exposes startAnimation() and stopAnimation() through a ref.",
+      "categories": ["icons"],
+      "docs": "https://www.itshover.com/icons/dialpad-icon",
+      "meta": {
+        "keywords": ["dialpad", "phone", "keypad", "numbers", "call", "dial"]
+      },
       "registryDependencies": [],
       "dependencies": ["motion"],
       "devDependencies": [],
@@ -1758,6 +2649,13 @@
     {
       "name": "dino-icon",
       "type": "registry:ui",
+      "title": "Dino",
+      "description": "Animated Dino icon for React, built with Motion. Animates on hover and exposes startAnimation() and stopAnimation() through a ref.",
+      "categories": ["icons"],
+      "docs": "https://www.itshover.com/icons/dino-icon",
+      "meta": {
+        "keywords": ["dino", "chrome", "pixel", "game", "animal", "offline"]
+      },
       "registryDependencies": [],
       "dependencies": ["motion"],
       "devDependencies": [],
@@ -1775,6 +2673,13 @@
     {
       "name": "discord-icon",
       "type": "registry:ui",
+      "title": "Discord",
+      "description": "Animated Discord icon for React, built with Motion. Animates on hover and exposes startAnimation() and stopAnimation() through a ref.",
+      "categories": ["icons"],
+      "docs": "https://www.itshover.com/icons/discord-icon",
+      "meta": {
+        "keywords": ["discord", "chat", "gaming", "community", "voice"]
+      },
       "registryDependencies": [],
       "dependencies": ["motion"],
       "devDependencies": [],
@@ -1792,6 +2697,13 @@
     {
       "name": "docker-icon",
       "type": "registry:ui",
+      "title": "Docker",
+      "description": "Animated Docker icon for React, built with Motion. Animates on hover and exposes startAnimation() and stopAnimation() through a ref.",
+      "categories": ["icons"],
+      "docs": "https://www.itshover.com/icons/docker-icon",
+      "meta": {
+        "keywords": ["docker", "container", "devops", "deployment", "whale"]
+      },
       "registryDependencies": [],
       "dependencies": ["motion"],
       "devDependencies": [],
@@ -1809,6 +2721,13 @@
     {
       "name": "dots-horizontal-icon",
       "type": "registry:ui",
+      "title": "Dots Horizontal",
+      "description": "Animated Dots Horizontal icon for React, built with Motion. Animates on hover and exposes startAnimation() and stopAnimation() through a ref.",
+      "categories": ["icons"],
+      "docs": "https://www.itshover.com/icons/dots-horizontal-icon",
+      "meta": {
+        "keywords": ["dots", "menu", "more", "options", "horizontal"]
+      },
       "registryDependencies": [],
       "dependencies": ["motion"],
       "devDependencies": [],
@@ -1826,6 +2745,13 @@
     {
       "name": "dots-vertical-icon",
       "type": "registry:ui",
+      "title": "Dots Vertical",
+      "description": "Animated Dots Vertical icon for React, built with Motion. Animates on hover and exposes startAnimation() and stopAnimation() through a ref.",
+      "categories": ["icons"],
+      "docs": "https://www.itshover.com/icons/dots-vertical-icon",
+      "meta": {
+        "keywords": ["dots", "menu", "more", "options", "vertical"]
+      },
       "registryDependencies": [],
       "dependencies": ["motion"],
       "devDependencies": [],
@@ -1843,6 +2769,13 @@
     {
       "name": "double-check-icon",
       "type": "registry:ui",
+      "title": "Double Check",
+      "description": "Animated Double Check icon for React, built with Motion. Animates on hover and exposes startAnimation() and stopAnimation() through a ref.",
+      "categories": ["icons"],
+      "docs": "https://www.itshover.com/icons/double-check-icon",
+      "meta": {
+        "keywords": ["check", "double", "read", "seen"]
+      },
       "registryDependencies": [],
       "dependencies": ["motion"],
       "devDependencies": [],
@@ -1860,6 +2793,13 @@
     {
       "name": "down-chevron",
       "type": "registry:ui",
+      "title": "Down Chevron",
+      "description": "Animated Down Chevron icon for React, built with Motion. Animates on hover and exposes startAnimation() and stopAnimation() through a ref.",
+      "categories": ["icons"],
+      "docs": "https://www.itshover.com/icons/down-chevron",
+      "meta": {
+        "keywords": ["arrow", "down", "expand", "more"]
+      },
       "registryDependencies": [],
       "dependencies": ["motion"],
       "devDependencies": [],
@@ -1877,6 +2817,20 @@
     {
       "name": "download-icon",
       "type": "registry:ui",
+      "title": "Download",
+      "description": "Animated Download icon for React, built with Motion. Animates on hover and exposes startAnimation() and stopAnimation() through a ref.",
+      "categories": ["icons"],
+      "docs": "https://www.itshover.com/icons/download-icon",
+      "meta": {
+        "keywords": [
+          "download",
+          "save",
+          "save-as",
+          "collect",
+          "store",
+          "receive"
+        ]
+      },
       "registryDependencies": [],
       "dependencies": ["motion"],
       "devDependencies": [],
@@ -1894,6 +2848,13 @@
     {
       "name": "drum-icon",
       "type": "registry:ui",
+      "title": "Drum",
+      "description": "Animated Drum icon for React, built with Motion. Animates on hover and exposes startAnimation() and stopAnimation() through a ref.",
+      "categories": ["icons"],
+      "docs": "https://www.itshover.com/icons/drum-icon",
+      "meta": {
+        "keywords": ["drum", "music", "instrument", "percussion", "beat"]
+      },
       "registryDependencies": [],
       "dependencies": ["motion"],
       "devDependencies": [],
@@ -1911,6 +2872,13 @@
     {
       "name": "expand-icon",
       "type": "registry:ui",
+      "title": "Expand",
+      "description": "Animated Expand icon for React, built with Motion. Animates on hover and exposes startAnimation() and stopAnimation() through a ref.",
+      "categories": ["icons"],
+      "docs": "https://www.itshover.com/icons/expand-icon",
+      "meta": {
+        "keywords": ["expand", "fullscreen", "maximize", "enlarge", "grow"]
+      },
       "registryDependencies": [],
       "dependencies": ["motion"],
       "devDependencies": [],
@@ -1928,6 +2896,13 @@
     {
       "name": "external-link-icon",
       "type": "registry:ui",
+      "title": "External Link",
+      "description": "Animated External Link icon for React, built with Motion. Animates on hover and exposes startAnimation() and stopAnimation() through a ref.",
+      "categories": ["icons"],
+      "docs": "https://www.itshover.com/icons/external-link-icon",
+      "meta": {
+        "keywords": ["external", "link", "open", "new", "window", "tab", "out"]
+      },
       "registryDependencies": [],
       "dependencies": ["motion"],
       "devDependencies": [],
@@ -1945,6 +2920,13 @@
     {
       "name": "eye-icon",
       "type": "registry:ui",
+      "title": "Eye",
+      "description": "Animated Eye icon for React, built with Motion. Animates on hover and exposes startAnimation() and stopAnimation() through a ref.",
+      "categories": ["icons"],
+      "docs": "https://www.itshover.com/icons/eye-icon",
+      "meta": {
+        "keywords": ["eye", "view", "see", "visible", "watch", "look"]
+      },
       "registryDependencies": [],
       "dependencies": ["motion"],
       "devDependencies": [],
@@ -1962,6 +2944,21 @@
     {
       "name": "eye-off-icon",
       "type": "registry:ui",
+      "title": "Eye Off",
+      "description": "Animated Eye Off icon for React, built with Motion. Animates on hover and exposes startAnimation() and stopAnimation() through a ref.",
+      "categories": ["icons"],
+      "docs": "https://www.itshover.com/icons/eye-off-icon",
+      "meta": {
+        "keywords": [
+          "eye",
+          "off",
+          "hidden",
+          "invisible",
+          "hide",
+          "privacy",
+          "password"
+        ]
+      },
       "registryDependencies": [],
       "dependencies": ["motion"],
       "devDependencies": [],
@@ -1979,6 +2976,13 @@
     {
       "name": "facebook-icon",
       "type": "registry:ui",
+      "title": "Facebook",
+      "description": "Animated Facebook icon for React, built with Motion. Animates on hover and exposes startAnimation() and stopAnimation() through a ref.",
+      "categories": ["icons"],
+      "docs": "https://www.itshover.com/icons/facebook-icon",
+      "meta": {
+        "keywords": ["facebook", "social", "media", "meta", "like"]
+      },
       "registryDependencies": [],
       "dependencies": ["motion"],
       "devDependencies": [],
@@ -1996,6 +3000,13 @@
     {
       "name": "figma-icon",
       "type": "registry:ui",
+      "title": "Figma",
+      "description": "Animated Figma icon for React, built with Motion. Animates on hover and exposes startAnimation() and stopAnimation() through a ref.",
+      "categories": ["icons"],
+      "docs": "https://www.itshover.com/icons/figma-icon",
+      "meta": {
+        "keywords": ["figma", "design", "ui", "ux", "prototype"]
+      },
       "registryDependencies": [],
       "dependencies": ["motion"],
       "devDependencies": [],
@@ -2013,6 +3024,13 @@
     {
       "name": "file-description-icon",
       "type": "registry:ui",
+      "title": "File Description",
+      "description": "Animated File Description icon for React, built with Motion. Animates on hover and exposes startAnimation() and stopAnimation() through a ref.",
+      "categories": ["icons"],
+      "docs": "https://www.itshover.com/icons/file-description-icon",
+      "meta": {
+        "keywords": ["file", "document", "description", "text", "paper"]
+      },
       "registryDependencies": [],
       "dependencies": ["motion"],
       "devDependencies": [],
@@ -2030,6 +3048,13 @@
     {
       "name": "filled-bell-icon",
       "type": "registry:ui",
+      "title": "Filled Bell",
+      "description": "Animated Filled Bell icon for React, built with Motion. Animates on hover and exposes startAnimation() and stopAnimation() through a ref.",
+      "categories": ["icons"],
+      "docs": "https://www.itshover.com/icons/filled-bell-icon",
+      "meta": {
+        "keywords": ["bell", "notification", "alert", "alarm"]
+      },
       "registryDependencies": [],
       "dependencies": ["motion"],
       "devDependencies": [],
@@ -2047,6 +3072,13 @@
     {
       "name": "filled-checked-icon",
       "type": "registry:ui",
+      "title": "Filled Checked",
+      "description": "Animated Filled Checked icon for React, built with Motion. Animates on hover and exposes startAnimation() and stopAnimation() through a ref.",
+      "categories": ["icons"],
+      "docs": "https://www.itshover.com/icons/filled-checked-icon",
+      "meta": {
+        "keywords": ["check", "tick", "success", "filled", "done"]
+      },
       "registryDependencies": [],
       "dependencies": ["motion"],
       "devDependencies": [],
@@ -2064,6 +3096,13 @@
     {
       "name": "filter-icon",
       "type": "registry:ui",
+      "title": "Filter",
+      "description": "Animated Filter icon for React, built with Motion. Animates on hover and exposes startAnimation() and stopAnimation() through a ref.",
+      "categories": ["icons"],
+      "docs": "https://www.itshover.com/icons/filter-icon",
+      "meta": {
+        "keywords": ["filter", "funnel", "sort", "sifting", "refine"]
+      },
       "registryDependencies": [],
       "dependencies": ["motion"],
       "devDependencies": [],
@@ -2081,6 +3120,13 @@
     {
       "name": "flame-icon",
       "type": "registry:ui",
+      "title": "Flame",
+      "description": "Animated Flame icon for React, built with Motion. Animates on hover and exposes startAnimation() and stopAnimation() through a ref.",
+      "categories": ["icons"],
+      "docs": "https://www.itshover.com/icons/flame-icon",
+      "meta": {
+        "keywords": ["flame", "fire", "hot", "burn", "heat"]
+      },
       "registryDependencies": [],
       "dependencies": ["motion"],
       "devDependencies": [],
@@ -2098,6 +3144,13 @@
     {
       "name": "focus-icon",
       "type": "registry:ui",
+      "title": "Focus",
+      "description": "Animated Focus icon for React, built with Motion. Animates on hover and exposes startAnimation() and stopAnimation() through a ref.",
+      "categories": ["icons"],
+      "docs": "https://www.itshover.com/icons/focus-icon",
+      "meta": {
+        "keywords": ["focus", "target", "aim", "center", "concentrate"]
+      },
       "registryDependencies": [],
       "dependencies": ["motion"],
       "devDependencies": [],
@@ -2115,6 +3168,13 @@
     {
       "name": "gamepad-icon",
       "type": "registry:ui",
+      "title": "Gamepad",
+      "description": "Animated Gamepad icon for React, built with Motion. Animates on hover and exposes startAnimation() and stopAnimation() through a ref.",
+      "categories": ["icons"],
+      "docs": "https://www.itshover.com/icons/gamepad-icon",
+      "meta": {
+        "keywords": ["game", "pad", "gaming", "controller", "play", "joystick"]
+      },
       "registryDependencies": [],
       "dependencies": ["motion"],
       "devDependencies": [],
@@ -2132,6 +3192,20 @@
     {
       "name": "gauge-icon",
       "type": "registry:ui",
+      "title": "Gauge",
+      "description": "Animated Gauge icon for React, built with Motion. Animates on hover and exposes startAnimation() and stopAnimation() through a ref.",
+      "categories": ["icons"],
+      "docs": "https://www.itshover.com/icons/gauge-icon",
+      "meta": {
+        "keywords": [
+          "gauge",
+          "meter",
+          "speed",
+          "dashboard",
+          "performance",
+          "measure"
+        ]
+      },
       "registryDependencies": [],
       "dependencies": ["motion"],
       "devDependencies": [],
@@ -2149,6 +3223,13 @@
     {
       "name": "gear-icon",
       "type": "registry:ui",
+      "title": "Gear",
+      "description": "Animated Gear icon for React, built with Motion. Animates on hover and exposes startAnimation() and stopAnimation() through a ref.",
+      "categories": ["icons"],
+      "docs": "https://www.itshover.com/icons/gear-icon",
+      "meta": {
+        "keywords": ["gear", "settings", "config", "options"]
+      },
       "registryDependencies": [],
       "dependencies": ["motion"],
       "devDependencies": [],
@@ -2166,6 +3247,13 @@
     {
       "name": "ghost-icon",
       "type": "registry:ui",
+      "title": "Ghost",
+      "description": "Animated Ghost icon for React, built with Motion. Animates on hover and exposes startAnimation() and stopAnimation() through a ref.",
+      "categories": ["icons"],
+      "docs": "https://www.itshover.com/icons/ghost-icon",
+      "meta": {
+        "keywords": ["ghost", "spooky", "halloween", "spirit", "boo"]
+      },
       "registryDependencies": [],
       "dependencies": ["motion"],
       "devDependencies": [],
@@ -2183,6 +3271,13 @@
     {
       "name": "github-copilot-icon",
       "type": "registry:ui",
+      "title": "GitHub Copilot",
+      "description": "Animated GitHub Copilot icon for React, built with Motion. Animates on hover and exposes startAnimation() and stopAnimation() through a ref.",
+      "categories": ["icons"],
+      "docs": "https://www.itshover.com/icons/github-copilot-icon",
+      "meta": {
+        "keywords": ["github", "copilot", "ai", "code", "assistant"]
+      },
       "registryDependencies": [],
       "dependencies": ["motion"],
       "devDependencies": [],
@@ -2200,6 +3295,13 @@
     {
       "name": "github-icon",
       "type": "registry:ui",
+      "title": "GitHub",
+      "description": "Animated GitHub icon for React, built with Motion. Animates on hover and exposes startAnimation() and stopAnimation() through a ref.",
+      "categories": ["icons"],
+      "docs": "https://www.itshover.com/icons/github-icon",
+      "meta": {
+        "keywords": ["github", "git", "code", "repository", "social"]
+      },
       "registryDependencies": [],
       "dependencies": ["motion"],
       "devDependencies": [],
@@ -2217,6 +3319,13 @@
     {
       "name": "gitlab-icon",
       "type": "registry:ui",
+      "title": "Gitlab",
+      "description": "Animated Gitlab icon for React, built with Motion. Animates on hover and exposes startAnimation() and stopAnimation() through a ref.",
+      "categories": ["icons"],
+      "docs": "https://www.itshover.com/icons/gitlab-icon",
+      "meta": {
+        "keywords": ["gitlab", "git", "code", "repository", "devops"]
+      },
       "registryDependencies": [],
       "dependencies": ["motion"],
       "devDependencies": [],
@@ -2234,6 +3343,13 @@
     {
       "name": "globe-icon",
       "type": "registry:ui",
+      "title": "Globe",
+      "description": "Animated Globe icon for React, built with Motion. Animates on hover and exposes startAnimation() and stopAnimation() through a ref.",
+      "categories": ["icons"],
+      "docs": "https://www.itshover.com/icons/globe-icon",
+      "meta": {
+        "keywords": ["globe", "world", "earth", "planet"]
+      },
       "registryDependencies": [],
       "dependencies": ["motion"],
       "devDependencies": [],
@@ -2251,6 +3367,13 @@
     {
       "name": "gmail-icon",
       "type": "registry:ui",
+      "title": "Gmail",
+      "description": "Animated Gmail icon for React, built with Motion. Animates on hover and exposes startAnimation() and stopAnimation() through a ref.",
+      "categories": ["icons"],
+      "docs": "https://www.itshover.com/icons/gmail-icon",
+      "meta": {
+        "keywords": ["gmail", "email", "google", "mail", "message"]
+      },
       "registryDependencies": [],
       "dependencies": ["motion"],
       "devDependencies": [],
@@ -2268,6 +3391,20 @@
     {
       "name": "golang-icon",
       "type": "registry:ui",
+      "title": "Golang",
+      "description": "Animated Golang icon for React, built with Motion. Animates on hover and exposes startAnimation() and stopAnimation() through a ref.",
+      "categories": ["icons"],
+      "docs": "https://www.itshover.com/icons/golang-icon",
+      "meta": {
+        "keywords": [
+          "golang",
+          "go",
+          "programming",
+          "language",
+          "code",
+          "developer"
+        ]
+      },
       "registryDependencies": [],
       "dependencies": ["motion"],
       "devDependencies": [],
@@ -2285,6 +3422,21 @@
     {
       "name": "hand-heart-icon",
       "type": "registry:ui",
+      "title": "Hand Heart",
+      "description": "Animated Hand Heart icon for React, built with Motion. Animates on hover and exposes startAnimation() and stopAnimation() through a ref.",
+      "categories": ["icons"],
+      "docs": "https://www.itshover.com/icons/hand-heart-icon",
+      "meta": {
+        "keywords": [
+          "hand",
+          "heart",
+          "love",
+          "care",
+          "support",
+          "charity",
+          "donate"
+        ]
+      },
       "registryDependencies": [],
       "dependencies": ["motion"],
       "devDependencies": [],
@@ -2302,6 +3454,21 @@
     {
       "name": "hashtag-icon",
       "type": "registry:ui",
+      "title": "Hashtag",
+      "description": "Animated Hashtag icon for React, built with Motion. Animates on hover and exposes startAnimation() and stopAnimation() through a ref.",
+      "categories": ["icons"],
+      "docs": "https://www.itshover.com/icons/hashtag-icon",
+      "meta": {
+        "keywords": [
+          "hashtag",
+          "hash",
+          "tag",
+          "number",
+          "symbol",
+          "social",
+          "trending"
+        ]
+      },
       "registryDependencies": [],
       "dependencies": ["motion"],
       "devDependencies": [],
@@ -2319,6 +3486,13 @@
     {
       "name": "heart-icon",
       "type": "registry:ui",
+      "title": "Heart",
+      "description": "Animated Heart icon for React, built with Motion. Animates on hover and exposes startAnimation() and stopAnimation() through a ref.",
+      "categories": ["icons"],
+      "docs": "https://www.itshover.com/icons/heart-icon",
+      "meta": {
+        "keywords": ["heart", "love", "favorite", "like"]
+      },
       "registryDependencies": [],
       "dependencies": ["motion"],
       "devDependencies": [],
@@ -2336,6 +3510,13 @@
     {
       "name": "history-circle-icon",
       "type": "registry:ui",
+      "title": "History Circle",
+      "description": "Animated History Circle icon for React, built with Motion. Animates on hover and exposes startAnimation() and stopAnimation() through a ref.",
+      "categories": ["icons"],
+      "docs": "https://www.itshover.com/icons/history-circle-icon",
+      "meta": {
+        "keywords": ["history", "time", "clock", "past", "rewind"]
+      },
       "registryDependencies": [],
       "dependencies": ["motion"],
       "devDependencies": [],
@@ -2353,6 +3534,13 @@
     {
       "name": "home-icon",
       "type": "registry:ui",
+      "title": "Home",
+      "description": "Animated Home icon for React, built with Motion. Animates on hover and exposes startAnimation() and stopAnimation() through a ref.",
+      "categories": ["icons"],
+      "docs": "https://www.itshover.com/icons/home-icon",
+      "meta": {
+        "keywords": ["home", "house", "main", "dashboard", "start"]
+      },
       "registryDependencies": [],
       "dependencies": ["motion"],
       "devDependencies": [],
@@ -2370,6 +3558,13 @@
     {
       "name": "hotel-icon",
       "type": "registry:ui",
+      "title": "Hotel",
+      "description": "Animated Hotel icon for React, built with Motion. Animates on hover and exposes startAnimation() and stopAnimation() through a ref.",
+      "categories": ["icons"],
+      "docs": "https://www.itshover.com/icons/hotel-icon",
+      "meta": {
+        "keywords": ["hotel", "lodging", "resort", "vacation", "travel"]
+      },
       "registryDependencies": [],
       "dependencies": ["motion"],
       "devDependencies": [],
@@ -2387,6 +3582,13 @@
     {
       "name": "info-circle-icon",
       "type": "registry:ui",
+      "title": "Info Circle",
+      "description": "Animated Info Circle icon for React, built with Motion. Animates on hover and exposes startAnimation() and stopAnimation() through a ref.",
+      "categories": ["icons"],
+      "docs": "https://www.itshover.com/icons/info-circle-icon",
+      "meta": {
+        "keywords": ["info", "information", "circle", "help", "about"]
+      },
       "registryDependencies": [],
       "dependencies": ["motion"],
       "devDependencies": [],
@@ -2404,6 +3606,13 @@
     {
       "name": "instagram-icon",
       "type": "registry:ui",
+      "title": "Instagram",
+      "description": "Animated Instagram icon for React, built with Motion. Animates on hover and exposes startAnimation() and stopAnimation() through a ref.",
+      "categories": ["icons"],
+      "docs": "https://www.itshover.com/icons/instagram-icon",
+      "meta": {
+        "keywords": ["instagram", "social", "media", "photo"]
+      },
       "registryDependencies": [],
       "dependencies": ["motion"],
       "devDependencies": [],
@@ -2421,6 +3630,13 @@
     {
       "name": "javascript-icon",
       "type": "registry:ui",
+      "title": "JavaScript",
+      "description": "Animated JavaScript icon for React, built with Motion. Animates on hover and exposes startAnimation() and stopAnimation() through a ref.",
+      "categories": ["icons"],
+      "docs": "https://www.itshover.com/icons/javascript-icon",
+      "meta": {
+        "keywords": ["javascript", "js", "code", "programming", "web"]
+      },
       "registryDependencies": [],
       "dependencies": ["motion"],
       "devDependencies": [],
@@ -2438,6 +3654,13 @@
     {
       "name": "keyframes-icon",
       "type": "registry:ui",
+      "title": "Keyframes",
+      "description": "Animated Keyframes icon for React, built with Motion. Animates on hover and exposes startAnimation() and stopAnimation() through a ref.",
+      "categories": ["icons"],
+      "docs": "https://www.itshover.com/icons/keyframes-icon",
+      "meta": {
+        "keywords": ["keyframes", "animation", "motion", "video", "timeline"]
+      },
       "registryDependencies": [],
       "dependencies": ["motion"],
       "devDependencies": [],
@@ -2455,6 +3678,20 @@
     {
       "name": "layers-icon",
       "type": "registry:ui",
+      "title": "Layers",
+      "description": "Animated Layers icon for React, built with Motion. Animates on hover and exposes startAnimation() and stopAnimation() through a ref.",
+      "categories": ["icons"],
+      "docs": "https://www.itshover.com/icons/layers-icon",
+      "meta": {
+        "keywords": [
+          "layers",
+          "stack",
+          "blocks",
+          "overlap",
+          "organize",
+          "group"
+        ]
+      },
       "registryDependencies": [],
       "dependencies": ["motion"],
       "devDependencies": [],
@@ -2472,6 +3709,22 @@
     {
       "name": "layout-bottombar-collapse-icon",
       "type": "registry:ui",
+      "title": "Layout Bottombar Collapse",
+      "description": "Animated Layout Bottombar Collapse icon for React, built with Motion. Animates on hover and exposes startAnimation() and stopAnimation() through a ref.",
+      "categories": ["icons"],
+      "docs": "https://www.itshover.com/icons/layout-bottombar-collapse-icon",
+      "meta": {
+        "keywords": [
+          "layout",
+          "bottombar",
+          "collapse",
+          "bottom",
+          "bar",
+          "panel",
+          "ui",
+          "interface"
+        ]
+      },
       "registryDependencies": [],
       "dependencies": ["motion"],
       "devDependencies": [],
@@ -2489,6 +3742,13 @@
     {
       "name": "layout-dashboard-icon",
       "type": "registry:ui",
+      "title": "Layout Dashboard",
+      "description": "Animated Layout Dashboard icon for React, built with Motion. Animates on hover and exposes startAnimation() and stopAnimation() through a ref.",
+      "categories": ["icons"],
+      "docs": "https://www.itshover.com/icons/layout-dashboard-icon",
+      "meta": {
+        "keywords": ["layout", "dashboard", "grid", "panel", "widgets", "admin"]
+      },
       "registryDependencies": [],
       "dependencies": ["motion"],
       "devDependencies": [],
@@ -2506,6 +3766,21 @@
     {
       "name": "layout-sidebar-right-collapse-icon",
       "type": "registry:ui",
+      "title": "Layout Sidebar Right Collapse",
+      "description": "Animated Layout Sidebar Right Collapse icon for React, built with Motion. Animates on hover and exposes startAnimation() and stopAnimation() through a ref.",
+      "categories": ["icons"],
+      "docs": "https://www.itshover.com/icons/layout-sidebar-right-collapse-icon",
+      "meta": {
+        "keywords": [
+          "layout",
+          "sidebar",
+          "right",
+          "collapse",
+          "panel",
+          "ui",
+          "interface"
+        ]
+      },
       "registryDependencies": [],
       "dependencies": ["motion"],
       "devDependencies": [],
@@ -2523,6 +3798,21 @@
     {
       "name": "layout-sidebar-right-icon",
       "type": "registry:ui",
+      "title": "Layout Sidebar Right",
+      "description": "Animated Layout Sidebar Right icon for React, built with Motion. Animates on hover and exposes startAnimation() and stopAnimation() through a ref.",
+      "categories": ["icons"],
+      "docs": "https://www.itshover.com/icons/layout-sidebar-right-icon",
+      "meta": {
+        "keywords": [
+          "layout",
+          "sidebar",
+          "right",
+          "panel",
+          "ui",
+          "interface",
+          "navigation"
+        ]
+      },
       "registryDependencies": [],
       "dependencies": ["motion"],
       "devDependencies": [],
@@ -2540,6 +3830,20 @@
     {
       "name": "letter-a-icon",
       "type": "registry:ui",
+      "title": "Letter A",
+      "description": "Animated Letter A icon for React, built with Motion. Animates on hover and exposes startAnimation() and stopAnimation() through a ref.",
+      "categories": ["icons"],
+      "docs": "https://www.itshover.com/icons/letter-a-icon",
+      "meta": {
+        "keywords": [
+          "letter",
+          "a",
+          "alphabet",
+          "text",
+          "character",
+          "typography"
+        ]
+      },
       "registryDependencies": [],
       "dependencies": ["motion"],
       "devDependencies": [],
@@ -2557,6 +3861,20 @@
     {
       "name": "letter-b-icon",
       "type": "registry:ui",
+      "title": "Letter B",
+      "description": "Animated Letter B icon for React, built with Motion. Animates on hover and exposes startAnimation() and stopAnimation() through a ref.",
+      "categories": ["icons"],
+      "docs": "https://www.itshover.com/icons/letter-b-icon",
+      "meta": {
+        "keywords": [
+          "letter",
+          "b",
+          "alphabet",
+          "text",
+          "character",
+          "typography"
+        ]
+      },
       "registryDependencies": [],
       "dependencies": ["motion"],
       "devDependencies": [],
@@ -2574,6 +3892,20 @@
     {
       "name": "letter-c-icon",
       "type": "registry:ui",
+      "title": "Letter C",
+      "description": "Animated Letter C icon for React, built with Motion. Animates on hover and exposes startAnimation() and stopAnimation() through a ref.",
+      "categories": ["icons"],
+      "docs": "https://www.itshover.com/icons/letter-c-icon",
+      "meta": {
+        "keywords": [
+          "letter",
+          "c",
+          "alphabet",
+          "text",
+          "character",
+          "typography"
+        ]
+      },
       "registryDependencies": [],
       "dependencies": ["motion"],
       "devDependencies": [],
@@ -2591,6 +3923,20 @@
     {
       "name": "letter-d-icon",
       "type": "registry:ui",
+      "title": "Letter D",
+      "description": "Animated Letter D icon for React, built with Motion. Animates on hover and exposes startAnimation() and stopAnimation() through a ref.",
+      "categories": ["icons"],
+      "docs": "https://www.itshover.com/icons/letter-d-icon",
+      "meta": {
+        "keywords": [
+          "letter",
+          "d",
+          "alphabet",
+          "text",
+          "character",
+          "typography"
+        ]
+      },
       "registryDependencies": [],
       "dependencies": ["motion"],
       "devDependencies": [],
@@ -2608,6 +3954,20 @@
     {
       "name": "letter-e-icon",
       "type": "registry:ui",
+      "title": "Letter E",
+      "description": "Animated Letter E icon for React, built with Motion. Animates on hover and exposes startAnimation() and stopAnimation() through a ref.",
+      "categories": ["icons"],
+      "docs": "https://www.itshover.com/icons/letter-e-icon",
+      "meta": {
+        "keywords": [
+          "letter",
+          "e",
+          "alphabet",
+          "text",
+          "character",
+          "typography"
+        ]
+      },
       "registryDependencies": [],
       "dependencies": ["motion"],
       "devDependencies": [],
@@ -2625,6 +3985,20 @@
     {
       "name": "letter-f-icon",
       "type": "registry:ui",
+      "title": "Letter F",
+      "description": "Animated Letter F icon for React, built with Motion. Animates on hover and exposes startAnimation() and stopAnimation() through a ref.",
+      "categories": ["icons"],
+      "docs": "https://www.itshover.com/icons/letter-f-icon",
+      "meta": {
+        "keywords": [
+          "letter",
+          "f",
+          "alphabet",
+          "text",
+          "character",
+          "typography"
+        ]
+      },
       "registryDependencies": [],
       "dependencies": ["motion"],
       "devDependencies": [],
@@ -2642,6 +4016,20 @@
     {
       "name": "letter-g-icon",
       "type": "registry:ui",
+      "title": "Letter G",
+      "description": "Animated Letter G icon for React, built with Motion. Animates on hover and exposes startAnimation() and stopAnimation() through a ref.",
+      "categories": ["icons"],
+      "docs": "https://www.itshover.com/icons/letter-g-icon",
+      "meta": {
+        "keywords": [
+          "letter",
+          "g",
+          "alphabet",
+          "text",
+          "character",
+          "typography"
+        ]
+      },
       "registryDependencies": [],
       "dependencies": ["motion"],
       "devDependencies": [],
@@ -2659,6 +4047,20 @@
     {
       "name": "letter-h-icon",
       "type": "registry:ui",
+      "title": "Letter H",
+      "description": "Animated Letter H icon for React, built with Motion. Animates on hover and exposes startAnimation() and stopAnimation() through a ref.",
+      "categories": ["icons"],
+      "docs": "https://www.itshover.com/icons/letter-h-icon",
+      "meta": {
+        "keywords": [
+          "letter",
+          "h",
+          "alphabet",
+          "text",
+          "character",
+          "typography"
+        ]
+      },
       "registryDependencies": [],
       "dependencies": ["motion"],
       "devDependencies": [],
@@ -2676,6 +4078,20 @@
     {
       "name": "letter-i-icon",
       "type": "registry:ui",
+      "title": "Letter I",
+      "description": "Animated Letter I icon for React, built with Motion. Animates on hover and exposes startAnimation() and stopAnimation() through a ref.",
+      "categories": ["icons"],
+      "docs": "https://www.itshover.com/icons/letter-i-icon",
+      "meta": {
+        "keywords": [
+          "letter",
+          "i",
+          "alphabet",
+          "text",
+          "character",
+          "typography"
+        ]
+      },
       "registryDependencies": [],
       "dependencies": ["motion"],
       "devDependencies": [],
@@ -2693,6 +4109,20 @@
     {
       "name": "letter-j-icon",
       "type": "registry:ui",
+      "title": "Letter J",
+      "description": "Animated Letter J icon for React, built with Motion. Animates on hover and exposes startAnimation() and stopAnimation() through a ref.",
+      "categories": ["icons"],
+      "docs": "https://www.itshover.com/icons/letter-j-icon",
+      "meta": {
+        "keywords": [
+          "letter",
+          "j",
+          "alphabet",
+          "text",
+          "character",
+          "typography"
+        ]
+      },
       "registryDependencies": [],
       "dependencies": ["motion"],
       "devDependencies": [],
@@ -2710,6 +4140,20 @@
     {
       "name": "letter-k-icon",
       "type": "registry:ui",
+      "title": "Letter K",
+      "description": "Animated Letter K icon for React, built with Motion. Animates on hover and exposes startAnimation() and stopAnimation() through a ref.",
+      "categories": ["icons"],
+      "docs": "https://www.itshover.com/icons/letter-k-icon",
+      "meta": {
+        "keywords": [
+          "letter",
+          "k",
+          "alphabet",
+          "text",
+          "character",
+          "typography"
+        ]
+      },
       "registryDependencies": [],
       "dependencies": ["motion"],
       "devDependencies": [],
@@ -2727,6 +4171,20 @@
     {
       "name": "letter-l-icon",
       "type": "registry:ui",
+      "title": "Letter L",
+      "description": "Animated Letter L icon for React, built with Motion. Animates on hover and exposes startAnimation() and stopAnimation() through a ref.",
+      "categories": ["icons"],
+      "docs": "https://www.itshover.com/icons/letter-l-icon",
+      "meta": {
+        "keywords": [
+          "letter",
+          "l",
+          "alphabet",
+          "text",
+          "character",
+          "typography"
+        ]
+      },
       "registryDependencies": [],
       "dependencies": ["motion"],
       "devDependencies": [],
@@ -2744,6 +4202,20 @@
     {
       "name": "letter-m-icon",
       "type": "registry:ui",
+      "title": "Letter M",
+      "description": "Animated Letter M icon for React, built with Motion. Animates on hover and exposes startAnimation() and stopAnimation() through a ref.",
+      "categories": ["icons"],
+      "docs": "https://www.itshover.com/icons/letter-m-icon",
+      "meta": {
+        "keywords": [
+          "letter",
+          "m",
+          "alphabet",
+          "text",
+          "character",
+          "typography"
+        ]
+      },
       "registryDependencies": [],
       "dependencies": ["motion"],
       "devDependencies": [],
@@ -2761,6 +4233,20 @@
     {
       "name": "letter-n-icon",
       "type": "registry:ui",
+      "title": "Letter N",
+      "description": "Animated Letter N icon for React, built with Motion. Animates on hover and exposes startAnimation() and stopAnimation() through a ref.",
+      "categories": ["icons"],
+      "docs": "https://www.itshover.com/icons/letter-n-icon",
+      "meta": {
+        "keywords": [
+          "letter",
+          "n",
+          "alphabet",
+          "text",
+          "character",
+          "typography"
+        ]
+      },
       "registryDependencies": [],
       "dependencies": ["motion"],
       "devDependencies": [],
@@ -2778,6 +4264,20 @@
     {
       "name": "letter-o-icon",
       "type": "registry:ui",
+      "title": "Letter O",
+      "description": "Animated Letter O icon for React, built with Motion. Animates on hover and exposes startAnimation() and stopAnimation() through a ref.",
+      "categories": ["icons"],
+      "docs": "https://www.itshover.com/icons/letter-o-icon",
+      "meta": {
+        "keywords": [
+          "letter",
+          "o",
+          "alphabet",
+          "text",
+          "character",
+          "typography"
+        ]
+      },
       "registryDependencies": [],
       "dependencies": ["motion"],
       "devDependencies": [],
@@ -2795,6 +4295,20 @@
     {
       "name": "letter-p-icon",
       "type": "registry:ui",
+      "title": "Letter P",
+      "description": "Animated Letter P icon for React, built with Motion. Animates on hover and exposes startAnimation() and stopAnimation() through a ref.",
+      "categories": ["icons"],
+      "docs": "https://www.itshover.com/icons/letter-p-icon",
+      "meta": {
+        "keywords": [
+          "letter",
+          "p",
+          "alphabet",
+          "text",
+          "character",
+          "typography"
+        ]
+      },
       "registryDependencies": [],
       "dependencies": ["motion"],
       "devDependencies": [],
@@ -2812,6 +4326,20 @@
     {
       "name": "letter-q-icon",
       "type": "registry:ui",
+      "title": "Letter Q",
+      "description": "Animated Letter Q icon for React, built with Motion. Animates on hover and exposes startAnimation() and stopAnimation() through a ref.",
+      "categories": ["icons"],
+      "docs": "https://www.itshover.com/icons/letter-q-icon",
+      "meta": {
+        "keywords": [
+          "letter",
+          "q",
+          "alphabet",
+          "text",
+          "character",
+          "typography"
+        ]
+      },
       "registryDependencies": [],
       "dependencies": ["motion"],
       "devDependencies": [],
@@ -2829,6 +4357,20 @@
     {
       "name": "letter-r-icon",
       "type": "registry:ui",
+      "title": "Letter R",
+      "description": "Animated Letter R icon for React, built with Motion. Animates on hover and exposes startAnimation() and stopAnimation() through a ref.",
+      "categories": ["icons"],
+      "docs": "https://www.itshover.com/icons/letter-r-icon",
+      "meta": {
+        "keywords": [
+          "letter",
+          "r",
+          "alphabet",
+          "text",
+          "character",
+          "typography"
+        ]
+      },
       "registryDependencies": [],
       "dependencies": ["motion"],
       "devDependencies": [],
@@ -2846,6 +4388,20 @@
     {
       "name": "letter-s-icon",
       "type": "registry:ui",
+      "title": "Letter S",
+      "description": "Animated Letter S icon for React, built with Motion. Animates on hover and exposes startAnimation() and stopAnimation() through a ref.",
+      "categories": ["icons"],
+      "docs": "https://www.itshover.com/icons/letter-s-icon",
+      "meta": {
+        "keywords": [
+          "letter",
+          "s",
+          "alphabet",
+          "text",
+          "character",
+          "typography"
+        ]
+      },
       "registryDependencies": [],
       "dependencies": ["motion"],
       "devDependencies": [],
@@ -2863,6 +4419,20 @@
     {
       "name": "letter-t-icon",
       "type": "registry:ui",
+      "title": "Letter T",
+      "description": "Animated Letter T icon for React, built with Motion. Animates on hover and exposes startAnimation() and stopAnimation() through a ref.",
+      "categories": ["icons"],
+      "docs": "https://www.itshover.com/icons/letter-t-icon",
+      "meta": {
+        "keywords": [
+          "letter",
+          "t",
+          "alphabet",
+          "text",
+          "character",
+          "typography"
+        ]
+      },
       "registryDependencies": [],
       "dependencies": ["motion"],
       "devDependencies": [],
@@ -2880,6 +4450,20 @@
     {
       "name": "letter-u-icon",
       "type": "registry:ui",
+      "title": "Letter U",
+      "description": "Animated Letter U icon for React, built with Motion. Animates on hover and exposes startAnimation() and stopAnimation() through a ref.",
+      "categories": ["icons"],
+      "docs": "https://www.itshover.com/icons/letter-u-icon",
+      "meta": {
+        "keywords": [
+          "letter",
+          "u",
+          "alphabet",
+          "text",
+          "character",
+          "typography"
+        ]
+      },
       "registryDependencies": [],
       "dependencies": ["motion"],
       "devDependencies": [],
@@ -2897,6 +4481,20 @@
     {
       "name": "letter-v-icon",
       "type": "registry:ui",
+      "title": "Letter V",
+      "description": "Animated Letter V icon for React, built with Motion. Animates on hover and exposes startAnimation() and stopAnimation() through a ref.",
+      "categories": ["icons"],
+      "docs": "https://www.itshover.com/icons/letter-v-icon",
+      "meta": {
+        "keywords": [
+          "letter",
+          "v",
+          "alphabet",
+          "text",
+          "character",
+          "typography"
+        ]
+      },
       "registryDependencies": [],
       "dependencies": ["motion"],
       "devDependencies": [],
@@ -2914,6 +4512,20 @@
     {
       "name": "letter-w-icon",
       "type": "registry:ui",
+      "title": "Letter W",
+      "description": "Animated Letter W icon for React, built with Motion. Animates on hover and exposes startAnimation() and stopAnimation() through a ref.",
+      "categories": ["icons"],
+      "docs": "https://www.itshover.com/icons/letter-w-icon",
+      "meta": {
+        "keywords": [
+          "letter",
+          "w",
+          "alphabet",
+          "text",
+          "character",
+          "typography"
+        ]
+      },
       "registryDependencies": [],
       "dependencies": ["motion"],
       "devDependencies": [],
@@ -2931,6 +4543,20 @@
     {
       "name": "letter-x-icon",
       "type": "registry:ui",
+      "title": "Letter X",
+      "description": "Animated Letter X icon for React, built with Motion. Animates on hover and exposes startAnimation() and stopAnimation() through a ref.",
+      "categories": ["icons"],
+      "docs": "https://www.itshover.com/icons/letter-x-icon",
+      "meta": {
+        "keywords": [
+          "letter",
+          "x",
+          "alphabet",
+          "text",
+          "character",
+          "typography"
+        ]
+      },
       "registryDependencies": [],
       "dependencies": ["motion"],
       "devDependencies": [],
@@ -2948,6 +4574,20 @@
     {
       "name": "letter-y-icon",
       "type": "registry:ui",
+      "title": "Letter Y",
+      "description": "Animated Letter Y icon for React, built with Motion. Animates on hover and exposes startAnimation() and stopAnimation() through a ref.",
+      "categories": ["icons"],
+      "docs": "https://www.itshover.com/icons/letter-y-icon",
+      "meta": {
+        "keywords": [
+          "letter",
+          "y",
+          "alphabet",
+          "text",
+          "character",
+          "typography"
+        ]
+      },
       "registryDependencies": [],
       "dependencies": ["motion"],
       "devDependencies": [],
@@ -2965,6 +4605,20 @@
     {
       "name": "letter-z-icon",
       "type": "registry:ui",
+      "title": "Letter Z",
+      "description": "Animated Letter Z icon for React, built with Motion. Animates on hover and exposes startAnimation() and stopAnimation() through a ref.",
+      "categories": ["icons"],
+      "docs": "https://www.itshover.com/icons/letter-z-icon",
+      "meta": {
+        "keywords": [
+          "letter",
+          "z",
+          "alphabet",
+          "text",
+          "character",
+          "typography"
+        ]
+      },
       "registryDependencies": [],
       "dependencies": ["motion"],
       "devDependencies": [],
@@ -2982,6 +4636,37 @@
     {
       "name": "library-icon",
       "type": "registry:ui",
+      "title": "Library",
+      "description": "Animated Library icon for React, built with Motion. Animates on hover and exposes startAnimation() and stopAnimation() through a ref.",
+      "categories": ["icons"],
+      "docs": "https://www.itshover.com/icons/library-icon",
+      "meta": {
+        "keywords": [
+          "books",
+          "reading",
+          "written",
+          "authors",
+          "stories",
+          "fiction",
+          "novels",
+          "information",
+          "knowledge",
+          "education",
+          "high school",
+          "university",
+          "college",
+          "academy",
+          "learning",
+          "study",
+          "research",
+          "collection",
+          "vinyl",
+          "records",
+          "albums",
+          "music",
+          "package"
+        ]
+      },
       "registryDependencies": [],
       "dependencies": ["motion"],
       "devDependencies": [],
@@ -2999,6 +4684,13 @@
     {
       "name": "like-icon",
       "type": "registry:ui",
+      "title": "Like",
+      "description": "Animated Like icon for React, built with Motion. Animates on hover and exposes startAnimation() and stopAnimation() through a ref.",
+      "categories": ["icons"],
+      "docs": "https://www.itshover.com/icons/like-icon",
+      "meta": {
+        "keywords": ["like", "heart", "love", "favorite"]
+      },
       "registryDependencies": [],
       "dependencies": ["motion"],
       "devDependencies": [],
@@ -3016,6 +4708,13 @@
     {
       "name": "link-icon",
       "type": "registry:ui",
+      "title": "Link",
+      "description": "Animated Link icon for React, built with Motion. Animates on hover and exposes startAnimation() and stopAnimation() through a ref.",
+      "categories": ["icons"],
+      "docs": "https://www.itshover.com/icons/link-icon",
+      "meta": {
+        "keywords": ["link", "chain", "url", "hyperlink", "connect"]
+      },
       "registryDependencies": [],
       "dependencies": ["motion"],
       "devDependencies": [],
@@ -3033,6 +4732,13 @@
     {
       "name": "linkedin-icon",
       "type": "registry:ui",
+      "title": "LinkedIn",
+      "description": "Animated LinkedIn icon for React, built with Motion. Animates on hover and exposes startAnimation() and stopAnimation() through a ref.",
+      "categories": ["icons"],
+      "docs": "https://www.itshover.com/icons/linkedin-icon",
+      "meta": {
+        "keywords": ["linkedin", "social", "professional", "network", "job"]
+      },
       "registryDependencies": [],
       "dependencies": ["motion"],
       "devDependencies": [],
@@ -3050,6 +4756,21 @@
     {
       "name": "locate-icon",
       "type": "registry:ui",
+      "title": "Locate",
+      "description": "Animated Locate icon for React, built with Motion. Animates on hover and exposes startAnimation() and stopAnimation() through a ref.",
+      "categories": ["icons"],
+      "docs": "https://www.itshover.com/icons/locate-icon",
+      "meta": {
+        "keywords": [
+          "gps",
+          "location",
+          "map",
+          "position",
+          "target",
+          "track",
+          "navigation"
+        ]
+      },
       "registryDependencies": [],
       "dependencies": ["motion"],
       "devDependencies": [],
@@ -3067,6 +4788,13 @@
     {
       "name": "lock-icon",
       "type": "registry:ui",
+      "title": "Lock",
+      "description": "Animated Lock icon for React, built with Motion. Animates on hover and exposes startAnimation() and stopAnimation() through a ref.",
+      "categories": ["icons"],
+      "docs": "https://www.itshover.com/icons/lock-icon",
+      "meta": {
+        "keywords": ["lock", "secure", "security", "password", "privacy"]
+      },
       "registryDependencies": [],
       "dependencies": ["motion"],
       "devDependencies": [],
@@ -3084,6 +4812,13 @@
     {
       "name": "logout-icon",
       "type": "registry:ui",
+      "title": "Logout",
+      "description": "Animated Logout icon for React, built with Motion. Animates on hover and exposes startAnimation() and stopAnimation() through a ref.",
+      "categories": ["icons"],
+      "docs": "https://www.itshover.com/icons/logout-icon",
+      "meta": {
+        "keywords": ["logout", "exit", "signout", "leave"]
+      },
       "registryDependencies": [],
       "dependencies": ["motion"],
       "devDependencies": [],
@@ -3101,6 +4836,13 @@
     {
       "name": "magnifier-icon",
       "type": "registry:ui",
+      "title": "Magnifier",
+      "description": "Animated Magnifier icon for React, built with Motion. Animates on hover and exposes startAnimation() and stopAnimation() through a ref.",
+      "categories": ["icons"],
+      "docs": "https://www.itshover.com/icons/magnifier-icon",
+      "meta": {
+        "keywords": ["search", "find", "zoom", "look"]
+      },
       "registryDependencies": [],
       "dependencies": ["motion"],
       "devDependencies": [],
@@ -3118,6 +4860,13 @@
     {
       "name": "mail-filled-icon",
       "type": "registry:ui",
+      "title": "Mail Filled",
+      "description": "Animated Mail Filled icon for React, built with Motion. Animates on hover and exposes startAnimation() and stopAnimation() through a ref.",
+      "categories": ["icons"],
+      "docs": "https://www.itshover.com/icons/mail-filled-icon",
+      "meta": {
+        "keywords": ["mail", "email", "message", "envelope", "inbox"]
+      },
       "registryDependencies": [],
       "dependencies": ["motion"],
       "devDependencies": [],
@@ -3135,6 +4884,13 @@
     {
       "name": "map-pin-icon",
       "type": "registry:ui",
+      "title": "Map Pin",
+      "description": "Animated Map Pin icon for React, built with Motion. Animates on hover and exposes startAnimation() and stopAnimation() through a ref.",
+      "categories": ["icons"],
+      "docs": "https://www.itshover.com/icons/map-pin-icon",
+      "meta": {
+        "keywords": ["map", "pin", "location", "marker", "gps"]
+      },
       "registryDependencies": [],
       "dependencies": ["motion"],
       "devDependencies": [],
@@ -3152,6 +4908,20 @@
     {
       "name": "meh-icon",
       "type": "registry:ui",
+      "title": "Meh",
+      "description": "Animated Meh icon for React, built with Motion. Animates on hover and exposes startAnimation() and stopAnimation() through a ref.",
+      "categories": ["icons"],
+      "docs": "https://www.itshover.com/icons/meh-icon",
+      "meta": {
+        "keywords": [
+          "meh",
+          "neutral",
+          "indifferent",
+          "emoji",
+          "face",
+          "emoticon"
+        ]
+      },
       "registryDependencies": [],
       "dependencies": ["motion"],
       "devDependencies": [],
@@ -3169,6 +4939,13 @@
     {
       "name": "message-circle-icon",
       "type": "registry:ui",
+      "title": "Message Circle",
+      "description": "Animated Message Circle icon for React, built with Motion. Animates on hover and exposes startAnimation() and stopAnimation() through a ref.",
+      "categories": ["icons"],
+      "docs": "https://www.itshover.com/icons/message-circle-icon",
+      "meta": {
+        "keywords": ["message", "chat", "bubble", "talk", "conversation"]
+      },
       "registryDependencies": [],
       "dependencies": ["motion"],
       "devDependencies": [],
@@ -3186,6 +4963,13 @@
     {
       "name": "moon-icon",
       "type": "registry:ui",
+      "title": "Moon",
+      "description": "Animated Moon icon for React, built with Motion. Animates on hover and exposes startAnimation() and stopAnimation() through a ref.",
+      "categories": ["icons"],
+      "docs": "https://www.itshover.com/icons/moon-icon",
+      "meta": {
+        "keywords": ["moon", "dark", "night", "theme", "mode"]
+      },
       "registryDependencies": [],
       "dependencies": ["motion"],
       "devDependencies": [],
@@ -3203,6 +4987,13 @@
     {
       "name": "mouse-pointer-2-icon",
       "type": "registry:ui",
+      "title": "Mouse Pointer 2",
+      "description": "Animated Mouse Pointer 2 icon for React, built with Motion. Animates on hover and exposes startAnimation() and stopAnimation() through a ref.",
+      "categories": ["icons"],
+      "docs": "https://www.itshover.com/icons/mouse-pointer-2-icon",
+      "meta": {
+        "keywords": ["mouse", "pointer", "cursor", "click", "select"]
+      },
       "registryDependencies": [],
       "dependencies": ["motion"],
       "devDependencies": [],
@@ -3220,6 +5011,13 @@
     {
       "name": "mysql-icon",
       "type": "registry:ui",
+      "title": "Mysql",
+      "description": "Animated Mysql icon for React, built with Motion. Animates on hover and exposes startAnimation() and stopAnimation() through a ref.",
+      "categories": ["icons"],
+      "docs": "https://www.itshover.com/icons/mysql-icon",
+      "meta": {
+        "keywords": ["mysql", "database", "sql", "db"]
+      },
       "registryDependencies": [],
       "dependencies": ["motion"],
       "devDependencies": [],
@@ -3237,6 +5035,13 @@
     {
       "name": "nodejs-icon",
       "type": "registry:ui",
+      "title": "Node.js",
+      "description": "Animated Node.js icon for React, built with Motion. Animates on hover and exposes startAnimation() and stopAnimation() through a ref.",
+      "categories": ["icons"],
+      "docs": "https://www.itshover.com/icons/nodejs-icon",
+      "meta": {
+        "keywords": ["nodejs", "node", "javascript", "server", "backend"]
+      },
       "registryDependencies": [],
       "dependencies": ["motion"],
       "devDependencies": [],
@@ -3254,6 +5059,21 @@
     {
       "name": "paint-icon",
       "type": "registry:ui",
+      "title": "Paint",
+      "description": "Animated Paint icon for React, built with Motion. Animates on hover and exposes startAnimation() and stopAnimation() through a ref.",
+      "categories": ["icons"],
+      "docs": "https://www.itshover.com/icons/paint-icon",
+      "meta": {
+        "keywords": [
+          "paint",
+          "roller",
+          "brush",
+          "color",
+          "design",
+          "theme",
+          "customize"
+        ]
+      },
       "registryDependencies": [],
       "dependencies": ["motion"],
       "devDependencies": [],
@@ -3271,6 +5091,13 @@
     {
       "name": "party-popper-icon",
       "type": "registry:ui",
+      "title": "Party Popper",
+      "description": "Animated Party Popper icon for React, built with Motion. Animates on hover and exposes startAnimation() and stopAnimation() through a ref.",
+      "categories": ["icons"],
+      "docs": "https://www.itshover.com/icons/party-popper-icon",
+      "meta": {
+        "keywords": ["party", "popper", "celebration", "confetti", "celebrate"]
+      },
       "registryDependencies": [],
       "dependencies": ["motion"],
       "devDependencies": [],
@@ -3288,6 +5115,13 @@
     {
       "name": "passport-icon",
       "type": "registry:ui",
+      "title": "Passport",
+      "description": "Animated Passport icon for React, built with Motion. Animates on hover and exposes startAnimation() and stopAnimation() through a ref.",
+      "categories": ["icons"],
+      "docs": "https://www.itshover.com/icons/passport-icon",
+      "meta": {
+        "keywords": ["international", "passport", "travel", "visa", "traveling"]
+      },
       "registryDependencies": [],
       "dependencies": ["motion"],
       "devDependencies": [],
@@ -3305,6 +5139,13 @@
     {
       "name": "paw-print-icon",
       "type": "registry:ui",
+      "title": "Paw Print",
+      "description": "Animated Paw Print icon for React, built with Motion. Animates on hover and exposes startAnimation() and stopAnimation() through a ref.",
+      "categories": ["icons"],
+      "docs": "https://www.itshover.com/icons/paw-print-icon",
+      "meta": {
+        "keywords": ["paw", "pet", "animal", "walk", "track", "dog", "cat"]
+      },
       "registryDependencies": [],
       "dependencies": ["motion"],
       "devDependencies": [],
@@ -3322,6 +5163,13 @@
     {
       "name": "pen-icon",
       "type": "registry:ui",
+      "title": "Pen",
+      "description": "Animated Pen icon for React, built with Motion. Animates on hover and exposes startAnimation() and stopAnimation() through a ref.",
+      "categories": ["icons"],
+      "docs": "https://www.itshover.com/icons/pen-icon",
+      "meta": {
+        "keywords": ["pen", "edit", "write", "modify"]
+      },
       "registryDependencies": [],
       "dependencies": ["motion"],
       "devDependencies": [],
@@ -3339,6 +5187,13 @@
     {
       "name": "phone-volume",
       "type": "registry:ui",
+      "title": "Phone Volume",
+      "description": "Animated Phone Volume icon for React, built with Motion. Animates on hover and exposes startAnimation() and stopAnimation() through a ref.",
+      "categories": ["icons"],
+      "docs": "https://www.itshover.com/icons/phone-volume",
+      "meta": {
+        "keywords": ["phone", "call", "volume", "sound"]
+      },
       "registryDependencies": [],
       "dependencies": ["motion"],
       "devDependencies": [],
@@ -3356,6 +5211,13 @@
     {
       "name": "pinterest-icon",
       "type": "registry:ui",
+      "title": "Pinterest",
+      "description": "Animated Pinterest icon for React, built with Motion. Animates on hover and exposes startAnimation() and stopAnimation() through a ref.",
+      "categories": ["icons"],
+      "docs": "https://www.itshover.com/icons/pinterest-icon",
+      "meta": {
+        "keywords": ["pinterest", "social", "pin", "board", "image"]
+      },
       "registryDependencies": [],
       "dependencies": ["motion"],
       "devDependencies": [],
@@ -3373,6 +5235,13 @@
     {
       "name": "player-icon",
       "type": "registry:ui",
+      "title": "Player",
+      "description": "Animated Player icon for React, built with Motion. Animates on hover and exposes startAnimation() and stopAnimation() through a ref.",
+      "categories": ["icons"],
+      "docs": "https://www.itshover.com/icons/player-icon",
+      "meta": {
+        "keywords": ["play", "media", "music", "video"]
+      },
       "registryDependencies": [],
       "dependencies": ["motion"],
       "devDependencies": [],
@@ -3390,6 +5259,21 @@
     {
       "name": "plug-connected-icon",
       "type": "registry:ui",
+      "title": "Plug Connected",
+      "description": "Animated Plug Connected icon for React, built with Motion. Animates on hover and exposes startAnimation() and stopAnimation() through a ref.",
+      "categories": ["icons"],
+      "docs": "https://www.itshover.com/icons/plug-connected-icon",
+      "meta": {
+        "keywords": [
+          "plug",
+          "connected",
+          "connection",
+          "cable",
+          "power",
+          "socket",
+          "electric"
+        ]
+      },
       "registryDependencies": [],
       "dependencies": ["motion"],
       "devDependencies": [],
@@ -3407,6 +5291,22 @@
     {
       "name": "plug-connected-x-icon",
       "type": "registry:ui",
+      "title": "Plug Connected X",
+      "description": "Animated Plug Connected X icon for React, built with Motion. Animates on hover and exposes startAnimation() and stopAnimation() through a ref.",
+      "categories": ["icons"],
+      "docs": "https://www.itshover.com/icons/plug-connected-x-icon",
+      "meta": {
+        "keywords": [
+          "plug",
+          "connected",
+          "disconnect",
+          "x",
+          "connection",
+          "cable",
+          "power",
+          "unplug"
+        ]
+      },
       "registryDependencies": [],
       "dependencies": ["motion"],
       "devDependencies": [],
@@ -3424,6 +5324,13 @@
     {
       "name": "python-icon",
       "type": "registry:ui",
+      "title": "Python",
+      "description": "Animated Python icon for React, built with Motion. Animates on hover and exposes startAnimation() and stopAnimation() through a ref.",
+      "categories": ["icons"],
+      "docs": "https://www.itshover.com/icons/python-icon",
+      "meta": {
+        "keywords": ["python", "code", "programming", "snake", "language"]
+      },
       "registryDependencies": [],
       "dependencies": ["motion"],
       "devDependencies": [],
@@ -3441,6 +5348,13 @@
     {
       "name": "qrcode-icon",
       "type": "registry:ui",
+      "title": "Qrcode",
+      "description": "Animated Qrcode icon for React, built with Motion. Animates on hover and exposes startAnimation() and stopAnimation() through a ref.",
+      "categories": ["icons"],
+      "docs": "https://www.itshover.com/icons/qrcode-icon",
+      "meta": {
+        "keywords": ["qr", "code", "scan", "barcode"]
+      },
       "registryDependencies": [],
       "dependencies": ["motion"],
       "devDependencies": [],
@@ -3458,6 +5372,13 @@
     {
       "name": "question-mark",
       "type": "registry:ui",
+      "title": "Question Mark",
+      "description": "Animated Question Mark icon for React, built with Motion. Animates on hover and exposes startAnimation() and stopAnimation() through a ref.",
+      "categories": ["icons"],
+      "docs": "https://www.itshover.com/icons/question-mark",
+      "meta": {
+        "keywords": ["question", "help", "info", "faq"]
+      },
       "registryDependencies": [],
       "dependencies": ["motion"],
       "devDependencies": [],
@@ -3475,6 +5396,20 @@
     {
       "name": "radio-icon",
       "type": "registry:ui",
+      "title": "Radio",
+      "description": "Animated Radio icon for React, built with Motion. Animates on hover and exposes startAnimation() and stopAnimation() through a ref.",
+      "categories": ["icons"],
+      "docs": "https://www.itshover.com/icons/radio-icon",
+      "meta": {
+        "keywords": [
+          "radio",
+          "signal",
+          "broadcast",
+          "waves",
+          "transmission",
+          "wireless"
+        ]
+      },
       "registryDependencies": [],
       "dependencies": ["motion"],
       "devDependencies": [],
@@ -3492,6 +5427,13 @@
     {
       "name": "rainbow-icon",
       "type": "registry:ui",
+      "title": "Rainbow",
+      "description": "Animated Rainbow icon for React, built with Motion. Animates on hover and exposes startAnimation() and stopAnimation() through a ref.",
+      "categories": ["icons"],
+      "docs": "https://www.itshover.com/icons/rainbow-icon",
+      "meta": {
+        "keywords": ["rainbow", "color", "pride", "arc", "spectrum"]
+      },
       "registryDependencies": [],
       "dependencies": ["motion"],
       "devDependencies": [],
@@ -3509,6 +5451,13 @@
     {
       "name": "refresh-icon",
       "type": "registry:ui",
+      "title": "Refresh",
+      "description": "Animated Refresh icon for React, built with Motion. Animates on hover and exposes startAnimation() and stopAnimation() through a ref.",
+      "categories": ["icons"],
+      "docs": "https://www.itshover.com/icons/refresh-icon",
+      "meta": {
+        "keywords": ["refresh", "reload", "sync", "update"]
+      },
       "registryDependencies": [],
       "dependencies": ["motion"],
       "devDependencies": [],
@@ -3526,6 +5475,13 @@
     {
       "name": "right-chevron",
       "type": "registry:ui",
+      "title": "Right Chevron",
+      "description": "Animated Right Chevron icon for React, built with Motion. Animates on hover and exposes startAnimation() and stopAnimation() through a ref.",
+      "categories": ["icons"],
+      "docs": "https://www.itshover.com/icons/right-chevron",
+      "meta": {
+        "keywords": ["arrow", "right", "next", "forward"]
+      },
       "registryDependencies": [],
       "dependencies": ["motion"],
       "devDependencies": [],
@@ -3543,6 +5499,13 @@
     {
       "name": "rocket-icon",
       "type": "registry:ui",
+      "title": "Rocket",
+      "description": "Animated Rocket icon for React, built with Motion. Animates on hover and exposes startAnimation() and stopAnimation() through a ref.",
+      "categories": ["icons"],
+      "docs": "https://www.itshover.com/icons/rocket-icon",
+      "meta": {
+        "keywords": ["rocket", "launch", "space", "startup"]
+      },
       "registryDependencies": [],
       "dependencies": ["motion"],
       "devDependencies": [],
@@ -3560,6 +5523,21 @@
     {
       "name": "rosette-discount-check-icon",
       "type": "registry:ui",
+      "title": "Rosette Discount Check",
+      "description": "Animated Rosette Discount Check icon for React, built with Motion. Animates on hover and exposes startAnimation() and stopAnimation() through a ref.",
+      "categories": ["icons"],
+      "docs": "https://www.itshover.com/icons/rosette-discount-check-icon",
+      "meta": {
+        "keywords": [
+          "rosette",
+          "discount",
+          "check",
+          "badge",
+          "verified",
+          "offer",
+          "sale"
+        ]
+      },
       "registryDependencies": [],
       "dependencies": ["motion"],
       "devDependencies": [],
@@ -3577,6 +5555,21 @@
     {
       "name": "rosette-discount-icon",
       "type": "registry:ui",
+      "title": "Rosette Discount",
+      "description": "Animated Rosette Discount icon for React, built with Motion. Animates on hover and exposes startAnimation() and stopAnimation() through a ref.",
+      "categories": ["icons"],
+      "docs": "https://www.itshover.com/icons/rosette-discount-icon",
+      "meta": {
+        "keywords": [
+          "rosette",
+          "discount",
+          "price",
+          "tag",
+          "sale",
+          "offer",
+          "percentage"
+        ]
+      },
       "registryDependencies": [],
       "dependencies": ["motion"],
       "devDependencies": [],
@@ -3594,6 +5587,20 @@
     {
       "name": "router-icon",
       "type": "registry:ui",
+      "title": "Router",
+      "description": "Animated Router icon for React, built with Motion. Animates on hover and exposes startAnimation() and stopAnimation() through a ref.",
+      "categories": ["icons"],
+      "docs": "https://www.itshover.com/icons/router-icon",
+      "meta": {
+        "keywords": [
+          "router",
+          "wifi",
+          "network",
+          "internet",
+          "connection",
+          "modem"
+        ]
+      },
       "registryDependencies": [],
       "dependencies": ["motion"],
       "devDependencies": [],
@@ -3611,6 +5618,20 @@
     {
       "name": "satellite-dish-icon",
       "type": "registry:ui",
+      "title": "Satellite Dish",
+      "description": "Animated Satellite Dish icon for React, built with Motion. Animates on hover and exposes startAnimation() and stopAnimation() through a ref.",
+      "categories": ["icons"],
+      "docs": "https://www.itshover.com/icons/satellite-dish-icon",
+      "meta": {
+        "keywords": [
+          "satellite",
+          "dish",
+          "antenna",
+          "signal",
+          "broadcast",
+          "communication"
+        ]
+      },
       "registryDependencies": [],
       "dependencies": ["motion"],
       "devDependencies": [],
@@ -3628,6 +5649,21 @@
     {
       "name": "save-icon",
       "type": "registry:ui",
+      "title": "Save",
+      "description": "Animated Save icon for React, built with Motion. Animates on hover and exposes startAnimation() and stopAnimation() through a ref.",
+      "categories": ["icons"],
+      "docs": "https://www.itshover.com/icons/save-icon",
+      "meta": {
+        "keywords": [
+          "save",
+          "floppy",
+          "disk",
+          "store",
+          "memory",
+          "storage",
+          "record"
+        ]
+      },
       "registryDependencies": [],
       "dependencies": ["motion"],
       "devDependencies": [],
@@ -3645,6 +5681,13 @@
     {
       "name": "scan-barcode-icon",
       "type": "registry:ui",
+      "title": "Scan Barcode",
+      "description": "Animated Scan Barcode icon for React, built with Motion. Animates on hover and exposes startAnimation() and stopAnimation() through a ref.",
+      "categories": ["icons"],
+      "docs": "https://www.itshover.com/icons/scan-barcode-icon",
+      "meta": {
+        "keywords": ["scan", "barcode", "qr", "code", "reader", "scanner"]
+      },
       "registryDependencies": [],
       "dependencies": ["motion"],
       "devDependencies": [],
@@ -3662,6 +5705,13 @@
     {
       "name": "scan-heart-icon",
       "type": "registry:ui",
+      "title": "Scan Heart",
+      "description": "Animated Scan Heart icon for React, built with Motion. Animates on hover and exposes startAnimation() and stopAnimation() through a ref.",
+      "categories": ["icons"],
+      "docs": "https://www.itshover.com/icons/scan-heart-icon",
+      "meta": {
+        "keywords": ["scan", "heart", "health", "medical", "monitor", "focus"]
+      },
       "registryDependencies": [],
       "dependencies": ["motion"],
       "devDependencies": [],
@@ -3679,6 +5729,20 @@
     {
       "name": "send-horizontal-icon",
       "type": "registry:ui",
+      "title": "Send Horizontal",
+      "description": "Animated Send Horizontal icon for React, built with Motion. Animates on hover and exposes startAnimation() and stopAnimation() through a ref.",
+      "categories": ["icons"],
+      "docs": "https://www.itshover.com/icons/send-horizontal-icon",
+      "meta": {
+        "keywords": [
+          "send",
+          "horizontal",
+          "message",
+          "mail",
+          "paper plane",
+          "submit"
+        ]
+      },
       "registryDependencies": [],
       "dependencies": ["motion"],
       "devDependencies": [],
@@ -3696,6 +5760,13 @@
     {
       "name": "send-icon",
       "type": "registry:ui",
+      "title": "Send",
+      "description": "Animated Send icon for React, built with Motion. Animates on hover and exposes startAnimation() and stopAnimation() through a ref.",
+      "categories": ["icons"],
+      "docs": "https://www.itshover.com/icons/send-icon",
+      "meta": {
+        "keywords": ["send", "message", "mail", "submit"]
+      },
       "registryDependencies": [],
       "dependencies": ["motion"],
       "devDependencies": [],
@@ -3713,6 +5784,13 @@
     {
       "name": "shield-check",
       "type": "registry:ui",
+      "title": "Shield Check",
+      "description": "Animated Shield Check icon for React, built with Motion. Animates on hover and exposes startAnimation() and stopAnimation() through a ref.",
+      "categories": ["icons"],
+      "docs": "https://www.itshover.com/icons/shield-check",
+      "meta": {
+        "keywords": ["shield", "security", "safe", "protect"]
+      },
       "registryDependencies": [],
       "dependencies": ["motion"],
       "devDependencies": [],
@@ -3730,6 +5808,13 @@
     {
       "name": "shopping-cart-icon",
       "type": "registry:ui",
+      "title": "Shopping Cart",
+      "description": "Animated Shopping Cart icon for React, built with Motion. Animates on hover and exposes startAnimation() and stopAnimation() through a ref.",
+      "categories": ["icons"],
+      "docs": "https://www.itshover.com/icons/shopping-cart-icon",
+      "meta": {
+        "keywords": ["cart", "shopping", "store", "buy"]
+      },
       "registryDependencies": [],
       "dependencies": ["motion"],
       "devDependencies": [],
@@ -3747,6 +5832,13 @@
     {
       "name": "simple-checked-icon",
       "type": "registry:ui",
+      "title": "Simple Checked",
+      "description": "Animated Simple Checked icon for React, built with Motion. Animates on hover and exposes startAnimation() and stopAnimation() through a ref.",
+      "categories": ["icons"],
+      "docs": "https://www.itshover.com/icons/simple-checked-icon",
+      "meta": {
+        "keywords": ["check", "tick", "simple", "done"]
+      },
       "registryDependencies": [],
       "dependencies": ["motion"],
       "devDependencies": [],
@@ -3764,6 +5856,13 @@
     {
       "name": "skull-emoji",
       "type": "registry:ui",
+      "title": "Skull Emoji",
+      "description": "Animated Skull Emoji icon for React, built with Motion. Animates on hover and exposes startAnimation() and stopAnimation() through a ref.",
+      "categories": ["icons"],
+      "docs": "https://www.itshover.com/icons/skull-emoji",
+      "meta": {
+        "keywords": ["skull", "death", "danger", "warning"]
+      },
       "registryDependencies": [],
       "dependencies": ["motion"],
       "devDependencies": [],
@@ -3781,6 +5880,13 @@
     {
       "name": "slack-icon",
       "type": "registry:ui",
+      "title": "Slack",
+      "description": "Animated Slack icon for React, built with Motion. Animates on hover and exposes startAnimation() and stopAnimation() through a ref.",
+      "categories": ["icons"],
+      "docs": "https://www.itshover.com/icons/slack-icon",
+      "meta": {
+        "keywords": ["slack", "chat", "team", "communication", "work"]
+      },
       "registryDependencies": [],
       "dependencies": ["motion"],
       "devDependencies": [],
@@ -3798,6 +5904,20 @@
     {
       "name": "sliders-horizontal-icon",
       "type": "registry:ui",
+      "title": "Sliders Horizontal",
+      "description": "Animated Sliders Horizontal icon for React, built with Motion. Animates on hover and exposes startAnimation() and stopAnimation() through a ref.",
+      "categories": ["icons"],
+      "docs": "https://www.itshover.com/icons/sliders-horizontal-icon",
+      "meta": {
+        "keywords": [
+          "sliders",
+          "settings",
+          "filter",
+          "equalizer",
+          "controls",
+          "adjust"
+        ]
+      },
       "registryDependencies": [],
       "dependencies": ["motion"],
       "devDependencies": [],
@@ -3815,6 +5935,13 @@
     {
       "name": "snapchat-icon",
       "type": "registry:ui",
+      "title": "Snapchat",
+      "description": "Animated Snapchat icon for React, built with Motion. Animates on hover and exposes startAnimation() and stopAnimation() through a ref.",
+      "categories": ["icons"],
+      "docs": "https://www.itshover.com/icons/snapchat-icon",
+      "meta": {
+        "keywords": ["snapchat", "social", "ghost", "snap", "chat"]
+      },
       "registryDependencies": [],
       "dependencies": ["motion"],
       "devDependencies": [],
@@ -3832,6 +5959,13 @@
     {
       "name": "soup-icon",
       "type": "registry:ui",
+      "title": "Soup",
+      "description": "Animated Soup icon for React, built with Motion. Animates on hover and exposes startAnimation() and stopAnimation() through a ref.",
+      "categories": ["icons"],
+      "docs": "https://www.itshover.com/icons/soup-icon",
+      "meta": {
+        "keywords": ["soup", "bowl", "food", "hot", "steam", "meal"]
+      },
       "registryDependencies": [],
       "dependencies": ["motion"],
       "devDependencies": [],
@@ -3849,6 +5983,21 @@
     {
       "name": "sparkles-icon",
       "type": "registry:ui",
+      "title": "Sparkles",
+      "description": "Animated Sparkles icon for React, built with Motion. Animates on hover and exposes startAnimation() and stopAnimation() through a ref.",
+      "categories": ["icons"],
+      "docs": "https://www.itshover.com/icons/sparkles-icon",
+      "meta": {
+        "keywords": [
+          "sparkles",
+          "stars",
+          "magic",
+          "shine",
+          "glitter",
+          "ai",
+          "new"
+        ]
+      },
       "registryDependencies": [],
       "dependencies": ["motion"],
       "devDependencies": [],
@@ -3866,6 +6015,13 @@
     {
       "name": "spotify-icon",
       "type": "registry:ui",
+      "title": "Spotify",
+      "description": "Animated Spotify icon for React, built with Motion. Animates on hover and exposes startAnimation() and stopAnimation() through a ref.",
+      "categories": ["icons"],
+      "docs": "https://www.itshover.com/icons/spotify-icon",
+      "meta": {
+        "keywords": ["spotify", "music", "audio", "streaming", "sound"]
+      },
       "registryDependencies": [],
       "dependencies": ["motion"],
       "devDependencies": [],
@@ -3883,6 +6039,21 @@
     {
       "name": "stack-3-icon",
       "type": "registry:ui",
+      "title": "Stack 3",
+      "description": "Animated Stack 3 icon for React, built with Motion. Animates on hover and exposes startAnimation() and stopAnimation() through a ref.",
+      "categories": ["icons"],
+      "docs": "https://www.itshover.com/icons/stack-3-icon",
+      "meta": {
+        "keywords": [
+          "stack",
+          "layers",
+          "three",
+          "multiple",
+          "organize",
+          "group",
+          "levels"
+        ]
+      },
       "registryDependencies": [],
       "dependencies": ["motion"],
       "devDependencies": [],
@@ -3900,6 +6071,13 @@
     {
       "name": "stack-icon",
       "type": "registry:ui",
+      "title": "Stack",
+      "description": "Animated Stack icon for React, built with Motion. Animates on hover and exposes startAnimation() and stopAnimation() through a ref.",
+      "categories": ["icons"],
+      "docs": "https://www.itshover.com/icons/stack-icon",
+      "meta": {
+        "keywords": ["stack", "layers", "pile", "organize", "group", "data"]
+      },
       "registryDependencies": [],
       "dependencies": ["motion"],
       "devDependencies": [],
@@ -3917,6 +6095,13 @@
     {
       "name": "star-icon",
       "type": "registry:ui",
+      "title": "Star",
+      "description": "Animated Star icon for React, built with Motion. Animates on hover and exposes startAnimation() and stopAnimation() through a ref.",
+      "categories": ["icons"],
+      "docs": "https://www.itshover.com/icons/star-icon",
+      "meta": {
+        "keywords": ["star", "favorite", "rating", "bookmark", "award"]
+      },
       "registryDependencies": [],
       "dependencies": ["motion"],
       "devDependencies": [],
@@ -3934,6 +6119,20 @@
     {
       "name": "subscript-icon",
       "type": "registry:ui",
+      "title": "Subscript",
+      "description": "Animated Subscript icon for React, built with Motion. Animates on hover and exposes startAnimation() and stopAnimation() through a ref.",
+      "categories": ["icons"],
+      "docs": "https://www.itshover.com/icons/subscript-icon",
+      "meta": {
+        "keywords": [
+          "subscript",
+          "text",
+          "format",
+          "typography",
+          "math",
+          "chemical"
+        ]
+      },
       "registryDependencies": [],
       "dependencies": ["motion"],
       "devDependencies": [],
@@ -3951,6 +6150,13 @@
     {
       "name": "target-icon",
       "type": "registry:ui",
+      "title": "Target",
+      "description": "Animated Target icon for React, built with Motion. Animates on hover and exposes startAnimation() and stopAnimation() through a ref.",
+      "categories": ["icons"],
+      "docs": "https://www.itshover.com/icons/target-icon",
+      "meta": {
+        "keywords": ["target", "aim", "goal", "focus", "bullseye", "center"]
+      },
       "registryDependencies": [],
       "dependencies": ["motion"],
       "devDependencies": [],
@@ -3968,6 +6174,13 @@
     {
       "name": "telephone-icon",
       "type": "registry:ui",
+      "title": "Telephone",
+      "description": "Animated Telephone icon for React, built with Motion. Animates on hover and exposes startAnimation() and stopAnimation() through a ref.",
+      "categories": ["icons"],
+      "docs": "https://www.itshover.com/icons/telephone-icon",
+      "meta": {
+        "keywords": ["telephone", "call", "phone", "contact"]
+      },
       "registryDependencies": [],
       "dependencies": ["motion"],
       "devDependencies": [],
@@ -3985,6 +6198,13 @@
     {
       "name": "terminal-icon",
       "type": "registry:ui",
+      "title": "Terminal",
+      "description": "Animated Terminal icon for React, built with Motion. Animates on hover and exposes startAnimation() and stopAnimation() through a ref.",
+      "categories": ["icons"],
+      "docs": "https://www.itshover.com/icons/terminal-icon",
+      "meta": {
+        "keywords": ["terminal", "console", "command", "shell", "code"]
+      },
       "registryDependencies": [],
       "dependencies": ["motion"],
       "devDependencies": [],
@@ -4002,6 +6222,13 @@
     {
       "name": "toggle-icon",
       "type": "registry:ui",
+      "title": "Toggle",
+      "description": "Animated Toggle icon for React, built with Motion. Animates on hover and exposes startAnimation() and stopAnimation() through a ref.",
+      "categories": ["icons"],
+      "docs": "https://www.itshover.com/icons/toggle-icon",
+      "meta": {
+        "keywords": ["toggle", "switch", "on", "off"]
+      },
       "registryDependencies": [],
       "dependencies": ["motion"],
       "devDependencies": [],
@@ -4019,6 +6246,13 @@
     {
       "name": "trash-icon",
       "type": "registry:ui",
+      "title": "Trash",
+      "description": "Animated Trash icon for React, built with Motion. Animates on hover and exposes startAnimation() and stopAnimation() through a ref.",
+      "categories": ["icons"],
+      "docs": "https://www.itshover.com/icons/trash-icon",
+      "meta": {
+        "keywords": ["trash", "delete", "remove", "bin"]
+      },
       "registryDependencies": [],
       "dependencies": ["motion"],
       "devDependencies": [],
@@ -4036,6 +6270,13 @@
     {
       "name": "travel-bag",
       "type": "registry:ui",
+      "title": "Travel Bag",
+      "description": "Animated Travel Bag icon for React, built with Motion. Animates on hover and exposes startAnimation() and stopAnimation() through a ref.",
+      "categories": ["icons"],
+      "docs": "https://www.itshover.com/icons/travel-bag",
+      "meta": {
+        "keywords": ["travel", "bag", "luggage", "suitcase", "traveling"]
+      },
       "registryDependencies": [],
       "dependencies": ["motion"],
       "devDependencies": [],
@@ -4053,6 +6294,20 @@
     {
       "name": "triangle-alert-icon",
       "type": "registry:ui",
+      "title": "Triangle Alert",
+      "description": "Animated Triangle Alert icon for React, built with Motion. Animates on hover and exposes startAnimation() and stopAnimation() through a ref.",
+      "categories": ["icons"],
+      "docs": "https://www.itshover.com/icons/triangle-alert-icon",
+      "meta": {
+        "keywords": [
+          "triangle",
+          "alert",
+          "warning",
+          "caution",
+          "danger",
+          "error"
+        ]
+      },
       "registryDependencies": [],
       "dependencies": ["motion"],
       "devDependencies": [],
@@ -4070,6 +6325,21 @@
     {
       "name": "trophy-icon",
       "type": "registry:ui",
+      "title": "Trophy",
+      "description": "Animated Trophy icon for React, built with Motion. Animates on hover and exposes startAnimation() and stopAnimation() through a ref.",
+      "categories": ["icons"],
+      "docs": "https://www.itshover.com/icons/trophy-icon",
+      "meta": {
+        "keywords": [
+          "trophy",
+          "cup",
+          "achievement",
+          "winner",
+          "reward",
+          "score",
+          "leaderboard"
+        ]
+      },
       "registryDependencies": [],
       "dependencies": ["motion"],
       "devDependencies": [],
@@ -4087,6 +6357,20 @@
     {
       "name": "truck-electric-icon",
       "type": "registry:ui",
+      "title": "Truck Electric",
+      "description": "Animated Truck Electric icon for React, built with Motion. Animates on hover and exposes startAnimation() and stopAnimation() through a ref.",
+      "categories": ["icons"],
+      "docs": "https://www.itshover.com/icons/truck-electric-icon",
+      "meta": {
+        "keywords": [
+          "truck",
+          "electric",
+          "vehicle",
+          "delivery",
+          "transport",
+          "ev"
+        ]
+      },
       "registryDependencies": [],
       "dependencies": ["motion"],
       "devDependencies": [],
@@ -4104,6 +6388,13 @@
     {
       "name": "twitter-icon",
       "type": "registry:ui",
+      "title": "Twitter",
+      "description": "Animated Twitter icon for React, built with Motion. Animates on hover and exposes startAnimation() and stopAnimation() through a ref.",
+      "categories": ["icons"],
+      "docs": "https://www.itshover.com/icons/twitter-icon",
+      "meta": {
+        "keywords": ["twitter", "bird", "social", "tweet", "social media"]
+      },
       "registryDependencies": [],
       "dependencies": ["motion"],
       "devDependencies": [],
@@ -4121,6 +6412,13 @@
     {
       "name": "twitter-x-icon",
       "type": "registry:ui",
+      "title": "Twitter X",
+      "description": "Animated Twitter X icon for React, built with Motion. Animates on hover and exposes startAnimation() and stopAnimation() through a ref.",
+      "categories": ["icons"],
+      "docs": "https://www.itshover.com/icons/twitter-x-icon",
+      "meta": {
+        "keywords": ["twitter", "x", "social", "media", "post"]
+      },
       "registryDependencies": [],
       "dependencies": ["motion"],
       "devDependencies": [],
@@ -4138,6 +6436,13 @@
     {
       "name": "typescript-icon",
       "type": "registry:ui",
+      "title": "TypeScript",
+      "description": "Animated TypeScript icon for React, built with Motion. Animates on hover and exposes startAnimation() and stopAnimation() through a ref.",
+      "categories": ["icons"],
+      "docs": "https://www.itshover.com/icons/typescript-icon",
+      "meta": {
+        "keywords": ["typescript", "ts", "code", "programming", "javascript"]
+      },
       "registryDependencies": [],
       "dependencies": ["motion"],
       "devDependencies": [],
@@ -4155,6 +6460,20 @@
     {
       "name": "unlink-icon",
       "type": "registry:ui",
+      "title": "Unlink",
+      "description": "Animated Unlink icon for React, built with Motion. Animates on hover and exposes startAnimation() and stopAnimation() through a ref.",
+      "categories": ["icons"],
+      "docs": "https://www.itshover.com/icons/unlink-icon",
+      "meta": {
+        "keywords": [
+          "unlink",
+          "disconnect",
+          "break",
+          "chain",
+          "separate",
+          "detach"
+        ]
+      },
       "registryDependencies": [],
       "dependencies": ["motion"],
       "devDependencies": [],
@@ -4172,6 +6491,13 @@
     {
       "name": "unordered-list-icon",
       "type": "registry:ui",
+      "title": "Unordered List",
+      "description": "Animated Unordered List icon for React, built with Motion. Animates on hover and exposes startAnimation() and stopAnimation() through a ref.",
+      "categories": ["icons"],
+      "docs": "https://www.itshover.com/icons/unordered-list-icon",
+      "meta": {
+        "keywords": ["list", "unordered", "bullet", "items", "menu"]
+      },
       "registryDependencies": [],
       "dependencies": ["motion"],
       "devDependencies": [],
@@ -4189,6 +6515,13 @@
     {
       "name": "upload-icon",
       "type": "registry:ui",
+      "title": "Upload",
+      "description": "Animated Upload icon for React, built with Motion. Animates on hover and exposes startAnimation() and stopAnimation() through a ref.",
+      "categories": ["icons"],
+      "docs": "https://www.itshover.com/icons/upload-icon",
+      "meta": {
+        "keywords": ["upload", "submit", "send", "transfer", "cloud"]
+      },
       "registryDependencies": [],
       "dependencies": ["motion"],
       "devDependencies": [],
@@ -4206,6 +6539,20 @@
     {
       "name": "user-check-icon",
       "type": "registry:ui",
+      "title": "User Check",
+      "description": "Animated User Check icon for React, built with Motion. Animates on hover and exposes startAnimation() and stopAnimation() through a ref.",
+      "categories": ["icons"],
+      "docs": "https://www.itshover.com/icons/user-check-icon",
+      "meta": {
+        "keywords": [
+          "user",
+          "check",
+          "verified",
+          "approved",
+          "confirm",
+          "accept"
+        ]
+      },
       "registryDependencies": [],
       "dependencies": ["motion"],
       "devDependencies": [],
@@ -4223,6 +6570,13 @@
     {
       "name": "user-icon",
       "type": "registry:ui",
+      "title": "User",
+      "description": "Animated User icon for React, built with Motion. Animates on hover and exposes startAnimation() and stopAnimation() through a ref.",
+      "categories": ["icons"],
+      "docs": "https://www.itshover.com/icons/user-icon",
+      "meta": {
+        "keywords": ["user", "person", "profile", "account", "avatar"]
+      },
       "registryDependencies": [],
       "dependencies": ["motion"],
       "devDependencies": [],
@@ -4240,6 +6594,13 @@
     {
       "name": "user-plus-icon",
       "type": "registry:ui",
+      "title": "User Plus",
+      "description": "Animated User Plus icon for React, built with Motion. Animates on hover and exposes startAnimation() and stopAnimation() through a ref.",
+      "categories": ["icons"],
+      "docs": "https://www.itshover.com/icons/user-plus-icon",
+      "meta": {
+        "keywords": ["user", "plus", "add", "new", "invite", "create", "signup"]
+      },
       "registryDependencies": [],
       "dependencies": ["motion"],
       "devDependencies": [],
@@ -4257,6 +6618,20 @@
     {
       "name": "users-group-icon",
       "type": "registry:ui",
+      "title": "Users Group",
+      "description": "Animated Users Group icon for React, built with Motion. Animates on hover and exposes startAnimation() and stopAnimation() through a ref.",
+      "categories": ["icons"],
+      "docs": "https://www.itshover.com/icons/users-group-icon",
+      "meta": {
+        "keywords": [
+          "users",
+          "group",
+          "people",
+          "team",
+          "community",
+          "collaboration"
+        ]
+      },
       "registryDependencies": [],
       "dependencies": ["motion"],
       "devDependencies": [],
@@ -4274,6 +6649,20 @@
     {
       "name": "users-icon",
       "type": "registry:ui",
+      "title": "Users",
+      "description": "Animated Users icon for React, built with Motion. Animates on hover and exposes startAnimation() and stopAnimation() through a ref.",
+      "categories": ["icons"],
+      "docs": "https://www.itshover.com/icons/users-icon",
+      "meta": {
+        "keywords": [
+          "users",
+          "people",
+          "group",
+          "team",
+          "community",
+          "multiple"
+        ]
+      },
       "registryDependencies": [],
       "dependencies": ["motion"],
       "devDependencies": [],
@@ -4291,6 +6680,21 @@
     {
       "name": "vinyl-icon",
       "type": "registry:ui",
+      "title": "Vinyl",
+      "description": "Animated Vinyl icon for React, built with Motion. Animates on hover and exposes startAnimation() and stopAnimation() through a ref.",
+      "categories": ["icons"],
+      "docs": "https://www.itshover.com/icons/vinyl-icon",
+      "meta": {
+        "keywords": [
+          "vinyl",
+          "record",
+          "music",
+          "disc",
+          "retro",
+          "audio",
+          "album"
+        ]
+      },
       "registryDependencies": [],
       "dependencies": ["motion"],
       "devDependencies": [],
@@ -4308,6 +6712,13 @@
     {
       "name": "volume-2-icon",
       "type": "registry:ui",
+      "title": "Volume 2",
+      "description": "Animated Volume 2 icon for React, built with Motion. Animates on hover and exposes startAnimation() and stopAnimation() through a ref.",
+      "categories": ["icons"],
+      "docs": "https://www.itshover.com/icons/volume-2-icon",
+      "meta": {
+        "keywords": ["volume", "sound", "audio", "speaker", "loud", "music"]
+      },
       "registryDependencies": [],
       "dependencies": ["motion"],
       "devDependencies": [],
@@ -4325,6 +6736,20 @@
     {
       "name": "volume-x-icon",
       "type": "registry:ui",
+      "title": "Volume X",
+      "description": "Animated Volume X icon for React, built with Motion. Animates on hover and exposes startAnimation() and stopAnimation() through a ref.",
+      "categories": ["icons"],
+      "docs": "https://www.itshover.com/icons/volume-x-icon",
+      "meta": {
+        "keywords": [
+          "volume",
+          "mute",
+          "silent",
+          "sound off",
+          "audio off",
+          "quiet"
+        ]
+      },
       "registryDependencies": [],
       "dependencies": ["motion"],
       "devDependencies": [],
@@ -4342,6 +6767,20 @@
     {
       "name": "wallet-icon",
       "type": "registry:ui",
+      "title": "Wallet",
+      "description": "Animated Wallet icon for React, built with Motion. Animates on hover and exposes startAnimation() and stopAnimation() through a ref.",
+      "categories": ["icons"],
+      "docs": "https://www.itshover.com/icons/wallet-icon",
+      "meta": {
+        "keywords": [
+          "wallet",
+          "money",
+          "payment",
+          "finance",
+          "cash",
+          "billfold"
+        ]
+      },
       "registryDependencies": [],
       "dependencies": ["motion"],
       "devDependencies": [],
@@ -4359,6 +6798,20 @@
     {
       "name": "washing-machine-icon",
       "type": "registry:ui",
+      "title": "Washing Machine",
+      "description": "Animated Washing Machine icon for React, built with Motion. Animates on hover and exposes startAnimation() and stopAnimation() through a ref.",
+      "categories": ["icons"],
+      "docs": "https://www.itshover.com/icons/washing-machine-icon",
+      "meta": {
+        "keywords": [
+          "washing",
+          "machine",
+          "laundry",
+          "clean",
+          "appliance",
+          "drum"
+        ]
+      },
       "registryDependencies": [],
       "dependencies": ["motion"],
       "devDependencies": [],
@@ -4376,6 +6829,13 @@
     {
       "name": "whatsapp-icon",
       "type": "registry:ui",
+      "title": "Whatsapp",
+      "description": "Animated Whatsapp icon for React, built with Motion. Animates on hover and exposes startAnimation() and stopAnimation() through a ref.",
+      "categories": ["icons"],
+      "docs": "https://www.itshover.com/icons/whatsapp-icon",
+      "meta": {
+        "keywords": ["whatsapp", "chat", "message", "social"]
+      },
       "registryDependencies": [],
       "dependencies": ["motion"],
       "devDependencies": [],
@@ -4393,6 +6853,13 @@
     {
       "name": "wifi-icon",
       "type": "registry:ui",
+      "title": "Wifi",
+      "description": "Animated Wifi icon for React, built with Motion. Animates on hover and exposes startAnimation() and stopAnimation() through a ref.",
+      "categories": ["icons"],
+      "docs": "https://www.itshover.com/icons/wifi-icon",
+      "meta": {
+        "keywords": ["wifi", "wireless", "internet", "network", "signal"]
+      },
       "registryDependencies": [],
       "dependencies": ["motion"],
       "devDependencies": [],
@@ -4410,6 +6877,13 @@
     {
       "name": "wifi-off-icon",
       "type": "registry:ui",
+      "title": "Wifi Off",
+      "description": "Animated Wifi Off icon for React, built with Motion. Animates on hover and exposes startAnimation() and stopAnimation() through a ref.",
+      "categories": ["icons"],
+      "docs": "https://www.itshover.com/icons/wifi-off-icon",
+      "meta": {
+        "keywords": ["wifi", "off", "disconnected", "no signal", "network"]
+      },
       "registryDependencies": [],
       "dependencies": ["motion"],
       "devDependencies": [],
@@ -4427,6 +6901,20 @@
     {
       "name": "world-icon",
       "type": "registry:ui",
+      "title": "World",
+      "description": "Animated World icon for React, built with Motion. Animates on hover and exposes startAnimation() and stopAnimation() through a ref.",
+      "categories": ["icons"],
+      "docs": "https://www.itshover.com/icons/world-icon",
+      "meta": {
+        "keywords": [
+          "world",
+          "globe",
+          "earth",
+          "planet",
+          "international",
+          "global"
+        ]
+      },
       "registryDependencies": [],
       "dependencies": ["motion"],
       "devDependencies": [],
@@ -4444,6 +6932,13 @@
     {
       "name": "x-icon",
       "type": "registry:ui",
+      "title": "X",
+      "description": "Animated X icon for React, built with Motion. Animates on hover and exposes startAnimation() and stopAnimation() through a ref.",
+      "categories": ["icons"],
+      "docs": "https://www.itshover.com/icons/x-icon",
+      "meta": {
+        "keywords": ["x", "close", "cancel", "exit", "dismiss", "remove"]
+      },
       "registryDependencies": [],
       "dependencies": ["motion"],
       "devDependencies": [],
@@ -4461,6 +6956,13 @@
     {
       "name": "youtube-icon",
       "type": "registry:ui",
+      "title": "YouTube",
+      "description": "Animated YouTube icon for React, built with Motion. Animates on hover and exposes startAnimation() and stopAnimation() through a ref.",
+      "categories": ["icons"],
+      "docs": "https://www.itshover.com/icons/youtube-icon",
+      "meta": {
+        "keywords": ["youtube", "video", "play", "media", "social"]
+      },
       "registryDependencies": [],
       "dependencies": ["motion"],
       "devDependencies": [],

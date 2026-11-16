@@ -3,7 +3,7 @@ import { getExamples } from "@/lib/examples";
 import { getIconCount, getIconMeta, getIconSlugs } from "@/lib/icons-data";
 import { countBrandIcons, iconDisplayName, pageUrl } from "@/lib/seo";
 
-const REGISTRY_INSTALL_HOST = "https://itshover.com";
+const REGISTRY_INSTALL_HOST = "https://www.itshover.com";
 
 export function buildLlmsTxt(): string {
   const n = getIconCount();

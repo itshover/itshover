@@ -7,20 +7,33 @@
 
 import * as fs from "fs";
 import * as path from "path";
+import { getIconRegistry } from "@/lib/icon-registry";
+import { iconDisplayName } from "@/lib/seo";
 
 const ICONS_DIR = path.join(__dirname, "..", "icons");
 const REGISTRY_PATH = path.join(__dirname, "..", "registry.json");
+const SITE_ORIGIN = "https://www.itshover.com";
 
 // Files to exclude from registry (not actual icons)
 const EXCLUDED_FILES = ["index.ts", "types.ts"];
 
+interface RegistryFile {
+  path: string;
+  type: "registry:ui";
+}
+
 interface RegistryItem {
   name: string;
   type: "registry:ui";
+  title: string;
+  description: string;
+  categories: string[];
+  docs: string;
+  meta: { keywords: string[] };
   registryDependencies: string[];
   dependencies: string[];
   devDependencies: string[];
-  files: { path: string; type: "registry:ui" }[];
+  files: RegistryFile[];
 }
 
 interface Registry {
@@ -28,6 +41,14 @@ interface Registry {
   name: string;
   homepage: string;
   items: RegistryItem[];
+}
+
+function getIconMetaByName(): Map<string, { keywords: string[] }> {
+  const map = new Map<string, { keywords: string[] }>();
+  for (const entry of getIconRegistry()) {
+    map.set(entry.name, { keywords: entry.keywords });
+  }
+  return map;
 }
 
 /**
@@ -63,18 +84,51 @@ function getIconFiles(): string[] {
  * Convert filename to registry name (remove .tsx extension)
  */
 function fileToRegistryName(filename: string): string {
-  return filename.replace(".tsx", "");
+  return filename.replace(/\.tsx$/, "");
+}
+
+function buildCategories(
+  slug: string,
+  keywords: string[],
+): RegistryItem["categories"] {
+  const categories: string[] = ["icons"];
+  const keywordSet = new Set(keywords.map((kw) => kw.toLowerCase()));
+  const isBrand =
+    slug.startsWith("brand-") ||
+    slug.endsWith("-logo") ||
+    keywordSet.has("brand") ||
+    keywordSet.has("logo");
+  if (isBrand) {
+    categories.push("brand");
+  }
+  return categories;
+}
+
+function buildDescription(displayName: string): string {
+  return `Animated ${displayName} icon for React, built with Motion. Animates on hover and exposes startAnimation() and stopAnimation() through a ref.`;
 }
 
 /**
  * Generate a registry item for an icon file
  */
-function generateRegistryItem(filename: string): RegistryItem {
+function generateRegistryItem(
+  filename: string,
+  iconMetaByName: Map<string, { keywords: string[] }>,
+): RegistryItem {
   const name = fileToRegistryName(filename);
+  const meta = iconMetaByName.get(name);
+  const keywords = meta?.keywords ?? [];
+  const title = iconDisplayName(name);
+  const description = buildDescription(title);
 
   return {
     name,
     type: "registry:ui",
+    title,
+    description,
+    categories: buildCategories(name, keywords),
+    docs: `${SITE_ORIGIN}/icons/${name}`,
+    meta: { keywords },
     registryDependencies: [],
     dependencies: ["motion"],
     devDependencies: [],
@@ -95,36 +149,7 @@ function generateRegistryItem(filename: string): RegistryItem {
  * Extract icon names from icons/index.ts ICON_LIST
  */
 function getIconListNames(): string[] {
-  const indexPath = path.join(ICONS_DIR, "index.ts");
-
-  try {
-    const content = fs.readFileSync(indexPath, "utf-8");
-
-    // Match all name: "xxx" patterns in ICON_LIST
-    const namePattern = /name:\s*["']([^"']+)["']/g;
-    const names: string[] = [];
-    let match;
-
-    while ((match = namePattern.exec(content)) !== null) {
-      const name = match[1];
-      // Only include names with hyphens (icon names like "github-icon")
-      // This excludes customProps names like "shakeOnClick", "dangerHover"
-      if (name.includes("-")) {
-        names.push(name);
-      }
-    }
-
-    return [...new Set(names)];
-  } catch (error) {
-    if ((error as NodeJS.ErrnoException).code === "ENOENT") {
-      console.error(`❌ Error: icons/index.ts not found at "${indexPath}"`);
-    } else if ((error as NodeJS.ErrnoException).code === "EACCES") {
-      console.error(`❌ Error: Permission denied reading "${indexPath}"`);
-    } else {
-      console.error(`❌ Error reading icons/index.ts: ${error}`);
-    }
-    process.exit(1);
-  }
+  return getIconRegistry().map((entry) => entry.name);
 }
 
 /**
@@ -200,8 +225,12 @@ function generateRegistry(): void {
   const iconFiles = getIconFiles();
   console.log(`Found ${iconFiles.length} icon files`);
 
+  const iconMetaByName = getIconMetaByName();
+
   console.log("Generating registry items...");
-  const items = iconFiles.map(generateRegistryItem);
+  const items = iconFiles.map((file) =>
+    generateRegistryItem(file, iconMetaByName),
+  );
 
   // Sort items alphabetically by name
   items.sort((a, b) => a.name.localeCompare(b.name));
@@ -209,7 +238,7 @@ function generateRegistry(): void {
   const registry: Registry = {
     $schema: "https://ui.shadcn.com/schema/registry.json",
     name: "itshover",
-    homepage: "https://itshover.com",
+    homepage: SITE_ORIGIN,
     items,
   };
 

@@ -1,6 +1,8 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "cloud-3-icon",
+  "title": "Cloud 3",
+  "description": "Animated Cloud 3 icon for React, built with Motion. Animates on hover and exposes startAnimation() and stopAnimation() through a ref.",
   "dependencies": ["motion"],
   "devDependencies": [],
   "registryDependencies": [],
@@ -16,5 +18,10 @@
       "type": "registry:ui"
     }
   ],
+  "meta": {
+    "keywords": ["cloud", "hosting", "server", "data", "computing", "database"]
+  },
+  "docs": "https://www.itshover.com/icons/cloud-3-icon",
+  "categories": ["icons"],
   "type": "registry:ui"
 }
