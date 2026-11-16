@@ -1,6 +1,8 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "chart-covariate-icon",
+  "title": "Chart Covariate",
+  "description": "Animated Chart Covariate icon for React, built with Motion. Animates on hover and exposes startAnimation() and stopAnimation() through a ref.",
   "dependencies": ["motion"],
   "devDependencies": [],
   "registryDependencies": [],
@@ -16,5 +18,10 @@
       "type": "registry:ui"
     }
   ],
+  "meta": {
+    "keywords": ["chart", "covariate", "scatter", "plot", "correlation", "data"]
+  },
+  "docs": "https://www.itshover.com/icons/chart-covariate-icon",
+  "categories": ["icons"],
   "type": "registry:ui"
 }

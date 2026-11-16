@@ -1,6 +1,8 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "plug-connected-x-icon",
+  "title": "Plug Connected X",
+  "description": "Animated Plug Connected X icon for React, built with Motion. Animates on hover and exposes startAnimation() and stopAnimation() through a ref.",
   "dependencies": ["motion"],
   "devDependencies": [],
   "registryDependencies": [],
@@ -16,5 +18,19 @@
       "type": "registry:ui"
     }
   ],
+  "meta": {
+    "keywords": [
+      "plug",
+      "connected",
+      "disconnect",
+      "x",
+      "connection",
+      "cable",
+      "power",
+      "unplug"
+    ]
+  },
+  "docs": "https://www.itshover.com/icons/plug-connected-x-icon",
+  "categories": ["icons"],
   "type": "registry:ui"
 }

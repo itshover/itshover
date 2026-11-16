@@ -1,6 +1,8 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "brand-grok-icon",
+  "title": "Grok",
+  "description": "Animated Grok icon for React, built with Motion. Animates on hover and exposes startAnimation() and stopAnimation() through a ref.",
   "dependencies": ["motion"],
   "devDependencies": [],
   "registryDependencies": [],
@@ -16,5 +18,10 @@
       "type": "registry:ui"
     }
   ],
+  "meta": {
+    "keywords": ["grok", "grok-icon", "ai", "chatbot", "conversation"]
+  },
+  "docs": "https://www.itshover.com/icons/brand-grok-icon",
+  "categories": ["icons", "brand"],
   "type": "registry:ui"
 }

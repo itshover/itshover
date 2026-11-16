@@ -1,6 +1,8 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "currency-rupee-icon",
+  "title": "Currency Rupee",
+  "description": "Animated Currency Rupee icon for React, built with Motion. Animates on hover and exposes startAnimation() and stopAnimation() through a ref.",
   "dependencies": ["motion"],
   "devDependencies": [],
   "registryDependencies": [],
@@ -16,5 +18,18 @@
       "type": "registry:ui"
     }
   ],
+  "meta": {
+    "keywords": [
+      "currency",
+      "rupee",
+      "money",
+      "finance",
+      "payment",
+      "inr",
+      "india"
+    ]
+  },
+  "docs": "https://www.itshover.com/icons/currency-rupee-icon",
+  "categories": ["icons"],
   "type": "registry:ui"
 }

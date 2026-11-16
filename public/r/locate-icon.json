@@ -1,6 +1,8 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "locate-icon",
+  "title": "Locate",
+  "description": "Animated Locate icon for React, built with Motion. Animates on hover and exposes startAnimation() and stopAnimation() through a ref.",
   "dependencies": ["motion"],
   "devDependencies": [],
   "registryDependencies": [],
@@ -16,5 +18,18 @@
       "type": "registry:ui"
     }
   ],
+  "meta": {
+    "keywords": [
+      "gps",
+      "location",
+      "map",
+      "position",
+      "target",
+      "track",
+      "navigation"
+    ]
+  },
+  "docs": "https://www.itshover.com/icons/locate-icon",
+  "categories": ["icons"],
   "type": "registry:ui"
 }

@@ -1,6 +1,8 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "satellite-dish-icon",
+  "title": "Satellite Dish",
+  "description": "Animated Satellite Dish icon for React, built with Motion. Animates on hover and exposes startAnimation() and stopAnimation() through a ref.",
   "dependencies": ["motion"],
   "devDependencies": [],
   "registryDependencies": [],
@@ -16,5 +18,17 @@
       "type": "registry:ui"
     }
   ],
+  "meta": {
+    "keywords": [
+      "satellite",
+      "dish",
+      "antenna",
+      "signal",
+      "broadcast",
+      "communication"
+    ]
+  },
+  "docs": "https://www.itshover.com/icons/satellite-dish-icon",
+  "categories": ["icons"],
   "type": "registry:ui"
 }

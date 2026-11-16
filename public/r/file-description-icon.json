@@ -1,6 +1,8 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "file-description-icon",
+  "title": "File Description",
+  "description": "Animated File Description icon for React, built with Motion. Animates on hover and exposes startAnimation() and stopAnimation() through a ref.",
   "dependencies": ["motion"],
   "devDependencies": [],
   "registryDependencies": [],
@@ -16,5 +18,10 @@
       "type": "registry:ui"
     }
   ],
+  "meta": {
+    "keywords": ["file", "document", "description", "text", "paper"]
+  },
+  "docs": "https://www.itshover.com/icons/file-description-icon",
+  "categories": ["icons"],
   "type": "registry:ui"
 }

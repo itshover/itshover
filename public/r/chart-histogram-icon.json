@@ -1,6 +1,8 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "chart-histogram-icon",
+  "title": "Chart Histogram",
+  "description": "Animated Chart Histogram icon for React, built with Motion. Animates on hover and exposes startAnimation() and stopAnimation() through a ref.",
   "dependencies": ["motion"],
   "devDependencies": [],
   "registryDependencies": [],
@@ -16,5 +18,17 @@
       "type": "registry:ui"
     }
   ],
+  "meta": {
+    "keywords": [
+      "chart",
+      "histogram",
+      "graph",
+      "distribution",
+      "statistics",
+      "data"
+    ]
+  },
+  "docs": "https://www.itshover.com/icons/chart-histogram-icon",
+  "categories": ["icons"],
   "type": "registry:ui"
 }

@@ -1,6 +1,8 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "letter-q-icon",
+  "title": "Letter Q",
+  "description": "Animated Letter Q icon for React, built with Motion. Animates on hover and exposes startAnimation() and stopAnimation() through a ref.",
   "dependencies": ["motion"],
   "devDependencies": [],
   "registryDependencies": [],
@@ -16,5 +18,10 @@
       "type": "registry:ui"
     }
   ],
+  "meta": {
+    "keywords": ["letter", "q", "alphabet", "text", "character", "typography"]
+  },
+  "docs": "https://www.itshover.com/icons/letter-q-icon",
+  "categories": ["icons"],
   "type": "registry:ui"
 }

@@ -1,6 +1,8 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "scan-heart-icon",
+  "title": "Scan Heart",
+  "description": "Animated Scan Heart icon for React, built with Motion. Animates on hover and exposes startAnimation() and stopAnimation() through a ref.",
   "dependencies": ["motion"],
   "devDependencies": [],
   "registryDependencies": [],
@@ -16,5 +18,10 @@
       "type": "registry:ui"
     }
   ],
+  "meta": {
+    "keywords": ["scan", "heart", "health", "medical", "monitor", "focus"]
+  },
+  "docs": "https://www.itshover.com/icons/scan-heart-icon",
+  "categories": ["icons"],
   "type": "registry:ui"
 }
