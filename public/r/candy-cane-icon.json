@@ -1,6 +1,8 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "candy-cane-icon",
+  "title": "Candy Cane",
+  "description": "Animated Candy Cane icon for React, built with Motion. Animates on hover and exposes startAnimation() and stopAnimation() through a ref.",
   "dependencies": ["motion"],
   "devDependencies": [],
   "registryDependencies": [],
@@ -16,5 +18,10 @@
       "type": "registry:ui"
     }
   ],
+  "meta": {
+    "keywords": ["candy", "cane", "christmas", "sweet", "holiday", "festive"]
+  },
+  "docs": "https://www.itshover.com/icons/candy-cane-icon",
+  "categories": ["icons"],
   "type": "registry:ui"
 }

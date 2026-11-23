@@ -1,6 +1,8 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "letter-w-icon",
+  "title": "Letter W",
+  "description": "Animated Letter W icon for React, built with Motion. Animates on hover and exposes startAnimation() and stopAnimation() through a ref.",
   "dependencies": ["motion"],
   "devDependencies": [],
   "registryDependencies": [],
@@ -16,5 +18,10 @@
       "type": "registry:ui"
     }
   ],
+  "meta": {
+    "keywords": ["letter", "w", "alphabet", "text", "character", "typography"]
+  },
+  "docs": "https://www.itshover.com/icons/letter-w-icon",
+  "categories": ["icons"],
   "type": "registry:ui"
 }

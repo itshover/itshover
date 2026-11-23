@@ -1,6 +1,8 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "arrow-big-up-dash-icon",
+  "title": "Arrow Big Up Dash",
+  "description": "Animated Arrow Big Up Dash icon for React, built with Motion. Animates on hover and exposes startAnimation() and stopAnimation() through a ref.",
   "dependencies": ["motion"],
   "devDependencies": [],
   "registryDependencies": [],
@@ -16,5 +18,10 @@
       "type": "registry:ui"
     }
   ],
+  "meta": {
+    "keywords": ["arrow", "big", "up", "dash", "upload", "top"]
+  },
+  "docs": "https://www.itshover.com/icons/arrow-big-up-dash-icon",
+  "categories": ["icons"],
   "type": "registry:ui"
 }

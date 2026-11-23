@@ -1,6 +1,8 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "currency-dollar-icon",
+  "title": "Currency Dollar",
+  "description": "Animated Currency Dollar icon for React, built with Motion. Animates on hover and exposes startAnimation() and stopAnimation() through a ref.",
   "dependencies": ["motion"],
   "devDependencies": [],
   "registryDependencies": [],
@@ -16,5 +18,18 @@
       "type": "registry:ui"
     }
   ],
+  "meta": {
+    "keywords": [
+      "currency",
+      "dollar",
+      "money",
+      "finance",
+      "payment",
+      "cash",
+      "usd"
+    ]
+  },
+  "docs": "https://www.itshover.com/icons/currency-dollar-icon",
+  "categories": ["icons"],
   "type": "registry:ui"
 }

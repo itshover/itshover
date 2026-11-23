@@ -1,6 +1,8 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "brand-nextjs-icon",
+  "title": "Next.js",
+  "description": "Animated Next.js icon for React, built with Motion. Animates on hover and exposes startAnimation() and stopAnimation() through a ref.",
   "dependencies": ["motion"],
   "devDependencies": [],
   "registryDependencies": [],
@@ -16,5 +18,18 @@
       "type": "registry:ui"
     }
   ],
+  "meta": {
+    "keywords": [
+      "nextjs",
+      "next",
+      "brand",
+      "logo",
+      "react",
+      "framework",
+      "vercel"
+    ]
+  },
+  "docs": "https://www.itshover.com/icons/brand-nextjs-icon",
+  "categories": ["icons", "brand"],
   "type": "registry:ui"
 }

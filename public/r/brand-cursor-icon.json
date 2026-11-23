@@ -1,6 +1,8 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "brand-cursor-icon",
+  "title": "Cursor",
+  "description": "Animated Cursor icon for React, built with Motion. Animates on hover and exposes startAnimation() and stopAnimation() through a ref.",
   "dependencies": ["motion"],
   "devDependencies": [],
   "registryDependencies": [],
@@ -16,5 +18,10 @@
       "type": "registry:ui"
     }
   ],
+  "meta": {
+    "keywords": ["cursor", "ide", "code", "coding", "cursor-ide"]
+  },
+  "docs": "https://www.itshover.com/icons/brand-cursor-icon",
+  "categories": ["icons", "brand"],
   "type": "registry:ui"
 }

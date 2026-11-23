@@ -1,6 +1,8 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "brand-chrome-icon",
+  "title": "Chrome",
+  "description": "Animated Chrome icon for React, built with Motion. Animates on hover and exposes startAnimation() and stopAnimation() through a ref.",
   "dependencies": ["motion"],
   "devDependencies": [],
   "registryDependencies": [],
@@ -16,5 +18,10 @@
       "type": "registry:ui"
     }
   ],
+  "meta": {
+    "keywords": ["chrome", "browser", "google", "web", "internet", "brand"]
+  },
+  "docs": "https://www.itshover.com/icons/brand-chrome-icon",
+  "categories": ["icons", "brand"],
   "type": "registry:ui"
 }

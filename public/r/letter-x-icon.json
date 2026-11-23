@@ -1,6 +1,8 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "letter-x-icon",
+  "title": "Letter X",
+  "description": "Animated Letter X icon for React, built with Motion. Animates on hover and exposes startAnimation() and stopAnimation() through a ref.",
   "dependencies": ["motion"],
   "devDependencies": [],
   "registryDependencies": [],
@@ -16,5 +18,10 @@
       "type": "registry:ui"
     }
   ],
+  "meta": {
+    "keywords": ["letter", "x", "alphabet", "text", "character", "typography"]
+  },
+  "docs": "https://www.itshover.com/icons/letter-x-icon",
+  "categories": ["icons"],
   "type": "registry:ui"
 }

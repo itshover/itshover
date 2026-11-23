@@ -1,6 +1,8 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "moon-icon",
+  "title": "Moon",
+  "description": "Animated Moon icon for React, built with Motion. Animates on hover and exposes startAnimation() and stopAnimation() through a ref.",
   "dependencies": ["motion"],
   "devDependencies": [],
   "registryDependencies": [],
@@ -16,5 +18,10 @@
       "type": "registry:ui"
     }
   ],
+  "meta": {
+    "keywords": ["moon", "dark", "night", "theme", "mode"]
+  },
+  "docs": "https://www.itshover.com/icons/moon-icon",
+  "categories": ["icons"],
   "type": "registry:ui"
 }

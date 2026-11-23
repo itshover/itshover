@@ -1,6 +1,8 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "shield-check",
+  "title": "Shield Check",
+  "description": "Animated Shield Check icon for React, built with Motion. Animates on hover and exposes startAnimation() and stopAnimation() through a ref.",
   "dependencies": ["motion"],
   "devDependencies": [],
   "registryDependencies": [],
@@ -16,5 +18,10 @@
       "type": "registry:ui"
     }
   ],
+  "meta": {
+    "keywords": ["shield", "security", "safe", "protect"]
+  },
+  "docs": "https://www.itshover.com/icons/shield-check",
+  "categories": ["icons"],
   "type": "registry:ui"
 }

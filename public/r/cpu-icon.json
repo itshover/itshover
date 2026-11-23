@@ -1,6 +1,8 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "cpu-icon",
+  "title": "Cpu",
+  "description": "Animated Cpu icon for React, built with Motion. Animates on hover and exposes startAnimation() and stopAnimation() through a ref.",
   "dependencies": ["motion"],
   "devDependencies": [],
   "registryDependencies": [],
@@ -16,5 +18,17 @@
       "type": "registry:ui"
     }
   ],
+  "meta": {
+    "keywords": [
+      "cpu",
+      "processor",
+      "chip",
+      "hardware",
+      "computing",
+      "performance"
+    ]
+  },
+  "docs": "https://www.itshover.com/icons/cpu-icon",
+  "categories": ["icons"],
   "type": "registry:ui"
 }

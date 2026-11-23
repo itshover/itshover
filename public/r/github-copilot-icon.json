@@ -1,6 +1,8 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "github-copilot-icon",
+  "title": "GitHub Copilot",
+  "description": "Animated GitHub Copilot icon for React, built with Motion. Animates on hover and exposes startAnimation() and stopAnimation() through a ref.",
   "dependencies": ["motion"],
   "devDependencies": [],
   "registryDependencies": [],
@@ -16,5 +18,10 @@
       "type": "registry:ui"
     }
   ],
+  "meta": {
+    "keywords": ["github", "copilot", "ai", "code", "assistant"]
+  },
+  "docs": "https://www.itshover.com/icons/github-copilot-icon",
+  "categories": ["icons"],
   "type": "registry:ui"
 }

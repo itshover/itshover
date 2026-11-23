@@ -1,6 +1,8 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "battery-icon",
+  "title": "Battery",
+  "description": "Animated Battery icon for React, built with Motion. Animates on hover and exposes startAnimation() and stopAnimation() through a ref.",
   "dependencies": ["motion"],
   "devDependencies": [],
   "registryDependencies": [],
@@ -16,5 +18,10 @@
       "type": "registry:ui"
     }
   ],
+  "meta": {
+    "keywords": ["battery", "charging", "bolt"]
+  },
+  "docs": "https://www.itshover.com/icons/battery-icon",
+  "categories": ["icons"],
   "type": "registry:ui"
 }

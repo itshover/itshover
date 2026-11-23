@@ -1,6 +1,8 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "brain-circuit-icon",
+  "title": "Brain Circuit",
+  "description": "Animated Brain Circuit icon for React, built with Motion. Animates on hover and exposes startAnimation() and stopAnimation() through a ref.",
   "dependencies": ["motion"],
   "devDependencies": [],
   "registryDependencies": [],
@@ -16,5 +18,10 @@
       "type": "registry:ui"
     }
   ],
+  "meta": {
+    "keywords": ["brain", "ai", "circuit", "intelligence", "neural", "mind"]
+  },
+  "docs": "https://www.itshover.com/icons/brain-circuit-icon",
+  "categories": ["icons"],
   "type": "registry:ui"
 }

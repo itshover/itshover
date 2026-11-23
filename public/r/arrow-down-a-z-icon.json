@@ -1,6 +1,8 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "arrow-down-a-z-icon",
+  "title": "Arrow Down A Z",
+  "description": "Animated Arrow Down A Z icon for React, built with Motion. Animates on hover and exposes startAnimation() and stopAnimation() through a ref.",
   "dependencies": ["motion"],
   "devDependencies": [],
   "registryDependencies": [],
@@ -16,5 +18,10 @@
       "type": "registry:ui"
     }
   ],
+  "meta": {
+    "keywords": ["text", "type", "font", "write", "sort", "alphabetical"]
+  },
+  "docs": "https://www.itshover.com/icons/arrow-down-a-z-icon",
+  "categories": ["icons"],
   "type": "registry:ui"
 }
