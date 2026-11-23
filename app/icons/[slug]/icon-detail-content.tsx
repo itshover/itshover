@@ -24,11 +24,13 @@ export default function IconDetailContent({
   code,
   displayName,
   relatedIconSlugs = [],
+  categoryLinks = [],
 }: {
   slug: string;
   code: string;
   displayName: string;
   relatedIconSlugs?: string[];
+  categoryLinks?: { slug: string; label: string }[];
 }) {
   const iconRef = React.useRef<AnimatedIconHandle>(null);
   const [codeCopied, setCodeCopied] = React.useState(false);
@@ -170,6 +172,23 @@ export interface AnimatedIconHandle {
                 from code with startAnimation() and stopAnimation(). Install it
                 with one shadcn command or copy the TSX.
               </p>
+
+              {categoryLinks.length > 0 && (
+                <p className="text-muted-foreground mb-6 text-sm">
+                  In:{" "}
+                  {categoryLinks.map((cat, index) => (
+                    <span key={cat.slug}>
+                      {index > 0 && " · "}
+                      <Link
+                        href={`/icons/category/${cat.slug}`}
+                        className="text-primary hover:text-primary/80 underline-offset-4 hover:underline"
+                      >
+                        {cat.label}
+                      </Link>
+                    </span>
+                  ))}
+                </p>
+              )}
 
               <div className="mb-8">
                 <h2 className="mb-3 text-lg font-semibold">At a glance</h2>

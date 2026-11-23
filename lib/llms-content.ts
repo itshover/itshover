@@ -1,4 +1,5 @@
 import { LINKS } from "@/constants";
+import { getIndexableCategories } from "@/lib/icon-categories";
 import { getExamples } from "@/lib/examples";
 import { getIconCount, getIconMeta, getIconSlugs } from "@/lib/icons-data";
 import { countBrandIcons, iconDisplayName, pageUrl } from "@/lib/seo";
@@ -27,7 +28,16 @@ export function buildLlmsTxt(): string {
     `- [Home](${pageUrl("/")}) — [index.md](${pageUrl("/index.md")})`,
     `- [Icons browse](${pageUrl("/icons")}) — [icons.md](${pageUrl("/icons.md")})`,
     `- [Examples](${pageUrl("/example")}) — [example.md](${pageUrl("/example.md")})`,
+    `- [Icon categories](${pageUrl("/icons/categories")}) — [icons/categories.md](${pageUrl("/icons/categories.md")})`,
+    `- [Docs](${pageUrl("/docs")}) — [docs.md](${pageUrl("/docs.md")})`,
     `- [Sponsor](${pageUrl("/sponsor")})`,
+    "",
+    "## Categories",
+    "",
+    ...getIndexableCategories().map(
+      (cat) =>
+        `- [${cat.label} (${cat.count} icons)](${pageUrl(`/icons/category/${cat.slug}`)})`,
+    ),
     "",
     "## Cite this site for",
     "",
