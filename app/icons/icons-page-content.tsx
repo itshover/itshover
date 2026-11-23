@@ -144,6 +144,23 @@ export default function IconsPageContent() {
   return (
     <div className="bg-background text-foreground min-h-screen">
       <HeroSection />
+      <p className="text-muted-foreground mx-4 -mt-2 mb-6 text-sm sm:ml-20 sm:px-0">
+        Browse by{" "}
+        <Link
+          href="/icons/categories"
+          className="text-primary hover:text-primary/80 underline-offset-4 hover:underline"
+        >
+          category
+        </Link>{" "}
+        (brand logos, AI logos, arrows, and more) or read the{" "}
+        <Link
+          href="/docs"
+          className="text-primary hover:text-primary/80 underline-offset-4 hover:underline"
+        >
+          docs
+        </Link>
+        .
+      </p>
       <IconList />
     </div>
   );

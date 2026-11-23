@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 import IconDetailContent from "./icon-detail-content";
 import { getIconsContent } from "@/actions/get-icons-content";
 import { JsonLd } from "@/components/json-ld";
+import { CATEGORY_META, getCategoriesForIcon } from "@/lib/icon-categories";
 import { getIconMeta, getRelatedIconSlugs } from "@/lib/icons-data";
 import {
   buildPageMetadata,
@@ -79,6 +80,10 @@ export default async function IconDetailPage({ params }: Props) {
 
   const displayName = iconDisplayName(slug);
   const relatedIconSlugs = getRelatedIconSlugs(slug, 8);
+  const categoryLinks = getCategoriesForIcon(slug).map((cat) => ({
+    slug: cat,
+    label: CATEGORY_META[cat].label,
+  }));
 
   const softwareJsonLd = {
     "@context": "https://schema.org",
@@ -125,6 +130,7 @@ export default async function IconDetailPage({ params }: Props) {
         code={code}
         displayName={displayName}
         relatedIconSlugs={relatedIconSlugs}
+        categoryLinks={categoryLinks}
       />
     </>
   );

@@ -107,6 +107,18 @@ const Footer = () => {
                 Icons
               </Link>
               <Link
+                href="/icons/categories"
+                className="text-muted-foreground hover:text-foreground transition-colors"
+              >
+                Categories
+              </Link>
+              <Link
+                href="/docs"
+                className="text-muted-foreground hover:text-foreground transition-colors"
+              >
+                Docs
+              </Link>
+              <Link
                 href="/sponsor"
                 className="text-muted-foreground hover:text-foreground transition-colors"
               >
